@@ -6,7 +6,7 @@
                 <h1>Handmade with Heart</h1>
                 <p>Artisanal jewelry crafted with care, inspired by nature, and made to be uniquely yours.</p>
                 <div class="hero-actions">
-                    <a class="button button-dark" href="#">
+                    <a class="button button-dark" href="collections.php">
                         <div class="layer" data-text="Shop the Collection">Shop the Collection</div>
                     </a>
                     <a class="button button-light" href="#">Explore New Arrivals</a>
@@ -40,7 +40,7 @@
         <section class="collections">
             <div class="section-heading">
                 <h2>Shop by Collection</h2>
-                <a href="#">View All Collections</a>
+                <a href="collections.php">View All Collections</a>
             </div>
 
             <div class="collection-grid">
