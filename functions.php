@@ -29,7 +29,7 @@
             <div class="layer" data-text="Shop"><a href="#">Shop</a></div>
             <div class="layer" data-text="New"><a href="#">New</a></div>
             <div class="layer" data-text="Gift"><a href="#">Gift</a></div>
-            <div class="layer" data-text="Collections"><a href="/collections.php">Collections</a></div>
+            <div class="layer" data-text="Collections"><a href="/collections.php">Collect</a></div>
             <div class="layer" data-text="About"><a href="#">About</a></div>
         </nav>
         <div class="cart-icons">
