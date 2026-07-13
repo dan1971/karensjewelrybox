@@ -1,0 +1,11 @@
+
+---
+deployment:
+  tasks: 
+    - export DEPLOYPATH=/home2/sazxjwte/public_html/website_14f8c164
+    - /bin/cp -R images $DEPLOYPATH
+    - /bin/cp -R css $DEPLOYPATH
+    - /bin/cp -R js $DEPLOYPATH
+    - /bin/cp  functions.php $DEPLOYPATH
+    - /bin/cp  index.php $DEPLOYPATH
+    - /bin/cp  collections.php $DEPLOYPATH
