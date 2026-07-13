@@ -1267,7 +1267,7 @@ aspect-ratio: 0.941;
         align-items: start;
         background:
             linear-gradient(180deg, rgba(255, 252, 247, 0.98) 0%, rgba(255, 252, 247, 0.88) 44%, rgba(255, 252, 247, 0.1) 74%),
-            url("../images/jewelry-hero.webp") center bottom / cover no-repeat;
+            url("../images/hero-bg-image-002.webp") center bottom / cover no-repeat;
     }
 
     .features,
@@ -1305,7 +1305,7 @@ aspect-ratio: 0.941;
         padding: 42px;
         background:
             linear-gradient(90deg, rgba(255, 252, 248, 0.98) 0%, rgba(255, 252, 248, 0.92) 100%),
-            url("../../KarensJewellryBox/Karens-jewelry-box/images/pendant002.webp") right center / cover no-repeat;
+            url("../../KarensJewellryBox/Karens-jewelry-box/images/pendant002.webp") left center / cover no-repeat;
     }
 
     .badge:nth-child(2) {
@@ -1349,6 +1349,8 @@ aspect-ratio: 0.941;
     .collection-grid,
     .footer-badges {
         grid-template-columns: 1fr;
+        row-gap:12px;
+        padding: 10px min(8vw, 100px);
     }
 
     .footer-content {
