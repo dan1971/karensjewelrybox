@@ -64,8 +64,8 @@ background-color: #f7f7f7;
 @font-face {
   font-family: "H1-TitlesOrtica";
   src:
-    url("../FONTS/OrticaLinear-Regular.woff") format("woff"),
-    url("../FONTS/OrticaLinear-Regular.woff") format("woff2");
+    url("/FONTS/OrticaLinear-Regular.woff") format("woff"),
+    url("/FONTS/OrticaLinear-Regular.woff") format("woff2");
 }
 
 .site-header {
