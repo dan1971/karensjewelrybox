@@ -106,7 +106,7 @@
         </div>
     </footer>
 
-    <script src="JS/danJS.js"></script>
+      <script src="js/danJS.js"></script> 
 </body>
 
 </html>
