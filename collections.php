@@ -60,7 +60,7 @@
                     <div class="product-card">
                         <div class="product-image" style="background-image: url('images/chime-002.webp')">
                             <div class="product-label">Bestseller</div>
-                            <div class="product-wishlist">
+                            <div id="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path id="myPath" class="wishheart"
@@ -106,7 +106,7 @@
                     <div class="product-card">
                         <div class="product-image" style="background-image: url('images/chime-003.webp')">
                             <div class="product-label">Bestseller</div>
-                            <div class="product-wishlist">
+                            <div id="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path id="myPath" class="wishheart"
@@ -150,7 +150,7 @@
                     <!-- Product 4 -->
                     <div class="product-card">
                         <div class="product-image" style="background-image: url('images/chime-004.webp')">
-                            <div class="product-wishlist">
+                            <div id="product-wishlist">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -197,7 +197,7 @@
                             <div class="product-label">Sale</div>
 
 
-                            <div class="product-wishlist">
+                            <div id="product-wishlist">
                                 <svg class="wishlist-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -245,7 +245,7 @@
                             <div class="product-label">Sale</div>
 
 
-                            <div class="product-wishlist">
+                            <div id="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path id="myPath" class="wishheart"
@@ -292,7 +292,7 @@
                             <div class="product-label">Sale</div>
 
 
-                            <div class="product-wishlist">
+                            <div id="product-wishlist">
                                 <svg class="wishlist-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -340,7 +340,7 @@
                             <div class="product-label">Sale</div>
 
 
-                            <div class="product-wishlist">
+                            <div id="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path id="myPath" class="wishheart"
@@ -436,7 +436,7 @@
                     <div class="product-card">
                         <div class="product-image" style="background-image: url('images/painting-002.webp')">
                             <div class="product-label">Bestseller</div>
-                            <div class="product-wishlist">
+                            <div id="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path id="myPath" class="wishheart"
@@ -482,7 +482,7 @@
                     <div class="product-card">
                         <div class="product-image" style="background-image: url('images/painting-003.webp')">
                             <div class="product-label">Bestseller</div>
-                            <div class="product-wishlist">
+                            <div id="product-wishlist" class="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path id="myPath" class="wishheart"
