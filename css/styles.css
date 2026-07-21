@@ -333,7 +333,7 @@ font-weight:normal;
     .wishheart {
         fill: var(--cream);
         stroke: var(--gray-400);
-        stroke: 2px;
+        stroke-width: 2px;
 
     }
 
