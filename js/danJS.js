@@ -1,11 +1,11 @@
 const elements = document.querySelectorAll('.wishHeart');
 
-elements.forEach(element => {
-  element.addEventListener('click', (event) => {
-    element.classList.toggle('.wishHeart-active'); 
-    console.log('Div clicked!', event.target);
-  });
-});
+// elements.forEach(element => {
+//   element.addEventListener('click', (event) => {
+//     element.classList.toggle('.wishHeart-active'); 
+//     console.log('Div clicked!', event.target);
+//   });
+// });
 
 // Select the elements
 const toggleButton = document.getElementById('product-wishlist');
