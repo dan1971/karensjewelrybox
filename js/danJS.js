@@ -9,7 +9,7 @@ const elements = document.querySelectorAll('.wishHeart');
 
 // Select the elements
 const toggleButton = document.getElementById('product-wishlist');
-const svgPath = toggleButton.querySelector('.wishheart');
+const svgPath = document.getElementById('myPath');
 // const svgPath = document.getElementById('myPath');
 
 // Toggle the class on click
