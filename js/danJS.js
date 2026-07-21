@@ -1,6 +1,6 @@
 // Select the elements
 const toggleButton = document.getElementById('product-wishlist');
-const svgPath = document.getElementByClassName('wishHeart')[0];
+const svgPath = document.getElementByClassName('wishHeart');
 
 // Toggle the class on click
 toggleButton.addEventListener('click', () => {
