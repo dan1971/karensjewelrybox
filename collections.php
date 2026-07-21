@@ -11,8 +11,8 @@
                     <h3>Wind Chimes</h3>
                 </div>
                 <div class="product-grid">
-                    <!-- Product 1 -->
-                       <div class="product-card">
+                      <!-- Product 1 -->
+<div class="product-card">
       <div class="product-image" style="background-image: url('images/chime-001.webp')">
         <div class="product-label">Bestseller</div>
         <div id="product-wishlist">
