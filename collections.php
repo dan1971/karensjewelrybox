@@ -60,7 +60,7 @@
                     <div class="product-card">
                         <div class="product-image" style="background-image: url('images/chime-002.webp')">
                             <div class="product-label">Bestseller</div>
-                            <div id="product-wishlist">
+                            <div class="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path class="wishheart"
