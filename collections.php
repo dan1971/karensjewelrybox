@@ -335,11 +335,10 @@
                         <div class="product-quick-view">Add to cart</div>
                     </div>
                     <!-- Product 7 -->
+                     
                     <div class="product-card">
                         <div class="product-image" style="background-image: url('images/chime-008.webp')">
                             <div class="product-label">Sale</div>
-
-
                             <div class="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
