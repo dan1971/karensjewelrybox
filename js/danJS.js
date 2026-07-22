@@ -1,8 +1,7 @@
-// Select the elements
-const toggleButton = document.getElementByClassName('product-wishlist');
-const svgPath = document.getElementByClassName('wishHeart');
+// Select the path element using its data attribute
+const pathElement = document.querySelector('[data-toggle]');
 
-// Toggle the class on click
-toggleButton.addEventListener('click', () => {
-  svgPath.classList.toggle('active');
+pathElement.addEventListener('click', () => {
+  // Toggle the active class on the path
+  pathElement.classList.toggle('active');
 });
