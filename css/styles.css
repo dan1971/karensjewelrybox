@@ -306,7 +306,7 @@ font-weight:normal;
       box-shadow: var(--shadow);
     }
 
-    .pproduct-wishlist {
+    .product-wishlist {
       position: absolute;
       top: 12px;
       right: 12px;
