@@ -436,10 +436,7 @@ font-weight:normal;
       color: var(--cream);
     }
 
-     .add-to-cart:hover .product-quick-view {
-        color:var(--cream);
-     }
-
+  .product-card:has(.add-to-cart:hover) .product-quick-view { color: var(--cream); }
     .add-to-cart:active {
       transform: scale(0.95);
     }
