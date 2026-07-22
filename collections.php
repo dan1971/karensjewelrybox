@@ -335,7 +335,7 @@
                         <div class="product-quick-view">Add to cart</div>
                     </div>
                     <!-- Product 7 -->
-                     
+
                     <div class="product-card">
                         <div class="product-image" style="background-image: url('images/chime-008.webp')">
                             <div class="product-label">Sale</div>
@@ -399,8 +399,8 @@
                             </div>
                         </div>
                         <div class="product-info">
-                            <div class="product-category">Wind Chimes</div>
-                            <div class="product-name">Golden Windstone</div>
+                            <div class="product-category">Original Art</div>
+                            <div class="product-name">Lake Reflection</div>
                             <div class="rating">
                                 <div class="stars">
                                     <div class="star">★</div>
@@ -445,8 +445,8 @@
                             </div>
                         </div>
                         <div class="product-info">
-                            <div class="product-category">Wind Chimes</div>
-                            <div class="product-name">Bronze Hearthstone</div>
+                            <div class="product-category">Original Art</div>
+                            <div class="product-name">Autumn Leaves</div>
                             <div class="rating">
                                 <div class="stars">
                                     <div class="star">★</div>
@@ -491,8 +491,8 @@
                             </div>
                         </div>
                         <div class="product-info">
-                            <div class="product-category">Wind Chimes</div>
-                            <div class="product-name">Silver Broachstone</div>
+                            <div class="product-category">Original Art</div>
+                            <div class="product-name">Canyon Sunset</div>
                             <div class="rating">
                                 <div class="stars">
                                     <div class="star">★</div>
