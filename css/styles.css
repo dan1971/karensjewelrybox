@@ -434,10 +434,11 @@ font-weight:normal;
     .add-to-cart:hover {
       background-color: var(--secondary);
       color: var(--cream);
-     & .product-quick-view {
+    }
+
+     .add-to-cart:hover .product-quick-view {
         color:var(--cream);
      }
-    }
 
     .add-to-cart:active {
       transform: scale(0.95);
