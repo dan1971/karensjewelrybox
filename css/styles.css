@@ -427,7 +427,7 @@ font-weight:normal;
       cursor: pointer;
     transform: scaleX(1);
     transition: transform 1s;
-      transition: .02s var(--transition);
+      transition: var(--transition);
       opacity: 0.9;
     }
 
