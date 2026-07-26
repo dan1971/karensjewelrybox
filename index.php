@@ -3,7 +3,7 @@
     <main>
         <section class="hero">
             <div class="hero-copy">
-                <h1>Handmade with Heart</h1>
+                <h1>Handmade with Love</h1>
                 <p>Artisanal jewelry crafted with care, inspired by nature, and made to be uniquely yours.</p>
                 <div class="hero-actions">
                     <a class="button button-dark" href="collections.php">
@@ -80,13 +80,13 @@
         <section class="story">
             <div class="faded-filter-overlay"></div>
             <div class="story-copy">
-                <h2>Handmade with Heart</h2>
+                <h2>Handmade with Love</h2>
                 <p>Each piece in Karen's Jewelry Box is handcrafted in small batches using natural stones, crystals, and
                     metals. My jewelry is inspired by nature, designed to bring beauty, meaning, and joy to your
                     everyday.</p>
-                <a class="button button-dark" href="#">
+                <!-- <a class="button button-dark" href="#">
                     <div class="layer" data-text="More About Karen">More About Karen</div>
-                </a>
+                </a> -->
             </div>
         </section>
 
