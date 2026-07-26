@@ -1100,8 +1100,8 @@ aspect-ratio: 0.941;
     position: relative;
     min-height: 56px;
     padding-left: 68px;
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     border-right: 1px solid var(--line);
 }
