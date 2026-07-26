@@ -63,9 +63,9 @@
     <?php } ?>
     <?php function footer() { ?>
     <section class="footer-badges" aria-label="Store benefits">
-        <div class="badge">
+        <div class="badge truck">
         <div>
-        
+
         </div>
          <div>
             <strong>Free Shipping</strong>
