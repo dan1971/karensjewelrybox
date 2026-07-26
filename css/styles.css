@@ -154,7 +154,7 @@ font-weight:normal;
 .layer,
 .layer:after {
   font-family: calibri, Georgia, serif;
-  display: block;
+  displabuttlock;
   font-size: clamp(0.75rem, 1.2vw, 0.8rem);
   color: #fdf6f6;
   white-space: pre;
@@ -695,6 +695,7 @@ font-weight:normal;
 }
 
 .button-dark {
+    font-family: "H1-TitlesOrtica", Georgia, serif;
     color: #fff;
     background: var(--cream);
     box-shadow: 0 12px 24px rgba(23, 23, 24, 0.3);
