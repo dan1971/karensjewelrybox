@@ -1121,7 +1121,7 @@ aspect-ratio: 0.941;
     align-items: center;
     justify-content: center;
     color: #8f8a82;
-    font-size: clamp(1.75rem, 3vw, 2.4rem);
+    font-size: clamp(2.2rem, 3.8vw, 3rem);
     transform: translateY(-50%);
 }
 
