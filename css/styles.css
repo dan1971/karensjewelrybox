@@ -1111,16 +1111,23 @@ aspect-ratio: 0.941;
 }
 
 .badge::before {
+    content: "";
     position: absolute;
     left: 7px;
     top: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #8f8a82;
-    font-size: 3rem;
+    font-size: clamp(1.75rem, 3vw, 2.4rem);
     transform: translateY(-50%);
 }
 
 .truck::before {
     content: "\1F69A";
+    display: block;
 }
 
 .lock::before {
