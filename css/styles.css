@@ -791,7 +791,7 @@ article.feature p {
     width: 36px;
     height: 36px;
     color: var(--accent);
-    background: currentColor;
+
     opacity: 0.88;
     margin: 0 auto;
 }
