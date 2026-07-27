@@ -23,12 +23,12 @@
             <article class="feature">
                 <span class="feature-icon diamond" aria-hidden="true"></span>
                 <h2>Natural Materials</h2>
-                <p>We use high-quality gemstones and eco-conscious materials.</p>
+                <p>High-quality and eco-conscious materials.</p>
             </article>
             <article class="feature">
                 <span class="feature-icon heart" aria-hidden="true"></span>
                 <h2>One of a Kind</h2>
-                <p>Unique designs made in small batches.</p>
+                <p>Unique designs to match your style.</p>
             </article>
             <article class="feature">
                 <span class="feature-icon gift" aria-hidden="true"></span>
