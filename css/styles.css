@@ -154,11 +154,14 @@ font-weight:normal;
 .layer,
 .layer:after {
   font-family: calibri, Georgia, serif;
-  display:block;
+  displabuttlock;
   font-size: clamp(0.75rem, 1.2vw, 0.8rem);
   color: #fdf6f6;
   white-space: pre;
   position: relative;
+  & .button{
+    color: #262627;
+  }
 }
 
 .layer:after {
