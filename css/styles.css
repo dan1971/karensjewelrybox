@@ -722,32 +722,34 @@ font-weight:normal;
     content: " ->";
 }
 
-
+/*
 section.features {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* Each article will span 3 rows (icon, h2, p) */
+  
   grid-template-rows: auto auto 1fr; 
 }
 
-/* 2. Make the article a subgrid */
+
 article.feature {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 3; /* Matches the 3 children: span, h2, p */
-  gap: 0; /* Control spacing via grid gap rather than margins */
+  grid-row: span 3; 
+  gap: 0; 
 }
 
-/* 3. Optional: Reset margins for tighter control */
+
 article.feature h2, 
 article.feature p {
   margin: 0;
 }
 
-/*
+*/
+
 .features {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto 1fr; 
     padding: 28px min(8vw, 90px);
     background: rgba(250, 249, 244, 0.96);
     border-bottom: 1px solid var(--line);
@@ -758,6 +760,10 @@ article.feature p {
     padding: 0 30px;
     text-align: center;
     border-right: 1px solid var(--line);
+    display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3; /* Matches the 3 children: span, h2, p */
+  gap: 0; /* Control spacing via grid gap rather than margins */
 }
 
 .feature:last-child {
