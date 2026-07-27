@@ -68,7 +68,7 @@
                     </div>
                 </article>
                 <article class="collection-card">
-                    <img src="images/collections-card-new.webp" alt="New Arivals">
+                    <img src="images/homepage-earrings.png" alt="New Arivals">
                     <div>
                         <h3>New Arrivals</h3>
                         <a class="button button-light" href="#">Shop now</a>
