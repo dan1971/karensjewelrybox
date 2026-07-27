@@ -1134,6 +1134,7 @@ aspect-ratio: 0.941;
 }
 
 .plant::before {
+    font-size: 6rem;
     content: "\1F64F";
 }
 
