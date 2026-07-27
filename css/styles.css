@@ -826,7 +826,7 @@ aspect-ratio: 0.941;
 .section-heading a,
 .collection-card a {
     color: var(--accent);
-    font-size: 0.82rem;
+    font-size: 0.7rem;
     font-weight: 800;
     letter-spacing: 0.14em;
     text-transform: uppercase;
