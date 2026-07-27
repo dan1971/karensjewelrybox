@@ -17,7 +17,7 @@
         <section class="features" aria-label="Shopping highlights">
             <article class="feature">
                 <span class="feature-icon leaf" aria-hidden="true"></span>
-                <h2>Made by Hand</h2>
+                <h2>Made<br>by Hand</h2>
                 <p>Every piece is thoughtfully crafted by hand.</p>
             </article>
             <article class="feature">
@@ -27,7 +27,7 @@
             </article>
             <article class="feature">
                 <span class="feature-icon heart" aria-hidden="true"></span>
-                <h2>One of a Kind</h2>
+                <h2>One<br>of a Kind</h2>
                 <p>Unique designs to match your style.</p>
             </article>
             <article class="feature">
