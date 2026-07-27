@@ -160,6 +160,7 @@ font-weight:normal;
   white-space: pre;
   position: relative;
    .button &{
+    font-family: "H1-TitlesOrtica", Georgia, serif;
     color: #262627;
    }
 }
