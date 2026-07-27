@@ -178,6 +178,10 @@ font-weight:normal;
   -moz-transition: .2s linear width;
   -o-transition: .2s linear width;
   -ms-transition: .2s linear width;
+    .button & {
+    font-family: "H1-TitlesOrtica", Georgia, serif;
+    color: #262627;
+   }
 }
 
 .layer:hover:after {
