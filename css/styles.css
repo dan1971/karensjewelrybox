@@ -159,9 +159,9 @@ font-weight:normal;
   color: #fdf6f6;
   white-space: pre;
   position: relative;
-  & .button{
+   .button{
     color: #262627;
-  }
+   }
 }
 
 .layer:after {
