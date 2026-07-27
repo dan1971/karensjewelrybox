@@ -178,10 +178,6 @@ font-weight:normal;
   -moz-transition: .2s linear width;
   -o-transition: .2s linear width;
   -ms-transition: .2s linear width;
-    .button & {
-    font-family: "H1-TitlesOrtica", Georgia, serif;
-    color: #262627;
-   }
 }
 
 .layer:hover:after {
@@ -704,9 +700,28 @@ font-weight:normal;
 
 .button-dark {
     font-family: "H1-TitlesOrtica", Georgia, serif;
-    color: #fff;
+    color: #262627;
     background: var(--cream);
     box-shadow: 0 12px 24px rgba(23, 23, 24, 0.3);
+}
+
+.button-dark::after{
+content: attr(data-text);
+  color: var(--accent);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  overflow: hidden;
+  transition: .2s linear width;
+  -webkit-transition: .2s linear width;
+  -moz-transition: .2s linear width;
+  -o-transition: .2s linear width;
+  -ms-transition: .2s linear width;
+    .button & {
+    font-family: "H1-TitlesOrtica", Georgia, serif;
+    color: #262627;
+   }
 }
 
 .button-light {
