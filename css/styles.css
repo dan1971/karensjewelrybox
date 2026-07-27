@@ -722,6 +722,29 @@ font-weight:normal;
     content: " ->";
 }
 
+
+section.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Each article will span 3 rows (icon, h2, p) */
+  grid-template-rows: auto auto 1fr; 
+}
+
+/* 2. Make the article a subgrid */
+article.feature {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3; /* Matches the 3 children: span, h2, p */
+  gap: 0; /* Control spacing via grid gap rather than margins */
+}
+
+/* 3. Optional: Reset margins for tighter control */
+article.feature h2, 
+article.feature p {
+  margin: 0;
+}
+
+/*
 .features {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -761,11 +784,11 @@ font-weight:normal;
     display: inline-block;
     width: 36px;
     height: 36px;
-    /* color: var(--accent);
-    background: currentColor; */
+    color: var(--accent);
+    background: currentColor;
     opacity: 0.88;
 }
-
+*/
 .leaf  {
 aspect-ratio: 0.941;
 	border-shape: shape(from 0% 98.23%,smooth by 17.65% -21.08% with 20.36% -19.45%,smooth by -5.96% -15.83% with -6.03% -11.21%,curve by 12.37% -32.79% with 0.15% -6.17%/-0.15% -20.09%,smooth by 37.25% -13.91% with 22.7% -11.07%,curve by 38.69% -14.62% with 19.15% -3.69%/38.69% -14.62%,curve by -1.96% 41.8% with 0% 0%/0.15% 24.91%,smooth by -43.97% 44.71% with -22.17% 41.45%,curve by -33.03% -6.03% with -17.57% 2.63%/-33.03% -6.03%,line by -19.38% 19.52%,line by -1.58% -1.7%,close,move to 15.99% 85.02%,line by 53.84% -49.33%,move to 35.9% 49.54%,vline by 16.39%,move to 57.16% 65.93%,line by -21.27% 0.85%);
