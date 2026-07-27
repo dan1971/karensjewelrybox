@@ -699,10 +699,8 @@ font-weight:normal;
 
 .button-dark {
     font-family: "H1-TitlesOrtica", Georgia, serif;
-    display:block;
     font-size: clamp(0.75rem, 1.2vw, 0.8rem);
     color: #262627;
-    white-space: pre;
     position: relative;
     background: var(--cream);
     box-shadow: 0 12px 24px rgba(23, 23, 24, 0.3);
