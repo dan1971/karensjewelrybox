@@ -17,12 +17,12 @@
         <section class="features" aria-label="Shopping highlights">
             <article class="feature">
                 <span class="feature-icon leaf" aria-hidden="true"></span>
-                <h2>Handmade</h2>
+                <h2>Made by Hand</h2>
                 <p>Every piece is thoughtfully crafted by hand.</p>
             </article>
             <article class="feature">
                 <span class="feature-icon diamond" aria-hidden="true"></span>
-                <h2>Natural Materials</h2>
+                <h2>Quality Materials</h2>
                 <p>High-quality and eco-conscious materials.</p>
             </article>
             <article class="feature">
@@ -32,7 +32,7 @@
             </article>
             <article class="feature">
                 <span class="feature-icon gift" aria-hidden="true"></span>
-                <h2>Perfect for Gifting</h2>
+                <h2>Perfect for Gifts</h2>
                 <p>Handmade, one-of-a-kind gifts.</p>
             </article>
         </section>
