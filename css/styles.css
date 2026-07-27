@@ -159,10 +159,6 @@ font-weight:normal;
   color: #fdf6f6;
   white-space: pre;
   position: relative;
-   .button & {
-    font-family: "H1-TitlesOrtica", Georgia, serif;
-    color: #262627;
-   }
 }
 
 .layer:after {
@@ -718,10 +714,6 @@ content: attr(data-text);
   -moz-transition: .2s linear width;
   -o-transition: .2s linear width;
   -ms-transition: .2s linear width;
-    .button & {
-    font-family: "H1-TitlesOrtica", Georgia, serif;
-    color: #262627;
-   }
 }
 
 .button-light {
