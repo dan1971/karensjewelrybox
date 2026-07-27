@@ -701,7 +701,7 @@ font-weight:normal;
     box-shadow: 0 12px 24px rgba(23, 23, 24, 0.3);
 }
 
-.button-dark::after{
+.button-dark:after{
 content: attr(data-text);
   color: var(--accent);
   position: absolute;
@@ -714,6 +714,11 @@ content: attr(data-text);
   -moz-transition: .2s linear width;
   -o-transition: .2s linear width;
   -ms-transition: .2s linear width;
+}
+
+.button-dark:hover:after{
+  width: 100%;
+  cursor: pointer;
 }
 
 .button-light {
