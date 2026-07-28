@@ -1296,7 +1296,6 @@ aspect-ratio: 0.941;
   font-family: "Delius Swash Caps", cursive;
     font-size: 1.5rem;
     font-weight: 500;
-    margin: 0.2em 0 0.2em 0;
     letter-spacing: 1px;
 }
 
@@ -1312,7 +1311,6 @@ aspect-ratio: 0.941;
     gap: 24px;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 8px;
      font-size: clamp(0.48rem, calc(0.242rem + 1.382vw), 0.88rem);
 }
 
