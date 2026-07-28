@@ -866,7 +866,7 @@ article.feature p {
 }
 
 .feature p {
-    font-size: small;
+    font-size: smaller;
     margin: 0 auto;
     max-width: 240px;
     color: var(--muted);
