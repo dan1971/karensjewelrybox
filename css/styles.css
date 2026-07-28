@@ -787,6 +787,7 @@ font-weight:normal;
     box-shadow: 0 12px 24px rgba(23, 23, 24, 0.3);
     position: relative;
     transition: transform 160ms ease, box-shadow 160ms ease, color 160ms ease;
+    text-shadow: 0 0 5px #e0dddd, 0 0 10px #e0dddd;
 
 }
 
