@@ -22,6 +22,9 @@
 
 @font-face {
   font-family: "H1-TitlesOrtica";
+    font-style: normal;
+  font-weight: 400;
+  font-display: swap;
   src:
     url("../fonts/Forum-Regular.woff") format("woff"),
     url("../fonts/Forum-Regular.woff2") format("woff2");
