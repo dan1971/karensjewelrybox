@@ -862,13 +862,15 @@ article.feature p {
     font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    line-height: 1.2em;
 }
 
 .feature p {
+    font-size: small;
     margin: 0 auto;
     max-width: 240px;
     color: var(--muted);
-    line-height: 1.25;
+    line-height: 1.2em;
 }
 
 .feature-icon {
