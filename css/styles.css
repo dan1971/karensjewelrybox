@@ -154,7 +154,7 @@ font-weight:normal;
 .layer,
 .layer:after {
   font-family: calibri, Georgia, serif;
-  displabuttlock;
+  display:block;
   font-size: clamp(0.75rem, 1.2vw, 0.8rem);
   color: #fdf6f6;
   white-space: pre;
