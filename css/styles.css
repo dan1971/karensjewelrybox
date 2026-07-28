@@ -28,7 +28,7 @@
  * Viewport: 320vw to 1200vw
  */
 
-html { font-size: 6px; }
+html { font-size: 24px; }
 
 /* Font Family Setup */
 body {
@@ -48,43 +48,43 @@ code {
 
 /* Typography Sizes */
 h1, .cg-h1 {
-  font-size: clamp(4.80rem, calc(4.364rem + 0.818vw), 6.00rem);
+  font-size: clamp(1.20rem, calc(1.091rem + 0.818vw), 1.50rem);
 }
 
 h2, .cg-h2 {
-  font-size: clamp(4.00rem, calc(3.636rem + 0.682vw), 5.00rem);
+  font-size: clamp(1.00rem, calc(0.909rem + 0.682vw), 1.25rem);
 }
 
 h3, .cg-h3 {
-  font-size: clamp(3.73rem, calc(3.394rem + 0.636vw), 4.67rem);
+  font-size: clamp(0.93rem, calc(0.848rem + 0.636vw), 1.17rem);
 }
 
 h4, .cg-h4 {
-  font-size: clamp(3.47rem, calc(3.152rem + 0.591vw), 4.33rem);
+  font-size: clamp(0.87rem, calc(0.788rem + 0.591vw), 1.08rem);
 }
 
 h5, .cg-h5 {
-  font-size: clamp(3.20rem, calc(2.909rem + 0.545vw), 4.00rem);
+  font-size: clamp(0.80rem, calc(0.727rem + 0.545vw), 1.00rem);
 }
 
 h6, .cg-h6 {
-  font-size: clamp(2.93rem, calc(2.667rem + 0.500vw), 3.67rem);
+  font-size: clamp(0.73rem, calc(0.667rem + 0.500vw), 0.92rem);
 }
 
 body, .cg-base {
-  font-size: clamp(2.67rem, calc(2.424rem + 0.455vw), 3.33rem);
+  font-size: clamp(0.67rem, calc(0.606rem + 0.455vw), 0.83rem);
 }
 
 small, .cg-small {
-  font-size: clamp(2.33rem, calc(2.121rem + 0.398vw), 2.92rem);
+  font-size: clamp(0.58rem, calc(0.530rem + 0.398vw), 0.73rem);
 }
 
 .tiny, .cg-tiny {
-  font-size: clamp(2.00rem, calc(1.818rem + 0.341vw), 2.50rem);
+  font-size: clamp(0.50rem, calc(0.455rem + 0.341vw), 0.63rem);
 }
 
 code, .cg-code {
-  font-size: clamp(2.33rem, calc(2.121rem + 0.398vw), 2.92rem);
+  font-size: clamp(0.58rem, calc(0.530rem + 0.398vw), 0.73rem);
 }
 
 html {
