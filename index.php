@@ -9,7 +9,7 @@
                     <div class="layered">
                     <a class="button button-dark-layer"  data-text="Shop the Collection" href="collections.php">Shop the Collection</a>
                     </div>
-                    <a class="button button-light" href="#">Explore New Arrivals</a>
+                    <!-- <a class="button button-light" href="#">Explore New Arrivals</a> -->
                 </div>
             </div>
         </section>
