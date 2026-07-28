@@ -71,7 +71,7 @@
                         </div>
                         <div class="product-info">
                             <div class="product-category">Wind Chimes</div>
-                            <div class="product-name">Golden Windstone</div>
+                            <div class="product-name">Golden SkyStone</div>
                             <div class="rating">
                                 <div class="stars">
                                     <div class="star">★</div>
@@ -116,7 +116,7 @@
                         </div>
                         <div class="product-info">
                             <div class="product-category">Wind Chimes</div>
-                            <div class="product-name">Golden Windstone</div>
+                            <div class="product-name">Golden Monarchy</div>
                             <div class="rating">
                                 <div class="stars">
                                     <div class="star">★</div>
@@ -160,7 +160,7 @@
                         </div>
                         <div class="product-info">
                             <div class="product-category">Wind Chimes</div>
-                            <div class="product-name">Golden Windstone</div>
+                            <div class="product-name">Bronze RiverStone</div>
                             <div class="rating">
                                 <div class="stars">
                                     <div class="star">★</div>
@@ -204,7 +204,7 @@
                         </div>
                         <div class="product-info">
                             <div class="product-category">Wind Chimes</div>
-                            <div class="product-name">Golden Windstone</div>
+                            <div class="product-name">Shining OceanStone</div>
                             <div class="rating">
                                 <div class="stars">
                                     <div class="star">★</div>
@@ -248,7 +248,7 @@
                         </div>
                         <div class="product-info">
                             <div class="product-category">Wind Chimes</div>
-                            <div class="product-name">Golden Windstone</div>
+                            <div class="product-name">Bronze EyeStone</div>
                             <div class="rating">
                                 <div class="stars">
                                     <div class="star">★</div>
@@ -292,7 +292,7 @@
                         </div>
                         <div class="product-info">
                             <div class="product-category">Wind Chimes</div>
-                            <div class="product-name">Golden Windstone</div>
+                            <div class="product-name">Golen ArkenStone</div>
                             <div class="rating">
                                 <div class="stars">
                                     <div class="star">★</div>
@@ -336,7 +336,7 @@
                         </div>
                         <div class="product-info">
                             <div class="product-category">Wind Chimes</div>
-                            <div class="product-name">Golden Windstone</div>
+                            <div class="product-name">Bronze CoralStone</div>
                             <div class="rating">
                                 <div class="stars">
                                     <div class="star">★</div>
@@ -372,7 +372,7 @@
                 <div class="product-grid">
 
                     <!-- Product 1 -->
-<div class="product-card">
+                <div class="product-card">
                         <div class="product-image" style="background-image: url('images/chime-009.webp')">
                             <div class="product-label">Bestseller</div>
                             <div class="product-wishlist">
@@ -386,7 +386,7 @@
                         </div>
                         <div class="product-info">
                             <div class="product-category">Wind Chimes</div>
-                            <div class="product-name">Golden Windstone</div>
+                            <div class="product-name">Silver StarStone</div>
                             <div class="rating">
                                 <div class="stars">
                                     <div class="star">★</div>
@@ -418,7 +418,7 @@
 
                     <!-- Product 2 -->
 <div class="product-card">
-                        <div class="product-image" style="background-image: url('images/chime-001.webp')">
+                        <div class="product-image" style="background-image: url('images/chime-010.webp')">
                             <div class="product-label">Bestseller</div>
                             <div class="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
@@ -431,7 +431,7 @@
                         </div>
                         <div class="product-info">
                             <div class="product-category">Wind Chimes</div>
-                            <div class="product-name">Golden Windstone</div>
+                            <div class="product-name">Golden CockStone</div>
                             <div class="rating">
                                 <div class="stars">
                                     <div class="star">★</div>
@@ -463,7 +463,7 @@
 
                     <!-- Product 3 -->
     <div class="product-card">
-                        <div class="product-image" style="background-image: url('images/chime-001.webp')">
+                        <div class="product-image" style="background-image: url('images/chime-011.webp')">
                             <div class="product-label">Bestseller</div>
                             <div class="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
@@ -476,7 +476,7 @@
                         </div>
                         <div class="product-info">
                             <div class="product-category">Wind Chimes</div>
-                            <div class="product-name">Golden Windstone</div>
+                            <div class="product-name">Brassy FireStone</div>
                             <div class="rating">
                                 <div class="stars">
                                     <div class="star">★</div>
