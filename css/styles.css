@@ -1,5 +1,6 @@
 :root {
     --ink: #242424;
+      --ink-semi: #24242460;
     --muted: #5d605f;
     --paper: #f8f6f1;
     --cream: #fbf8f2;
@@ -782,6 +783,7 @@ font-weight:normal;
 }
 
 .button-dark-layer:hover{
+background: var(--ink-semi);
   color: var(--accent);
   backdrop-filter: (1.2) drop-shadow(#301934 25px 15px 9px);
 }
