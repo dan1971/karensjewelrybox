@@ -22,7 +22,7 @@
             </article>
             <article class="feature">
                 <span class="feature-icon diamond" aria-hidden="true"></span>
-                <h2>Quality Materials</h2>
+                <h2>Quality<br>Materials</h2>
                 <p>High-quality and eco-conscious materials.</p>
             </article>
             <article class="feature">
@@ -32,7 +32,7 @@
             </article>
             <article class="feature">
                 <span class="feature-icon gift" aria-hidden="true"></span>
-                <h2>Perfect for Gifts</h2>
+                <h2>Perfect <br>for Gifts</h2>
                 <p>Handmade, one-of-a-kind gifts.</p>
             </article>
         </section>
