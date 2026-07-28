@@ -764,7 +764,7 @@ font-weight:normal;
 }
 
 .button:hover {
-    transform: translateY(-2px);
+    transform: translate(-2px, -2px);
     & .layer:after {
         width: 100%;
         cursor: pointer;
