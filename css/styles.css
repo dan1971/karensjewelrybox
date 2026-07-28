@@ -1353,7 +1353,7 @@ aspect-ratio: 0.941;
     .feature:nth-child(n+3) {
         padding-top: 24px;
     }
-
+s
     .story {
         padding: 42px;
         background:
@@ -1371,6 +1371,11 @@ aspect-ratio: 0.941;
 }
 
 @media (max-width: 680px) {
+.hero {
+           background:
+            linear-gradient(113deg, rgba(255, 252, 247, 0.98) 0%, rgba(255, 252, 247, 0.88) 44%, rgba(255, 252, 247, 0.1) 74%),
+            url("../images/hero-bg-image-002.webp") -500px 200px / cover no-repeat;
+    }
 
 .story::before {
   
