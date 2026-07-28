@@ -717,7 +717,7 @@ font-weight:normal;
 
 }
 
-.button-dark-layer:hover:{
+.button-dark-layer:hover{
   color: var(--accent);
 }
 
