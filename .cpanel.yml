@@ -10,3 +10,4 @@ deployment:
     - /bin/cp  functions.php $DEPLOYPATH
     - /bin/cp  index.php $DEPLOYPATH
     - /bin/cp  collections.php $DEPLOYPATH
+    - /bin/cp  purchase.php $DEPLOYPATH
