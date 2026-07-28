@@ -1288,7 +1288,6 @@ aspect-ratio: 0.941;
 .footer-logo {
     font-size: 2rem;
     font-weight: 300;
-    margin-bottom: 8px;
     letter-spacing: 2px;
 }
 
@@ -1331,9 +1330,8 @@ aspect-ratio: 0.941;
 
 .footer-social {
     display: flex;
-    gap: 18px;
+    column-gap: 18px;
     justify-content: center;
-    margin-bottom: 8px;
 }
 
 .footer-social a {
