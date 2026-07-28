@@ -19,8 +19,8 @@
 @font-face {
   font-family: "H1-TitlesOrtica";
   src:
-    url("./FONTS/Forum-Regular.woff") format("woff"),
-    url("./FONTS/Forum-Regular.woff2") format("woff2");
+    url("../FONTS/Forum-Regular.woff") format("woff"),
+    url("../FONTS/Forum-Regular.woff2") format("woff2");
 }
 
 
@@ -124,13 +124,6 @@ background-color: #f7f7f7;
   width: 100%;          /* Occupies 90% of screen on mobile */
   max-width: 1200px;   /* Prevents getting too wide on ultrawide monitors */
   margin: 35px auto 35px 0;      /* Centers the container */
-}
-
-@font-face {
-  font-family: "H1-TitlesOrtica";
-  src:
-    url("FONTS/OrticaLinear-Regular.woff") format("woff"),
-    url("FONTS/OrticaLinear-Regular.woff2") format("woff2");
 }
 
 .site-header {
