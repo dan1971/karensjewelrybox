@@ -44,7 +44,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'H1-TitlesOrtica', sans-serif;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 code {
@@ -713,12 +713,14 @@ font-weight:normal;
 
 .hero h1 {
     max-width: 520px;
+    font-size: clamp(4.1rem, 8vw, 7rem);
 }
 
 .hero p {
     max-width: 430px;
     margin: 34px 0 0;
     color: var(--muted);
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
     line-height: 1.45;
 }
 
