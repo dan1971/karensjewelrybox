@@ -778,15 +778,12 @@ font-weight:normal;
     box-shadow: 0 12px 24px rgba(23, 23, 24, 0.3);
     position: relative;
     transition: transform 160ms ease, box-shadow 160ms ease, color 160ms ease;
-    text-shadow: 0 0 5px #abaaaa, 0 0 10px #abaaaa;
-    -webkit-backdrop-filter: blur(10px); /* For Safari support */
-    backdrop-filter: drop-shadow(#301934 20px 10px 4px);
 
 }
 
 .button-dark-layer:hover{
   color: var(--accent);
-  backdrop-filter: brightness(1.2) drop-shadow(#301934 25px 15px 9px);
+  backdrop-filter: (1.2) drop-shadow(#301934 25px 15px 9px);
 }
 
 .button-light {
