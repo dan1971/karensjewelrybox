@@ -8,8 +8,8 @@
     --teal: #48c6d4;
     --dark: #413f3f;
     --shadow: 0 16px 40px rgba(29, 26, 24, 0.12);
-    --light-cream: #ffffff;
-    --light-cream-hover: #ffffff1b;
+    --light-cream: #fff9f970;
+    --light-cream-hover: #ffffffc5;
     --muted-brown: #a19489;
     --muted-light-brn:#b5a89e;
     --muted-grey: #d1d7d6;
@@ -776,7 +776,7 @@ font-weight:normal;
     font-weight: bold;
     color: var(--dark);
     background: var(--light-cream);
-
+    box-shadow: inset 0 0 0 1px var(--muted-grey), 0 2px 4px rgba(0, 0, 0, 0.08);
     position: relative;
     transition: transform 160ms ease, box-shadow 160ms ease, color 160ms ease, background 160ms ease;
 
