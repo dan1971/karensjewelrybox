@@ -711,8 +711,8 @@ font-weight:normal;
 }
 
 .button-dark-layer:hover{
-  color: var(--muted-brown);
-  text-shadow: 0 0 10px #525151, 0 0 20px #535252;
+  color: var(--muted-grey);
+  text-shadow: 0 0 10px #afadad, 0 0 20px #afadad;
 }
 
 .button-light {
