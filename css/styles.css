@@ -707,22 +707,18 @@ font-weight:normal;
 .collections h2,
 .story h2 {
     margin: 0;
-    font-family: "H1-TitlesOrtica", Georgia, serif;
-    font-weight: 400;
     line-height: 0.94;
     letter-spacing: .5px;
 }
 
 .hero h1 {
     max-width: 520px;
-    font-size: clamp(4.1rem, 8vw, 7rem);
 }
 
 .hero p {
     max-width: 430px;
     margin: 34px 0 0;
     color: var(--muted);
-    font-size: clamp(1.1rem, 2vw, 1.45rem);
     line-height: 1.45;
 }
 
