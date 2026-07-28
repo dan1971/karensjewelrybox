@@ -713,7 +713,8 @@ font-weight:normal;
     background: var(--cream);
     box-shadow: 0 12px 24px rgba(23, 23, 24, 0.3);
     position: relative;
-    transition: color 0.2s ease-in-out;
+    transition: transform 160ms ease, box-shadow 160ms ease, color 160ms ease;
+
 }
 
 .button-dark-layer:hover:{
