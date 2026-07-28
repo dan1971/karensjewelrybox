@@ -718,13 +718,18 @@ font-weight:normal;
 }
 
 .button-dark-layer:hover{
-  color: var(--teal);
+  color: var(--accent);
 }
 
 .button-light {
     min-height: auto;
     font-weight: bold;
     padding: 0;
+     color: var(--dark);
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+.button-light:hover {
     color: var(--accent);
     text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
 }
