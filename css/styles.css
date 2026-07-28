@@ -784,7 +784,7 @@ font-weight:normal;
 
 .button-dark-layer:hover{
 background: var(--light-cream-hover);
-  color: var(--accent);
+  color: var(--dark);
   backdrop-filter: (1.2) drop-shadow(#301934 25px 15px 9px);
 }
 
