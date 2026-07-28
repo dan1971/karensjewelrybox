@@ -674,7 +674,7 @@ font-weight:normal;
     justify-content: center;
     min-height: 54px;
     padding: 0 28px;
-    border-radius: 2px;
+    border-radius:4px;
     font-size: 0.8rem;
     font-weight: 800;
     letter-spacing: 0.16em;
