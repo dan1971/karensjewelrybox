@@ -718,7 +718,7 @@ font-weight:normal;
 }
 
 .button-dark-layer:hover{
-  color: var(--accent);
+  color: var(--teal);
 }
 
 .button-light {
