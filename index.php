@@ -80,7 +80,7 @@
         <section class="story">
             <div class="faded-filter-overlay"></div>
             <div class="story-copy">
-                <h1>Handmade with Love</h1>
+                <h2>Handmade with Love</h2>
                 <p>Each piece in Karen's Jewelry Box is handcrafted in small batches using natural stones, crystals, and
                     metals. My jewelry is inspired by nature, designed to bring beauty, meaning, and joy to your
                     everyday.</p>
