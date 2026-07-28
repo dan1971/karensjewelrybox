@@ -778,7 +778,7 @@ font-weight:normal;
 .button-dark-layer{
     font-family: "H1-TitlesOrtica", Georgia, serif;
     font-size: smaller;
-    font-weight: 800;
+    font-weight: bold;
     color: var(--dark);
     background: var(--cream);
     box-shadow: 0 12px 24px rgba(23, 23, 24, 0.3);
