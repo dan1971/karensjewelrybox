@@ -6,8 +6,8 @@
                 <h1>Handmade with Love</h1>
                 <p>Artisanal jewelry crafted with care, inspired by nature, and made to be uniquely yours.</p>
                 <div class="hero-actions">
-                    <div class="layer" data-text="Shop the Collection">
-                        `<a class="button button-dark"href="collections.php">Shop the Collection</a>
+                    <div class="layered">
+                    <a class="layer button button-dark"  data-text="Shop the Collection" href="collections.php">Shop the Collection</a>
                     </div>
                     <a class="button button-light" href="#">Explore New Arrivals</a>
                 </div>
