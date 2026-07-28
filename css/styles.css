@@ -8,19 +8,12 @@
     --teal: #48c6d4;
     --dark: #232323;
     --shadow: 0 16px 40px rgba(29, 26, 24, 0.12);
+    --light-cream: #fdf6f6;
+    --muted-brown: #a19489;
+    --muted-light-brn:#b5a89e;
+    --muted-grey: #d1d7d6;
+    --lighter-grey: #e2e2e2;
 }
-
-    :root {
-      --primary: #f8f7f4;
-      --secondary: #31302c;
-      --gray-100: #f3f3f3;
-      --gray-200: #e9e9e9;
-      --gray-300: #d1d1d1;
-      --gray-400: #a0a0a0;
-      --gray-500: #6c6c6c;
-      --border-radius: 12px;
-      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
 
 
 * {
