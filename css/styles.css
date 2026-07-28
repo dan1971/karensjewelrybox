@@ -1254,7 +1254,7 @@ aspect-ratio: 0.941;
 }
 
 .badge strong {
-    font-size: medium;
+    font-size: small;
     color:#242424;
     font-weight: 800;
     letter-spacing: 0.16em;
@@ -1262,7 +1262,7 @@ aspect-ratio: 0.941;
 }
 
 .badge span {
-    font-size:small;
+    font-size:smaller;
     margin-top: 4px;
     color: var(--muted);
 }
