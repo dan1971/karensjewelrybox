@@ -722,8 +722,9 @@ font-weight:normal;
   content: attr(data-text);
   color: var(--accent);
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 50%;           /* Moves the top edge to the parent's middle */
+  left: 50%;          /* Moves the left edge to the parent's middle */
+  transform: translate(-50%, -50%); 
   width: 0px;
   overflow: hidden;
   transition: .2s linear width;
