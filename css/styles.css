@@ -14,7 +14,9 @@
     --muted-grey: #d1d7d6;
     --lighter-grey: #e2e2e2;
     --hero-h1-size: clamp(4.1rem, 8vw, 7rem);
+    --hero-p-size: clamp(1.1rem, 2vw, 1.45rem);
     --story-h2-size: calc(var(--hero-h1-size) * 0.618);
+    --story-p-size: calc(var(--hero-p-size) * 0.618);
     font-family: calibri, Arial, sans-serif;
 }
 
