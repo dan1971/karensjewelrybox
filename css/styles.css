@@ -8,7 +8,7 @@
     --teal: #48c6d4;
     --dark: #413f3f;
     --shadow: 0 16px 40px rgba(29, 26, 24, 0.12);
-    --light-cream: #fdf6f6;
+    --light-cream: #fdf6f6b1;
     --muted-brown: #a19489;
     --muted-light-brn:#b5a89e;
     --muted-grey: #d1d7d6;
@@ -770,20 +770,11 @@ font-weight:normal;
         }
 }
 
-/* .button-dark {
-    font-family: "H1-TitlesOrtica", Georgia, serif;
-    font-size: clamp(0.75rem, 1.2vw, 0.8rem);
-    color: #262627;
-    position: relative;
-    background: var(--cream);
-    box-shadow: 0 12px 24px rgba(23, 23, 24, 0.3);
-} */
-
 .button-dark-layer{
     font-family: "H1-TitlesOrtica", Georgia, serif;
     font-weight: bold;
     color: var(--dark);
-    background: var(--cream);
+    background: var(--light-cream);
     box-shadow: 0 12px 24px rgba(23, 23, 24, 0.3);
     position: relative;
     transition: transform 160ms ease, box-shadow 160ms ease, color 160ms ease;
