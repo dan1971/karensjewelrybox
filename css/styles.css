@@ -859,7 +859,6 @@ article.feature p {
     margin: 0 auto;
     max-width: 240px;
     color: var(--muted);
-    font-size: 0.8rem;
     line-height: 1.25;
 }
 
