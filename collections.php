@@ -58,7 +58,7 @@
 
                     <!-- Product 2 -->
                    <div class="product-card">
-                        <div class="product-image" style="background-image: url('images/chime-001.webp')">
+                        <div class="product-image" style="background-image: url('images/chime-002.webp')">
                             <div class="product-label">Bestseller</div>
                             <div class="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
@@ -103,7 +103,7 @@
 
                     <!-- Product 3 -->
                    <div class="product-card">
-                        <div class="product-image" style="background-image: url('images/chime-001.webp')">
+                        <div class="product-image" style="background-image: url('images/chime-003.webp')">
                             <div class="product-label">Bestseller</div>
                             <div class="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
@@ -147,7 +147,7 @@
 
                     <!-- Product 4 -->
                   <div class="product-card">
-                        <div class="product-image" style="background-image: url('images/chime-001.webp')">
+                        <div class="product-image" style="background-image: url('images/chime-004.webp')">
                             <div class="product-label">Bestseller</div>
                             <div class="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
@@ -191,7 +191,7 @@
 
                     <!-- Product 5 -->
                    <div class="product-card">
-                        <div class="product-image" style="background-image: url('images/chime-001.webp')">
+                        <div class="product-image" style="background-image: url('images/chime-005.webp')">
                             <div class="product-label">Bestseller</div>
                             <div class="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
@@ -235,7 +235,7 @@
 
                     <!-- Product 5 -->
                     <div class="product-card">
-                        <div class="product-image" style="background-image: url('images/chime-001.webp')">
+                        <div class="product-image" style="background-image: url('images/chime-006.webp')">
                             <div class="product-label">Bestseller</div>
                             <div class="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
@@ -279,7 +279,7 @@
 
                     <!-- Product 6 -->
                    <div class="product-card">
-                        <div class="product-image" style="background-image: url('images/chime-001.webp')">
+                        <div class="product-image" style="background-image: url('images/chime-007.webp')">
                             <div class="product-label">Bestseller</div>
                             <div class="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
@@ -323,7 +323,7 @@
 
                     <!-- Product 7 -->
                    <div class="product-card">
-                        <div class="product-image" style="background-image: url('images/chime-001.webp')">
+                        <div class="product-image" style="background-image: url('images/chime-008.webp')">
                             <div class="product-label">Bestseller</div>
                             <div class="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
@@ -373,7 +373,7 @@
 
                     <!-- Product 1 -->
 <div class="product-card">
-                        <div class="product-image" style="background-image: url('images/chime-001.webp')">
+                        <div class="product-image" style="background-image: url('images/chime-009.webp')">
                             <div class="product-label">Bestseller</div>
                             <div class="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
