@@ -1318,8 +1318,9 @@ aspect-ratio: 0.941;
         min-height: 620px;
         align-items: start;
         background:
-            linear-gradient(180deg, rgba(255, 252, 247, 0.98) 0%, rgba(255, 252, 247, 0.88) 44%, rgba(255, 252, 247, 0.1) 74%),
+            linear-gradient(160deg, rgba(255, 252, 247, 0.98) 0%, rgba(255, 252, 247, 0.88) 44%, rgba(255, 252, 247, 0.1) 74%),
             url("../images/hero-bg-image-002.webp") center bottom / cover no-repeat;
+            filter: saturate(1.5) contrast(1.1);
     }
 
     .features,
