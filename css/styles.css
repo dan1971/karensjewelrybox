@@ -1291,7 +1291,6 @@ aspect-ratio: 0.941;
     letter-spacing: 2px;
 }
 
-
 .site-footer h1 {
   font-family: "Delius Swash Caps", cursive;
     font-size: 1.5rem;
@@ -1349,19 +1348,7 @@ aspect-ratio: 0.941;
     margin-top: 8px;
 }
 
-/* Responsive footer */
-@media (max-width: 600px) {
-    .footer-content {
-        padding: 0 8px;
-     
-    }
-    .footer-links {
-        gap: 12px;
-    }
-    .footer-logo {
-        font-size: 1.3rem;
-    }
-}
+
 
 @media (max-width: 980px) {
     .site-header {
