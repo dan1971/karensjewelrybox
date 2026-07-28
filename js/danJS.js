@@ -20,7 +20,23 @@ window.addEventListener('DOMContentLoaded', () => {
     initializeWishlistState();
     setupGlobalInteractions();
     setupPurchasePage();
+    setupHeaderScroll();
 });
+
+function setupHeaderScroll() {
+    updateHeaderShrink();
+    window.addEventListener('scroll', updateHeaderShrink, { passive: true });
+}
+
+function updateHeaderShrink() {
+    const header = document.querySelector('.site-header');
+    if (!header) return;
+    if (window.scrollY > 24) {
+        header.classList.add('shrink');
+    } else {
+        header.classList.remove('shrink');
+    }
+}
 
 function getStoredData(key) {
     return JSON.parse(localStorage.getItem(key) || 'null');
