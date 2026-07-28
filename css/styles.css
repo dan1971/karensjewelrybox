@@ -17,7 +17,7 @@
     --hero-p-size: clamp(1.1rem, 2vw, 1.45rem);
     --story-h2-size: calc(var(--hero-h1-size) * 0.618);
     --story-p-size: calc(var(--hero-p-size) * 0.618);
-    font-family: calibri, Arial, sans-serif;
+    font-family: "Montserrat", Arial, sans-serif;
 }
 
 @font-face {
@@ -45,8 +45,10 @@ html { font-size: 16px; }
 
 /* Font Family Setup */
 body {
-  font-family: 'Calibri', sans-serif;
+font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
+  font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
