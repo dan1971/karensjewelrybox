@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <nav class="main-nav links" aria-label="Main navigation">
+        <nav class="main-nav menu-links" aria-label="Main navigation">
             <div class="layer" data-text="Shop"><a href="#">Shop</a></div>
             <div class="layer" data-text="New"><a href="#">New</a></div>
             <div class="layer" data-text="Gift"><a href="#">Gift</a></div>
