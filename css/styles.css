@@ -1306,7 +1306,7 @@ aspect-ratio: 0.941;
     letter-spacing: 0;
 }
 
-.footer-links {
+.footer-menu-links {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
