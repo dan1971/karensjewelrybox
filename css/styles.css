@@ -712,9 +712,8 @@ font-weight:normal;
     font-size: clamp(0.75rem, 1.2vw, 0.8rem);
     color: #262627;
     position: relative;
-    background: var(--cream);
+    /* background: var(--cream); */
     box-shadow: 0 12px 24px rgba(23, 23, 24, 0.3);
-
   white-space: pre;
   position: relative;
 }
