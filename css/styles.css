@@ -713,33 +713,12 @@ font-weight:normal;
     background: var(--cream);
     box-shadow: 0 12px 24px rgba(23, 23, 24, 0.3);
     position: relative;
+    transition: color 0.2s ease-in-out;
 }
 
-.button-dark-layer:after {
-  content: attr(data-text);
+.button-dark-layer:hover:{
   color: var(--accent);
-    font-family: "H1-TitlesOrtica", Georgia, serif;
-    font-size: clamp(0.75rem, 1.2vw, 0.8rem);
-    white-space: pre;
-  position: absolute;
-  top: 50%;           /* Moves the top edge to the parent's middle */
-  left: 50%;          /* Moves the left edge to the parent's middle */
-  transform: translate(-50%, -50%); 
-  width: 0px;
-  overflow: hidden;
-  transition: .2s linear width;
-  -webkit-transition: .2s linear width;
-  -moz-transition: .2s linear width;
-  -o-transition: .2s linear width;
-  -ms-transition: .2s linear width;
 }
-
-.button-dark-layer:hover:after {
-  width: 100%;
-  cursor: pointer;
-}
-
-
 
 .button-light {
     min-height: auto;
