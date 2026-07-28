@@ -780,7 +780,7 @@ font-weight:normal;
     transition: transform 160ms ease, box-shadow 160ms ease, color 160ms ease;
     text-shadow: 0 0 5px #abaaaa, 0 0 10px #abaaaa;
     -webkit-backdrop-filter: blur(10px); /* For Safari support */
-    backdrop-filter: blur(10px);          /* Standard property */
+    backdrop-filter: drop-shadow(#301934 20px 10px 4px);
 
 }
 
