@@ -87,13 +87,21 @@
                 <!-- <img src="./images/logo.png" alt="KAREN Jewelry Logo"> -->
 
             </div>
-            <div class="footer-links">
+            <!-- <div class="footer-links">
                 <a href="#">SHOP</a>
                 <a href="#">NEW</a>
                 <a href="#">GIFTS</a>
                 <a href="collections.php">COLLECTIONS</a>
                 <a href="#">ABOUT ME</a>
-            </div>
+            </div> -->
+            
+        <nav class="main-nav menu-links" aria-label="Main navigation">
+            <div class="layer" data-text="Shop"><a href="#">Shop</a></div>
+            <div class="layer" data-text="New"><a href="#">New</a></div>
+            <div class="layer" data-text="Gift"><a href="#">Gift</a></div>
+            <div class="layer" data-text="Collections"><a href="/collections.php">Collect</a></div>
+            <div class="layer" data-text="About"><a href="#">About</a></div>
+        </nav>
             <div class="footer-social">
                 <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
