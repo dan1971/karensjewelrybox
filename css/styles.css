@@ -6,7 +6,7 @@
     --line: #e2ded6;
     --accent: #c07a57;
     --teal: #48c6d4;
-    --dark: #232323;
+    --dark: #413f3f;
     --shadow: 0 16px 40px rgba(29, 26, 24, 0.12);
     --light-cream: #fdf6f6;
     --muted-brown: #a19489;
@@ -711,7 +711,8 @@ font-weight:normal;
 }
 
 .button-dark-layer:hover{
-  color: var(--accent);
+  color: var(--muted-brown);
+  text-shadow: 0 0 10px #525151, 0 0 20px #535252;
 }
 
 .button-light {
