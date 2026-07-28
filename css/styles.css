@@ -1083,7 +1083,7 @@ aspect-ratio: 0.941;
     margin: 0 0 6px;
     font-family: "H1-TitlesOrtica", Georgia, serif;
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 600;
     transition: 0.5s ease;
     color: var(--muted);
 }
