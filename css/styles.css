@@ -92,7 +92,7 @@ p body, .cg-base {
 }
 
 .button, .cg-medium {
-  font-size: clamp(0.86rem, calc(0.434rem + 1.580vw), 1.57rem);
+  font-size: clamp(0.94rem, calc(0.752rem + 0.790vw), 1.25rem);
 }
 
 small, .cg-small {
