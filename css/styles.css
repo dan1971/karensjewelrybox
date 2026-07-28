@@ -776,7 +776,7 @@ font-weight:normal;
     font-weight: bold;
     color: var(--dark);
     background: var(--light-cream);
-    box-shadow: 0 12px 24px rgba(23, 23, 24, 0.3);
+
     position: relative;
     transition: transform 160ms ease, box-shadow 160ms ease, color 160ms ease, background 160ms ease;
 
