@@ -1262,6 +1262,7 @@ aspect-ratio: 0.941;
 }
 
 .badge span {
+    font-size:medium;
     margin-top: 4px;
     color: var(--muted);
 }
