@@ -630,7 +630,7 @@ font-weight:normal;
     border-bottom: 1px solid var(--line);
     background:
         linear-gradient(115deg, rgba(255, 252, 247, 0.98) 0%, rgba(255, 252, 247, 0.9) 35%, rgba(255, 252, 247, 0.08) 61%),
-        url("../images/hero-bg-image-002.webp") right center / cover no-repeat;
+        url("../images/hero-bg-image-002.webp") right top / cover no-repeat;
         filter: saturate(2) contrast(1.1);
 }
 
@@ -1373,7 +1373,7 @@ aspect-ratio: 0.941;
 .hero {
            background:
             linear-gradient(180deg, rgba(255, 252, 247, 0.98) 0%, rgba(255, 252, 247, 0.88) 44%, rgba(255, 252, 247, 0.1) 74%),
-            url("../images/hero-bg-image-002.webp") -500px 200px / cover no-repeat;
+            url("../images/hero-bg-image-002.webp") -500px 100px / cover no-repeat;
             filter: saturate(1.5) contrast(1.1);
     }
 
