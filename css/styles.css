@@ -782,8 +782,8 @@ font-weight:normal;
 .button-dark-layer{
     font-family: "H1-TitlesOrtica", Georgia, serif;
     font-weight: bold;
-    color: var(--accent);
-    background: var(--cream);
+    color: var(--dark);
+    background: var(--accent);
     box-shadow: 0 12px 24px rgba(23, 23, 24, 0.3);
     position: relative;
     transition: transform 160ms ease, box-shadow 160ms ease, color 160ms ease;
