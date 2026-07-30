@@ -446,6 +446,7 @@ font-weight:normal;
       display: grid;
       margin-bottom: 0px;
       transition: padding 0.3s ease;
+      position:relative
     }
 
     /* .product-info:hover {
