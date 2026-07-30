@@ -8,6 +8,10 @@
 
         <div class="checkout-layout">
             <div class="checkout-left">
+
+                <div class="checkout-main-photo">
+                    <img id="checkout-main-photo-image" src="images/chime-001.webp" alt="Golden Windstone wind chime">
+                </div>
                 <div class="thumb-gallery">
                     <button class="thumb-nav thumb-nav-left" type="button" aria-label="Show previous thumbnails">&#10094;</button>
 
@@ -19,10 +23,6 @@
                     </div>
 
                     <button class="thumb-nav thumb-nav-right" type="button" aria-label="Show next thumbnails">&#10095;</button>
-                </div>
-
-                <div class="checkout-main-photo">
-                    <img id="checkout-main-photo-image" src="images/chime-001.webp" alt="Golden Windstone wind chime">
                 </div>
             </div>
 

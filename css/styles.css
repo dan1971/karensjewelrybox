@@ -992,7 +992,7 @@ background: var(--light-cream-hover);
 
 .checkout-layout {
     display: grid;
-    grid-template-columns: minmax(120px, 1fr) minmax(360px, 2fr) 320px;
+    grid-template-columns: minmax(120px, 1fr) minmax(360px, 3fr) 320px;
     gap: 32px;
     align-items: start;
 }
