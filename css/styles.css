@@ -538,19 +538,19 @@ font-weight:normal;
       right: 8px;
     }
 
-    .add-to-cart:hover {
+    /* .add-to-cart:hover {
       background-color: var(--teal);
       color: var(--ink);
-        product-quick-view &{ 
+        product-quick-view & { 
             color: var(--cream); 
             background-color:var(--teal);
       }
-    }
+    } */
 
-  /* .product-card:has(.add-to-cart:hover) .product-quick-view { 
-    color: var(--cream); 
-    background-color:var(--secondary);
-  } */
+  .product-card:has(.add-to-cart:hover) .product-quick-view { 
+    color: var(--ink); 
+    background-color:var(--teal);
+  }
     .add-to-cart:active {
       transform: scale(0.95);
     }
