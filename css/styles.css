@@ -533,8 +533,8 @@ font-weight:normal;
       transition: var(--transition);
       opacity: 0.9;
       position:absolute;
-      bottom:61px;
-      right: 12px;
+      top:-43px;
+      right: 8px;
     }
 
     .add-to-cart:hover {
