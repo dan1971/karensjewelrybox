@@ -992,7 +992,7 @@ background: var(--light-cream-hover);
 
 .checkout-layout {
     display: grid;
-    grid-template-columns: minmax(120px, 1fr) minmax(360px, 1.5fr) 320px;
+    grid-template-columns: minmax(120px, 1fr) minmax(360px, 2fr) 320px;
     gap: 32px;
     align-items: start;
 }
@@ -1268,7 +1268,7 @@ background: var(--light-cream-hover);
 
 @media (max-width: 1100px) {
     .checkout-layout {
-        grid-template-columns: 1.2fr 1fr;
+        grid-template-columns: 1fr 2fr;
     }
 
     .checkout-summary {
