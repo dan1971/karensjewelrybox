@@ -440,6 +440,7 @@ font-weight:normal;
     }
 
     .product-info {
+        position: relative;
         background-color: #ffffff;
       padding: 16px 16px 16px 16px;
       flex-grow: 1;
@@ -456,7 +457,7 @@ font-weight:normal;
         transform: scaleX(-1);
        }
     }
-
+ 
 
    .add-to-cart > svg {
         pointer-events: none; 
@@ -536,6 +537,9 @@ font-weight:normal;
     transition: transform 1s;
       transition: var(--transition);
       opacity: 0.9;
+      position: absolute;
+      top: -15px;
+      right: 10px;
     }
 
     .add-to-cart:hover {
