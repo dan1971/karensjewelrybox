@@ -334,7 +334,7 @@ font-weight:normal;
       border-radius: var(--border-radius);
       overflow: hidden;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-      transition: var(--transition);
+      transition: var(--bounce);
       position: relative;
       height: 350px;
       display: flex;
@@ -380,7 +380,7 @@ font-weight:normal;
       inset: 0;
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.1) 100%);
       opacity: 0;
-      transition: var(--transition);
+      transition: var(--bounce);
       backdrop-filter:brightness(1.1);
     }
 
@@ -418,7 +418,7 @@ font-weight:normal;
       cursor: pointer;
       opacity: 1;
       transform: translateY(5px);
-      transition: var(--transition);
+      transition: var(--bounce);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       z-index: 99;
     }
@@ -585,7 +585,6 @@ font-weight:normal;
       white-space: nowrap;
       opacity: 0;
       transform: translateY(5px);
-      transition: var(--transition);
       pointer-events: none;
       margin-bottom: 8px;
     }
@@ -612,8 +611,7 @@ font-weight:normal;
       padding: 10px;
       font-weight: 500;
       font-size: 16px;
-      transform: translateY(100%);
-      transition: var(--transition);
+      transition: var(--bounce);
       cursor: pointer;
     }
 
@@ -632,7 +630,7 @@ font-weight:normal;
       gap: 10px;
       transform: translateY(100px);
       opacity: 0;
-      transition: var(--transition);
+      transition: var(--bounce-linear);
       z-index: 10;
       max-width: 300px;
     }
