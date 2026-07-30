@@ -440,7 +440,6 @@ font-weight:normal;
     }
 
     .product-info {
-        position: relative;
         background-color: #ffffff;
       padding: 16px 16px 16px 16px;
       flex-grow: 1;
@@ -449,15 +448,11 @@ font-weight:normal;
       transition: padding 0.3s ease;
     }
 
-    .product-info:hover {
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    padding: 16px 16px 45px 16px;
-      & .add-to-cart {
-      background-color: #efc96f;
-        transform: scaleX(-1);
-       }
+    /* .product-info:hover {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        padding: 16px 16px 45px 16px;
     }
- 
+   */
 
    .add-to-cart > svg {
         pointer-events: none; 
@@ -537,14 +532,15 @@ font-weight:normal;
     transition: transform 1s;
       transition: var(--transition);
       opacity: 0.9;
-      position: absolute;
-      top: -15px;
-      right: 10px;
     }
 
     .add-to-cart:hover {
-      background-color: #efc96f;
+      background-color: #8f8a82;;
       color: var(--cream);
+      .product-quick-view {
+            background-color:#8f8a82;
+            color: var(--cream);
+        }
     }
 
   .product-card:has(.add-to-cart:hover) .product-quick-view { color: var(--cream); }
@@ -579,14 +575,9 @@ font-weight:normal;
       border-color: var(--secondary) transparent transparent transparent;
     }
 
-    .add-to-cart:hover + .cart-tooltip {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
     .product-quick-view {
       position: absolute;
-      bottom: 0;
+      bottom: 41px;
       left: 0;
       right: 0;
       /* background-color: rgba(49, 48, 44, 0.9); */
@@ -602,11 +593,14 @@ font-weight:normal;
     }
 
     .product-quick-view:hover {
-        color: var(--cream)
-    }
-
-    .product-card:hover .product-quick-view {
-      transform: translateY(0);
+        bottom: 42px;
+        color: var(--cream);
+        background-color: #8f8a82;
+        .add-to-cart {
+            background-color:#8f8a82;
+            color: var(--cream);
+            transform: scaleX(-1);
+        }
     }
 
     .cart-notification {
