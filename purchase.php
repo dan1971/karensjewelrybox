@@ -20,30 +20,6 @@
                 </div>
             </div>
 
-            <section class="checkout-details">
-                <p class="product-category">Wind Chimes</p>
-                <h1 class="product-title">Golden Windstone</h1>
-                <p class="product-description">A bestselling wind chime finished in warm gold tones, perfect for adding gentle sound and elegant movement to any outdoor space.</p>
-
-                <div class="product-info-summary">
-                    <p><strong>Unit Price:</strong> <span id="unit-price">$155</span> <small class="original-price">$119</small></p>
-                    <p><strong>Total:</strong> <span id="order-total">$155</span></p>
-                    <p>Get Fast, Free Shipping with Amazon Prime • FREE Returns</p>
-                    <p><strong>Collection:</strong> Wind Chimes</p>
-                </div>
-
-                <div class="product-features">
-                    <h3>About this item</h3>
-                    <ul>
-                        <li>Bestseller in the Wind Chimes collection with a rich Golden Windstone finish.</li>
-                        <li>Handcrafted design that offers soothing chime tones for outdoor living spaces.</li>
-                        <li>High-quality construction with careful attention to sound and durability.</li>
-                        <li>Perfect gift for home decor, patio, garden, or porch accents.</li>
-                        <li>Highly rated item with 57 reviews from happy customers.</li>
-                    </ul>
-                </div>
-            </section>
-
             <div class="checkout-details">
                 <p class="product-category">Wind Chimes</p>
                 <h1 class="product-title">Golden Windstone</h1>
