@@ -358,17 +358,7 @@ font-weight:normal;
   animation: rotation_9018 3000ms infinite linear;
   animation-play-state: paused;
     }
-    .product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-      & .product-info {
-        padding: 16px 16px 45px 16px;
-      }
-      & .add-to-cart {
-      background-color: #efc96f;
-        transform: scaleX(-1);
-       }
-    }
+
 
     .product-image {
       height: 450px;
@@ -457,6 +447,16 @@ font-weight:normal;
       margin-bottom: 0px;
       transition: padding 0.3s ease;
     }
+
+    .product-info:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 16px 16px 45px 16px;
+      & .add-to-cart {
+      background-color: #efc96f;
+        transform: scaleX(-1);
+       }
+    }
+
 
    .add-to-cart > svg {
         pointer-events: none; 
