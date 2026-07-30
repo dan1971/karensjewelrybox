@@ -444,7 +444,7 @@ font-weight:normal;
       padding: 16px 16px 16px 16px;
       flex-grow: 1;
       display: grid;
-      margin-bottom: 0px;
+      margin-bottom: 36px;
       transition: padding 0.3s ease;
       position:relative
     }
@@ -539,7 +539,7 @@ font-weight:normal;
     }
 
     .add-to-cart:hover {
-      background-color: #8f8a82;;
+      background-color: #8f8a82;
       color: var(--cream);
       .product-quick-view {
             background-color:#8f8a82;
