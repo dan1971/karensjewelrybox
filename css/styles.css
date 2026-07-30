@@ -1079,7 +1079,7 @@ background: var(--light-cream-hover);
 }
 
 .checkout-main-photo img {
-    width: 80%;
+    width: 100%;
     display: block;
 }
 
