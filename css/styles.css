@@ -439,7 +439,7 @@ font-weight:normal;
 
     .wishheart {
         fill: var(--cream);
-        stroke: var(--gray-400);
+        stroke: var(--ink);
         stroke-width: 2px;
         z-index: 100;
     }
@@ -522,7 +522,7 @@ font-weight:normal;
     }
 
     .add-to-cart {
-      background-color: var(--gray-200);
+      background-color: #efc96f;
       color: var(--secondary);
       border: none;
       border-radius: 50%;
@@ -539,7 +539,7 @@ font-weight:normal;
     }
 
     .add-to-cart:hover {
-      background-color: var(--secondary);
+      background-color: #efc96f;
       color: var(--cream);
     }
 
