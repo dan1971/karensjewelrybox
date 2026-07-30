@@ -530,7 +530,7 @@ font-weight:normal;
       justify-content: center;
       cursor: pointer;
     transform: scale(1);
-    transition: transform 1s ease, background-color 0.3s ease, color 0.3s ease;
+    transition: transform 0.3s linear, background-color 0.3s linear, color 0.3s linear;
       opacity: 0.9;
       position:absolute;
       top:-43px;
@@ -554,7 +554,7 @@ font-weight:normal;
   .product-card:has(.add-to-cart:hover) .add-to-cart {
     background-color: #8f8a82;
     color: var(--cream);
-    transform: scale(1.25);
+    transform: scale(1.2);
   }
 
   .product-card:has(.product-quick-view:hover) .product-quick-view {
@@ -565,11 +565,11 @@ font-weight:normal;
   .product-card:has(.product-quick-view:hover) .add-to-cart {
     background-color: #8f8a82;
     color: var(--cream);
-      transform: scale(1.25);
+      transform: scale(1.2);
   }
 
     .add-to-cart:active {
-      transform: scale(0.95);
+      transform: scale(0.9);
     }
 
     .cart-tooltip {
