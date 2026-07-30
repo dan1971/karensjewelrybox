@@ -529,7 +529,7 @@ font-weight:normal;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-    transform: scaleX(1);
+    transform: scale(1, 1);
     transition: transform 1s ease, background-color 0.3s ease, color 0.3s ease;
       opacity: 0.9;
       position:absolute;
@@ -554,7 +554,7 @@ font-weight:normal;
   .product-card:has(.add-to-cart:hover) .add-to-cart {
     background-color: #8f8a82;
     color: var(--cream);
-    transform: scaleX(-1);
+    transform: scaleX(1.25, 1.25);
   }
 
   .product-card:has(.product-quick-view:hover) .product-quick-view {
@@ -565,7 +565,7 @@ font-weight:normal;
   .product-card:has(.product-quick-view:hover) .add-to-cart {
     background-color: #8f8a82;
     color: var(--cream);
-    transform: scaleX(-1);
+    transform: scaleX(1.25, 1.25);
   }
 
     .add-to-cart:active {
@@ -616,16 +616,7 @@ font-weight:normal;
       cursor: pointer;
     }
 
-    .product-quick-view:hover {
-        bottom: 42px;
-        color: var(--cream);
-        background-color: #8f8a82;
-        .add-to-cart {
-            background-color:#8f8a82;
-            color: var(--cream);
-            transform: scaleX(-1);
-        }
-    }
+
 
     .cart-notification {
       position: fixed;
