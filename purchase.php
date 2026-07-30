@@ -8,15 +8,21 @@
 
         <div class="checkout-layout">
             <div class="checkout-left">
-                <div class="checkout-thumbs" aria-label="Product thumbnails">
-                    <button class="thumb-item" type="button"><img src="images/chime-001.webp" alt="Golden Windstone wind chime"></button>
-                    <button class="thumb-item" type="button"><img src="images/collections-card-chimes.png" alt="Wind chime detail"></button>
-                    <button class="thumb-item" type="button"><img src="images/collections-card-new.webp" alt="Alternate product view"></button>
-                    <button class="thumb-item" type="button"><img src="images/collections-card-rings.webp" alt="Related product option"></button>
+                <div class="thumb-gallery">
+                    <button class="thumb-nav thumb-nav-left" type="button" aria-label="Show previous thumbnails">&#10094;</button>
+
+                    <div class="checkout-thumbs" aria-label="Product thumbnails">
+                        <button class="thumb-item is-active" type="button" data-image="images/chime-001.webp" data-alt="Golden Windstone wind chime"><img src="images/chime-001.webp" alt="Golden Windstone wind chime"></button>
+                        <button class="thumb-item" type="button" data-image="images/collections-card-chimes.png" data-alt="Wind chime detail"><img src="images/collections-card-chimes.png" alt="Wind chime detail"></button>
+                        <button class="thumb-item" type="button" data-image="images/collections-card-new.webp" data-alt="Alternate product view"><img src="images/collections-card-new.webp" alt="Alternate product view"></button>
+                        <button class="thumb-item" type="button" data-image="images/collections-card-rings.webp" data-alt="Related product option"><img src="images/collections-card-rings.webp" alt="Related product option"></button>
+                    </div>
+
+                    <button class="thumb-nav thumb-nav-right" type="button" aria-label="Show next thumbnails">&#10095;</button>
                 </div>
 
                 <div class="checkout-main-photo">
-                    <img src="images/chime-001.webp" alt="Golden Windstone wind chime">
+                    <img id="checkout-main-photo-image" src="images/chime-001.webp" alt="Golden Windstone wind chime">
                 </div>
             </div>
 
@@ -99,6 +105,49 @@
         </div>
     </main>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const gallery = document.querySelector('.thumb-gallery');
+    if (!gallery) return;
+
+    const track = gallery.querySelector('.checkout-thumbs');
+    const thumbs = Array.from(gallery.querySelectorAll('.thumb-item'));
+    const prevButton = gallery.querySelector('.thumb-nav-left');
+    const nextButton = gallery.querySelector('.thumb-nav-right');
+    const mainImage = document.getElementById('checkout-main-photo-image');
+
+    if (!track || !thumbs.length || !mainImage) return;
+
+    const setActiveThumb = (activeThumb) => {
+        thumbs.forEach((thumb) => thumb.classList.toggle('is-active', thumb === activeThumb));
+        if (activeThumb) {
+            const imageSrc = activeThumb.dataset.image || activeThumb.querySelector('img')?.getAttribute('src');
+            const imageAlt = activeThumb.dataset.alt || activeThumb.querySelector('img')?.getAttribute('alt') || '';
+            mainImage.setAttribute('src', imageSrc);
+            mainImage.setAttribute('alt', imageAlt);
+        }
+    };
+
+    thumbs.forEach((thumb) => {
+        thumb.addEventListener('click', () => setActiveThumb(thumb));
+    });
+
+    const scrollToThumb = (direction) => {
+        const currentIndex = thumbs.findIndex((thumb) => thumb.classList.contains('is-active'));
+        const nextIndex = direction === 'next'
+            ? Math.min(currentIndex + 1, thumbs.length - 1)
+            : Math.max(currentIndex - 1, 0);
+
+        const nextThumb = thumbs[nextIndex];
+        setActiveThumb(nextThumb);
+        nextThumb.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    };
+
+    prevButton?.addEventListener('click', () => scrollToThumb('prev'));
+    nextButton?.addEventListener('click', () => scrollToThumb('next'));
+});
+</script>
 
 <?php footer(); ?>
 <?php flush(); ?>
