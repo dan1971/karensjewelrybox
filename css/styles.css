@@ -539,8 +539,8 @@ font-weight:normal;
     }
 
     .add-to-cart:hover {
-      background-color: var(--muted);
-      color: var(--cream);
+      background-color: var(--teal);
+      color: var(--ink);
     }
 
   /* .product-card:has(.add-to-cart:hover) .product-quick-view { 
