@@ -1,10 +1,13 @@
 
 
 const words = ["Sugar", "Buddy", "Chimera", "Shrimps", "Lollypop", "Bubbles", "Twinkle", "Sparkle", "Doodle", "Noodle", "Wiggle", "Jellybean"];
+const wordPulled = [];
 const el = document.querySelector(".product-grid");
 for (const child of el.children) {
     const randomWord = words[Math.floor(Math.random() * words.length)];
- child.setAttribute("data-word", randomWord);
+    wordPulled.push(words.indexOf(randomWord));
+    child.setAttribute("data-word", randomWord);
+    console.log("Assigned word " + wordPulled);
 }
 
 const storageKeys = {
