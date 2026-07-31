@@ -1,7 +1,7 @@
 
 
 const words = ["Sugar", "Buddy", "Chimera", "Shrimps", "Lollypop", "Bubbles", "Twinkle", "Sparkle", "Doodle", "Noodle", "Wiggle", "Jellybean"];
-const el = document.querySelector(".product-card");
+const el = document.querySelector(".product-grid");
 const randomWord = words[Math.floor(Math.random() * words.length)];
 for (const child of el.children) {
   console.log(child); // Access each child element here
