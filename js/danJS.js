@@ -1,7 +1,7 @@
 
 
 const words = ["Sugar", "Buddy", "Chimera", "Shrimps", "Lollypop", "Bubbles", "Twinkle", "Sparkle", "Doodle", "Noodle", "Wiggle", "Jellybean", "Snickerdoodle", "Pudding", "Cupcake", "Marshmallow", "Sprinkles", "Fizzle", "Giggles", "Bumblebee"];
-const el = document.querySelector(".product-label");
+const el = document.querySelector(".product-card");
 const randomWord = words[Math.floor(Math.random() * words.length)];
 el.setAttribute("data-word", randomWord);
 
