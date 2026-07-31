@@ -351,6 +351,7 @@ font-weight:normal;
         opacity: 0;
         transform: translateX(-50%); 
       transition: var(--transition);
+      pointer-events: none;
     }
 
   .product-card::before {
