@@ -595,6 +595,11 @@ font-weight:normal;
       cursor: pointer;
     }
 
+    .product-quick-view:hover {
+      background-color: var(--teal);
+      color: var(--ink);
+    }
+
     .product-card:has(.product-quick-view:hover) .add-to-cart { 
         color: var(--ink); 
         background-color:var(--teal);
