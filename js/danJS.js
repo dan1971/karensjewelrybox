@@ -4,7 +4,7 @@ const words = ["Sugar", "Buddy", "Chimera", "Shrimps", "Lollypop", "Bubbles", "T
 const el = document.querySelector(".product-grid");
 const randomWord = words[Math.floor(Math.random() * words.length)];
 for (const child of el.children) {
-  console.log(child); // Access each child element here
+ child.setAttribute("data-word", randomWord);
 }
 
 const storageKeys = {
