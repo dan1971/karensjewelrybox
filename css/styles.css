@@ -600,6 +600,11 @@ font-weight:normal;
       cursor: pointer;
     }
 
+      .product-card:has(.product-quick-view:hover) .add-to-cart { 
+    color: var(--cream); 
+    background-color:var(--secondary);
+  }
+  
     .product-quick-view:hover {
         bottom: 42px;
         color: var(--cream);
