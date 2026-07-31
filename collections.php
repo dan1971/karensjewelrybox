@@ -12,7 +12,7 @@
                 </div>
                 <div class="product-grid">
                     <!-- Product 1 -->
-                    <div class="product-card">
+                    <div class="product-card" data-word="">
                         <div class="product-label">Bestseller</div>
                         <div class="product-image" style="background-image: url('images/chime-001.webp')">
                             
@@ -58,7 +58,7 @@
 
 
                     <!-- Product 2 -->
-                   <div class="product-card">
+                   <div class="product-card" data-word="">
                             <div class="product-label">Bestseller</div>
 
                         <div class="product-image" style="background-image: url('images/chime-002.webp')">
@@ -104,7 +104,7 @@
 
 
                     <!-- Product 3 -->
-                   <div class="product-card">
+                   <div class="product-card" data-word="">
                     <div class="product-label">Bestseller</div>
                         <div class="product-image" style="background-image: url('images/chime-003.webp')">
                             
@@ -149,7 +149,7 @@
                     </div>
 
                     <!-- Product 4 -->
-                  <div class="product-card">
+                  <div class="product-card" data-word="">
                     <div class="product-label">Bestseller</div>
                         <div class="product-image" style="background-image: url('images/chime-004.webp')">
                             
@@ -194,7 +194,7 @@
                     </div>
 
                     <!-- Product 5 -->
-                   <div class="product-card">
+                   <div class="product-card" data-word="">
                     <div class="product-label">Bestseller</div>
                         <div class="product-image" style="background-image: url('images/chime-005.webp')">
                             
@@ -239,7 +239,7 @@
                     </div>
 
                     <!-- Product 5 -->
-                    <div class="product-card">
+                    <div class="product-card" data-word="">
                         <div class="product-label">Bestseller</div>
                         <div class="product-image" style="background-image: url('images/chime-006.webp')">
                             
@@ -284,7 +284,7 @@
                     </div>
 
                     <!-- Product 6 -->
-                   <div class="product-card">
+                   <div class="product-card" data-word="">
                     <div class="product-label">Bestseller</div>
                         <div class="product-image" style="background-image: url('images/chime-007.webp')">
                            
@@ -329,7 +329,7 @@
                     </div>
 
                     <!-- Product 7 -->
-                   <div class="product-card">
+                   <div class="product-card" data-word="">
                      <div class="product-label">Bestseller</div>
                         <div class="product-image" style="background-image: url('images/chime-008.webp')">
                            
@@ -380,7 +380,7 @@
                 <div class="product-grid">
 
                     <!-- Product 1 -->
-                <div class="product-card">
+                <div class="product-card" data-word="">
                     <div class="product-label">Bestseller</div>
                         <div class="product-image" style="background-image: url('images/chime-009.webp')">
                             
@@ -426,7 +426,7 @@
 
 
                     <!-- Product 2 -->
-<div class="product-card">
+<div class="product-card" data-word="">
     <div class="product-label">Bestseller</div>
                         <div class="product-image" style="background-image: url('images/chime-010.webp')">
                             
@@ -472,7 +472,7 @@
 
 
                     <!-- Product 3 -->
-    <div class="product-card">
+    <div class="product-card" data-word="">
                         <div class="product-image" style="background-image: url('images/chime-011.webp')">
                             <div class="product-label">Bestseller</div>
                             <div class="product-wishlist">

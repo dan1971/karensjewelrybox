@@ -341,7 +341,7 @@ font-weight:normal;
     }
 
     .product-card::after {
-      content: 'Hello World';
+      content: attr(data-word);
         font-family: 'Delius Swash Caps', sans-serif;
         color:#00eaff;
         position: absolute;

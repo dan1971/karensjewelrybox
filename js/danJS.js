@@ -1,3 +1,10 @@
+
+
+const words = ["Sugar", "Buddy", "Chimera", "Shrimps", "Lollypop", "Bubbles", "Twinkle", "Sparkle", "Doodle", "Noodle", "Wiggle", "Jellybean", "Snickerdoodle", "Pudding", "Cupcake", "Marshmallow", "Sprinkles", "Fizzle", "Giggles", "Bumblebee"];
+const el = document.querySelector(".product-label");
+const randomWord = words[Math.floor(Math.random() * words.length)];
+el.setAttribute("data-word", randomWord);
+
 const storageKeys = {
     cart: 'kjb_cart',
     wishlist: 'kjb_wishlist'
