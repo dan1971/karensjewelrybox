@@ -346,8 +346,9 @@ font-weight:normal;
         font-family: 'Delius Swash Caps', sans-serif;
         color:#00eaff;
         position: absolute;
-        bottom:0;
+        bottom: 10px;
         left: 50%;
+        opacity: 0;
         transform: translateX(-50%); 
       transition: var(--transition);
     }
@@ -554,11 +555,17 @@ font-weight:normal;
       color: var(--ink);
     }
 
+  .product-card:has(.add-to-cart:hover).product-card::after {    
+    opacity: 1; 
+   
+  }
+
   .product-card:has(.add-to-cart:hover) .product-quick-view { 
     color: var(--ink); 
     background-color:var(--teal);
     transform: scaleY(-1);
   }
+  
     .add-to-cart:active {
       transform: scale(0.95);
     }
