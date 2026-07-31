@@ -1310,6 +1310,7 @@ background: var(--light-cream-hover);
         display: flex;
         gap: 12px;
         overflow-x: auto;
+}
 
 .checkout-thumb {
     border-radius: 18px;
