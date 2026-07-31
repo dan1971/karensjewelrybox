@@ -540,7 +540,7 @@ font-weight:normal;
 
     .add-to-cart:hover {
      background-color:var(--teal);
-      color: var(--cream);
+      color: var(--ink);
     }
 
   .product-card:has(.add-to-cart:hover) .product-quick-view { 
