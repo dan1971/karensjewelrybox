@@ -546,7 +546,7 @@ font-weight:normal;
   .product-card:has(.add-to-cart:hover) .product-quick-view { 
     color: var(--ink); 
     background-color:var(--teal);
-    transform: scaleX(-1);
+    transform: scaleY(-1);
   }
     .add-to-cart:active {
       transform: scale(0.95);
@@ -592,7 +592,7 @@ font-weight:normal;
       font-weight: 500;
       font-size: 16px;
       transform: translateY(100%);
-      transform: scaleX(1);
+      transform: scaleY(1);
       transition: var(--transition);
       cursor: pointer;
     }
