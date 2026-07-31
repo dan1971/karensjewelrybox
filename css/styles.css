@@ -587,7 +587,7 @@ font-weight:normal;
   .product-card:has(.add-to-cart:hover) .product-quick-view { 
     color: var(--ink); 
     background-color:var(--teal);
-    transform: scaleY(-1);
+    transform: scaleY(-.5);
   }
   
     .add-to-cart:active {
@@ -1345,9 +1345,10 @@ background: var(--light-cream-hover);
     .checkout-page {
         padding: 32px 18px;
     }
+
 }
-    align-items: start;
-}
+    
+
 
 .checkout-visual {
     display: grid;
