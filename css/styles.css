@@ -407,7 +407,7 @@ font-weight:normal;
   font-weight: bold;
   color: #fff;
   z-index: 100;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.05em;
 }
 .product-label {
   --f: .5em; /* control the folded part */
