@@ -533,7 +533,6 @@ font-weight:normal;
     transform: scaleX(1);
     transition: transform 1s;
       transition: var(--transition);
-      opacity: 0.9;
       position:absolute;
       top:-43px;
       right: 8px;
