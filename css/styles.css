@@ -403,10 +403,11 @@ font-weight:normal;
 
 /* HTML: <div class="ribbon">Your text content</div> */
 .product-label {
-  font-size: 28px;
+  font-size: 12px;
   font-weight: bold;
   color: #fff;
   z-index: 100;
+  letter-spacing: 0.5em;
 }
 .product-label {
   --f: .5em; /* control the folded part */
