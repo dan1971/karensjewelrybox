@@ -341,6 +341,14 @@ font-weight:normal;
       flex-direction: column;
     }
 
+    .product-card::after {
+      content: 'Hello World';
+      position: absolute;
+    bottom:0;
+    left:0;
+      transition: var(--transition);
+    }
+
   .product-card::before {
   opacity: 0;
   content: " ";
