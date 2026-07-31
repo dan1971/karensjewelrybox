@@ -539,7 +539,7 @@ font-weight:normal;
     }
 
     .add-to-cart:hover {
-      background-color: #8f8a82;
+     background-color:var(--teal);
       color: var(--cream);
     }
 
