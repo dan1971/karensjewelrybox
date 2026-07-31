@@ -604,7 +604,7 @@ font-weight:normal;
         bottom: 42px;
         color: var(--cream);
         background-color: #8f8a82;
-        .add-to-cart {
+        .add-to-cart &{
             background-color:#8f8a82;
             color: var(--cream);
             transform: scaleX(-1);
