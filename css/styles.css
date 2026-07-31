@@ -19,6 +19,7 @@
     --story-h2-size: calc(var(--hero-h1-size) * 0.618);
     --story-p-size: calc(var(--hero-p-size) * 0.618);
     font-family: "Montserrat", Arial, sans-serif;
+    --transition: all 0.2s ease-in-out;
 }
 
 @font-face {
@@ -371,7 +372,7 @@ font-weight:normal;
       position: relative;
       overflow: hidden;
       backdrop-filter:brightness(1);
-    }
+    }ans
 
     .product-image::after {
       content: '';
