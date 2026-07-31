@@ -332,7 +332,6 @@ font-weight:normal;
     .product-card {
       background-color: rgb(0, 0, 0);
       border-radius: var(--border-radius);
-      overflow: hidden;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
       transition: var(--transition);
       position: relative;
