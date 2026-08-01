@@ -732,7 +732,7 @@ font-weight:normal;
 
     .cart-badge {
         position: absolute;
-        top: -8px;
+        top: 25%;
         left: 50%;
         width: 16px;
         height: 16px;
@@ -743,7 +743,7 @@ font-weight:normal;
         font-size: 21px;
         line-height: 1;
         opacity: 1;
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(-25%);
         transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
