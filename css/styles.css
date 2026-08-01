@@ -1008,19 +1008,17 @@ font-weight:normal;
     font-family: "H1-TitlesOrtica", Georgia, serif;
     font-weight: bold;
     color: var(--dark);
-    background: var(--light-cream);
+    background: #48c6d4;
     box-shadow: inset 0 0 0 1px var(--muted-grey), 0 2px 4px rgba(0, 0, 0, 0.08);
     position: relative;
-    backdrop-filter: saturate(2.2);
-    transition: transform 160ms ease, box-shadow 160ms ease, color 160ms ease, background 160ms ease, backdrop-filter 160ms ease;
+    transition: transform 160ms ease, box-shadow 160ms ease, color 160ms ease, background 160ms ease;
 
 }
 
 .button-dark-layer:hover{
-background: var(--light-cream-hover);
+background: #8bd7e0;
   color: var(--dark);
   box-shadow: inset 0 0 0 .0px var(--muted-grey), 0 0px 0px rgba(0, 0, 0, 0.00);
-  backdrop-filter: saturate(1.2);
 }
 
 .button-light {
