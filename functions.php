@@ -59,7 +59,6 @@
                     </g>
                 </svg>
                 <span class="cart-badge" aria-hidden="true">♦</span>
-                CART
             </a>
         </div>
         <!-- <span aria-hidden="true">Cart</span> -->

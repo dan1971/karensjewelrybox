@@ -175,7 +175,7 @@ img {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 20px;
+    max-width: 40px;
     transform: scaleX(1);
     transition: transform .3s;
     color:#48c6d4
