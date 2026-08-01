@@ -743,7 +743,6 @@ font-weight:normal;
         color: #fff;
         font-size: 10px;
         line-height: 1;
-        border-radius: 50%;
         box-shadow: 0 0 0 2px #fff;
         opacity: 0;
         transition: opacity 0.2s ease, transform 0.2s ease;
