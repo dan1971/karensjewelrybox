@@ -175,7 +175,7 @@ img {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 40px;
+    max-width: 35px;
     transform: scaleX(1);
     transition: transform .3s;
     color:#48c6d4
@@ -886,7 +886,7 @@ font-weight:normal;
 .st1, .st2 {
         fill:#48c6d4;
         stroke: #48c6d4;
-        stroke-width: 5px; 
+        stroke-width: 3px; 
         stroke-miterlimit: 10;
 }   
 
