@@ -739,12 +739,11 @@ font-weight:normal;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        background: var(--accent);
         color: #fff;
         font-size: 10px;
         line-height: 1;
-        box-shadow: 0 0 0 2px #fff;
         opacity: 0;
+        transform: translateX(50%);
         transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
