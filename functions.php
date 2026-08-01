@@ -33,8 +33,7 @@
             <div class="layer" data-text="Gift"><a href="#">Gift</a></div>
             <div class="layer" data-text="Collections"><a href="/collections.php">Collect</a></div>
             <div class="layer" data-text="About"><a href="#">About</a></div>
-        </nav>
-        <div class="cart-icons">
+                    <div class="cart-icons">
             <a class="cart-link links" href="#" aria-label="View cart"></a>
             <!-- Removed SEARCH menu item -->
             <!-- <a href="#"><span class="icon-account"></span>ACCOUNT</a> -->
@@ -61,6 +60,8 @@
                 <span class="cart-badge" aria-hidden="true">♦</span>
             </a>
         </div>
+        </nav>
+
         <!-- <span aria-hidden="true">Cart</span> -->
     </header>
     <?php } ?>
