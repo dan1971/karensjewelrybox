@@ -732,7 +732,7 @@ font-weight:normal;
 
     .cart-badge {
         position: absolute;
-        top: 25%;
+        top: -72%;
         left: 50%;
         width: 16px;
         height: 16px;
@@ -740,17 +740,27 @@ font-weight:normal;
         align-items: center;
         justify-content: center;
         color: #fff;
-        font-size: 21px;
+        font-size: 18px;
         line-height: 1;
         opacity: 1;
-        transform: translateX(-50%) translateY(-25%);
+        transform: translateX(-50%);
         transition: opacity 0.2s ease, transform 0.2s ease;
+        animation: cart-full .05s ease-out forwards;
     }
 
     .cart-badge.active {
         opacity: 1;
-        transform: translateY(-1px);
+        transform: translateY(-72%);
     }
+
+    @keyframes cart-full {
+        0% {
+            transform: translateY(-72%);
+        }
+        100% {
+         transform: translateY(0%);
+        }  
+        }
 
     .cart-overlay {
         position: fixed;
