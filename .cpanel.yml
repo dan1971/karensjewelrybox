@@ -11,3 +11,4 @@ deployment:
     - /bin/cp  index.php $DEPLOYPATH
     - /bin/cp  collections.php $DEPLOYPATH
     - /bin/cp  purchase.php $DEPLOYPATH
+    - /bin/cp  cart.php $DEPLOYPATH
