@@ -98,6 +98,7 @@ function renderCartBadge() {
     const badge = document.querySelector(selectors.cartBadge);
     if (!badge) return;
     const itemCount = getCart().reduce((sum, item) => sum + item.quantity, 0);
+    console.log('Cart item count:', itemCount);
     if (itemCount > 0) {
         badge.classList.add('active');
     } else {
