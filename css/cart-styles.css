@@ -51,7 +51,7 @@
         font-size: 16px;
         line-height: 1;
         opacity: 0;
-        transform: translateX(-50%) translateY(-46%);
+        transform: transform: translate(-48%, 9%);
         transition: opacity 0.2s ease, transform 0.2s ease-out forwards;
         /* animation: cart-full .05s ease-out forwards;
         animation-delay: 0.5s; */
@@ -59,9 +59,19 @@
 
     .cart-badge.active {
     opacity: 1;
-    transform: translate(-48%, 9%);
     font-size: 17px;
+    animation: cart-full-animate 0.2s ease-out forwards;
+    animation-delay: 0.1s;
     }
+
+@keyframes cart-full-animate {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(9%);
+  }
+}
 
 .cart-content {
     display: grid;
