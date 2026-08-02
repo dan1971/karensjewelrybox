@@ -262,13 +262,6 @@ font-size: clamp(0.64rem, calc(0.421rem + 1.264vw), 1.00rem);
     gap: clamp(24px, 4vw, 52px);
 }
 
-/* .main-nav a:hover,
-.cart-link:hover {
-    color: #fff;
-} */
-
-/* link hover */
-
 .layer,
 .layer:after {
   display:block;
@@ -658,17 +651,7 @@ font-size: clamp(0.64rem, calc(0.421rem + 1.264vw), 1.00rem);
         background-color:var(--teal);
         transform: scaleX(-1);
     }
-  
-    /* .product-quick-view:hover {
-        bottom: 42px;
-        color: var(--cream);
-        background-color: #8f8a82;
-        .add-to-cart &{
-            background-color:#8f8a82;
-            color: var(--cream);
-            transform: scaleX(-1);
-        }
-    } */
+
 
     .cart-notification {
       position: fixed;
