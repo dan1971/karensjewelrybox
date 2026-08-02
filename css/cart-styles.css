@@ -51,7 +51,7 @@
         font-size: 16px;
         line-height: 1;
         opacity: 0;
-        transform: transform: translate(-48%, -61%);
+        transform: translate(-48%, -61%);
         transition: opacity 0.2s ease;
         /* animation: cart-full .05s ease-out forwards;
         animation-delay: 0.5s; */
