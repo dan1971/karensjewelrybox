@@ -20,7 +20,7 @@ const storageKeys = {
 
 const selectors = {
     cartButton: '#cart-button',
-    cartBadge: '.cart-badge',
+    cartbadge: '.cart-badge',
     cartOverlay: '#cart-modal-overlay',
     paySection: '#payment-section',
     quantity: '#quantity',
@@ -84,7 +84,7 @@ function initializeCartState() {
 }
 
 function createCartBadge() {
-    const cartBadge = document.querySelector(selectors.cart-badge);
+    const cartBadge = document.querySelector(selectors.cartBadge);
     const cartBadgeActive = cartBadge?.classList.contains('active');
     if (!cartBadgeActive) return;
 
