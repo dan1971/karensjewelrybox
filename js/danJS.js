@@ -79,20 +79,20 @@ function setWishlist(wishlist) {
 }
 
 function initializeCartState() {
-    createCartBadge();
+    // createCartBadge();
     renderCartBadge();
     createCartModal();
 }
 
-function createCartBadge() {
-    const cartBadge = document.querySelector(selectors.cartBadge);
-    const cartBadgeActive = cartBadge?.classList.contains('active');
-    if (!cartBadgeActive) return;
+// function createCartBadge() {
+//     const cartBadge = document.querySelector(selectors.cartBadge);
+//     const cartBadgeActive = cartBadge?.classList.contains('active');
+//     if (!cartBadgeActive) return;
 
-    if (cartBadgeActive) {
-        cartBadge.setAttribute('opacity', '1');
-    }
-}
+//     if (cartBadgeActive) {
+//         cartBadge.setAttribute('opacity', '1');
+//     }
+// }
 
 function renderCartBadge() {
     const badge = document.querySelector(selectors.cartBadge);
