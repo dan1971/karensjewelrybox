@@ -30,7 +30,6 @@ const selectors = {
     addToCartButtons: '[data-product][data-price]',
     productCards: '.product-card'
 };
-
 // const element = document.querySelector(selectors.cartbadge);
 // const opacity = window.getComputedStyle(element).opacity;
 // console.log('Selectors:', opacity);
@@ -100,10 +99,9 @@ function initializeCartState() {
 
 function renderCartBadge() {
     const badge = document.querySelector(selectors.cartbadge);
-console.log('Selectors:', badge);
     const cartBadgeActive = badge?.classList.contains('active');
     const itemCount = getCart().reduce((sum, item) => sum + item.quantity, 0);
-    console.log('Cart item count:', itemCount + ' | Badge active:', badge);
+    console.log('Cart item count:', itemCount + ' | Badge active:', cartBadgeActive);
     if (itemCount > 0) {
         badge.classList.add('active');
     } else {
