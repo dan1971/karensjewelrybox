@@ -3,15 +3,10 @@
     <main>
         <section class="collections">
             <div class="section-heading">
-                <h2>Shop by Collection</h2>
+                <h2>Shopping Cart</h2>
             </div>
 
-            <div class="sub-page-container">
-                <div class="section-heading">
-                    <h3>Wind Chimes</h3>
-                </div>
-
-                        <main class="cart-main">
+        <main class="cart-main">
             <div class="cart-container">
                 <h1>Shopping Cart</h1>
                 
