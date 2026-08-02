@@ -50,9 +50,10 @@
         color: var(--cart-badge);
         font-size: 16px;
         line-height: 1;
-        scale: 1;
-        transform: translate(-48%, -61%);
-        transition: opacity 0.2s ease;
+        opacity: 0;
+        transform-origin: center center; 
+        transform: scale(.10) translate(-48%, -61%);
+        transition: opacity 0.2s ease scale 0.2 ease-out forwards;
         /* animation: cart-full .05s ease-out forwards;
         animation-delay: 0.5s; */
     }
@@ -65,10 +66,10 @@
 
 @keyframes cart-full-animate {
   0% {
-    transform: translate(-48%, -61%);
+    transform: opacity(0) scale(.10) translate(-48%, -61%);
   }
   100% {
-    transform: translate(-48%, 8%);
+    transform: opacity(1) scale(1) translate(-48%, 8%);
   }
 }
 
