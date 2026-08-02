@@ -27,7 +27,8 @@ const selectors = {
     orderTotal: '#order-total',
     orderDisplayPrice: '#order-display-price',
     payAmount: '#pay-amount',
-    addToCartButtons: '[data-product][data-price]'
+    addToCartButtons: '[data-product][data-price]',
+    productCards: '.product-card'
 };
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -168,7 +169,7 @@ function renderCartModal() {
 }
 
 function setupGlobalInteractions() {
-    document.body.addEventListener('click', (event) => {
+   productCards('click', (event) => {
         const addButton = event.target.closest('[data-product][data-price]');
         console.log('Clicked add to cart button:', addButton);
         if (addButton) {
