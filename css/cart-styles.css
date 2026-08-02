@@ -60,6 +60,7 @@
     .cart-badge.active {
     font-size: 17px;
     animation: cart-full-animate 0.2s ease-out forwards;
+    opacity: 1;
     animation-delay: 0.5s;
     }
 
