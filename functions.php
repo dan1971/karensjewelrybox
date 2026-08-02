@@ -8,6 +8,7 @@
     <title>Karen's Jewelry Box</title>
      <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cart-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
