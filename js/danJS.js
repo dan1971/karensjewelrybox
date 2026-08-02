@@ -30,7 +30,7 @@ const selectors = {
     addToCartButtons: '[data-product][data-price]',
     productCards: '.product-card'
 };
-console.log('Selectors:', selectors.cartbadge.attr('id'));
+console.log('Selectors:', selectors.cartbadge.getAttribute('id'));
 
 window.addEventListener('DOMContentLoaded', () => {
     initializeCartState();
