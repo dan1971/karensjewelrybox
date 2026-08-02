@@ -169,7 +169,7 @@ function renderCartModal() {
 }
 
 function setupGlobalInteractions() {
-   productCards('click', (event) => {
+    document.body.addEventListener('click', (event) => {
         const addButton = event.target.closest('[data-product][data-price]');
         console.log('Clicked add to cart button:', addButton);
         if (addButton) {
