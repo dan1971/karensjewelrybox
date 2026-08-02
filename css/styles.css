@@ -250,7 +250,7 @@ font-weight:normal;
 }
 
 .menu-links {
- font-family:'calibri', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-family:"H1-TitlesOrtica", Georgia, serif;
    font-size: clamp(0.64rem, calc(0.421rem + 1.264vw), 1.00rem);
  color:#b0d0d3;
 
