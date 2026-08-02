@@ -745,8 +745,8 @@ font-weight:normal;
         opacity: 1;
         transform: translateX(-50%) translateY(0%);
         transition: opacity 0.2s ease;
-        animation: cart-full .05s ease-out forwards;
-        animation-delay: 0.5s;
+        /* animation: cart-full .05s ease-out forwards;
+        animation-delay: 0.5s; */
     }
 
     .cart-badge.active {
@@ -754,14 +754,14 @@ font-weight:normal;
         transform: translateY(-72%);
     }
 
-    @keyframes cart-full {
+    /* @keyframes cart-full {
         0% {
             transform: translateY(-72%);
         }
         100% {
          transform: translateY(0%);
         }  
-        }
+        } */
 
     .cart-overlay {
         position: fixed;
