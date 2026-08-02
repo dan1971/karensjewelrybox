@@ -30,9 +30,10 @@ const selectors = {
     addToCartButtons: '[data-product][data-price]',
     productCards: '.product-card'
 };
-const element = document.querySelector(selectors.cartbadge);
-const opacity = window.getComputedStyle(element).opacity;
-console.log('Selectors:', opacity);
+
+// const element = document.querySelector(selectors.cartbadge);
+// const opacity = window.getComputedStyle(element).opacity;
+// console.log('Selectors:', opacity);
 
 window.addEventListener('DOMContentLoaded', () => {
     initializeCartState();
