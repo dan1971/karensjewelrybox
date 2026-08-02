@@ -744,7 +744,7 @@ font-weight:normal;
         line-height: 1;
         opacity: 1;
         transform: translateX(-50%) translateY(0%);
-        transition: opacity 0.2s ease, transform 0.2s ease;
+        transition: opacity 0.2s ease;
         animation: cart-full .05s ease-out forwards;
         animation-delay: 0.5s;
     }
