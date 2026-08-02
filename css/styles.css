@@ -14,6 +14,7 @@
     --muted-light-brn:#b5a89e;
     --muted-grey: #d1d7d6;
     --lighter-grey: #e2e2e2;
+    --cart-badge:#efc96f;
     --hero-h1-size: clamp(4.1rem, 8vw, 7rem);
     --hero-p-size: clamp(1.1rem, 2vw, 1.45rem);
     --story-h2-size: calc(var(--hero-h1-size) * 0.618);
@@ -250,9 +251,9 @@ font-weight:normal;
 }
 
 .menu-links {
- font-family:"H1-TitlesOrtica", Georgia, serif;
-font-size: clamp(0.64rem, calc(0.421rem + 1.264vw), 1.00rem);
- color:#b0d0d3;
+font-family:"H1-TitlesOrtica", Georgia, serif;
+font-size: clamp(0.70rem, calc(0.582rem + 0.814vw), 1.00rem);
+color:#b0d0d3;
 
 }
 
@@ -693,49 +694,7 @@ font-size: clamp(0.64rem, calc(0.421rem + 1.264vw), 1.00rem);
     }
 
 /* <<<<<<<< PRODUCT CARD CSS END >>>>>>>>>>>> */
-.cart-icons {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-}
 
-.cart-icons a {
-    color:#b0d0d3;
-    text-decoration: none;
-    font-size: 0.7rem;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    transition: color 0.2s;
-}
-
-    #cart-button {
-        position: relative;
-    }
-
-    .cart-badge {
-        position: absolute;
-        top: -57%;
-        left: 50%;
-        width: 16px;
-        height: 16px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-size: 16px;
-        line-height: 1;
-        opacity: 1;
-        transform: translateX(-50%) translateY(0%);
-        transition: opacity 0.2s ease;
-        /* animation: cart-full .05s ease-out forwards;
-        animation-delay: 0.5s; */
-    }
-
-    .cart-badge.active {
-        opacity: 1;
-        transform: translateY(-72%);
-    }
 
     /* @keyframes cart-full {
         0% {

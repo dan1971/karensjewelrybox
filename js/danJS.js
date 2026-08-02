@@ -1,17 +1,17 @@
 
 
-const words = ["Sugar", "Buddy", "Chimera", "Shrimps", "Lollypop", "Bubbles", "Twinkle", "Sparkle", "Doodle", "Noodle", "Wiggle", "Jellybean"];
-const el = document.querySelector(".product-grid");
+// const words = ["Sugar", "Buddy", "Chimera", "Shrimps", "Lollypop", "Bubbles", "Twinkle", "Sparkle", "Doodle", "Noodle", "Wiggle", "Jellybean"];
+// const el = document.querySelector(".product-grid");
 
-for (const child of el.children) {
-    const randomWord = words[Math.floor(Math.random() * words.length)];
-    let wordPulledIndx = words.indexOf(randomWord);
-    if(wordPulledIndx > -1) {
-        words.splice(wordPulledIndx, 1);
-    }
-    child.setAttribute("data-word", randomWord);
-    console.log("Assigned word " + randomWord + " to product card.");
-}
+// for (const child of el.children) {
+//     const randomWord = words[Math.floor(Math.random() * words.length)];
+//     let wordPulledIndx = words.indexOf(randomWord);
+//     if(wordPulledIndx > -1) {
+//         words.splice(wordPulledIndx, 1);
+//     }
+//     child.setAttribute("data-word", randomWord);
+//     console.log("Assigned word " + randomWord + " to product card.");
+// }
 
 const storageKeys = {
     cart: 'kjb_cart',
@@ -84,14 +84,12 @@ function initializeCartState() {
 }
 
 function createCartBadge() {
-    const cartButton = document.querySelector(selectors.cartButton);
-    if (!cartButton) return;
-    let badge = cartButton.querySelector(selectors.cartBadge);
-    if (!badge) {
-        badge = document.createElement('span');
-        badge.className = 'cart-badge';
-        badge.textContent = '♦';
-        cartButton.appendChild(badge);
+    const cartBadge = document.querySelector(selectors.cart-badge);
+    const cartBadgeActive = cartBadge?.classList.contains('active');
+    if (!cartBadgeActive) return;
+
+    if (cartBadgeActive) {
+        cartBadge.setAttribute('opacity', '1');
     }
 }
 
