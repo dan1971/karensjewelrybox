@@ -743,9 +743,10 @@ font-weight:normal;
         font-size: 18px;
         line-height: 1;
         opacity: 1;
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(0%);
         transition: opacity 0.2s ease, transform 0.2s ease;
         animation: cart-full .05s ease-out forwards;
+        animation-delay: 0.5s;
     }
 
     .cart-badge.active {
