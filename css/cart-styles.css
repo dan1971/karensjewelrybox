@@ -66,10 +66,10 @@
 
 @keyframes cart-full-animate {
   0% {
-    transform: opacity(0) scale(.10) translate(-48%, -61%);
+    transform: scale(.10) translate(-48%, -61%);
   }
   100% {
-    transform: opacity(1) scale(1) translate(-48%, 8%);
+    transform: scale(1) translate(-48%, 8%);
   }
 }
 
