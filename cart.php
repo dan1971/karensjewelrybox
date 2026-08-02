@@ -8,8 +8,6 @@
 
         <main class="cart-main">
             <div class="cart-container">
-                <h1>Shopping Cart</h1>
-                
                 <div class="cart-content">
                     <!-- Cart Items Section -->
                     <div class="cart-items">

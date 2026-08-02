@@ -26,12 +26,6 @@
 }
 
 /* Cart Items */
-.cart-items {
-    background: #fff;
-    border-radius: 8px;
-    padding: 24px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
 
 .cart-item {
     display: grid;
@@ -305,7 +299,10 @@
     .cart-items {
         display: grid;
         gap: 18px;
-        margin: 24px 0;
+        background: #fff;
+        border-radius: 8px;
+        padding: 24px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
 
     .cart-item {
