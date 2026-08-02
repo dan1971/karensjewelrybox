@@ -20,7 +20,7 @@ const storageKeys = {
 
 const selectors = {
     cartButton: '#cart-button',
-    cartbadge: '#cart-badge',
+    cartbadge: '.cart-badge',
     cartOverlay: '#cart-modal-overlay',
     paySection: '#payment-section',
     quantity: '#quantity',
@@ -30,7 +30,9 @@ const selectors = {
     addToCartButtons: '[data-product][data-price]',
     productCards: '.product-card'
 };
-console.log('Selectors:', selectors.cartbadge.getAttribute('id'));
+const element = document.querySelector(selectors.cartbadge);
+const opacity = window.getComputedStyle(element).opacity;
+console.log('Selectors:', opacity);
 
 window.addEventListener('DOMContentLoaded', () => {
     initializeCartState();
