@@ -61,7 +61,7 @@
                             d="M79,85.5c9.1-1.3,12.7-10.9,11.9-26.8" />
                     </g>
                 </svg>
-                <i class="cart-badge fa-regular fa-gem"></i>
+                <i id="cart-badge" class="cart-badge fa-regular fa-gem"></i>
                 <!-- <span class="cart-badge" aria-hidden="true">♦</span> -->
             </a>
             </div>

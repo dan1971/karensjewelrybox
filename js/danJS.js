@@ -20,7 +20,7 @@ const storageKeys = {
 
 const selectors = {
     cartButton: '#cart-button',
-    cartbadge: '.cart-badge',
+    cartbadge: '#cart-badge',
     cartOverlay: '#cart-modal-overlay',
     paySection: '#payment-section',
     quantity: '#quantity',
