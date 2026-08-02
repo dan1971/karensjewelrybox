@@ -282,7 +282,7 @@ font-weight:normal;
 
 .layer:after {
   content: attr(data-text);
-  color: var(--accent);
+  color: #48c6d4;
   position: absolute;
   top: 0px;
   left: 0px;
