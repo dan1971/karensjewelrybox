@@ -588,7 +588,7 @@ color:#b0d0d3;
    
   }
 
-  .product-card:has(.add-to-cart-circle:hover) .product-quick-view { 
+  .product-card:has(.add-to-cart-circle:hover) .add-to-cart-rectangle { 
     color: var(--ink); 
     background-color:var(--teal);
     transform: scaleY(-.5);
@@ -625,7 +625,7 @@ color:#b0d0d3;
       border-color: var(--secondary) transparent transparent transparent;
     }
 
-    .product-quick-view {
+    .add-to-cart-rectangle {
       position: absolute;
       bottom: 41px;
       left: 0;
@@ -642,12 +642,12 @@ color:#b0d0d3;
       cursor: pointer;
     }
 
-    .product-quick-view:hover {
+    .add-to-cart-rectangle:hover {
       background-color: var(--teal);
       color: var(--ink);
     }
 
-    .product-card:has(.product-quick-view:hover) .add-to-cart-circle { 
+    .product-card:has(.add-to-cart-rectangle:hover) .add-to-cart-circle { 
         color: var(--ink); 
         background-color:var(--teal);
         transform: scaleX(-1);

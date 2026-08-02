@@ -43,7 +43,7 @@
                                     <span class="price">$155</span>
                                     <span class="original-price">$119</span>
                                 </div>
-                                <button class="add-to-cart-circle" data-product="Minimalist Vase Set" data-price="89">
+                                <button class="add-to-cart-circle add-to-cart" data-product="Golden Windstone" data-price="125">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2"
@@ -53,7 +53,7 @@
                                 <div class="cart-tooltip">Add to cart</div>
                             </div>
                         </div>
-                        <div class="product-quick-view">Add to cart</div>
+                        <div class="add-to-cart-rectangle add-to-cart" data-product="Golden Windstone" data-price="125">Add to cart</div>
                     </div>
 
 
@@ -99,7 +99,7 @@
                                 <div class="cart-tooltip">Add to cart</div>
                             </div>
                         </div>
-                        <div class="product-quick-view">Add to cart</div>
+                        <div class="add-to-cart-rectangle add-to-cart">Add to cart</div>
                     </div>
 
 
