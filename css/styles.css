@@ -496,7 +496,7 @@ color:#b0d0d3;
     }
    */
 
-   .add-to-cart > svg {
+   .add-to-cart-circle > svg {
         pointer-events: none; 
       }
 
@@ -559,7 +559,7 @@ color:#b0d0d3;
       margin-left: 6px;
     }
 
-    .add-to-cart {
+    .add-to-cart-circle {
       background-color: #efc96f;
       color: var(--secondary);
       border: none;
@@ -578,23 +578,23 @@ color:#b0d0d3;
       right: 8px;
     }
 
-    .add-to-cart:hover {
+    .add-to-cart-circle:hover {
      background-color:var(--teal);
       color: var(--ink);
     }
 
-  .product-card:has(.add-to-cart:hover).product-card::after {    
+  .product-card:has(.add-to-cart-circle:hover).product-card::after {    
     opacity: 1; 
    
   }
 
-  .product-card:has(.add-to-cart:hover) .product-quick-view { 
+  .product-card:has(.add-to-cart-circle:hover) .product-quick-view { 
     color: var(--ink); 
     background-color:var(--teal);
     transform: scaleY(-.5);
   }
   
-    .add-to-cart:active {
+    .add-to-cart-circle:active {
       transform: scale(0.95);
     }
 
@@ -647,7 +647,7 @@ color:#b0d0d3;
       color: var(--ink);
     }
 
-    .product-card:has(.product-quick-view:hover) .add-to-cart { 
+    .product-card:has(.product-quick-view:hover) .add-to-cart-circle { 
         color: var(--ink); 
         background-color:var(--teal);
         transform: scaleX(-1);
