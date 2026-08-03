@@ -924,7 +924,7 @@ background: var(--muted-brown);
 }
 
 .checkout-main-photo img {
-    width: 100%;
+    width: 40%;
     display: block;
 }
 

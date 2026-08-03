@@ -24,7 +24,7 @@
 
                     <button class="thumb-nav thumb-nav-right" type="button" aria-label="Show next thumbnails">&#10095;</button>
                 </div>
-                                <div class="product-features">
+                <div class="product-features">
                     <h3>About this item</h3>
                     <ul>
                         <li>Bestseller in the Wind Chimes collection with a rich Golden Windstone finish.</li>
