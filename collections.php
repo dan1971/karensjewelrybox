@@ -90,6 +90,7 @@ empty<?php require("functions.php");  head_top_menu(); ?>
                         <div class="add-to-cart-rectangle add-to-cart" data-image="images/chime-002.webp" data-product="Golden SkyStone" data-price="125">Add to cart</div>
                     </div>
 
+
                     <!-- Product 3 -->
                    <div class="product-card" data-word="">
                     <div class="product-label">Bestseller</div>
@@ -177,7 +178,7 @@ empty<?php require("functions.php");  head_top_menu(); ?>
                                 <div class="cart-tooltip">Add to cart</div>
                             </div>
                         </div>
-                        <div class="add-to-cart-rectangle add-to-cart" data-image="images/chime-003.webp" data-product="Golden Monarchy" data-price="129">Add to cart</div>
+                                                <div class="add-to-cart-rectangle add-to-cart" data-image="images/chime-003.webp" data-product="Golden Monarchy" data-price="129">Add to cart</div>
                     </div>
 
                     <!-- Product 5 -->
@@ -269,9 +270,9 @@ empty<?php require("functions.php");  head_top_menu(); ?>
                         </div>
                          <div class="add-to-cart-rectangle add-to-cart" data-image="images/chime-006.webp" data-product="Bronze EyeStone" data-price="129">Add to cart</div>
                     </div>
-                    </div>
+
                     <!-- Product 6 -->
-                  
+                   <div class="product-card" data-word="">
                     <div class="product-label">Bestseller</div>
                         <div class="product-image" style="background-image: url('images/chime-007.webp')">
                            
@@ -359,14 +360,13 @@ empty<?php require("functions.php");  head_top_menu(); ?>
                         </div>
                         <div class="add-to-cart-rectangle add-to-cart" data-image="images/chime-008.webp" data-product="Bronze CoralStone" data-price="129">Add to cart</div>
                     </div>
-                   </div>
-
-                    <div class="section-heading">
+                <div class="section-heading">
                     <h3>Original Art</h3>
-                    </div>
+                </div>
+                <div class="product-grid">
 
-                    <div class="product-grid">
                     <!-- Product 1 -->
+                <div class="product-card" data-word="">
                     <div class="product-label">Bestseller</div>
                         <div class="product-image" style="background-image: url('images/painting-001.webp')">
                             
@@ -411,8 +411,8 @@ empty<?php require("functions.php");  head_top_menu(); ?>
                 
                     </div>
                     <!-- Product 2 -->
-                        <div class="product-card" data-word="">
-                        <div class="product-label">Bestseller</div>
+<div class="product-card" data-word="">
+    <div class="product-label">Bestseller</div>
                         <div class="product-image" style="background-image: url('images/chime-010.webp')">
                             
                             <div class="product-wishlist">
@@ -455,7 +455,7 @@ empty<?php require("functions.php");  head_top_menu(); ?>
                         <div class="add-to-cart-rectangle add-to-cart" data-image="images/painting-002.webp" data-product="Water on Fire" data-price="289">Add to cart</div>
                     </div>
                     <!-- Product 3 -->
-                    <div class="product-card" data-word="">
+    <div class="product-card" data-word="">
                         <div class="product-image" style="background-image: url('images/chime-011.webp')">
                             <div class="product-label">Bestseller</div>
                             <div class="product-wishlist">
@@ -498,7 +498,6 @@ empty<?php require("functions.php");  head_top_menu(); ?>
                          <div class="add-to-cart-rectangle add-to-cart" data-image="images/painting-003.webp" data-product="The Sky is not the Limit" data-price="289">Add to cart</div>
                     </div>
                 </div>
-                
         </section>
         <section class="testimonial" aria-label="Customer testimonial">
             <blockquote>The wind chime I ordered is even more beautiful in person. You can feel the love and care in
