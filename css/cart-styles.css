@@ -55,7 +55,7 @@
     }
 
     .cart-badge.active {
-    animation: cart-full-animate 0.2s ease-out forwards;
+    animation: cart-full-animate;
     opacity: 1;
     animation-delay: 0.2s;
     }
@@ -63,9 +63,11 @@
 @keyframes cart-full-animate {
     0% {
     transform: translateX(-48%) translateY(-161%);
+    animation-timing-function: ease-in;
     }
     50% {
         transform: translateX(-48%) translateY(143%);
+         animation-timing-function: ease-out;
      }
      100% {
     transform: translateX(-48%) translateY(8%);
