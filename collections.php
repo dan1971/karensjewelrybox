@@ -1,4 +1,4 @@
-empty<?php require("functions.php");  head_top_menu(); ?>
+<?php require("functions.php");  head_top_menu(); ?>
 <div class="main-container">
     <main>
         <section class="collections">

@@ -13,6 +13,25 @@
 //     console.log("Assigned word " + randomWord + " to product card.");
 // }
 
+// HEADER SHRINK ON SCROLL
+
+function setupHeaderScroll() {
+    updateHeaderShrink();
+    window.addEventListener('scroll', updateHeaderShrink, { passive: true });
+}
+
+function updateHeaderShrink() {
+    const header = document.querySelector('.site-header');
+    if (!header) return;
+    if (window.scrollY > 24) {
+        header.classList.add('shrink');
+    } else {
+        header.classList.remove('shrink');
+    }
+}
+
+//
+
 const storageKeys = {
     cart: 'kjb_cart',
     wishlist: 'kjb_wishlist'
@@ -44,20 +63,6 @@ window.addEventListener('DOMContentLoaded', () => {
     setupHeaderScroll();
 });
 
-function setupHeaderScroll() {
-    updateHeaderShrink();
-    window.addEventListener('scroll', updateHeaderShrink, { passive: true });
-}
-
-function updateHeaderShrink() {
-    const header = document.querySelector('.site-header');
-    if (!header) return;
-    if (window.scrollY > 24) {
-        header.classList.add('shrink');
-    } else {
-        header.classList.remove('shrink');
-    }
-}
 
 function getStoredData(key) {
     return JSON.parse(localStorage.getItem(key) || 'null');
@@ -99,6 +104,8 @@ function initializeCartState() {
 //     }
 // }
 
+// Cart icon showing items in the cart
+
 function renderCartBadge() {
     const badge = document.querySelector(selectors.cartbadge);
     const cartBadgeActive = badge?.classList.contains('active');
@@ -112,6 +119,7 @@ function renderCartBadge() {
     }
 }
 
+// Cart modal
 function createCartModal() {
     if (document.getElementById('cart-modal-overlay')) return;
 
@@ -184,10 +192,11 @@ function renderCartModal() {
     cartTotal.textContent = `Total: $${total.toFixed(2)}`;
 }
 
+// event listeners add to cart, buy now, and checkout//
+
 function setupGlobalInteractions() {
     document.body.addEventListener('click', (event) => {
         const addButton = event.target.closest('[data-image][data-product][data-price]');
-        console.log('Clicked add to cart button:', addButton);
         if (addButton) {
             const text = addButton.textContent.trim().toLowerCase();
             const imagePath = addButton.dataset.image;
@@ -222,6 +231,7 @@ function setupGlobalInteractions() {
                 showToast('Your cart is empty.');
                 return;
             }
+            console.log("Proceeding to checkout with cart items:", cart);   
             window.location.href = 'purchase.php';
             return;
         }
@@ -292,6 +302,8 @@ function updatePurchaseTotal() {
     }
 }
 
+// add item to cart, update localStorage, and update cart badge and modal ///
+
 function addToCart(imagePath, product, price, quantity = 1) {
   const cart = getCart();
   const existing = cart.find((item) => item.product === product && item.price === price);
@@ -307,23 +319,6 @@ function addToCart(imagePath, product, price, quantity = 1) {
   renderCartModal();
   showToast(`${product} added to cart`);
 }
-
-// function addToCart(imagePath, product, price, quantity = 1) {
-//     const cart = getCart()
-
-// console.log('Adding to Cart: ', cart);
-
-//     const existing = cart.find((item) => item.product === product && item.price === price);
-//     if (existing) {
-//         existing.quantity += quantity;
-//     } else {
-//         cart.push({ product, price, quantity });
-//     }
-//     setCart(cart);
-//     renderCartBadge();
-//     renderCartModal();
-//     showToast(`${product} added to cart`);
-// }
 
 function removeCartItem(index) {
     const cart = getCart();
