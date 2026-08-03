@@ -166,7 +166,7 @@ function renderCartModal() {
                 <div><img src="${item.imagePath}" alt="${item.product}" style="max-width: 100px; height: auto;"></div>
                 <div>
                     
-                    <div><strong>${item.product}</strong></div>
+                    <div class="cart-item-title"><strong>${item.product}</strong></div>
                     <div class="cart-item-quantity">Qty: ${item.quantity}</div>
                     <div>$${(item.price * item.quantity).toFixed(2)}</div>
                 </div>
