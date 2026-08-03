@@ -170,7 +170,9 @@ function renderCartModal() {
                     <div class="cart-item-quantity">Qty: ${item.quantity}</div>
                     <div>$${(item.price * item.quantity).toFixed(2)}</div>
                 </div>
-                <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
+                <div>
+                    <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
+                </div>
             </div>
         `;
     }).join('');
