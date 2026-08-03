@@ -83,15 +83,6 @@
 
 /* Cart Items */
 
-.cart-item {
-    display: grid;
-    grid-template-columns: 120px 1fr 120px 100px 40px;
-    gap: 20px;
-    align-items: center;
-    padding: 20px 0;
-    border-bottom: 1px solid #e5e5e5;
-}
-
 .cart-item:last-child {
     border-bottom: none;
 }
@@ -349,7 +340,7 @@
 
     .cart-item {
         display: grid;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 1fr 1fr auto;
         gap: 14px;
         padding-bottom: 16px;
         border-bottom: 1px solid var(--line);
