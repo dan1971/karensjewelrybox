@@ -1,4 +1,4 @@
-a
+
 
 // const words = ["Sugar", "Buddy", "Chimera", "Shrimps", "Lollypop", "Bubbles", "Twinkle", "Sparkle", "Doodle", "Noodle", "Wiggle", "Jellybean"];
 // const el = document.querySelector(".product-grid");
