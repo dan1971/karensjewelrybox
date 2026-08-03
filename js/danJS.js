@@ -18,6 +18,7 @@ const storageKeys = {
     wishlist: 'kjb_wishlist'
 };
 
+
 const selectors = {
     cartButton: '#cart-button',
     cartIconsContainer: '.cart-icons',
@@ -28,7 +29,7 @@ const selectors = {
     orderTotal: '#order-total',
     orderDisplayPrice: '#order-display-price',
     payAmount: '#pay-amount',
-    addToCartButtons: '[data-imagePath][data-product][data-price]',
+    addToCartButtons: '[data-image][data-product][data-price]',
     productCards: '.product-card'
 };
 // const element = document.querySelector(selectors.cartbadge);
@@ -266,21 +267,37 @@ function updatePurchaseTotal() {
 }
 
 function addToCart(imagePath, product, price, quantity = 1) {
-    const cart = getCart()
+  const cart = getCart();
+  const existing = cart.find((item) => item.product === product && item.price === price);
 
-console.log('Adding to Cart: ', cart);
+  if (existing) {
+    existing.quantity += quantity;
+  } else {
+    cart.push({ imagePath, product, price, quantity });
+  }
 
-    const existing = cart.find((item) => item.product === product && item.price === price);
-    if (existing) {
-        existing.quantity += quantity;
-    } else {
-        cart.push({ product, price, quantity });
-    }
-    setCart(cart);
-    renderCartBadge();
-    renderCartModal();
-    showToast(`${product} added to cart`);
+  setCart(cart);
+  renderCartBadge();
+  renderCartModal();
+  showToast(`${product} added to cart`);
 }
+
+// function addToCart(imagePath, product, price, quantity = 1) {
+//     const cart = getCart()
+
+// console.log('Adding to Cart: ', cart);
+
+//     const existing = cart.find((item) => item.product === product && item.price === price);
+//     if (existing) {
+//         existing.quantity += quantity;
+//     } else {
+//         cart.push({ product, price, quantity });
+//     }
+//     setCart(cart);
+//     renderCartBadge();
+//     renderCartModal();
+//     showToast(`${product} added to cart`);
+// }
 
 function removeCartItem(index) {
     const cart = getCart();
