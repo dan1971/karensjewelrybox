@@ -162,7 +162,8 @@ function renderCartModal() {
     const cartcheckOutBtn = overlay.querySelector('.place-order-button');
     const cart = getCart();
     console.log('Rendering cart modal with items:', cart);
-    
+    cartcheckOutBtn.style.display = 'block';
+
     if (!cart.length) {
         cartItems.innerHTML = '<p>Your cart is empty.</p>';
         cartTotal.textContent = '';
