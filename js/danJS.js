@@ -104,12 +104,10 @@ function renderCartBadge() {
     const cartBadgeActive = badge?.classList.contains('active');
     const itemCount = getCart().reduce((sum, item) => sum + item.quantity, 0);
     console.log('Cart item count:', itemCount + ' | Badge active:', cartBadgeActive);
-      if (itemCount > 0 && cartBadgeActive) {
-        cartIconsContainer.appendChild(badge);
-        badge.classList.add('active');
-        } 
     if (itemCount > 0) {
         badge.classList.add('active');
+        cartIconsContainer.appendChild(badge);
+        
     } else {
         badge.classList.remove('active');
     }
