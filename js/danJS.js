@@ -1,4 +1,4 @@
-
+a
 
 // const words = ["Sugar", "Buddy", "Chimera", "Shrimps", "Lollypop", "Bubbles", "Twinkle", "Sparkle", "Doodle", "Noodle", "Wiggle", "Jellybean"];
 // const el = document.querySelector(".product-grid");
@@ -262,9 +262,30 @@ function setupPurchasePage() {
 
     const orderCard = document.getElementById('order-card');
     const cart = getCart();
+
     if (orderCard && cart.length) {
         const cartTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
         orderCard.dataset.unitPrice = cartTotal.toString();
+
+        const checkOutDetails = document.querySelector('.checkout-details');
+       checkOutDetails.innerHTML = cart.map((item, index) => {
+        return `
+            <div class="cart-item" data-item-index="${index}">
+                <div class="cart-item-image">
+                    <img src="${item.imagePath}" alt="${item.product}">
+                </div>
+                <div>
+                    <div class="cart-item-title"><strong>${item.product}</strong></div>
+                    <div class="cart-item-quantity">Qty: ${item.quantity}</div>
+                    <div>$${(item.price * item.quantity).toFixed(2)}</div>
+                </div>
+                <div>
+                    <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
+                </div>
+            </div>
+        `;
+    }).join('');
+        
     }
 
     updatePurchaseTotal();
