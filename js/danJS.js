@@ -151,6 +151,7 @@ function renderCartModal() {
     const cartItems = overlay.querySelector('.cart-items');
     const cartTotal = overlay.querySelector('.cart-total');
     const cart = getCart();
+
     if (!cart.length) {
         cartItems.innerHTML = '<p>Your cart is empty.</p>';
         cartTotal.textContent = '';
@@ -158,6 +159,7 @@ function renderCartModal() {
     }
 
     cartItems.innerHTML = cart.map((item, index) => {
+        conssole.log('Rendering cart item:', ${item.ImagePath}, ${item.product}, ${item.price}, ${item.quantity});
         return `
             <div class="cart-item" data-item-index="${index}">
                 <div>
