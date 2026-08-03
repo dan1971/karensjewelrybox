@@ -125,7 +125,7 @@ function createCartModal() {
             <div class="cart-items"></div>
             <div class="cart-total"></div>
             <div class="cart-actions">
-                <button class="button button-light" type="button" id="cart-close-button">Close</button>
+                <button class="place-order-button button-light" type="button" id="cart-close-button">Go to Checkout</button>
             </div>
         </div>
     `;

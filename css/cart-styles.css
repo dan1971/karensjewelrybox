@@ -363,8 +363,6 @@
         font-size: 0.9rem;
     }
 
-
-
     .cart-item-remove {
     background: none;
     border: none;
@@ -393,6 +391,18 @@
         justify-content: flex-end;
     }
 
+    .place-order-button {
+        background: var(--primary);
+        color: #fff;
+        border: none;
+        padding: 12px 28px;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    
     .cart-actions .button {
         width: auto;
         padding: 0 28px;
