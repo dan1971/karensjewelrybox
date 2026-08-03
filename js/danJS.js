@@ -179,11 +179,11 @@ function renderCartModal() {
 
 function setupGlobalInteractions() {
     document.body.addEventListener('click', (event) => {
-        const addButton = event.target.closest('[data-imagePath][data-product][data-price]');
+        const addButton = event.target.closest('[data-image][data-product][data-price]');
         console.log('Clicked add to cart button:', addButton);
         if (addButton) {
             const text = addButton.textContent.trim().toLowerCase();
-            const imagePath = addButton.dataset.imagepath;
+            const imagePath = addButton.dataset.image;
             const product = addButton.dataset.product;
             const price = Number(addButton.dataset.price);
             if (product && price) {
