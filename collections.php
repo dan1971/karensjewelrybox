@@ -269,9 +269,9 @@ empty<?php require("functions.php");  head_top_menu(); ?>
                         </div>
                          <div class="add-to-cart-rectangle add-to-cart" data-image="images/chime-006.webp" data-product="Bronze EyeStone" data-price="129">Add to cart</div>
                     </div>
-
+                    </div>
                     <!-- Product 6 -->
-                   <div class="product-card" data-word="">
+                  
                     <div class="product-label">Bestseller</div>
                         <div class="product-image" style="background-image: url('images/chime-007.webp')">
                            
@@ -359,14 +359,14 @@ empty<?php require("functions.php");  head_top_menu(); ?>
                         </div>
                         <div class="add-to-cart-rectangle add-to-cart" data-image="images/chime-008.webp" data-product="Bronze CoralStone" data-price="129">Add to cart</div>
                     </div>
-                   
+                   </div>
+
                     <div class="section-heading">
                     <h3>Original Art</h3>
                     </div>
-                    <div class="product-grid">
 
+                    <div class="product-grid">
                     <!-- Product 1 -->
-                    <div class="product-card" data-word="">
                     <div class="product-label">Bestseller</div>
                         <div class="product-image" style="background-image: url('images/painting-001.webp')">
                             
@@ -498,7 +498,7 @@ empty<?php require("functions.php");  head_top_menu(); ?>
                          <div class="add-to-cart-rectangle add-to-cart" data-image="images/painting-003.webp" data-product="The Sky is not the Limit" data-price="289">Add to cart</div>
                     </div>
                 </div>
-                </div>
+                
         </section>
         <section class="testimonial" aria-label="Customer testimonial">
             <blockquote>The wind chime I ordered is even more beautiful in person. You can feel the love and care in
