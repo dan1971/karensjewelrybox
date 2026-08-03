@@ -498,6 +498,7 @@ empty<?php require("functions.php");  head_top_menu(); ?>
                          <div class="add-to-cart-rectangle add-to-cart" data-image="images/painting-003.webp" data-product="The Sky is not the Limit" data-price="289">Add to cart</div>
                     </div>
                 </div>
+                </div>
         </section>
         <section class="testimonial" aria-label="Customer testimonial">
             <blockquote>The wind chime I ordered is even more beautiful in person. You can feel the love and care in
