@@ -40,8 +40,8 @@
                             </div>
                             <div class="price-row">
                                 <div>
-                                    <span class="price">$155</span>
-                                    <span class="original-price">$119</span>
+                                    <span class="price">$129</span>
+                                    <span class="original-price">$189</span>
                                 </div>
       
                                 <div class="cart-tooltip">Add to cart</div>

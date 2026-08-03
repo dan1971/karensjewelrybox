@@ -214,6 +214,18 @@ function setupGlobalInteractions() {
             }
         }
 
+        const checkoutButton = event.target.closest('#cart-modal-overlay .place-order-button');
+        if (checkoutButton) {
+            event.preventDefault();
+            const cart = getCart();
+            if (!cart.length) {
+                showToast('Your cart is empty.');
+                return;
+            }
+            window.location.href = 'purchase.php';
+            return;
+        }
+
         if (event.target.closest('.cart-item-remove')) {
             const removeButton = event.target.closest('.cart-item-remove');
             const index = Number(removeButton.dataset.itemIndex);
@@ -233,6 +245,14 @@ function setupGlobalInteractions() {
 
 function setupPurchasePage() {
     initializeWishlistState();
+
+    const orderCard = document.getElementById('order-card');
+    const cart = getCart();
+    if (orderCard && cart.length) {
+        const cartTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        orderCard.dataset.unitPrice = cartTotal.toString();
+    }
+
     updatePurchaseTotal();
 
     const quantitySelect = document.querySelector(selectors.quantity);
