@@ -158,7 +158,7 @@ function renderCartModal() {
     if (!cart.length) {
         cartItems.innerHTML = '<p>Your cart is empty.</p>';
         cartTotal.textContent = '';
-        cartcheckOutBtn.disabled = true;
+        cartcheckOutBtn.style.display = 'none';
         return;
     }
 
