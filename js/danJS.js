@@ -106,8 +106,7 @@ function renderCartBadge() {
     console.log('Cart item count:', itemCount + ' | Badge active:', cartBadgeActive);
     if (itemCount > 0) {
         badge.classList.add('active');
-        cartIconsContainer.appendChild(badge);
-        
+
     } else {
         badge.classList.remove('active');
     }
