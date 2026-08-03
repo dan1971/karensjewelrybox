@@ -28,7 +28,7 @@ const selectors = {
     orderTotal: '#order-total',
     orderDisplayPrice: '#order-display-price',
     payAmount: '#pay-amount',
-    addToCartButtons: '[data-product][data-price]',
+    addToCartButtons: '[data-imagePath][data-product][data-price]',
     productCards: '.product-card'
 };
 // const element = document.querySelector(selectors.cartbadge);
@@ -161,6 +161,7 @@ function renderCartModal() {
         return `
             <div class="cart-item" data-item-index="${index}">
                 <div>
+                    <div>${item.imagePath}</div>
                     <div><strong>${item.product}</strong></div>
                     <div class="cart-item-quantity">Qty: ${item.quantity}</div>
                     <div>$${(item.price * item.quantity).toFixed(2)}</div>
@@ -176,10 +177,11 @@ function renderCartModal() {
 
 function setupGlobalInteractions() {
     document.body.addEventListener('click', (event) => {
-        const addButton = event.target.closest('[data-product][data-price]');
+        const addButton = event.target.closest('[data-imagePath][data-product][data-price]');
         console.log('Clicked add to cart button:', addButton);
         if (addButton) {
             const text = addButton.textContent.trim().toLowerCase();
+            const image_path = addButton.dataset.imagePath;
             const product = addButton.dataset.product;
             const price = Number(addButton.dataset.price);
             if (product && price) {
@@ -187,11 +189,11 @@ function setupGlobalInteractions() {
                 const quantitySelect = document.querySelector(selectors.quantity);
                 const quantity = quantitySelect ? Number(quantitySelect.value) : 1;
                 if (text.includes('add to cart')) {
-                    addToCart(product, price, quantity);
+                    addToCart(image_path, product, price, quantity);
                     return;
                 }
                 if (text.includes('buy now')) {
-                    addToCart(product, price, quantity);
+                    addToCart(image_path, product, price, quantity);
                     const paymentSection = document.getElementById('payment-section');
                     if (paymentSection) {
                         updatePurchaseTotal();

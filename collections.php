@@ -47,7 +47,7 @@
                                 <div class="cart-tooltip">Add to cart</div>
                             </div>
                         </div>
-                        <div class="add-to-cart-rectangle add-to-cart" data-product="Golden Windstone" data-price="125">Add to cart</div>
+                        <div class="add-to-cart-rectangle add-to-cart" data-imagePath="images/chime-001.webp" data-product="Golden Windstone" data-price="125">Add to cart</div>
                     </div>
 
 
