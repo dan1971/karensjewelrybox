@@ -164,7 +164,7 @@ function renderCartModal() {
         return `
             <div class="cart-item" data-item-index="${index}">
                 <div class="cart-item-image">
-                    <img src="${item.imagePath}" alt="${item.product}" style="max-width: 100px; height: auto;">
+                    <img src="${item.imagePath}" alt="${item.product}">
                 </div>
                 <div>
                     <div class="cart-item-title"><strong>${item.product}</strong></div>

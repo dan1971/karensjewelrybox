@@ -333,10 +333,12 @@
         font-size: 0.9rem;
         border-bottom: 1px solid var(--line);
     }
+
     cart-item-image {
         max-width:70px;
         max-height:70px;
     }    
+    
     cart-item-title{
         font-family: 'Montserrat', Verdana, Arial, sans-serif;
         font-size:.9rem;
