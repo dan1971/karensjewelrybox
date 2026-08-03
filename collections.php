@@ -368,7 +368,7 @@ empty<?php require("functions.php");  head_top_menu(); ?>
                     <!-- Product 1 -->
                 <div class="product-card" data-word="">
                     <div class="product-label">Bestseller</div>
-                        <div class="product-image" style="background-image: url('images/chime-009.webp')">
+                        <div class="product-image" style="background-image: url('images/painting-001.webp')">
                             
                             <div class="product-wishlist">
                                 <svg class="windchime_001" width="16" height="16" viewBox="0 0 24 24"
@@ -497,7 +497,7 @@ empty<?php require("functions.php");  head_top_menu(); ?>
                         </div>
                          <div class="add-to-cart-rectangle add-to-cart" data-image="images/painting-003.webp" data-product="The Sky is not the Limit" data-price="289">Add to cart</div>
                     </div>
-
+                </div>
         </section>
         <section class="testimonial" aria-label="Customer testimonial">
             <blockquote>The wind chime I ordered is even more beautiful in person. You can feel the love and care in
