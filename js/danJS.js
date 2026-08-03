@@ -235,7 +235,7 @@ function setupGlobalInteractions() {
                 return;
             }
             console.log("Proceeding to checkout with cart items:", cart);   
-            $_SESSION["username"] = "Alex";
+          
             window.location.href = 'purchase.php';
             return;
         }
