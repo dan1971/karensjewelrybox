@@ -24,6 +24,16 @@
 
                     <button class="thumb-nav thumb-nav-right" type="button" aria-label="Show next thumbnails">&#10095;</button>
                 </div>
+                                <div class="product-features">
+                    <h3>About this item</h3>
+                    <ul>
+                        <li>Bestseller in the Wind Chimes collection with a rich Golden Windstone finish.</li>
+                        <li>Handcrafted design that offers soothing chime tones for outdoor living spaces.</li>
+                        <li>High-quality construction with careful attention to sound and durability.</li>
+                        <li>Perfect gift for home decor, patio, garden, or porch accents.</li>
+                        <li>Highly rated item with 57 reviews from happy customers.</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="checkout-details">
@@ -38,16 +48,7 @@
                     <p><strong>Collection:</strong> Wind Chimes</p>
                 </div>
 
-                <div class="product-features">
-                    <h3>About this item</h3>
-                    <ul>
-                        <li>Bestseller in the Wind Chimes collection with a rich Golden Windstone finish.</li>
-                        <li>Handcrafted design that offers soothing chime tones for outdoor living spaces.</li>
-                        <li>High-quality construction with careful attention to sound and durability.</li>
-                        <li>Perfect gift for home decor, patio, garden, or porch accents.</li>
-                        <li>Highly rated item with 57 reviews from happy customers.</li>
-                    </ul>
-                </div>
+
 
                 <aside class="checkout-summary">
                     <div class="order-card" id="order-card" data-unit-price="155" data-product-name="Golden Windstone">
