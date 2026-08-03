@@ -55,7 +55,7 @@
     }
 
     .cart-badge.active {
-    animation: cart-full-animate 2s forwards;
+    animation: cart-full-animate 1s forwards;
     opacity: 1;
     animation-delay: .5s;
     }
