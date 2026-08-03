@@ -270,32 +270,22 @@ function setupPurchasePage() {
         const checkOutDetails = document.querySelector('.checkout-details');
        checkOutDetails.innerHTML = cart.map((item, index) => {
         return `
-            <div id="order-card" class="checkout-details">
+            <div id="order-card" class="checkout-details" data-item-index="${index}">>
+                <img src="${item.imagePath}" alt="${item.product}">
                 <p class="product-category">Wind Chimes</p>
-                <h1 class="product-title">Golden Windstone</h1>
+                <h1 class="product-title">${item.product}</h1>
                 <p class="product-description">A bestselling wind chime finished in warm gold tones, perfect for adding gentle sound and elegant movement to any outdoor space.</p>
 
                 <div class="product-info-summary">
-                    <p><strong>Unit Price:</strong> <span id="unit-price">$155</span> <small class="original-price">$119</small></p>
-                    <p><strong>Total:</strong> <span id="order-total">$155</span></p>
+                    <p><strong>Unit Price:</strong> <span id="unit-price"> ${item.price}</span> <small class="original-price">$119</small></p>
+                    <div class="cart-item-quantity">Qty: ${item.quantity}</div>
+                    <p><strong>Total:</strong> <span id="order-total">$${(item.price * item.quantity).toFixed(2)}</span></p>
                     <p>Get Fast, Free Shipping with Amazon Prime • FREE Returns</p>
                     <p><strong>Collection:</strong> Wind Chimes</p>
                 </div>
              </div>
                 
-            <div class="cart-item" data-item-index="${index}">
-                <div class="cart-item-image">
-                    <img src="${item.imagePath}" alt="${item.product}">
-                </div>
-                <div>
-                    <div class="cart-item-title"><strong>${item.product}</strong></div>
-                    <div class="cart-item-quantity">Qty: ${item.quantity}</div>
-                    <div>$${(item.price * item.quantity).toFixed(2)}</div>
-                </div>
-                <div>
-                    <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
-                </div>
-            </div>
+            
         `;
     }).join('');
         
