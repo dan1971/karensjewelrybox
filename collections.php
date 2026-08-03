@@ -1,6 +1,4 @@
-<?php require("functions.php");  head_top_menu(); session_start();?>
-<? session_start()></?<php>
-
+<?php require("functions.php");  head_top_menu(); ?>
 <div class="main-container">
     <main>
         <section class="collections">
