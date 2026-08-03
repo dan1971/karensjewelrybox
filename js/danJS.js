@@ -231,7 +231,7 @@ function setupGlobalInteractions() {
                 showToast('Your cart is empty.');
                 return;
             }
-            console.log("Proceeding to checkout with cart items:", cart);   
+console.log("Proceeding to checkout with cart items:", cart);   
             window.location.href = 'purchase.php';
             return;
         }
