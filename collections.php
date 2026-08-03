@@ -455,7 +455,7 @@ empty<?php require("functions.php");  head_top_menu(); ?>
                         <div class="add-to-cart-rectangle add-to-cart" data-image="images/painting-002.webp" data-product="Water on Fire" data-price="289">Add to cart</div>
                     </div>
                     <!-- Product 3 -->
-    <div class="product-card" data-word="">
+                        <div class="product-card" data-word="">
                         <div class="product-image" style="background-image: url('images/chime-011.webp')">
                             <div class="product-label">Bestseller</div>
                             <div class="product-wishlist">
