@@ -62,10 +62,10 @@
 
 @keyframes cart-full-animate {
   0% {
-    transform: translateY(-61%);
+    transform: translateX(-48%) translateY(-61%);
   }
   100% {
-    transform: translateY(8%);
+    transform: translateX(-48%) translateY(0%);
   }
 }
 
