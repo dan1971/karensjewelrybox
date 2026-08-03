@@ -183,7 +183,7 @@ function setupGlobalInteractions() {
         console.log('Clicked add to cart button:', addButton);
         if (addButton) {
             const text = addButton.textContent.trim().toLowerCase();
-            const imagePath = addButton.dataset.imagePath;
+            const imagePath = addButton.dataset.imagepath;
             const product = addButton.dataset.product;
             const price = Number(addButton.dataset.price);
             if (product && price) {
