@@ -151,12 +151,14 @@ function renderCartModal() {
     if (!overlay) return;
     const cartItems = overlay.querySelector('.cart-items');
     const cartTotal = overlay.querySelector('.cart-total');
+    const cartcheckOutBtn = overlay.querySelector('.place-order-button');
     const cart = getCart();
     console.log('Rendering cart modal with items:', cart);
     
     if (!cart.length) {
         cartItems.innerHTML = '<p>Your cart is empty.</p>';
         cartTotal.textContent = '';
+        cartcheckOutBtn.disabled = true;
         return;
     }
 
