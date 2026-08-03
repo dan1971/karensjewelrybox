@@ -60,44 +60,14 @@
     animation-delay: 0.2s;
     }
 
-    @keyframes cart-full-animate  {
-  0% {
-    transform: translateX(-48%) translateY(-161%);; /* Start high up */
-    animation-timing-function: ease-in; /* Speed up as it falls */
-  }
-  30% {
-    transform: translateX(-48%) translateY(143%); /* Hit the floor */
-    animation-timing-function: ease-out; /* Slow down as it rises */
-  }
-  50% {
-    transform: translateX(-48%) translateY(15%); /* First bounce height */
-    animation-timing-function: ease-in;
-  }
-  70% {
-    transform: translateX(-48%) translateY(143%); /* Hit the floor again */
-    animation-timing-function: ease-out;
-  }
-  85% {
-    transform: translateX(-48%) translateY(61%); /* Second smaller bounce */
-    animation-timing-function: ease-in;
-  }
-  95% {
-    transform: translateX(-48%) translateY(100%); /* Third tiny bounce */
-    animation-timing-function: ease-in;
-  }
-  100% {
-    transform: translateX(-48%) translateY(143%); /* Final rest position */
-  }
-}
-
-/* @keyframes cart-full-animate {
+@keyframes cart-full-animate {
   0% {
     transform: translateX(-48%) translateY(-161%);
   }
   100% {
     transform: translateX(-48%) translateY(0%);
   }
-} */
+}
 
 .cart-content {
     display: grid;
