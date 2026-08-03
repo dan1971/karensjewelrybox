@@ -45,10 +45,13 @@
                                 <label for="qty-2">Qty:</label>
                                 <input type="number" id="qty-2" value="2" min="1" max="99">
                             </div>
+                            <div>
+                               
+                            </div>
+                            <button class="cart-item-remove" aria-label="Remove item">Remove- ×</button>
                             <div class="cart-item-total">
                                 <p>$230.00</p>
                             </div>
-                            <button class="cart-item-remove" aria-label="Remove item">Remove- ×</button>
                         </div>
 
                         <!-- Empty Cart Message (hidden when items exist) -->
