@@ -812,7 +812,7 @@ color:#b0d0d3;
 }
 
 .button-dark-layer:hover{
-background: var(--muted-grey);
+background: var(--muted-brown);
   color: var(--dark);
   box-shadow: inset 0 0 0 .0px var(--muted-grey), 0 0px 0px rgba(0, 0, 0, 0.00);
 }
