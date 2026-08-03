@@ -61,12 +61,15 @@
     }
 
 @keyframes cart-full-animate {
-  0% {
+    0% {
     transform: translateX(-48%) translateY(-161%);
-  }
-  100% {
-    transform: translateX(-48%) translateY(0%);
-  }
+    }
+    50% {
+        transform: translateX(-48%) translateY(143%);
+     }
+     100% {
+    transform: translateX(-48%) translateY(8%);
+    }
 }
 
 .cart-content {
