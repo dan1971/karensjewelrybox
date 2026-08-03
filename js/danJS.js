@@ -161,7 +161,7 @@ function renderCartModal() {
         return `
             <div class="cart-item" data-item-index="${index}">
                 <div>
-                    <div>${item.imagePath}</div>
+                    <div><img src="${item.imagePath}" alt="${item.product}" style="max-width: 100px; height: auto;"></div>
                     <div><strong>${item.product}</strong></div>
                     <div class="cart-item-quantity">Qty: ${item.quantity}</div>
                     <div>$${(item.price * item.quantity).toFixed(2)}</div>
@@ -181,7 +181,7 @@ function setupGlobalInteractions() {
         console.log('Clicked add to cart button:', addButton);
         if (addButton) {
             const text = addButton.textContent.trim().toLowerCase();
-            const image_path = addButton.dataset.imagePath;
+            const imagePath = addButton.dataset.imagePath;
             const product = addButton.dataset.product;
             const price = Number(addButton.dataset.price);
             if (product && price) {
@@ -189,11 +189,11 @@ function setupGlobalInteractions() {
                 const quantitySelect = document.querySelector(selectors.quantity);
                 const quantity = quantitySelect ? Number(quantitySelect.value) : 1;
                 if (text.includes('add to cart')) {
-                    addToCart(image_path, product, price, quantity);
+                    addToCart(imagePath, product, price, quantity);
                     return;
                 }
                 if (text.includes('buy now')) {
-                    addToCart(image_path, product, price, quantity);
+                    addToCart(imagePath, product, price, quantity);
                     const paymentSection = document.getElementById('payment-section');
                     if (paymentSection) {
                         updatePurchaseTotal();
@@ -263,7 +263,7 @@ function updatePurchaseTotal() {
     }
 }
 
-function addToCart(product, price, quantity = 1) {
+function addToCart(imagePath, product, price, quantity = 1) {
     const cart = getCart();
     const existing = cart.find((item) => item.product === product && item.price === price);
     if (existing) {
