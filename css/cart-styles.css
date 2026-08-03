@@ -403,6 +403,10 @@
         transition: background 0.2s;
     }
 
+    .place-order-button:hover{
+        background: var(--muted-grey);
+    }
+
     .cart-actions .button {
         width: auto;
         padding: 0 28px;
