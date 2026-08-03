@@ -159,7 +159,7 @@ function renderCartModal() {
     }
 
     cartItems.innerHTML = cart.map((item, index) => {
-        conssole.log('Rendering cart item:', ${item.ImagePath}, ${item.product}, ${item.price}, ${item.quantity});
+        console.log('Rendering cart item:', item.imagePath);
         return `
             <div class="cart-item" data-item-index="${index}">
                 <div>
