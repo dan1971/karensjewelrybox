@@ -1,4 +1,4 @@
-
+a
 
 // const words = ["Sugar", "Buddy", "Chimera", "Shrimps", "Lollypop", "Bubbles", "Twinkle", "Sparkle", "Doodle", "Noodle", "Wiggle", "Jellybean"];
 // const el = document.querySelector(".product-grid");
@@ -61,6 +61,8 @@ window.addEventListener('DOMContentLoaded', () => {
     setupGlobalInteractions();
     setupPurchasePage();
     setupHeaderScroll();
+    const cart = getCart();
+    console.log('Rendering cart modal with items:', cart);
 });
 
 
@@ -232,7 +234,8 @@ function setupGlobalInteractions() {
                 showToast('Your cart is empty.');
                 return;
             }
-console.log("Proceeding to checkout with cart items:", cart);   
+            console.log("Proceeding to checkout with cart items:", cart);   
+            $_SESSION["username"] = "Alex";
             window.location.href = 'purchase.php';
             return;
         }
