@@ -254,7 +254,7 @@ font-weight:normal;
 
 .menu-links {
 font-family:"H1-TitlesOrtica", Georgia, serif;
-font-size: clamp(0.70rem, calc(0.582rem + 0.814vw), 1.00rem);
+font-size: clamp(1.33rem, calc(1.241rem + 0.348vw), 1.58rem);
 color:#b0d0d3;
 
 }
@@ -268,7 +268,7 @@ color:#b0d0d3;
 .layer,
 .layer:after {
   display:block;
-  color: Var(--cart-badge);
+  color: Var(--primary-btn-drk);
   white-space: pre;
   position: relative;
   & .button{
@@ -278,7 +278,7 @@ color:#b0d0d3;
 
 .layer:after {
   content: attr(data-text);
-  color: #48c6d4;
+  color: Var(--muted-grey);
   position: absolute;
   top: 0px;
   left: 0px;
