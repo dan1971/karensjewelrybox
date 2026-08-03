@@ -226,7 +226,7 @@ function setupGlobalInteractions() {
             }
         }
 
-        const checkoutButton = event.target.closest('#cart-modal-overlay .place-order-button');
+        const checkoutButton = event.target.closest('#cart-button');
         if (checkoutButton) {
             event.preventDefault();
             const cart = getCart();
@@ -236,7 +236,7 @@ function setupGlobalInteractions() {
             }
             console.log("Proceeding to checkout with cart items:", cart);   
           
-            window.location.href = 'purchase.php';
+            window.location.href = 'cart.php';
             return;
         }
 
@@ -260,35 +260,79 @@ function setupGlobalInteractions() {
 function setupPurchasePage() {
     initializeWishlistState();
 
-    const orderCard = document.getElementById('order-card');
+    const orderCard = document.getElementById('cart-main');
     const cart = getCart();
 
     if (orderCard && cart.length) {
-        const cartTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-        orderCard.dataset.unitPrice = cartTotal.toString();
-
-        const checkOutDetails = document.querySelector('.checkout-details');
+        const checkOutDetails = document.querySelector('.cart-items');
+=
        checkOutDetails.innerHTML = cart.map((item, index) => {
         return `
-            <div id="order-card" class="checkout-details" data-item-index="${index}">>
-                <img src="${item.imagePath}" alt="${item.product}">
-                <p class="product-category">Wind Chimes</p>
-                <h1 class="product-title">${item.product}</h1>
-                <p class="product-description">A bestselling wind chime finished in warm gold tones, perfect for adding gentle sound and elegant movement to any outdoor space.</p>
 
-                <div class="product-info-summary">
-                    <p><strong>Unit Price:</strong> <span id="unit-price"> ${item.price}</span> <small class="original-price">$119</small></p>
-                    <div class="cart-item-quantity">Qty: ${item.quantity}</div>
-                    <p><strong>Total:</strong> <span id="order-total">$${(item.price * item.quantity).toFixed(2)}</span></p>
-                    <p>Get Fast, Free Shipping with Amazon Prime • FREE Returns</p>
-                    <p><strong>Collection:</strong> Wind Chimes</p>
-                </div>
-             </div>
+                        <div class="cart-item" data-item-index="${index}>
+                            <div class="cart-item-image">
+                                  <img src="${item.imagePath}" alt="${item.product}">
+                            </div>
+                            <div class="cart-item-details">
+                                <h1 class="product-title">${item.product}</h1>
+                                <p class="cart-item-description">Handcrafted windchime with glass beads</p>
+                                <p class="cart-item-price">${item.price}</p>
+                            </div>
+                            <div class="cart-item-quantity">
+                                <label for="qty-1">Qty:</label>
+                                <input type="number" id="qty-1" value="${item.quantity}" min="1" max="99">
+                            </div>
+                            <div class="cart-item-total">
+                                <p>$${(item.price * item.quantity).toFixed(2)}</p>
+                            </div>
+                            <button class="cart-item-remove" aria-label="Remove item">×</button>
+                        </div>
                 
             
         `;
     }).join('');
-        
+
+        const checkOutSubtotal = document.querySelector('.subtotal');
+         const checkOutShipping = document.querySelector('.shipping');
+         const checkOutTax = document.querySelector('.tax');
+         const checkOutTotal = document.querySelector('.total');
+        const cartSubTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        const shippingCost = 12.00;
+        const taxRate = 0.08;
+        const taxAmount = cartSubTotal * taxRate;
+        const cartTotal = cartSubTotal + shippingCost + taxAmount;
+    
+        checkOutSubtotal.innerHTML =cartSubTotal.toString();
+         checkOutShipping.innerHTML =shippingCost.toString();
+         checkOutTax.innerHTML =taxAmount.toString();
+         checkOutTotal.innerHTML =cartTotal.toString();
+        //   checkOutTotal.dataset.unitPrice = cartTotal.toString();
+
+                //    <div class="cart-summary">
+                //     <h2>Order Summary</h2>
+                //         <div class="cart-summary-line">
+                //             <span>Subtotal</span>
+                //             <span id="subtotal">$${(item.price * item.quantity).toFixed(2)}</span>
+                //         </div>
+                        
+                //         <div class="cart-summary-line">
+                //             <span>Shipping</span>
+                //             <span id="shipping">$12.00</span>
+                //         </div>
+                        
+                //         <div class="cart-summary-line">
+                //             <span>Tax</span>
+                //             <span>$24.72</span>
+                //         </div>
+                        
+                //         <div class="cart-summary-divider"></div>
+                        
+                //         <div class="cart-summary-line cart-summary-total">
+                //             <span>Total</span>
+                //             <span class="total">$345.72</span>
+                //         </div>
+                //         <button class="checkout-btn">Proceed to Checkout</button>
+                //         </div>
     }
 
     updatePurchaseTotal();

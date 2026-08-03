@@ -64,24 +64,24 @@
                         
                         <div class="cart-summary-line">
                             <span>Subtotal</span>
-                            <span>$309.00</span>
+                            <span class="subtotal">$309.00</span>
                         </div>
                         
                         <div class="cart-summary-line">
                             <span>Shipping</span>
-                            <span>$12.00</span>
+                            <span class="shipping">$12.00</span>
                         </div>
                         
                         <div class="cart-summary-line">
                             <span>Tax</span>
-                            <span>$24.72</span>
+                            <span class="tax">$24.72</span>
                         </div>
                         
                         <div class="cart-summary-divider"></div>
                         
                         <div class="cart-summary-line cart-summary-total">
                             <span>Total</span>
-                            <span>$345.72</span>
+                            <span class="total" data-total="345.72">$345.72</span>
                         </div>
 
                         <button class="checkout-btn">Proceed to Checkout</button>
