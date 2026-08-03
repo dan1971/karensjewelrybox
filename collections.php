@@ -1,4 +1,4 @@
-<?php require("functions.php");  head_top_menu(); ?>
+empty<?php require("functions.php");  head_top_menu(); ?>
 <div class="main-container">
     <main>
         <section class="collections">
@@ -80,7 +80,7 @@
                             </div>
                             <div class="price-row">
                                 <div>
-                                    <span class="price">$155</span>
+                                    <span class="price">$129</span>
                                     <span class="original-price">$119</span>
                                 </div>
                      
@@ -120,7 +120,7 @@
                             </div>
                             <div class="price-row">
                                 <div>
-                                    <span class="price">$155</span>
+                                    <span class="price">$129</span>
                                     <span class="original-price">$119</span>
                                 </div>
                                 <button class="add-to-cart" data-product="Minimalist Vase Set" data-price="89">
@@ -133,7 +133,7 @@
                                 <div class="cart-tooltip">Add to cart</div>
                             </div>
                         </div>
-                        <div class="product-quick-view">Add to cart</div>
+                        <div class="add-to-cart-rectangle add-to-cart">Add to cart</div>
                     </div>
 
                     <!-- Product 4 -->
@@ -165,7 +165,7 @@
                             </div>
                             <div class="price-row">
                                 <div>
-                                    <span class="price">$155</span>
+                                    <span class="price">$129</span>
                                     <span class="original-price">$119</span>
                                 </div>
                                 <button class="add-to-cart" data-product="Minimalist Vase Set" data-price="89">
@@ -178,7 +178,7 @@
                                 <div class="cart-tooltip">Add to cart</div>
                             </div>
                         </div>
-                        <div class="product-quick-view">Add to cart</div>
+                        <div class="add-to-cart-rectangle add-to-cart">Add to cart</div>
                     </div>
 
                     <!-- Product 5 -->
@@ -210,7 +210,7 @@
                             </div>
                             <div class="price-row">
                                 <div>
-                                    <span class="price">$155</span>
+                                    <span class="price">$129</span>
                                     <span class="original-price">$119</span>
                                 </div>
                                 <button class="add-to-cart" data-product="Minimalist Vase Set" data-price="89">
@@ -223,7 +223,7 @@
                                 <div class="cart-tooltip">Add to cart</div>
                             </div>
                         </div>
-                        <div class="product-quick-view">Add to cart</div>
+                        <div class="add-to-cart-rectangle add-to-cart">Add to cart</div>
                     </div>
 
                     <!-- Product 5 -->
@@ -255,7 +255,7 @@
                             </div>
                             <div class="price-row">
                                 <div>
-                                    <span class="price">$155</span>
+                                    <span class="price">$129</span>
                                     <span class="original-price">$119</span>
                                 </div>
                                 <button class="add-to-cart" data-product="Minimalist Vase Set" data-price="89">
@@ -268,7 +268,7 @@
                                 <div class="cart-tooltip">Add to cart</div>
                             </div>
                         </div>
-                        <div class="product-quick-view">Add to cart</div>
+                        <div class="add-to-cart-rectangle add-to-cart">Add to cart</div>
                     </div>
 
                     <!-- Product 6 -->
@@ -300,7 +300,7 @@
                             </div>
                             <div class="price-row">
                                 <div>
-                                    <span class="price">$155</span>
+                                    <span class="price">$129</span>
                                     <span class="original-price">$119</span>
                                 </div>
                                 <button class="add-to-cart" data-product="Minimalist Vase Set" data-price="89">
@@ -313,7 +313,7 @@
                                 <div class="cart-tooltip">Add to cart</div>
                             </div>
                         </div>
-                        <div class="product-quick-view">Add to cart</div>
+                        <div class="add-to-cart-rectangle add-to-cart">Add to cart</div>
                     </div>
 
                     <!-- Product 7 -->
@@ -345,7 +345,7 @@
                             </div>
                             <div class="price-row">
                                 <div>
-                                    <span class="price">$155</span>
+                                    <span class="price">$129</span>
                                     <span class="original-price">$119</span>
                                 </div>
                                 <button class="add-to-cart" data-product="Minimalist Vase Set" data-price="89">
@@ -358,7 +358,7 @@
                                 <div class="cart-tooltip">Add to cart</div>
                             </div>
                         </div>
-                        <div class="product-quick-view">Add to cart</div>
+                        <div class="add-to-cart-rectangle add-to-cart">Add to cart</div>
                     </div>
                 </div>
 
@@ -396,7 +396,7 @@
                             </div>
                             <div class="price-row">
                                 <div>
-                                    <span class="price">$155</span>
+                                    <span class="price">$129</span>
                                     <span class="original-price">$119</span>
                                 </div>
                                 <button class="add-to-cart" data-product="Minimalist Vase Set" data-price="89">
@@ -409,7 +409,7 @@
                                 <div class="cart-tooltip">Add to cart</div>
                             </div>
                         </div>
-                        <div class="product-quick-view">Add to cart</div>
+                        <div class="add-to-cart-rectangle add-to-cart">Add to cart</div>
                     </div>
 
 
@@ -442,7 +442,7 @@
                             </div>
                             <div class="price-row">
                                 <div>
-                                    <span class="price">$155</span>
+                                    <span class="price">$129</span>
                                     <span class="original-price">$119</span>
                                 </div>
                                 <button class="add-to-cart" data-product="Minimalist Vase Set" data-price="89">
@@ -455,7 +455,7 @@
                                 <div class="cart-tooltip">Add to cart</div>
                             </div>
                         </div>
-                        <div class="product-quick-view">Add to cart</div>
+                        <div class="add-to-cart-rectangle add-to-cart">Add to cart</div>
                     </div>
 
 
@@ -487,7 +487,7 @@
                             </div>
                             <div class="price-row">
                                 <div>
-                                    <span class="price">$155</span>
+                                    <span class="price">$129</span>
                                     <span class="original-price">$119</span>
                                 </div>
                                 <button class="add-to-cart" data-product="Minimalist Vase Set" data-price="89">
@@ -500,7 +500,7 @@
                                 <div class="cart-tooltip">Add to cart</div>
                             </div>
                         </div>
-                        <div class="product-quick-view">Add to cart</div>
+                        <div class="add-to-cart-rectangle add-to-cart">Add to cart</div>
                     </div>
 
                 </div>
