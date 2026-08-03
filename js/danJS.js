@@ -270,6 +270,19 @@ function setupPurchasePage() {
         const checkOutDetails = document.querySelector('.checkout-details');
        checkOutDetails.innerHTML = cart.map((item, index) => {
         return `
+            <div id="order-card" class="checkout-details">
+                <p class="product-category">Wind Chimes</p>
+                <h1 class="product-title">Golden Windstone</h1>
+                <p class="product-description">A bestselling wind chime finished in warm gold tones, perfect for adding gentle sound and elegant movement to any outdoor space.</p>
+
+                <div class="product-info-summary">
+                    <p><strong>Unit Price:</strong> <span id="unit-price">$155</span> <small class="original-price">$119</small></p>
+                    <p><strong>Total:</strong> <span id="order-total">$155</span></p>
+                    <p>Get Fast, Free Shipping with Amazon Prime • FREE Returns</p>
+                    <p><strong>Collection:</strong> Wind Chimes</p>
+                </div>
+             </div>
+                
             <div class="cart-item" data-item-index="${index}">
                 <div class="cart-item-image">
                     <img src="${item.imagePath}" alt="${item.product}">
