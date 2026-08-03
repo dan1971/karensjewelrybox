@@ -266,7 +266,10 @@ function updatePurchaseTotal() {
 }
 
 function addToCart(imagePath, product, price, quantity = 1) {
-    const cart = getCart();
+    const cart = getCart()
+
+console.log('Adding to Cart: ', cart);
+
     const existing = cart.find((item) => item.product === product && item.price === price);
     if (existing) {
         existing.quantity += quantity;
