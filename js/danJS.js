@@ -281,7 +281,6 @@ function setupPurchasePage() {
                 <div class="cart-item-quantity">
                     <label for="qty-1">Qty:</label>
                     <input type="number" id="qty-1" value="${item.quantity}" min="1" max="99">
-                    <div class="cart-item-total"><p>$${(item.price * item.quantity).toFixed(2)}</p></div>
                 </div>
                 <div></div>
                 <div></div>
