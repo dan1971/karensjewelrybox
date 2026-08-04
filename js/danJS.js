@@ -242,7 +242,7 @@ function setupGlobalInteractions() {
 
         if (event.target.closest('.cart-item-remove')) {
             const removeButton = event.target.closest('.cart-item-remove');
-            conole.log('Remove button clicked:', removeButton);
+            console.log('Remove button clicked:', removeButton);
             const index = Number(removeButton.dataset.itemIndex);
             removeCartItem(index);
             return;
