@@ -62,6 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
     setupPurchasePage();
     setupHeaderScroll();
     const cart = getCart();
+    console.log('Cart items on page load:', cart);
 });
 
 
@@ -234,7 +235,7 @@ function setupGlobalInteractions() {
                 return;
             }
             console.log("Proceeding to checkout with cart items:", cart);   
-          
+           
             window.location.href = 'cart.php';
             return;
         }
