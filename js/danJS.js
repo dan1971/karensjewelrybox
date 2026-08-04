@@ -399,6 +399,7 @@ function removeCartItem(index) {
         cart.splice(index, 1);
         setCart(cart);
         renderCartBadge();
+        setupPurchasePage();
     }
 }
 
