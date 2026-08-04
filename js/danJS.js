@@ -92,7 +92,7 @@ function setWishlist(wishlist) {
 function initializeCartState() {
     // createCartBadge();
     renderCartBadge();
-    createCartModal();
+
 }
 
 // function createCartBadge() {
@@ -212,10 +212,10 @@ function setupGlobalInteractions() {
                     addToCart(imagePath, product, price, quantity);
                     return;
                 }
-                if (text.includes('buy now')) {
+            if (text.includes('buy now')) {
                     addToCart(imagePath, product, price, quantity);
                     const paymentSection = document.getElementById('payment-section');
-                    if (paymentSection) {
+            if (paymentSection) {
                         updatePurchaseTotal();
                         paymentSection.scrollIntoView({ behavior: 'smooth' });
                         showToast('Ready to pay with Square.');
@@ -254,6 +254,7 @@ function setupGlobalInteractions() {
            setupPurchasePage();
         });
     }
+    
 }
 
 function setupPurchasePage() {
