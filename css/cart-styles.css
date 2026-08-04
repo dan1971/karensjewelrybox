@@ -12,10 +12,10 @@
 
 .cart-container h1 {
     font-family: 'Montserrat', Verdana, Arial, sans-serif;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    font-weight: 500;
     color: var(--ink);
     margin-bottom: 2rem;
-    text-align: center;
 }
 
 .cart-icons {
@@ -96,13 +96,13 @@
 }
 
 .cart-item-description {
-    font-size: 1.4rem;
+    font-size:.9rem;
     color: var(--dark);
     margin: 0 0 8px 0;
 }
 
 .cart-item-price {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--ink);
     font-weight: 500;
     margin: 0;
@@ -111,7 +111,7 @@
 .cart-item-quantity {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 3px;
 }
 
 .cart-item-quantity label {
@@ -349,7 +349,7 @@ font-weight: 500;
     
     cart-item-title{
         font-family: 'Montserrat', Verdana, Arial, sans-serif;
-        font-size:.9rem;
+        font-size:.6rem;
         font-weight: 600;
     }    
 
