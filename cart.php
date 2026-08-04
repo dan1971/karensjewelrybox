@@ -20,7 +20,7 @@
                                 <h3>Chime Magic</h3>
                                 <p class="cart-item-description">Handcrafted windchime with glass beads</p>
                                 <p class="cart-item-price">$79.00</p>
-                                <button class="cart-item-remove" aria-label="Remove item">×</button>
+                                <button class="cart-item-remove" aria-label="Remove item">Remove-X</button>
                             </div>
                             <div class="cart-item-quantity">
                                 <label for="qty-1">Qty:</label>
@@ -29,7 +29,7 @@
                             <div class="cart-item-total">
                                 <p>$79.00</p>
                             </div>
-                            <button class="cart-item-remove" aria-label="Remove item">×</button>
+                            <button class="cart-item-remove" aria-label="Remove item">Remove-X</button>
                         </div>
 
                         <!-- Cart Item 2 -->
