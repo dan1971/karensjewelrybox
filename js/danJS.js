@@ -263,33 +263,29 @@ function setupPurchasePage() {
     initializeWishlistState();
     const orderCard = document.querySelector('.cart-main');
     const cart = getCart();
-// console.log('Setting up purchase page with cart items:', cart);
     if (orderCard && cart.length) {
-        console.log('Rendering purchase page with cart items:', cart);
+        
         const checkOutDetails = document.querySelector('.cart-items');
-       checkOutDetails.innerHTML = cart.map((item, index) => {
+        
+        checkOutDetails.innerHTML = cart.map((item, index) => {
         return `
 
-                        <div class="cart-item" data-item-index="${index}>
-                            <div class="cart-item-image">
-                                  <img src="${item.imagePath}" alt="${item.product}">
-                            </div>
-                            <div class="cart-item-details">
-                                <h1 class="product-title">${item.product}</h1>
-                                <p class="cart-item-description">Handcrafted windchime with glass beads</p>
-                                <p class="cart-item-price">${item.price}</p>
-                               <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
-                            </div>
-                            <div class="cart-item-quantity">
-                                <label for="qty-1">Qty:</label>
-                                <input type="number" id="qty-1" value="${item.quantity}" min="1" max="99">
-                            </div>
-                            <div class="cart-item-total">
-                                <p>$${(item.price * item.quantity).toFixed(2)}</p>
-                            </div>
-                            
-                        </div>
-                
+            <div class="cart-item" data-item-index="${index}">
+                <div class="cart-item-image"><img src="${item.imagePath}" alt="${item.product}" /></div>
+                <div>
+                    <h1 class="product-title">${item.product}</h1>
+                    <p class="cart-item-description">Handcrafted windchime with glass beads</p>
+                    <p class="cart-item-price">${item.price}</p>
+                    <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
+                </div>
+                <div class="cart-item-quantity">
+                    <label for="qty-1">Qty:</label>
+                    <input type="number" id="qty-1" value="${item.quantity}" min="1" max="99">
+                </div>
+                <div class="cart-item-total">
+                    <p>$${(item.price * item.quantity).toFixed(2)}</p>
+                </div>
+            </div>
             
         `;
     }).join('');

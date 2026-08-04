@@ -18,10 +18,10 @@
                             <p>Your cart is empty</p>
                             <a href="index.html" class="continue-shopping-btn">Continue Shopping</a>
                         </div>
-                    </div>
+                        </div>
 
-                    <!-- Cart Summary Section -->
-                    <div class="cart-summary">
+                        <!-- Cart Summary Section -->
+                        <div class="cart-summary">
                         <h2>Order Summary</h2>
                         
                         <div class="cart-summary-line">
