@@ -265,7 +265,7 @@ function setupPurchasePage() {
     const cart = getCart();
 // console.log('Setting up purchase page with cart items:', cart);
     if (orderCard && cart.length) {
-        conole.log('Rendering purchase page with cart items:', cart);
+        console.log('Rendering purchase page with cart items:', cart);
         const checkOutDetails = document.querySelector('.cart-items');
        checkOutDetails.innerHTML = cart.map((item, index) => {
         return `
