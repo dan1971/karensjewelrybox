@@ -413,8 +413,8 @@ function clearCart() {
 }
 
  document.body.addEventListener('click', (event) => {
-    const addQuantity = document.getElementById('qty-1');
-     const addQuantity.value = Number(addQuantity.value);
+    const addQuantity =  event.target.closest('qty-1');
+     const addQuantityValue = Number(addQuantity.value);
     console.log('Quantity input clicked:', addQuantity);
  });
 
