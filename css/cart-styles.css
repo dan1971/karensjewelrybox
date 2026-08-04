@@ -350,6 +350,11 @@ font-weight: 500;
         font-weight: 600;
     }    
 
+     .cart-item img{
+        width:25%;
+        height: auto;
+     }
+
     .cart-item-quantity {
         color: var(--muted);
         font-size: 0.8rem;
