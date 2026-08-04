@@ -62,7 +62,6 @@ window.addEventListener('DOMContentLoaded', () => {
     setupPurchasePage();
     setupHeaderScroll();
     const cart = getCart();
-    console.log('Rendering cart modal with items:', cart);
 });
 
 
@@ -252,7 +251,7 @@ function setupGlobalInteractions() {
     if (cartButton) {
         cartButton.addEventListener('click', (event) => {
             event.preventDefault();
-            toggleCartModal(true);
+           setupPurchasePage();
         });
     }
 }
@@ -388,7 +387,6 @@ function addToCart(imagePath, product, price, quantity = 1) {
 
   setCart(cart);
   renderCartBadge();
-  renderCartModal();
   showToast(`${product} added to cart`);
 }
 
@@ -398,14 +396,12 @@ function removeCartItem(index) {
         cart.splice(index, 1);
         setCart(cart);
         renderCartBadge();
-        renderCartModal();
     }
 }
 
 function clearCart() {
     setCart([]);
     renderCartBadge();
-    renderCartModal();
 }
 
 function initializeWishlistState() {
