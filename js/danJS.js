@@ -277,6 +277,7 @@ function setupPurchasePage() {
                                 <h1 class="product-title">${item.product}</h1>
                                 <p class="cart-item-description">Handcrafted windchime with glass beads</p>
                                 <p class="cart-item-price">${item.price}</p>
+                                <button class="cart-item-remove" aria-label="Remove item">Remove</button>
                             </div>
                             <div class="cart-item-quantity">
                                 <label for="qty-1">Qty:</label>
@@ -285,7 +286,7 @@ function setupPurchasePage() {
                             <div class="cart-item-total">
                                 <p>$${(item.price * item.quantity).toFixed(2)}</p>
                             </div>
-                            <button class="cart-item-remove" aria-label="Remove item">×</button>
+                            
                         </div>
                 
             

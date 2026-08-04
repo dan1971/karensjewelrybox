@@ -11,49 +11,7 @@
                 <div class="cart-content">
                     <!-- Cart Items Section -->
                     <div class="cart-items">
-                        <!-- Cart Item 1 -->
-                        <div class="cart-item">
-                            <div class="cart-item-image">
-                                <img src="images/Chime-001.webp" alt="Chime Magic">
-                            </div>
-                            <div class="cart-item-details">
-                                <h3>Chime Magic</h3>
-                                <p class="cart-item-description">Handcrafted windchime with glass beads</p>
-                                <p class="cart-item-price">$79.00</p>
-                                <button class="cart-item-remove" aria-label="Remove item">Remove</button>
-                            </div>
-                            <div class="cart-item-quantity">
-                                <label for="qty-1">Qty:</label>
-                                <input type="number" id="qty-1" value="1" min="1" max="99">
-                            </div>
-                            <div class="cart-item-total">
-                                <p>$79.00</p>
-                            </div>
-                            
-                        </div>
-
-                        <!-- Cart Item 2 -->
-                        <div class="cart-item">
-                            <div class="cart-item-image">
-                                <img src="images/Chime-002.webp" alt="Chime Love">
-                            </div>
-                            <div class="cart-item-details">
-                                <h3>Chime Love</h3>
-                                <p class="cart-item-description">Whimsical design with copper accents</p>
-                                <p class="cart-item-price">$115.00</p>
-                                <button class="cart-item-remove" aria-label="Remove item">Remove</button>
-                            </div>
-                            <div class="cart-item-quantity">
-                                <label for="qty-2">Qty:</label>
-                                <input type="number" id="qty-2" value="2" min="1" max="99">
-                                
-                            </div>
-                            <div></div>
-                            <div></div>
-                            <div class="cart-item-total">
-                                <p>$230.00</p>
-                            </div>
-                        </div>
+            
 
                         <!-- Empty Cart Message (hidden when items exist) -->
                         <div class="cart-empty" style="display: none;">
