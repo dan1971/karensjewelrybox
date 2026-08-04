@@ -61,8 +61,6 @@ window.addEventListener('DOMContentLoaded', () => {
     setupGlobalInteractions();
     setupPurchasePage();
     setupHeaderScroll();
-    const cart = getCart();
-    console.log('Cart items on page load:', cart);
 });
 
 
