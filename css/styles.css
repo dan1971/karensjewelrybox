@@ -253,11 +253,10 @@ font-weight:normal;
 }
 
 .menu-links {
-font-family:"H1-TitlesOrtica", Georgia, serif;
+font-family:"Montserrat", Georgia, serif;
 font-size: clamp(1.00rem, calc(0.931rem + 0.348vw), 1.19rem);
 color:#b0d0d3;
-font-weight: 600;
-
+font-weight: 300;
 }
 
 .main-nav {

@@ -394,9 +394,8 @@ function addToCart(imagePath, product, price, quantity = 1) {
 }
 
 function removeCartItem(index) {
-    
+     const cart = getCart();
     if (index >= 0 && index < cart.length) {
-        const cart = getCart();
         cart.splice(index, 1);
         setCart(cart);
         renderCartBadge();
