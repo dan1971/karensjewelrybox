@@ -12,8 +12,8 @@
 
 .cart-container h1 {
     font-family: 'Montserrat', Verdana, Arial, sans-serif;
-    font-size: 2.5rem;
-    color: #ffffff;
+    font-size: 1.3rem;
+    color: var(--ink);
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -89,21 +89,21 @@
 
 .cart-item-details h3 {
     font-family: 'Montserrat', Verdana, Arial, sans-serif;
-    font-size: 1.2rem;
-    color: #222;
+    font-size: 1.8rem;
+    color: var(--ink)ca;
     margin: 0 0 8px 0;
     font-weight: 600;
 }
 
 .cart-item-description {
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 1.4rem;
+    color: var(--dark);
     margin: 0 0 8px 0;
 }
 
 .cart-item-price {
     font-size: 1rem;
-    color: #222;
+    color: var(--ink);
     font-weight: 500;
     margin: 0;
 }
@@ -116,8 +116,9 @@
 
 .cart-item-quantity label {
     font-size: 0.85rem;
-    color: #666;
-    font-weight: 500;
+color: var(--ink); 
+font-weight: 500;
+    margin: 0 auto;
 }
 
 .cart-item-quantity input {
@@ -136,7 +137,7 @@
 .cart-item-total p {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #222;
+    color: var(--ink);
     margin: 0;
 }
 
@@ -152,7 +153,7 @@
 
 .cart-empty p {
     font-size: 1.3rem;
-    color: #666;
+    color: var(--dark);
     margin-bottom: 24px;
 }
 
@@ -333,6 +334,14 @@
         font-size: 0.9rem;
         border-bottom: 1px solid var(--line);
     }
+
+        cart-item_details { 
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            align-items: flex-start;
+        }
+
 
     cart-item-image {
         max-width:70px;
