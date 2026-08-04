@@ -272,7 +272,7 @@ function setupPurchasePage() {
 
             <div class="cart-item" data-item-index="${index}">
                 <div class="cart-item-image"><img src="${item.imagePath}" alt="${item.product}" /></div>
-                <div>
+                <div class="cart-item-details">
                     <h1 class="product-title">${item.product}</h1>
                     <p class="cart-item-description">Handcrafted windchime with glass beads</p>
                     <p class="cart-item-price">${item.price}</p>
@@ -281,10 +281,14 @@ function setupPurchasePage() {
                 <div class="cart-item-quantity">
                     <label for="qty-1">Qty:</label>
                     <input type="number" id="qty-1" value="${item.quantity}" min="1" max="99">
+                    <div class="cart-item-total"><p>$${(item.price * item.quantity).toFixed(2)}</p></div>
                 </div>
+                <div></div>
+                <div></div>
                 <div class="cart-item-total">
-                    <p>$${(item.price * item.quantity).toFixed(2)}</p>
+                <p>$${(item.price * item.quantity).toFixed(2)}</p>
                 </div>
+
             </div>
             
         `;
