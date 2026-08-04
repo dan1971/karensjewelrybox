@@ -265,7 +265,6 @@ function setupPurchasePage() {
 
     if (orderCard && cart.length) {
         const checkOutDetails = document.querySelector('.cart-items');
-=
        checkOutDetails.innerHTML = cart.map((item, index) => {
         return `
 
