@@ -258,11 +258,11 @@ function setupGlobalInteractions() {
 }
 
 function setupPurchasePage() {
+    
     initializeWishlistState();
-
     const orderCard = document.getElementById('cart-main');
     const cart = getCart();
-
+console.log('Setting up purchase page with cart items:', cart);
     if (orderCard && cart.length) {
         const checkOutDetails = document.querySelector('.cart-items');
        checkOutDetails.innerHTML = cart.map((item, index) => {
