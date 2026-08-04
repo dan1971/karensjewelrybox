@@ -257,6 +257,11 @@ function setupGlobalInteractions() {
     
 }
 
+functionAddQutntityChangeListener() {
+    const quantitySelect = document.querySelector(selectors.quantity);
+
+
+
 function setupPurchasePage() {
     
     initializeWishlistState();
@@ -279,7 +284,7 @@ function setupPurchasePage() {
                 </div>
                 <div class="cart-item-quantity">
                     <label for="qty-1">Qty:</label>
-                    <input type="number" id="qty-1" value="${item.quantity}" min="1" max="99">
+                    <input class="addItemsToOrder" type="number" id="qty-1" value="${item.quantity}" min="1" max="99">
                 </div>
                 <div></div>
                 <div></div>
@@ -406,6 +411,12 @@ function clearCart() {
     setCart([]);
     renderCartBadge();
 }
+
+ document.body.addEventListener('click', (event) => {
+    const addQuantity = document.getElementById('qty-1');
+     const addQuantity.value = Number(addQuantity.value);
+    console.log('Quantity input clicked:', addQuantity);
+ });
 
 function initializeWishlistState() {
     const wishlist = getWishlist();
