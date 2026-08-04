@@ -257,11 +257,6 @@ function setupGlobalInteractions() {
     
 }
 
-functionAddQutntityChangeListener() {
-    const quantitySelect = document.querySelector(selectors.quantity);
-
-
-
 function setupPurchasePage() {
     
     initializeWishlistState();
