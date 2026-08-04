@@ -275,7 +275,7 @@ function setupPurchasePage() {
                 <div class="cart-item-details">
                     <h1 class="product-title">${item.product}</h1>
                     <p class="cart-item-description">Handcrafted windchime with glass beads</p>
-                    <p class="cart-item-price">${item.price}</p>
+                    <p class="cart-item-price">$${item.price}</p>
                     <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
                 </div>
                 <div class="cart-item-quantity">
