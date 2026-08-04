@@ -407,12 +407,6 @@ function clearCart() {
     renderCartBadge();
 }
 
- document.body.addEventListener('click', (event) => {
-    const addQuantity =  event.target.closest('qty-1');
-     const addQuantityValue = Number(addQuantity.value);
-    console.log('Quantity input clicked:', addQuantity);
- });
-
 function initializeWishlistState() {
     const wishlist = getWishlist();
     document.querySelectorAll('.wishheart').forEach((path) => {
