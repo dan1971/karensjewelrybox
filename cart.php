@@ -29,7 +29,7 @@
                             <div class="cart-item-total">
                                 <p>$79.00</p>
                             </div>
-                            <button class="cart-item-remove" aria-label="Remove item">Remove-X</button>
+                            
                         </div>
 
                         <!-- Cart Item 2 -->
