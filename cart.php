@@ -20,7 +20,7 @@
                                 <h3>Chime Magic</h3>
                                 <p class="cart-item-description">Handcrafted windchime with glass beads</p>
                                 <p class="cart-item-price">$79.00</p>
-                                <button class="cart-item-remove" aria-label="Remove item">Remove-X</button>
+                                <button class="cart-item-remove" aria-label="Remove item">Remove</button>
                             </div>
                             <div class="cart-item-quantity">
                                 <label for="qty-1">Qty:</label>
@@ -41,7 +41,7 @@
                                 <h3>Chime Love</h3>
                                 <p class="cart-item-description">Whimsical design with copper accents</p>
                                 <p class="cart-item-price">$115.00</p>
-                                <button class="cart-item-remove" aria-label="Remove item">×</button>
+                                <button class="cart-item-remove" aria-label="Remove item">Remove</button>
                             </div>
                             <div class="cart-item-quantity">
                                 <label for="qty-2">Qty:</label>
