@@ -278,8 +278,8 @@ function setupPurchasePage() {
                     <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
                 </div>
                 <div class="cart-item-quantity">
-                    <label for="qty-1">Qty:</label>
-                    <input class="addItemsToOrder" type="number" id="qty-1" value="${item.quantity}" min="1" max="99">
+                    <label for="quantity">Qty:</label>
+                    <input class="addItemsToOrder" type="number" id="quantity" value="${item.quantity}" min="1" max="99">
                 </div>
                 <div></div>
                 <div></div>
