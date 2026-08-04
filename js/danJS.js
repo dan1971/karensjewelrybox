@@ -261,7 +261,7 @@ function setupGlobalInteractions() {
 function setupPurchasePage() {
     
     initializeWishlistState();
-    const orderCard = document.querySelector('cart-main');
+    const orderCard = document.querySelector('.cart-main');
     const cart = getCart();
 // console.log('Setting up purchase page with cart items:', cart);
     if (orderCard && cart.length) {
