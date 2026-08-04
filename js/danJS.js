@@ -262,8 +262,9 @@ function setupPurchasePage() {
     initializeWishlistState();
     const orderCard = document.getElementById('cart-main');
     const cart = getCart();
-console.log('Setting up purchase page with cart items:', cart);
+// console.log('Setting up purchase page with cart items:', cart);
     if (orderCard && cart.length) {
+        conole.log('Rendering purchase page with cart items:', cart);
         const checkOutDetails = document.querySelector('.cart-items');
        checkOutDetails.innerHTML = cart.map((item, index) => {
         return `
