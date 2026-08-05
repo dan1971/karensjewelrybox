@@ -264,9 +264,11 @@ function setupGlobalInteractions() {
         console.log('Quantity select element:', quantitySelect);
         if (quantitySelect) {
             quantitySelect.addEventListener('change', () => {
+            const itemTotal = event.target.closest('.cart-item-total p');
             console.log('Quantity changed to:', itemTotal);
+           
             // itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
-             updatePurchaseTotal();
+            //  updatePurchaseTotal();
         });}}
 
 function setupPurchasePage() {
