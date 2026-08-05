@@ -264,7 +264,7 @@ function setUpAddItemsQty(){
         const quantitySelect = document.querySelector('.addItemsToOrder');
         // const parentCardIndex = Number(removeButton.dataset.itemIndex);
         quantitySelect.addEventListener('change', () => {
-            const cartItemIndex = event.target.dataset.data-item-index;
+            const cartItemIndex = event.target.dataset.data-item-quantity-index;
             const itemPrice = document.querySelector(`.cart-item-price[data-cart-item-price-index="${cartItemIndex}"]`);
 
             // const element = document.querySelector('.my-class[data-info="value"]');
