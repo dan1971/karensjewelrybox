@@ -247,7 +247,7 @@ function setupGlobalInteractions() {
             return;
         }
         const itemTotal = event.target.closest('.cart-item-total');
-        const itemPrice = event.target.closest('.cart-item-price');
+        const itemPrice = event.target.closest('.cart-item-price p');
         const quantitySelect = event.target.closest(selectors.quantity);
         if (quantitySelect) {
             quantitySelect.addEventListener('change', () => {
