@@ -257,14 +257,16 @@ function setupGlobalInteractions() {
     }
 }
 
-        // const itemTotal = event.target.closest('.cart-item-total p');
-        // const itemPrice = event.target.closest('.cart-item-price p');
+        const itemTotal = event.target.closest('.cart-item-total p');
+        const itemPrice = event.target.closest('.cart-item-price p');
+         console.log('itemPrice', itemTotal);
+
     function updateItemTotal() {
         const quantitySelect = document.querySelector(selectors.quantity);
         console.log('Quantity select element:', quantitySelect);
         if (quantitySelect) {
             quantitySelect.addEventListener('change', (event) => {
-            const itemTotal = event.target.closest('.cart-item-total');
+          
             console.log('Quantity changed to:', itemTotal);
            
             // itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
