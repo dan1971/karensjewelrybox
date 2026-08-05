@@ -44,7 +44,7 @@ const selectors = {
     cartbadge: '#cart-badge',
     cartOverlay: '#cart-modal-overlay',
     paySection: '#payment-section',
-    quantity: '.quantity',
+    quantity: '.addItemsToOrder',
     orderTotal: '#order-total',
     orderDisplayPrice: '#order-display-price',
     payAmount: '#pay-amount',
