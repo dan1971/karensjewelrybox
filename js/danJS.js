@@ -251,7 +251,7 @@ function setupGlobalInteractions() {
         if (quantitySelect) {
             quantitySelect.addEventListener('change', () => {
             console.log('Quantity changed to:', quantitySelect.value);
-            // updatePurchaseTotal();
+             updatePurchaseTotal();
         });}
     });
 
