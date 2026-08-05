@@ -44,7 +44,7 @@ const selectors = {
     cartbadge: '#cart-badge',
     cartOverlay: '#cart-modal-overlay',
     paySection: '#payment-section',
-    quantity: '#quantity',
+    quantity: '.quantity',
     orderTotal: '#order-total',
     orderDisplayPrice: '#order-display-price',
     payAmount: '#pay-amount',
@@ -225,6 +225,7 @@ function setupGlobalInteractions() {
         }
 
         const checkoutButton = event.target.closest('#cart-button');
+        
         if (checkoutButton) {
             event.preventDefault();
             const cart = getCart();
@@ -340,7 +341,8 @@ function setupPurchasePage() {
     const quantitySelect = document.querySelector(selectors.quantity);
     if (quantitySelect) {
         quantitySelect.addEventListener('change', () => {
-            updatePurchaseTotal();
+            console.log('Quantity changed to:', quantitySelect.value);
+            // updatePurchaseTotal();
         });
     }
 
