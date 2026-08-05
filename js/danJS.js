@@ -247,11 +247,12 @@ function setupGlobalInteractions() {
             return;
         }
         const itemTotal = event.target.closest('.cart-item-total');
+        const itemPrice = event.target.closest('.cart-item-price');
         const quantitySelect = event.target.closest(selectors.quantity);
         if (quantitySelect) {
             quantitySelect.addEventListener('change', () => {
             console.log('Quantity changed to:', quantitySelect.value);
-            itemTotal.querySelector('p').textContent = `$${(Number(quantitySelect.value) * Number(removeButton.closest('.cart-item').querySelector('.cart-item-price').textContent.replace('$', ''))).toFixed(2)}`;
+            itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
              updatePurchaseTotal();
         });}
     });
