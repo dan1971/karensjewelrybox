@@ -246,6 +246,13 @@ function setupGlobalInteractions() {
             removeCartItem(index);
             return;
         }
+
+        const quantitySelect = event.target.closest(selectors.quantity);
+        if (quantitySelect) {
+            quantitySelect.addEventListener('change', () => {
+            console.log('Quantity changed to:', quantitySelect.value);
+            // updatePurchaseTotal();
+        });}
     });
 
     const cartButton = document.querySelector(selectors.cartButton);
@@ -337,14 +344,6 @@ function setupPurchasePage() {
     }
 
     updatePurchaseTotal();
-
-    const quantitySelect = document.querySelector(selectors.quantity);
-    if (quantitySelect) {
-        quantitySelect.addEventListener('change', () => {
-            console.log('Quantity changed to:', quantitySelect.value);
-            // updatePurchaseTotal();
-        });
-    }
 
     const paymentSection = document.querySelector(selectors.paySection);
     if (paymentSection) {
