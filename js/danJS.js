@@ -246,17 +246,7 @@ function setupGlobalInteractions() {
             removeCartItem(index);
             return;
         }
-        const itemTotal = event.target.closest('.cart-item-total p');
-        const itemPrice = event.target.closest('.cart-item-price p');
-        const quantitySelect = event.target.closest(selectors.quantity);
-        if (quantitySelect) {
-            quantitySelect.addEventListener('change', () => {
-            console.log('Quantity changed to:', itemTotal);
-            // itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
-             updatePurchaseTotal();
-        });}
     });
-
     const cartButton = document.querySelector(selectors.cartButton);
     if (cartButton) {
         cartButton.addEventListener('click', (event) => {
@@ -264,8 +254,18 @@ function setupGlobalInteractions() {
            setupPurchasePage();
         });
     }
-    
 }
+
+        // const itemTotal = event.target.closest('.cart-item-total p');
+        // const itemPrice = event.target.closest('.cart-item-price p');
+        const quantitySelect = document.querySelector(selectors.quantity);
+        console.log('Quantity select element:', quantitySelect);
+        if (quantitySelect) {
+            quantitySelect.addEventListener('change', () => {
+            console.log('Quantity changed to:', itemTotal);
+            // itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
+             updatePurchaseTotal();
+        });}
 
 function setupPurchasePage() {
     
