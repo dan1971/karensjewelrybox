@@ -261,7 +261,7 @@ function setupGlobalInteractions() {
         // const itemPrice = event.target.closest('.cart-item-price p');
          
 
-    function updateItemTotal() {
+
         document.body.addEventListener('change', (event) => {
             const quantitySelect = event.target.closest(selectors.quantity);
             if (!quantitySelect) return;
@@ -277,7 +277,7 @@ function setupGlobalInteractions() {
             itemTotalNode.textContent = `$${(quantitySelect.value * itemPrice).toFixed(2)}`;
             updatePurchaseTotal();
         });
-    }
+
 
 function setupPurchasePage() {
     
