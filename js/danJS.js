@@ -259,11 +259,11 @@ function setupGlobalInteractions() {
 
         // const itemTotal = event.target.closest('.cart-item-total p');
         // const itemPrice = event.target.closest('.cart-item-price p');
-    function updateItemTotal(): void {
+    function updateItemTotal() {
         const quantitySelect = document.querySelector(selectors.quantity);
         console.log('Quantity select element:', quantitySelect);
         if (quantitySelect) {
-            quantitySelect.addEventListener('change', () => {
+            quantitySelect.addEventListener('change', (event) => {
             const itemTotal = event.target.closest('.cart-item-total p');
             console.log('Quantity changed to:', itemTotal);
            
