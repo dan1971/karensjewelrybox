@@ -61,6 +61,7 @@ window.addEventListener('DOMContentLoaded', () => {
     setupGlobalInteractions();
     setupPurchasePage();
     setupHeaderScroll();
+    updateItemTotal();
 });
 
 
@@ -258,6 +259,7 @@ function setupGlobalInteractions() {
 
         // const itemTotal = event.target.closest('.cart-item-total p');
         // const itemPrice = event.target.closest('.cart-item-price p');
+    function updateItemTotal() {
         const quantitySelect = document.querySelector(selectors.quantity);
         console.log('Quantity select element:', quantitySelect);
         if (quantitySelect) {
@@ -265,7 +267,7 @@ function setupGlobalInteractions() {
             console.log('Quantity changed to:', itemTotal);
             // itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
              updatePurchaseTotal();
-        });}
+        });}}
 
 function setupPurchasePage() {
     
