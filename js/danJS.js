@@ -61,6 +61,7 @@ window.addEventListener('DOMContentLoaded', () => {
     setupGlobalInteractions();
     setupPurchasePage();
     setupHeaderScroll();
+    setUpAddItemsQty();
 });
 
 
@@ -256,11 +257,12 @@ function setupGlobalInteractions() {
     }
 }
 
+
+function setUpAddItemsQty(){
         // const itemTotal = event.target.closest('.cart-item-total p');
         // const itemPrice = event.target.closest('.cart-item-price p');
         const quantitySelect = document.querySelector('.addItemsToOrder');
         // const parentCardIndex = Number(removeButton.dataset.itemIndex);
-    
         quantitySelect.addEventListener('change', () => {
             const cartItemIndex = event.target.dataset.data-item-index;
             const itemPrice = document.querySelector(`.cart-item-price[data-cart-item-price-index="${cartItemIndex}"]`);
@@ -271,6 +273,7 @@ function setupGlobalInteractions() {
             // itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
             //  updatePurchaseTotal();
         });
+};
 
 function setupPurchasePage() {
     
