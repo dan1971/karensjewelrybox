@@ -262,13 +262,14 @@ function setupGlobalInteractions() {
          
 
     function updateItemTotal() {
-         const itemPrice = event.target.closest('.cart-item-price p');
-         console.log('itemPrice', itemPrice);
+
         const quantitySelect = document.querySelector(selectors.quantity);
         console.log('Quantity select element:', quantitySelect);
+
         if (quantitySelect) {
             quantitySelect.addEventListener('change', (event) => {
-          
+            const itemPrice = event.target.closest('.cart-item-price p');
+         console.log('itemPrice', itemPrice);
             console.log('Quantity changed to:', itemTotal);
            
             // itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
