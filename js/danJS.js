@@ -61,7 +61,6 @@ window.addEventListener('DOMContentLoaded', () => {
     setupGlobalInteractions();
     setupPurchasePage();
     setupHeaderScroll();
-
 });
 
 
@@ -180,8 +179,8 @@ function renderCartModal() {
                 </div>
                 <div>
                     <div class="cart-item-title"><strong>${item.product}</strong></div>
-                    <div class="cart-item-quantity">Qty: ${item.quantity}</div>
-                    <div>$${(item.price * item.quantity).toFixed(2)}</div>
+                    <div class="cart-item-quantity" data-item-index="${index}">Qty: ${item.quantity}</div>
+                    <div class="cart-item-price" data-item-index="${index}>$${(item.price * item.quantity).toFixed(2)}</div>
                 </div>
                 <div>
                     <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
@@ -259,25 +258,19 @@ function setupGlobalInteractions() {
 
         // const itemTotal = event.target.closest('.cart-item-total p');
         // const itemPrice = event.target.closest('.cart-item-price p');
-         
+        const quantitySelect = document.querySelector('.addItemsToOrder');
+        // const parentCardIndex = Number(removeButton.dataset.itemIndex);
+    
+        quantitySelect.addEventListener('change', () => {
+            const cartItemIndex = event.target.dataset.data-item-index;
+            const itemPrice = document.querySelector(`.cart-item-price[data-cart-item-price-index="${cartItemIndex}"]`);
 
+            // const element = document.querySelector('.my-class[data-info="value"]');
 
-        document.body.addEventListener('change', (event) => {
-            const quantitySelect = event.target.closest(selectors.quantity);
-            if (!quantitySelect) return;
-
-            const cartItem = quantitySelect.closest('.cart-item');
-            if (!cartItem) return;
-
-            const itemPriceNode = cartItem.querySelector('.cart-item-price p');
-            const itemTotalNode = cartItem.querySelector('.cart-item-total p');
-            if (!itemPriceNode || !itemTotalNode) return;
-
-            const itemPrice = Number(itemPriceNode.textContent.replace('$', ''));
-            itemTotalNode.textContent = `$${(quantitySelect.value * itemPrice).toFixed(2)}`;
-            updatePurchaseTotal();
+            console.log('Quantity changed to:', itemPrice);
+            // itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
+            //  updatePurchaseTotal();
         });
-
 
 function setupPurchasePage() {
     
@@ -296,16 +289,16 @@ function setupPurchasePage() {
                 <div class="cart-item-details">
                     <h1 class="product-title">${item.product}</h1>
                     <p class="cart-item-description">Handcrafted windchime with glass beads</p>
-                    <p class="cart-item-price">$${item.price}</p>
+                    <p class="cart-item-price" data-item-price-index="${index}>$${item.price}</p>
                     <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
                 </div>
                 <div class="cart-item-quantity">
                     <label for="quantity">Qty:</label>
-                    <input class="addItemsToOrder" type="number" id="quantity" value="${item.quantity}" min="1" max="99">
+                    <input class="addItemsToOrder" type="number" id="quantity" data-item-quantity-index="${index} value="${item.quantity}" min="1" max="99">
                 </div>
                 <div></div>
                 <div></div>
-                <div class="cart-item-total">
+                <div class="cart-item-total" data-item-total-index="${index}>$>
                 <p>$${(item.price * item.quantity).toFixed(2)}</p>
                 </div>
 
