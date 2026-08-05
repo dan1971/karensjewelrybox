@@ -262,18 +262,22 @@ function setupGlobalInteractions() {
          
 
     function updateItemTotal() {
+        document.body.addEventListener('change', (event) => {
+            const quantitySelect = event.target.closest(selectors.quantity);
+            if (!quantitySelect) return;
 
-        const quantitySelect = document.querySelector(selectors.quantity);
-        console.log('Quantity select element:', quantitySelect);
+            const cartItem = quantitySelect.closest('.cart-item');
+            if (!cartItem) return;
 
-        if (quantitySelect) {
-            quantitySelect.addEventListener('change', (event) => {
-            const itemPrice = event.target.closest('.cart-item-price p');
-         console.log('itemPrice', itemPrice);
-           
-            // itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
-            //  updatePurchaseTotal();
-        });}}
+            const itemPriceNode = cartItem.querySelector('.cart-item-price p');
+            const itemTotalNode = cartItem.querySelector('.cart-item-total p');
+            if (!itemPriceNode || !itemTotalNode) return;
+
+            const itemPrice = Number(itemPriceNode.textContent.replace('$', ''));
+            itemTotalNode.textContent = `$${(quantitySelect.value * itemPrice).toFixed(2)}`;
+            updatePurchaseTotal();
+        });
+    }
 
 function setupPurchasePage() {
     
