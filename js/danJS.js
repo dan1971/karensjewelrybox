@@ -356,7 +356,7 @@ const userCard = document.querySelector('.profile-card[data-user-id="123"]');
             const cartItemIndex = event.target.dataset.itemQuantityIndex;
             console.log("STEP 1= "+ cartItemIndex);
 
-            const itemPrice = document.querySelector(`.cart-item-price[data-item-price-index="${cartItemIndex}"]`).;
+            const itemPrice = document.querySelector(`.cart-item-price[data-item-price-index="${cartItemIndex}"]`);
 // const userCard = document.querySelector(`.profile-card[data-item-price-index="${userId}"]`);
 
             console.log('Quantity changed to:', itemPrice);
