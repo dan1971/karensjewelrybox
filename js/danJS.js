@@ -121,78 +121,78 @@ function renderCartBadge() {
 }
 
 // // Cart modal
-// function createCartModal() {
-//     if (document.getElementById('cart-modal-overlay')) return;
+function createCartModal() {
+    if (document.getElementById('cart-modal-overlay')) return;
 
-//     const overlay = document.createElement('div');
-//     overlay.id = 'cart-modal-overlay';
-//     overlay.className = 'cart-overlay';
-//     overlay.innerHTML = `
-//         <div class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cart-modal-title">
-//             <button class="cart-close" type="button" aria-label="Close cart">×</button>
-//             <h2 id="cart-modal-title">Your Cart</h2>
-//             <div class="cart-items"></div>
-//             <div class="cart-total"></div>
-//             <div class="cart-actions">
-//                 <button class="button button-dark-layer place-order-button" type="button" id="cart-close-button">Go to Checkout</button>
-//             </div>
-//         </div>
-//     `;
-//     document.body.appendChild(overlay);
-//     overlay.addEventListener('click', (event) => {
-//         if (event.target === overlay || event.target.closest('.cart-close')) {
-//             toggleCartModal(false);
-//         }
-//     });
-// }
+    const overlay = document.createElement('div');
+    overlay.id = 'cart-modal-overlay';
+    overlay.className = 'cart-overlay';
+    overlay.innerHTML = `
+        <div class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cart-modal-title">
+            <button class="cart-close" type="button" aria-label="Close cart">×</button>
+            <h2 id="cart-modal-title">Your Cart</h2>
+            <div class="cart-items"></div>
+            <div class="cart-total"></div>
+            <div class="cart-actions">
+                <button class="button button-dark-layer place-order-button" type="button" id="cart-close-button">Go to Checkout</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+    overlay.addEventListener('click', (event) => {
+        if (event.target === overlay || event.target.closest('.cart-close')) {
+            toggleCartModal(false);
+        }
+    });
+}
 
-// function toggleCartModal(show = true) {
-//     const overlay = document.getElementById('cart-modal-overlay');
-//     if (!overlay) return;
-//     overlay.classList.toggle('active', show);
-//     if (show) {
-//         renderCartModal();
-//     }
-// }
+function toggleCartModal(show = true) {
+    const overlay = document.getElementById('cart-modal-overlay');
+    if (!overlay) return;
+    overlay.classList.toggle('active', show);
+    if (show) {
+        renderCartModal();
+    }
+}
 
-// function renderCartModal() {
-//     const overlay = document.getElementById('cart-modal-overlay');
-//     if (!overlay) return;
-//     const cartItems = overlay.querySelector('.cart-items');
-//     const cartTotal = overlay.querySelector('.cart-total');
-//     const cartcheckOutBtn = overlay.querySelector('.place-order-button');
-//     const cart = getCart();
-//     console.log('Rendering cart modal with items:', cart);
-//     cartcheckOutBtn.style.display = 'block';
+function renderCartModal() {
+    const overlay = document.getElementById('cart-modal-overlay');
+    if (!overlay) return;
+    const cartItems = overlay.querySelector('.cart-items');
+    const cartTotal = overlay.querySelector('.cart-total');
+    const cartcheckOutBtn = overlay.querySelector('.place-order-button');
+    const cart = getCart();
+    console.log('Rendering cart modal with items:', cart);
+    cartcheckOutBtn.style.display = 'block';
 
-//     if (!cart.length) {
-//         cartItems.innerHTML = '<p>Your cart is empty.</p>';
-//         cartTotal.textContent = '';
-//         cartcheckOutBtn.style.display = 'none';
-//         return;
-//     }
+    if (!cart.length) {
+        cartItems.innerHTML = '<p>Your cart is empty.</p>';
+        cartTotal.textContent = '';
+        cartcheckOutBtn.style.display = 'none';
+        return;
+    }
 
-//     cartItems.innerHTML = cart.map((item, index) => {
-//         return `
-//             <div class="cart-item" data-item-index="${index}">
-//                 <div class="cart-item-image">
-//                     <img src="${item.imagePath}" alt="${item.product}">
-//                 </div>
-//                 <div>
-//                     <div class="cart-item-title"><strong>${item.product}</strong></div>
-//                     <div class="cart-item-quantity" data-item-index="${index}">Qty: ${item.quantity}</div>
-//                     <div class="cart-item-price" data-item-index="${index}>$${(item.price * item.quantity).toFixed(2)}</div>
-//                 </div>
-//                 <div>
-//                     <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
-//                 </div>
-//             </div>
-//         `;
-//     }).join('');
+    cartItems.innerHTML = cart.map((item, index) => {
+        return `
+            <div class="cart-item" data-item-index="${index}">
+                <div class="cart-item-image">
+                    <img src="${item.imagePath}" alt="${item.product}">
+                </div>
+                <div>
+                    <div class="cart-item-title"><strong>${item.product}</strong></div>
+                    <div class="cart-item-quantity" data-item-index="${index}">Qty: ${item.quantity}</div>
+                    <div class="cart-item-price" data-item-index="${index}>$${(item.price * item.quantity).toFixed(2)}</div>
+                </div>
+                <div>
+                    <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
+                </div>
+            </div>
+        `;
+    }).join('');
 
-//     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-//     cartTotal.textContent = `Total: $${total.toFixed(2)}`;
-// }
+    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+}
 
 // event listeners add to cart, buy now, and checkout//
 
@@ -257,26 +257,6 @@ function setupGlobalInteractions() {
     }
 }
 
-
-function setUpAddItemsQty(){
-        // const itemTotal = event.target.closest('.cart-item-total p');
-        // const itemPrice = event.target.closest('.cart-item-price p');
-        const quantitySelect = document.querySelector('.addItemsToOrder');
-        // Target: <div class="profile-card" data-user-id="123"></div>
-const userCard = document.querySelector('.profile-card[data-user-id="123"]');
-        quantitySelect.addEventListener('change', () => {
-            const cartItemIndex = event.target.dataset.itemQuantityIndex;
-            console.log("STEP 1= "+ cartItemIndex);
-
-            const itemPrice = document.querySelector(`.cart-item-price[data-item-price-index="${cartItemIndex}"]`);
-// const userCard = document.querySelector(`.profile-card[data-item-price-index="${userId}"]`);
-
-            console.log('Quantity changed to:', itemPrice);
-            // itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
-            //  updatePurchaseTotal();
-        });
-};
-
 function setupPurchasePage() {
     
     initializeWishlistState();
@@ -326,33 +306,33 @@ function setupPurchasePage() {
          checkOutShipping.innerHTML =shippingCost.toString();
          checkOutTax.innerHTML =taxAmount.toString();
          checkOutTotal.innerHTML =cartTotal.toString();
-        //   checkOutTotal.dataset.unitPrice = cartTotal.toString();
+          checkOutTotal.dataset.unitPrice = cartTotal.toString();
 
-                //    <div class="cart-summary">
-                //     <h2>Order Summary</h2>
-                //         <div class="cart-summary-line">
-                //             <span>Subtotal</span>
-                //             <span id="subtotal">$${(item.price * item.quantity).toFixed(2)}</span>
-                //         </div>
+                   <div class="cart-summary">
+                    <h2>Order Summary</h2>
+                        <div class="cart-summary-line">
+                            <span>Subtotal</span>
+                            <span id="subtotal">$${(item.price * item.quantity).toFixed(2)}</span>
+                        </div>
                         
-                //         <div class="cart-summary-line">
-                //             <span>Shipping</span>
-                //             <span id="shipping">$12.00</span>
-                //         </div>
+                        <div class="cart-summary-line">
+                            <span>Shipping</span>
+                            <span id="shipping">$12.00</span>
+                        </div>
                         
-                //         <div class="cart-summary-line">
-                //             <span>Tax</span>
-                //             <span>$24.72</span>
-                //         </div>
+                        <div class="cart-summary-line">
+                            <span>Tax</span>
+                            <span>$24.72</span>
+                        </div>
                         
-                //         <div class="cart-summary-divider"></div>
+                        <div class="cart-summary-divider"></div>
                         
-                //         <div class="cart-summary-line cart-summary-total">
-                //             <span>Total</span>
-                //             <span class="total">$345.72</span>
-                //         </div>
-                //         <button class="checkout-btn">Proceed to Checkout</button>
-                //         </div>
+                        <div class="cart-summary-line cart-summary-total">
+                            <span>Total</span>
+                            <span class="total">$345.72</span>
+                        </div>
+                        <button class="checkout-btn">Proceed to Checkout</button>
+                        </div>
     }
 
     updatePurchaseTotal();
@@ -365,6 +345,25 @@ function setupPurchasePage() {
         });
     }
 }
+
+function setUpAddItemsQty(){
+        // const itemTotal = event.target.closest('.cart-item-total p');
+        // const itemPrice = event.target.closest('.cart-item-price p');
+        const quantitySelect = document.querySelector('.addItemsToOrder');
+        // Target: <div class="profile-card" data-user-id="123"></div>
+const userCard = document.querySelector('.profile-card[data-user-id="123"]');
+        quantitySelect.addEventListener('change', () => {
+            const cartItemIndex = event.target.dataset.itemQuantityIndex;
+            console.log("STEP 1= "+ cartItemIndex);
+
+            const itemPrice = document.querySelector(`.cart-item-price[data-item-price-index="${cartItemIndex}"]`).;
+// const userCard = document.querySelector(`.profile-card[data-item-price-index="${userId}"]`);
+
+            console.log('Quantity changed to:', itemPrice);
+            // itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
+            //  updatePurchaseTotal();
+        });
+};
 
 function updatePurchaseTotal() {
     const orderCard = document.getElementById('order-card');
