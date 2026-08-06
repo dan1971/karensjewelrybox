@@ -258,6 +258,20 @@ function setupGlobalInteractions() {
     }
 }
 
+ function setUpAddItemsQty(indx){
+            const quantitySelect = document.getElementById(`quantity${indx}`);
+            quantitySelect.addEventListener('change', () => {
+            const cartItemIndex = event.target.dataset.itemQuantityIndex;
+            console.log("STEP 1= "+ cartItemIndex);
+
+            const itemPrice = document.querySelector(`.cart-item-price[data-item-price-index="${cartItemIndex}"]`);
+            // const userCard = document.querySelector(`.profile-card[data-item-price-index="${userId}"]`);
+
+            console.log('Quantity changed to:', itemPrice);
+            // itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
+            //  updatePurchaseTotal();
+        });
+};
 function setupPurchasePage() {
     
     initializeWishlistState();
@@ -348,20 +362,7 @@ function setupPurchasePage() {
     }
 }
 
-        function setUpAddItemsQty(indx){
-            const quantitySelect = document.getElementById(`quantity${indx}`);
-            quantitySelect.addEventListener('change', () => {
-            const cartItemIndex = event.target.dataset.itemQuantityIndex;
-            console.log("STEP 1= "+ cartItemIndex);
-
-            const itemPrice = document.querySelector(`.cart-item-price[data-item-price-index="${cartItemIndex}"]`);
-            // const userCard = document.querySelector(`.profile-card[data-item-price-index="${userId}"]`);
-
-            console.log('Quantity changed to:', itemPrice);
-            // itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
-            //  updatePurchaseTotal();
-        });
-};
+       
 
 
 function updatePurchaseTotal() {
