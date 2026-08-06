@@ -284,7 +284,7 @@ function setupPurchasePage() {
                 </div>
                 <div></div>
                 <div></div>
-                <div class="cart-item-total" data-item-total-index="${index}>$>
+                <div class="cart-item-total" data-item-total-index="${index}">
                 <p>$${(item.price * item.quantity).toFixed(2)}</p>
                 </div>
 
