@@ -265,7 +265,7 @@ function setUpAddItemsQty(){
         // const parentCardIndex = Number(removeButton.dataset.itemIndex);
         quantitySelect.addEventListener('change', () => {
             const cartItemIndex = event.target.dataset.itemQuantityIndex;
-            const itemPrice = document.querySelector(`cart-item-price`).dataset.itemPriceIndex;
+            const itemPrice = document.querySelector(`cart-item-price`).dataset;
 
             // const element = document.querySelector('.my-class[data-info="value"]');
 
