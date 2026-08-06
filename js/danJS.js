@@ -269,8 +269,8 @@ function setupGlobalInteractions() {
             // const userCard = document.querySelector(`.profile-card[data-item-price-index="${userId}"]`);
 
             console.log('Quantity changed to:', itemPrice);
-            // itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
-            //  updatePurchaseTotal();
+            itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
+             updatePurchaseTotal();
         });
 };
 function setupPurchasePage() {
