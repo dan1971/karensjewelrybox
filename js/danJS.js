@@ -248,6 +248,7 @@ function setupGlobalInteractions() {
             return;
         }
     });
+
     const cartButton = document.querySelector(selectors.cartButton);
     if (cartButton) {
         cartButton.addEventListener('click', (event) => {
@@ -279,7 +280,7 @@ function setupPurchasePage() {
                 </div>
                 <div class="cart-item-quantity">
                     <label for="quantity">Qty:</label>
-                    <input class="addItemsToOrder" type="number" id="quantity" data-item-quantity-index="${index} value="${item.quantity}" min="1" max="99">
+                    <input class="addItemsToOrder" type="number" id="quantity${index}" data-item-quantity-index="${index} value="${item.quantity}" min="1" max="99">
                 </div>
                 <div></div>
                 <div></div>
