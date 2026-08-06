@@ -262,11 +262,12 @@ function setUpAddItemsQty(){
         // const itemTotal = event.target.closest('.cart-item-total p');
         // const itemPrice = event.target.closest('.cart-item-price p');
         const quantitySelect = document.querySelector('.addItemsToOrder');
-        // const parentCardIndex = Number(removeButton.dataset.itemIndex);
+        // Target: <div class="profile-card" data-user-id="123"></div>
+const userCard = document.querySelector('.profile-card[data-user-id="123"]');
         quantitySelect.addEventListener('change', () => {
             const cartItemIndex = event.target.dataset.itemQuantityIndex;
-            const itemPrice = document.querySelector(`cart-item-price`).dataset;
-
+            console.log("STEP 1= "+ cartItemIndex);
+            // const itemPrice = document.querySelector('.cart-item-price[data-item-price-index=cartItemIndex]');
             // const element = document.querySelector('.my-class[data-info="value"]');
 
             console.log('Quantity changed to:', itemPrice);
