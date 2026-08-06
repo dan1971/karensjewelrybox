@@ -290,12 +290,12 @@ function setupPurchasePage() {
                 <div class="cart-item-details">
                     <h1 class="product-title">${item.product}</h1>
                     <p class="cart-item-description">Handcrafted windchime with glass beads</p>
-                    <p class="cart-item-price" data-item-price-index="${index}>$${item.price}</p>
+                    <p class="cart-item-price" data-item-price-index="${index}">$${item.price}</p>
                     <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
                 </div>
                 <div class="cart-item-quantity">
                     <label for="quantity${index}">Qty:</label>
-                    <input class="addItemsToOrder" type="number" id="quantity${index}" data-item-quantity-index="${index} value="${item.quantity}" min="1" max="99">
+                    <input class="addItemsToOrder" type="number" id="quantity${index}" data-item-quantity-index="${index}" value="${item.quantity}" min="1" max="99">
                 </div>
                 <div></div>
                 <div></div>
@@ -306,8 +306,10 @@ function setupPurchasePage() {
             </div>
             
         `;
-        setUpAddItemsQty(index);
     }).join('');
+
+        // After rendering the DOM, attach quantity change handlers for each rendered item.
+        cart.forEach((_, idx) => setUpAddItemsQty(idx));
 
         const checkOutSubtotal = document.querySelector('.subtotal');
          const checkOutShipping = document.querySelector('.shipping');
