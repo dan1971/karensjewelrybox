@@ -262,14 +262,14 @@ function setupGlobalInteractions() {
      console.log("select function "+ indx);
             const quantitySelect = document.getElementById(`quantity${indx}`);
             quantitySelect.addEventListener('change', () => {
-            const cartItemIndex = event.target.dataset.itemQuantityIndex;
+            const cartItemIndex = idx.price;
             console.log("STEP 1= "+ cartItemIndex);
 
-            const itemPrice = document.querySelector(`.cart-item-price[data-item-price-index="${cartItemIndex}"]`);
+            // document.querySelector(`.cart-item-price[data-item-price-index="${cartItemIndex}"]`).value;
             // const userCard = document.querySelector(`.profile-card[data-item-price-index="${userId}"]`);
 
             console.log('Quantity changed to:', itemPrice);
-            itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
+            cart-item-total.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
              updatePurchaseTotal();
         });
 };
