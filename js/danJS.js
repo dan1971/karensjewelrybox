@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded', () => {
     setupGlobalInteractions();
     setupPurchasePage();
     setupHeaderScroll();
-    setUpAddItemsQty();
+    // setUpAddItemsQty();
 });
 
 
