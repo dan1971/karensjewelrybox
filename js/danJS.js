@@ -259,6 +259,7 @@ function setupGlobalInteractions() {
 }
 
  function setUpAddItemsQty(indx){
+     console.log("select function "+ indx);
             const quantitySelect = document.getElementById(`quantity${indx}`);
             quantitySelect.addEventListener('change', () => {
             const cartItemIndex = event.target.dataset.itemQuantityIndex;
