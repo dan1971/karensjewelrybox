@@ -291,6 +291,7 @@ function setupPurchasePage() {
             </div>
             
         `;
+        setUpAddItemsQty(index);
     }).join('');
 
         const checkOutSubtotal = document.querySelector('.subtotal');
@@ -347,24 +348,21 @@ function setupPurchasePage() {
     }
 }
 
-function setUpAddItemsQty(){
-        // const itemTotal = event.target.closest('.cart-item-total p');
-        // const itemPrice = event.target.closest('.cart-item-price p');
-        const quantitySelect = document.querySelector('.addItemsToOrder');
-        // Target: <div class="profile-card" data-user-id="123"></div>
-const userCard = document.querySelector('.profile-card[data-user-id="123"]');
-        quantitySelect.addEventListener('change', () => {
+        function setUpAddItemsQty(indx){
+            const quantitySelect = document.getElementById(`quantity${indx}`);
+            quantitySelect.addEventListener('change', () => {
             const cartItemIndex = event.target.dataset.itemQuantityIndex;
             console.log("STEP 1= "+ cartItemIndex);
 
             const itemPrice = document.querySelector(`.cart-item-price[data-item-price-index="${cartItemIndex}"]`);
-// const userCard = document.querySelector(`.profile-card[data-item-price-index="${userId}"]`);
+            // const userCard = document.querySelector(`.profile-card[data-item-price-index="${userId}"]`);
 
             console.log('Quantity changed to:', itemPrice);
             // itemTotal.textContent = `$${(Number(quantitySelect.value) * Number(itemPrice.textContent.replace('$', ''))).toFixed(2)}`;
             //  updatePurchaseTotal();
         });
 };
+
 
 function updatePurchaseTotal() {
     const orderCard = document.getElementById('order-card');
