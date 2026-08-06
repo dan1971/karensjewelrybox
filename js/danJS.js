@@ -308,31 +308,31 @@ function setupPurchasePage() {
          checkOutTotal.innerHTML =cartTotal.toString();
           checkOutTotal.dataset.unitPrice = cartTotal.toString();
 
-                   <div class="cart-summary">
-                    <h2>Order Summary</h2>
-                        <div class="cart-summary-line">
-                            <span>Subtotal</span>
-                            <span id="subtotal">$${(item.price * item.quantity).toFixed(2)}</span>
-                        </div>
+                //    <div class="cart-summary">
+                //     <h2>Order Summary</h2>
+                //         <div class="cart-summary-line">
+                //             <span>Subtotal</span>
+                //             <span id="subtotal">$${(item.price * item.quantity).toFixed(2)}</span>
+                //         </div>
                         
-                        <div class="cart-summary-line">
-                            <span>Shipping</span>
-                            <span id="shipping">$12.00</span>
-                        </div>
+                //         <div class="cart-summary-line">
+                //             <span>Shipping</span>
+                //             <span id="shipping">$12.00</span>
+                //         </div>
                         
-                        <div class="cart-summary-line">
-                            <span>Tax</span>
-                            <span>$24.72</span>
-                        </div>
+                //         <div class="cart-summary-line">
+                //             <span>Tax</span>
+                //             <span>$24.72</span>
+                //         </div>
                         
-                        <div class="cart-summary-divider"></div>
+                //         <div class="cart-summary-divider"></div>
                         
-                        <div class="cart-summary-line cart-summary-total">
-                            <span>Total</span>
-                            <span class="total">$345.72</span>
-                        </div>
-                        <button class="checkout-btn">Proceed to Checkout</button>
-                        </div>
+                //         <div class="cart-summary-line cart-summary-total">
+                //             <span>Total</span>
+                //             <span class="total">$345.72</span>
+                //         </div>
+                //         <button class="checkout-btn">Proceed to Checkout</button>
+                //         </div>
     }
 
     updatePurchaseTotal();
