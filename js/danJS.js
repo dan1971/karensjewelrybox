@@ -120,79 +120,79 @@ function renderCartBadge() {
     }
 }
 
-// Cart modal
-function createCartModal() {
-    if (document.getElementById('cart-modal-overlay')) return;
+// // Cart modal
+// function createCartModal() {
+//     if (document.getElementById('cart-modal-overlay')) return;
 
-    const overlay = document.createElement('div');
-    overlay.id = 'cart-modal-overlay';
-    overlay.className = 'cart-overlay';
-    overlay.innerHTML = `
-        <div class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cart-modal-title">
-            <button class="cart-close" type="button" aria-label="Close cart">×</button>
-            <h2 id="cart-modal-title">Your Cart</h2>
-            <div class="cart-items"></div>
-            <div class="cart-total"></div>
-            <div class="cart-actions">
-                <button class="button button-dark-layer place-order-button" type="button" id="cart-close-button">Go to Checkout</button>
-            </div>
-        </div>
-    `;
-    document.body.appendChild(overlay);
-    overlay.addEventListener('click', (event) => {
-        if (event.target === overlay || event.target.closest('.cart-close')) {
-            toggleCartModal(false);
-        }
-    });
-}
+//     const overlay = document.createElement('div');
+//     overlay.id = 'cart-modal-overlay';
+//     overlay.className = 'cart-overlay';
+//     overlay.innerHTML = `
+//         <div class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cart-modal-title">
+//             <button class="cart-close" type="button" aria-label="Close cart">×</button>
+//             <h2 id="cart-modal-title">Your Cart</h2>
+//             <div class="cart-items"></div>
+//             <div class="cart-total"></div>
+//             <div class="cart-actions">
+//                 <button class="button button-dark-layer place-order-button" type="button" id="cart-close-button">Go to Checkout</button>
+//             </div>
+//         </div>
+//     `;
+//     document.body.appendChild(overlay);
+//     overlay.addEventListener('click', (event) => {
+//         if (event.target === overlay || event.target.closest('.cart-close')) {
+//             toggleCartModal(false);
+//         }
+//     });
+// }
 
-function toggleCartModal(show = true) {
-    const overlay = document.getElementById('cart-modal-overlay');
-    if (!overlay) return;
-    overlay.classList.toggle('active', show);
-    if (show) {
-        renderCartModal();
-    }
-}
+// function toggleCartModal(show = true) {
+//     const overlay = document.getElementById('cart-modal-overlay');
+//     if (!overlay) return;
+//     overlay.classList.toggle('active', show);
+//     if (show) {
+//         renderCartModal();
+//     }
+// }
 
-function renderCartModal() {
-    const overlay = document.getElementById('cart-modal-overlay');
-    if (!overlay) return;
-    const cartItems = overlay.querySelector('.cart-items');
-    const cartTotal = overlay.querySelector('.cart-total');
-    const cartcheckOutBtn = overlay.querySelector('.place-order-button');
-    const cart = getCart();
-    console.log('Rendering cart modal with items:', cart);
-    cartcheckOutBtn.style.display = 'block';
+// function renderCartModal() {
+//     const overlay = document.getElementById('cart-modal-overlay');
+//     if (!overlay) return;
+//     const cartItems = overlay.querySelector('.cart-items');
+//     const cartTotal = overlay.querySelector('.cart-total');
+//     const cartcheckOutBtn = overlay.querySelector('.place-order-button');
+//     const cart = getCart();
+//     console.log('Rendering cart modal with items:', cart);
+//     cartcheckOutBtn.style.display = 'block';
 
-    if (!cart.length) {
-        cartItems.innerHTML = '<p>Your cart is empty.</p>';
-        cartTotal.textContent = '';
-        cartcheckOutBtn.style.display = 'none';
-        return;
-    }
+//     if (!cart.length) {
+//         cartItems.innerHTML = '<p>Your cart is empty.</p>';
+//         cartTotal.textContent = '';
+//         cartcheckOutBtn.style.display = 'none';
+//         return;
+//     }
 
-    cartItems.innerHTML = cart.map((item, index) => {
-        return `
-            <div class="cart-item" data-item-index="${index}">
-                <div class="cart-item-image">
-                    <img src="${item.imagePath}" alt="${item.product}">
-                </div>
-                <div>
-                    <div class="cart-item-title"><strong>${item.product}</strong></div>
-                    <div class="cart-item-quantity" data-item-index="${index}">Qty: ${item.quantity}</div>
-                    <div class="cart-item-price" data-item-index="${index}>$${(item.price * item.quantity).toFixed(2)}</div>
-                </div>
-                <div>
-                    <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
-                </div>
-            </div>
-        `;
-    }).join('');
+//     cartItems.innerHTML = cart.map((item, index) => {
+//         return `
+//             <div class="cart-item" data-item-index="${index}">
+//                 <div class="cart-item-image">
+//                     <img src="${item.imagePath}" alt="${item.product}">
+//                 </div>
+//                 <div>
+//                     <div class="cart-item-title"><strong>${item.product}</strong></div>
+//                     <div class="cart-item-quantity" data-item-index="${index}">Qty: ${item.quantity}</div>
+//                     <div class="cart-item-price" data-item-index="${index}>$${(item.price * item.quantity).toFixed(2)}</div>
+//                 </div>
+//                 <div>
+//                     <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
+//                 </div>
+//             </div>
+//         `;
+//     }).join('');
 
-    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    cartTotal.textContent = `Total: $${total.toFixed(2)}`;
-}
+//     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+//     cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+// }
 
 // event listeners add to cart, buy now, and checkout//
 
@@ -264,8 +264,8 @@ function setUpAddItemsQty(){
         const quantitySelect = document.querySelector('.addItemsToOrder');
         // const parentCardIndex = Number(removeButton.dataset.itemIndex);
         quantitySelect.addEventListener('change', () => {
-            const cartItemIndex = event.target.dataset.data-item-quantity-index;
-            const itemPrice = document.querySelector(`.cart-item-price[data-cart-item-price-index="${cartItemIndex}"]`);
+            const cartItemIndex = event.target.dataset.itemQuantityIndex;
+            const itemPrice = document.querySelector(`cart-item-price`).dataset.itemPriceIndex;
 
             // const element = document.querySelector('.my-class[data-info="value"]');
 
