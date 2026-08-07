@@ -316,8 +316,8 @@ function setupPurchasePage() {
          const checkOutTotal = document.querySelector('.checkOut_total');
         const shippingCost = 12.00;
         const taxRate = 0.08;
-        const taxAmount = cartSubTotal * taxRate;
-        const cartTotal = cartSubTotal + shippingCost + taxAmount;
+        const taxAmount = checkOutSubtotal * taxRate;
+        const cartTotal = checkOutSubtotal + shippingCost + taxAmount;
     
         checkOutSubtotal.innerHTML =cartItemTotal.toString();
          checkOutShipping.innerHTML =shippingCost.toString();
