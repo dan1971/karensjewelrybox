@@ -262,7 +262,7 @@ function setupGlobalInteractions() {
      console.log("select function "+ indx);
             const quantitySelect = document.getElementById(`quantity${indx}`);
             quantitySelect.addEventListener('change', () => {
-            const cartItemIndex = idx.price;
+            const cartItemIndex = idnx.price;
             console.log("STEP 1= "+ cartItemIndex);
 
             // document.querySelector(`.cart-item-price[data-item-price-index="${cartItemIndex}"]`).value;
