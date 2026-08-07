@@ -319,7 +319,7 @@ function setupPurchasePage() {
         const taxAmount = checkOutSubtotal * taxRate;
         const cartTotal = checkOutSubtotal + shippingCost + taxAmount;
     
-        checkOutSubtotal.innerHTML =cartItemTotal.dataset;
+        checkOutSubtotal.innerHTML =cartItemTotal.dataset.toString();
          checkOutShipping.innerHTML =shippingCost.toString();
          checkOutTax.innerHTML =taxAmount.toString();
          checkOutTotal.innerHTML =cartTotal.toString();
