@@ -268,7 +268,7 @@ function setupGlobalInteractions() {
             // const userCard = document.querySelector(`.profile-card[data-item-price-index="${userId}"]`);  const element = document.querySelector(`[data-item-price-index="${index}"]`);
             const cartItemTotal=document.querySelector(`cart-item-total`);
              const cartItemPrice=document.querySelector(`[data-item-price-index="${indx}"]`);
-             console.log("STEP 1= "+ cartItemPrice.textContent);
+             console.log("STEP 2= "+ cartItemPrice.textContent);
             cartItemTotal.textContent = `$${(Number(quantitySelected) * Number(cartItemPrice.textContent.replace('$', ''))).toFixed(2)}`;
              updatePurchaseTotal();
         });
