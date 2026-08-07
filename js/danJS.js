@@ -270,10 +270,11 @@ function setupGlobalInteractions() {
              const cartItemPrice=document.querySelector(`[data-item-price-index="${indx}"]`);
 
              console.log("Index= " + `${indx}`+ " Price " + cartItemPrice.textContent);
-            console.log("Index= " + `${indx}`+ " Total " + cartItemTotal.textContent);
 
             cartItemTotal.textContent = `$${(Number(quantitySelected) * Number(cartItemPrice.textContent.replace('$', ''))).toFixed(2)}`;
              updatePurchaseTotal();
+
+                 console.log("Index= " + `${indx}`+ " Total " + cartItemTotal.textContent);
         });
 };
 function setupPurchasePage() {
