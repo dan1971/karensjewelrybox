@@ -31,19 +31,19 @@
                         
                         <div class="cart-summary-line">
                             <span>Shipping</span>
-                            <span class="shipping"></span>
+                            <span class="checkOut_shipping"></span>
                         </div>
                         
                         <div class="cart-summary-line">
                             <span>Tax</span>
-                            <span class="tax"></span>
+                            <span class="checkOut_tax"></span>
                         </div>
                         
                         <div class="cart-summary-divider"></div>
                         
                         <div class="cart-summary-line cart-summary-total">
                             <span>Total</span>
-                            <span class="total" data-total=""></span>
+                            <span class="checkOut_total" data-total=""></span>
                         </div>
 
                         <button class="checkout-btn">Proceed to Checkout</button>
