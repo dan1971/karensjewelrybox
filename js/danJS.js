@@ -263,7 +263,7 @@ function setupGlobalInteractions() {
             const quantitySelect = document.getElementById(`quantity${indx}`);
             quantitySelect.addEventListener('change', () => {
             
-            console.log("STEP 1= "+ quantitySelect);
+            console.log("STEP 1= "+ quantitySelect.value);
 
             // document.querySelector(`.cart-item-price[data-item-price-index="${cartItemIndex}"]`).value;
             // const userCard = document.querySelector(`.profile-card[data-item-price-index="${userId}"]`);
