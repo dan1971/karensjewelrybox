@@ -304,7 +304,7 @@ function setupPurchasePage() {
             </div>
             
         `;
-        checkOutSubtotal.textContent = `<p>$${(item.price * item.quantity).toFixed(2)}</p>';
+        checkOutSubtotal.textContent = `$${(item.price * item.quantity).toFixed(2)}`;
     }).join('');
 
         // After rendering the DOM, attach quantity change handlers for each rendered item.
