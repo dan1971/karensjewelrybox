@@ -264,11 +264,11 @@ function setupGlobalInteractions() {
             quantitySelect.addEventListener('change', () => {
             const quantitySelected = quantitySelect.value;
             console.log("STEP 1= "+ quantitySelect.value);
-
+           document.querySelector(`[data-item-price-index="${index}"]`);
             // document.querySelector(`.cart-item-price[data-item-price-index="${cartItemIndex}"]`).value;
-            // const userCard = document.querySelector(`.profile-card[data-item-price-index="${userId}"]`);
+            // const userCard = document.querySelector(`.profile-card[data-item-price-index="${userId}"]`);  const element = document.querySelector(`[data-item-price-index="${index}"]`);
             const cartItemTotal=document.querySelector(`cart-item-total`);
-             const cartItemPrice=document.querySelector(`cart-item-price`);
+             const cartItemPrice=document.querySelector(`[data-item-price-index="${index}"]`);
              console.log("STEP 1= "+ cartItemPrice.textContent);
             cartItemTotal.textContent = `$${(Number(quantitySelected) * Number(cartItemPrice.textContent.replace('$', ''))).toFixed(2)}`;
              updatePurchaseTotal();
