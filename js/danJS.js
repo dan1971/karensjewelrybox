@@ -277,7 +277,6 @@ function setupPurchasePage() {
     const orderCard = document.querySelector('.cart-main');
     const cart = getCart();
     if (orderCard && cart.length) {
-        const checkOutSubtotal = document.querySelector('.checkOut_subtotal');
         const checkOutDetails = document.querySelector('.cart-items');
         
         checkOutDetails.innerHTML = cart.map((item, index) => {
@@ -304,14 +303,14 @@ function setupPurchasePage() {
             </div>
             
         `;
-        checkOutSubtotal.textContent = `$${(item.price * item.quantity).toFixed(2)}`;
+
     }).join('');
 
         // After rendering the DOM, attach quantity change handlers for each rendered item.
 
         const checkOutSubtotal = document.querySelector('.checkOut_subtotal');
         const cartItemTotal = document.querySelector('.cart-item-total');        
-        cart-item-total
+
          const checkOutShipping = document.querySelector('.checkOut_shipping');
          const checkOutTax = document.querySelector('.checkOut_tax');
          const checkOutTotal = document.querySelector('.checkOut_total');
@@ -321,7 +320,7 @@ function setupPurchasePage() {
         const taxAmount = cartSubTotal * taxRate;
         const cartTotal = cartSubTotal + shippingCost + taxAmount;
     
-        checkOutSubtotal.innerHTML =cartSubTotal.toString();
+        checkOutSubtotal.innerHTML =cartItemTotal.toString();
          checkOutShipping.innerHTML =shippingCost.toString();
          checkOutTax.innerHTML =taxAmount.toString();
          checkOutTotal.innerHTML =cartTotal.toString();
