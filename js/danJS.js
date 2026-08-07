@@ -266,9 +266,9 @@ function setupGlobalInteractions() {
             console.log("STEP 1= "+ quantitySelect.value);
             // document.querySelector(`.cart-item-price[data-item-price-index="${cartItemIndex}"]`).value;
             // const userCard = document.querySelector(`.profile-card[data-item-price-index="${userId}"]`);  const element = document.querySelector(`[data-item-price-index="${index}"]`);
-            const cartItemTotal=document.querySelector(`cart-item-total`);
+            const cartItemTotal=document.querySelector(`[data-item-total-index="${indx}"]`);
              const cartItemPrice=document.querySelector(`[data-item-price-index="${indx}"]`);
-             console.log("STEP 2= "+ cartItemPrice.textContent);
+             console.log("Index= " + ${indx} + " Price " + cartItemPrice.textContent + "Index= " + ${indx} + " Total " + cartItemTotal); 
             cartItemTotal.textContent = `$${(Number(quantitySelected) * Number(cartItemPrice.textContent.replace('$', ''))).toFixed(2)}`;
              updatePurchaseTotal();
         });
