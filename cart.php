@@ -26,7 +26,7 @@
                         
                         <div class="cart-summary-line">
                             <span>Subtotal</span>
-                            <span class="subtotal"></span>
+                            <span class="checkOut_subtotal"></span>
                         </div>
                         
                         <div class="cart-summary-line">

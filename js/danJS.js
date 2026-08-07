@@ -259,23 +259,17 @@ function setupGlobalInteractions() {
 }
 
  function setUpAddItemsQty(indx){
-     console.log("select function "+ indx);
             const quantitySelect = document.getElementById(`quantity${indx}`);
             quantitySelect.addEventListener('change', () => {
             const quantitySelected = quantitySelect.value;
-            console.log("STEP 1= "+ quantitySelect.value);
-            // document.querySelector(`.cart-item-price[data-item-price-index="${cartItemIndex}"]`).value;
-            // const userCard = document.querySelector(`.profile-card[data-item-price-index="${userId}"]`);  const element = document.querySelector(`[data-item-price-index="${index}"]`);
             const cartItemTotal=document.querySelector(`[data-item-total-index="${indx}"]`);
              const cartItemPrice=document.querySelector(`[data-item-price-index="${indx}"]`);
-
-             console.log("Index= " + `${indx}`+ " Price " + cartItemPrice.textContent);
-
+    console.log("Index= " + `${indx}`+ " Price " + cartItemPrice.textContent);
             cartItemTotal.textContent = `$${(Number(quantitySelected) * Number(cartItemPrice.textContent.replace('$', ''))).toFixed(2)}`;
              updatePurchaseTotal();
-
-                 console.log("Index= " + `${indx}`+ " Total " + cartItemTotal.textContent);
+    console.log("Index= " + `${indx}`+ " Total " + cartItemTotal.textContent);
         });
+            updatePurchaseTotal();
 };
 function setupPurchasePage() {
     
@@ -283,7 +277,7 @@ function setupPurchasePage() {
     const orderCard = document.querySelector('.cart-main');
     const cart = getCart();
     if (orderCard && cart.length) {
-        
+        const checkOutSubtotal = document.querySelector('.checkOut_subtotal');
         const checkOutDetails = document.querySelector('.cart-items');
         
         checkOutDetails.innerHTML = cart.map((item, index) => {
@@ -310,16 +304,18 @@ function setupPurchasePage() {
             </div>
             
         `;
+        checkOutSubtotal.textContent = <p>$${(item.price * item.quantity).toFixed(2)}</p>
     }).join('');
 
         // After rendering the DOM, attach quantity change handlers for each rendered item.
-        cart.forEach((_, idx) => setUpAddItemsQty(idx));
 
-        const checkOutSubtotal = document.querySelector('.subtotal');
-         const checkOutShipping = document.querySelector('.shipping');
-         const checkOutTax = document.querySelector('.tax');
-         const checkOutTotal = document.querySelector('.total');
-        const cartSubTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        const checkOutSubtotal = document.querySelector('.checkOut_subtotal');
+        const cartItemTotal = document.querySelector('.cart-item-total');        
+        cart-item-total
+         const checkOutShipping = document.querySelector('.checkOut_shipping');
+         const checkOutTax = document.querySelector('.checkOut_tax');
+         const checkOutTotal = document.querySelector('.checkOut_total');
+        const checkOut_subtotal = any
         const shippingCost = 12.00;
         const taxRate = 0.08;
         const taxAmount = cartSubTotal * taxRate;
