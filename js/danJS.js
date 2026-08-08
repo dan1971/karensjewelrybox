@@ -315,6 +315,7 @@ function setupPurchasePage() {
             
         `;
        subtotalAddEmUp+=cartItemTotal;
+       checkOutSubtotal = subtotalAddEmUp;
     }).join('');
 
         // After rendering the DOM, attach quantity change handlers for each rendered item.
