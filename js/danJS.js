@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initializeCartState();
     initializeWishlistState();
     setupGlobalInteractions();
-    setupPurchasePage();
+    // setupPurchasePage();
     setupHeaderScroll();
     // setUpAddItemsQty();
 });
