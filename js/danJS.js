@@ -62,6 +62,9 @@ window.addEventListener('DOMContentLoaded', () => {
     // setupPurchasePage();
     setupHeaderScroll();
     // setUpAddItemsQty();
+    const currentUrl = window.location.href;
+    console.log(currentUrl); 
+    // setupPurchasePage();
 });
 
 
