@@ -245,7 +245,6 @@ function setupGlobalInteractions() {
             console.log('Remove button clicked:', removeButton);
             const index = Number(removeButton.dataset.itemIndex);
             removeCartItem(index);
-             setupPurchasePage();
             return;
         }
     });
