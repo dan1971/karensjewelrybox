@@ -428,6 +428,7 @@ function addToCart(imagePath, product, price, quantity = 1) {
 
 function removeCartItem(index) {
      const cart = getCart();
+     console.log("remove lione 431")
     if (index >= 0 && index < cart.length) {
         cart.splice(index, 1);
         setCart(cart);
