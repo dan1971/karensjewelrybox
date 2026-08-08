@@ -236,7 +236,7 @@ function setupGlobalInteractions() {
             }
             console.log("Proceeding to checkout with cart items:", cart);   
            
-            window.location.href = 'cart.php';
+            // window.location.href = 'cart.php';
             return;
         }
 
@@ -294,7 +294,7 @@ function setupPurchasePage() {
     initializeWishlistState();
     const orderCard = document.querySelector('.cart-main');
     const cart = getCart();
-console.log("Cart set page ", cart)
+    console.log("Cart set page ", cart);
     if (orderCard && cart.length) {
         const checkOutDetails = document.querySelector('.cart-items');
 
