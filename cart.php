@@ -1,4 +1,5 @@
 <?php require("functions.php");  head_top_menu(); ?>
+<script initializeCartState(); setupPurchasePage();></script>
 <div class="main-container">
     <main>
         <section class="collections">
