@@ -236,7 +236,7 @@ function setupGlobalInteractions() {
             }
             console.log("Proceeding to checkout with cart items:", cart);   
            
-            // window.location.href = 'cart.php';
+            window.location.href = 'cart.php';
             return;
         }
 
