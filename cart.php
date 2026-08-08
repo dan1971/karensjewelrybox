@@ -60,7 +60,9 @@
             </div>
         </main>
 <script>
-    setupPurchasePage();
+const currentUrl = window.location.href;
+console.log(currentUrl); 
+    // setupPurchasePage();
 </script>
 <?php footer(); ?>
 <?php flush(); ?>
