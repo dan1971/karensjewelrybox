@@ -283,6 +283,7 @@ function setupGlobalInteractions() {
         const cartItemTotal = document.querySelector('.cart-item-total');    
 
 function getDisplayedCartSubtotal() {
+    console.log("Get cart subtot");
     return Array.from(document.querySelectorAll('.cart-item-total')).reduce((sum, element) => {
         const value = Number((element.textContent || '').replace(/[^0-9.]/g, ''));
         return sum + (Number.isFinite(value) ? value : 0);
@@ -318,7 +319,7 @@ function setupPurchasePage() {
                     </div>
                 </div>
             `;
-            checkOutSubtotal
+    
         }).join('');
 
         const checkOutShipping = document.querySelector('.checkOut_shipping');
