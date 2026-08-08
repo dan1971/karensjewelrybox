@@ -271,6 +271,17 @@ function setupGlobalInteractions() {
         });
             updatePurchaseTotal();
 };
+
+
+         const checkOutShipping = document.querySelector('.checkOut_shipping');
+         const checkOutTax = document.querySelector('.checkOut_tax');
+         const checkOutTotal = document.querySelector('.checkOut_total');
+        const shippingCost = 12.00;
+        const taxRate = 0.08;
+        const checkOutSubtotal = document.querySelector('.checkOut_subtotal');
+        let subtotalAddEmUp =0;
+        const cartItemTotal = document.querySelector('.cart-item-total');    
+
 function setupPurchasePage() {
     
     initializeWishlistState();
@@ -303,13 +314,12 @@ function setupPurchasePage() {
             </div>
             
         `;
-
+       subtotalAddEmUp+=cartItemTotal;
     }).join('');
 
         // After rendering the DOM, attach quantity change handlers for each rendered item.
 
-        const checkOutSubtotal = document.querySelector('.checkOut_subtotal');
-        const cartItemTotal = document.querySelector('.cart-item-total');        
+          
 
          const checkOutShipping = document.querySelector('.checkOut_shipping');
          const checkOutTax = document.querySelector('.checkOut_tax');
@@ -319,11 +329,11 @@ function setupPurchasePage() {
         const taxAmount = checkOutSubtotal * taxRate;
         const cartTotal = checkOutSubtotal + shippingCost + taxAmount;
     
-        checkOutSubtotal.innerHTML =cartItemTotal.dataset.toString();
-         checkOutShipping.innerHTML =shippingCost.toString();
-         checkOutTax.innerHTML =taxAmount.toString();
-         checkOutTotal.innerHTML =cartTotal.toString();
-          checkOutTotal.dataset.unitPrice = cartTotal.toString();
+        // checkOutSubtotal.innerHTML =cartItemTotal.dataset.toString();
+        //  checkOutShipping.innerHTML =shippingCost.toString();
+        //  checkOutTax.innerHTML =taxAmount.toString();
+        //  checkOutTotal.innerHTML =cartTotal.toString();
+        //   checkOutTotal.dataset.unitPrice = cartTotal.toString();
 
                 //    <div class="cart-summary">
                 //     <h2>Order Summary</h2>
