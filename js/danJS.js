@@ -282,85 +282,94 @@ function setupGlobalInteractions() {
         let subtotalAddEmUp =0;
         const cartItemTotal = document.querySelector('.cart-item-total');    
 
+function getDisplayedCartSubtotal() {
+    return Array.from(document.querySelectorAll('.cart-item-total')).reduce((sum, element) => {
+        const value = Number((element.textContent || '').replace(/[^0-9.]/g, ''));
+        return sum + (Number.isFinite(value) ? value : 0);
+    }, 0);
+}
+
 function setupPurchasePage() {
-    
     initializeWishlistState();
     const orderCard = document.querySelector('.cart-main');
     const cart = getCart();
+
     if (orderCard && cart.length) {
         const checkOutDetails = document.querySelector('.cart-items');
-        
+
         checkOutDetails.innerHTML = cart.map((item, index) => {
-        return `
-
-            <div class="cart-item" data-item-index="${index}">
-                <div class="cart-item-image"><img src="${item.imagePath}" alt="${item.product}" /></div>
-                <div class="cart-item-details">
-                    <h1 class="product-title">${item.product}</h1>
-                    <p class="cart-item-description">Handcrafted windchime with glass beads</p>
-                    <p class="cart-item-price" data-item-price-index="${index}">$${item.price}</p>
-                    <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
+            return `
+                <div class="cart-item" data-item-index="${index}">
+                    <div class="cart-item-image"><img src="${item.imagePath}" alt="${item.product}" /></div>
+                    <div class="cart-item-details">
+                        <h1 class="product-title">${item.product}</h1>
+                        <p class="cart-item-description">Handcrafted windchime with glass beads</p>
+                        <p class="cart-item-price" data-item-price-index="${index}">$${item.price}</p>
+                        <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
+                    </div>
+                    <div class="cart-item-quantity">
+                        <label for="quantity${index}">Qty:</label>
+                        <input class="addItemsToOrder" type="number" id="quantity${index}" data-item-quantity-index="${index}" value="${item.quantity}" min="1" max="99">
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div class="cart-item-total" data-item-total-index="${index}">
+                        <p>$${(item.price * item.quantity).toFixed(2)}</p>
+                    </div>
                 </div>
-                <div class="cart-item-quantity">
-                    <label for="quantity${index}">Qty:</label>
-                    <input class="addItemsToOrder" type="number" id="quantity${index}" data-item-quantity-index="${index}" value="${item.quantity}" min="1" max="99">
-                </div>
-                <div></div>
-                <div></div>
-                <div class="cart-item-total" data-item-total-index="${index}">
-                <p>$${(item.price * item.quantity).toFixed(2)}</p>
-                </div>
+            `;
+            checkOutSubtotal
+        }).join('');
 
-            </div>
-            
-        `;
-       subtotalAddEmUp+=cartItemTotal;
-       checkOutSubtotal = subtotalAddEmUp;
-    }).join('');
-
-        // After rendering the DOM, attach quantity change handlers for each rendered item.
-
-          
-
-         const checkOutShipping = document.querySelector('.checkOut_shipping');
-         const checkOutTax = document.querySelector('.checkOut_tax');
-         const checkOutTotal = document.querySelector('.checkOut_total');
+        const checkOutShipping = document.querySelector('.checkOut_shipping');
         const shippingCost = 12.00;
         const taxRate = 0.08;
-        const taxAmount = checkOutSubtotal * taxRate;
-        const cartTotal = checkOutSubtotal + shippingCost + taxAmount;
-    
-        // checkOutSubtotal.innerHTML =cartItemTotal.dataset.toString();
-        //  checkOutShipping.innerHTML =shippingCost.toString();
-        //  checkOutTax.innerHTML =taxAmount.toString();
-        //  checkOutTotal.innerHTML =cartTotal.toString();
-        //   checkOutTotal.dataset.unitPrice = cartTotal.toString();
 
-                //    <div class="cart-summary">
-                //     <h2>Order Summary</h2>
-                //         <div class="cart-summary-line">
-                //             <span>Subtotal</span>
-                //             <span id="subtotal">$${(item.price * item.quantity).toFixed(2)}</span>
-                //         </div>
-                        
-                //         <div class="cart-summary-line">
-                //             <span>Shipping</span>
-                //             <span id="shipping">$12.00</span>
-                //         </div>
-                        
-                //         <div class="cart-summary-line">
-                //             <span>Tax</span>
-                //             <span>$24.72</span>
-                //         </div>
-                        
-                //         <div class="cart-summary-divider"></div>
-                        
-                //         <div class="cart-summary-line cart-summary-total">
-                //             <span>Total</span>
-                //             <span class="total">$345.72</span>
-                //         </div>
-                //         <button class="checkout-btn">Proceed to Checkout</button>
-                //         </div>
+        const updateCheckoutSummary = (items) => {
+            const displayedSubtotalAmount = getDisplayedCartSubtotal();
+            const subtotalAmount = displayedSubtotalAmount || items.reduce((sum, item) => sum + Number(item.price) * Number(item.quantity), 0);
+            const taxAmount = subtotalAmount * taxRate;
+            const cartTotal = subtotalAmount + shippingCost + taxAmount;
+
+            if (checkOutSubtotal) {
+                checkOutSubtotal.textContent = `$${subtotalAmount.toFixed(2)}`;
+            }
+            if (checkOutShipping) {
+                checkOutShipping.textContent = `$${shippingCost.toFixed(2)}`;
+            }
+            if (checkOutTax) {
+                checkOutTax.textContent = `$${taxAmount.toFixed(2)}`;
+            }
+            if (checkOutTotal) {
+                checkOutTotal.textContent = `$${cartTotal.toFixed(2)}`;
+                checkOutTotal.dataset.total = cartTotal.toFixed(2);
+            }
+        };
+
+        updateCheckoutSummary(cart);
+
+        document.querySelectorAll('.addItemsToOrder').forEach((input) => {
+            input.addEventListener('change', () => {
+                const index = Number(input.dataset.itemQuantityIndex);
+                const quantitySelected = Number(input.value) || 1;
+                const cartItemTotal = document.querySelector(`[data-item-total-index="${index}"]`);
+                const cartItemPrice = document.querySelector(`[data-item-price-index="${index}"]`);
+                const price = Number(cartItemPrice?.textContent.replace('$', '')) || 0;
+                const newTotal = price * quantitySelected;
+
+                if (cartItemTotal) {
+                    cartItemTotal.textContent = `$${newTotal.toFixed(2)}`;
+                }
+
+                const updatedCart = getCart();
+                if (updatedCart[index]) {
+                    updatedCart[index].quantity = quantitySelected;
+                    setCart(updatedCart);
+                }
+
+                updateCheckoutSummary(updatedCart);
+            });
+        });
     }
 
     updatePurchaseTotal();
