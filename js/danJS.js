@@ -429,7 +429,7 @@ function removeCartItem(index) {
      const cart = getCart();
      
     if (index >= 0 && index < cart.length) {
-        console.log("remove lione 431");
+        console.log("remove lione 431 ",cart.length );
         cart.splice(index, 1);
         setCart(cart);
         renderCartBadge();
