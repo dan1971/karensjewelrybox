@@ -1,7 +1,5 @@
 <?php require("functions.php");  head_top_menu(); ?>
-<script>
-    setupPurchasePage();
-</script>
+
 <div class="main-container">
     <main>
         <section class="collections">
@@ -61,6 +59,8 @@
                 </div>
             </div>
         </main>
-
+<script>
+    setupPurchasePage();
+</script>
 <?php footer(); ?>
 <?php flush(); ?>
