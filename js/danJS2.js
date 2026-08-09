@@ -36,8 +36,7 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
 
                     if (data.success) {
                         // Dynamically update UI with data returned from server
-                        document.getElementById('cart-count').textContent = data.cart_count;
-                        document.getElementById('cart-total').textContent = data.cart_total.toFixed(2);
+                        document.getElementById('cart-badge').add('active');
                         alert('Item added successfully!');
                     } else {
                         alert('Error: ' + data.message);
@@ -49,4 +48,31 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
                 }
             });
         });
+
+    document.getElementById('checkout-btn').addEventListener('click', async () => {
+        if (!confirm('Are you sure you want to finalize your purchase?')) return;
+
+        try {
+            const response = await fetch('checkout_processor.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' }
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                alert(`Success! Your order #${data.order_id} has been placed.`);
+                // Reset your frontend UI badge tracking
+                document.getElementById('cart-badge').classList.remove('active');
+  
+            } else {
+                alert('Checkout Failed: ' + data.message);
+            }
+            
+        } catch (error) {
+            console.error('Checkout error:', error);
+            alert('A network connection error prevented your checkout.');
+        }
+    });
+
     

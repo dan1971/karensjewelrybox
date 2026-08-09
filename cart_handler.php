@@ -2,6 +2,7 @@
 // Force clean JSON responses
 header('Content-Type: application/json');
 session_start();
+
 // Require the secure database configuration file
 require_once 'db_config.php';
 
@@ -46,3 +47,20 @@ if ($mock_user_id !== null) {
 }
 
 // ... (Compute totals and echo your standard json_encode response)
+
+$cart_count = 0;
+$cart_total = 0.00;
+
+foreach ($_SESSION['cart'] as $id => $qty) {
+    if (isset($mock_products_db[$id])) {
+        $cart_count += $qty;
+        $cart_total += ($mock_products_db[$id]['price'] * $qty);
+    }
+}
+
+// Send standard successful response format back to client UI
+echo json_encode([
+    'success' => true,
+    'cart_count' => $cart_count,
+    'cart_total' => $cart_total
+]);

@@ -14,4 +14,5 @@ deployment:
     - /bin/cp  cart.php $DEPLOYPATH
     - /bin/cp  cart_2.php $DEPLOYPATH
     - /bin/cp  cart_handler.php $DEPLOYPATH
-    
+    - /bin/cp  checkout_processor.php $DEPLOYPATH
+    - /bin/cp  db_config.php $DEPLOYPATH

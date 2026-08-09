@@ -37,7 +37,7 @@
 
         </nav>
 
-            <div class="cart-icons">
+            <div class="cart-icons cart-status">
             <a class="cart-link links" href="#" aria-label="View cart"></a>
             <!-- Removed SEARCH menu item -->
             <!-- <a href="#"><span class="icon-account"></span>ACCOUNT</a> -->
