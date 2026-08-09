@@ -2,9 +2,9 @@
 <?php
 // Secure Database Connection Configuration
 $host    = 'localhost';
-$db      = 'your_database_name';
-$user    = 'your_database_user';
-$pass    = 'your_database_password';
+$db      = 'sazxjwte_cart_storage';
+$user    = 'sazxjwte_sugar';
+$pass    = 'P^OVFTyQ@1IKVAhe';
 $charset = 'utf8mb4';
 
 // Data Source Name construction
