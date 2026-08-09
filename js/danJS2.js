@@ -50,7 +50,7 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
         });
 
  const pageName = window.location.pathname.split("/").pop();
-    if(pageName==="cart_2.php"){
+    if(pageName==="cart.php"){
         listenForCheckoutBtn();
     }
 
