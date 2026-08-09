@@ -63,6 +63,9 @@ window.addEventListener('DOMContentLoaded', () => {
     setupHeaderScroll();
     // setUpAddItemsQty();
     const pageName = window.location.pathname.split("/").pop();
+    if(pageName==="cart.php"){
+        setupPurchasePage();
+    }
     console.log(pageName); 
     // setupPurchasePage();
 });

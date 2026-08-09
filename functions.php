@@ -121,7 +121,7 @@
         </div>
     </footer>
 
-      <script src="js/danJS.js"></script> 
+      <script src="js/danJS2.js"></script> 
 </body>
 
 </html>
