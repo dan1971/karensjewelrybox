@@ -49,7 +49,13 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
             });
         });
 
-    document.getElementById('checkout-btn').addEventListener('click', async () => {
+ const pageName = window.location.pathname.split("/").pop();
+    if(pageName==="cart_2.php"){
+        listenForCheckoutBtn();
+    }
+
+    function listenForCheckoutBtn () {
+        document.getElementById('checkout-btn').addEventListener('click', async () => {
         if (!confirm('Are you sure you want to finalize your purchase?')) return;
 
         try {
@@ -75,4 +81,5 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
         }
     });
 
+    }
     
