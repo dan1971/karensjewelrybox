@@ -15,7 +15,7 @@
 .cart-panel {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 400px;
     width: min(420px, 100%);
     max-width: 420px;
     height: 100vh;
