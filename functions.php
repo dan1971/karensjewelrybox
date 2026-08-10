@@ -31,7 +31,7 @@
 </nav>
 
 <!-- Dimmed background overlay when menu is open -->
-<div class="menu-overlay"></div>
+
           
     <header class="site-header">
         <div class="header-logo-div">
