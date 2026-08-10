@@ -25,21 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to open navigation
   const openNav = () => {
     sideMenu.classList.add('active');
-    overlay.classList.add('active');
+    // overlay.classList.add('active');
     document.body.style.overflow = 'hidden'; // Prevents background body scrolling
   };
 
   // Function to close navigation
   const closeNav = () => {
     sideMenu.classList.remove('active');
-    overlay.classList.remove('active');
+    // overlay.classList.remove('active');
     document.body.style.overflow = ''; // Restores background scrolling
   };
 
   // Attach Event Listeners
   menuToggle.addEventListener('click', openNav );
   menuClose.addEventListener('click', closeNav);
-  overlay.addEventListener('click', closeNav); // Closes menu if user clicks outside of it
+//   overlay.addEventListener('click', closeNav); // Closes menu if user clicks outside of it
 });
 
 
