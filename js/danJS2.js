@@ -25,7 +25,7 @@ const checkoutButton = document.querySelector('.cart-link');
             console.log("Proceeding to checkout with cart items:", cart);   
            
             window.location.href = 'cart.php';
-            return;
+            
         }
 
 document.querySelectorAll('.add-to-cart-btn').forEach(button => {
