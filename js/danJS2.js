@@ -44,8 +44,8 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
                     }
 
                     console.log('Success:', data);
-                    document.getElementById('cart-count-badge').innerText = data.cart_count;
-                    document.getElementById('cart-total-display').innerText = '$' + data.cart_total.toFixed(2);
+                    // document.getElementById('cart-count-badge').innerText = data.cart_count;
+                    // document.getElementById('cart-total-display').innerText = '$' + data.cart_total.toFixed(2);
 
                 } catch (error) {
                     console.error('Fetch Error:', error.message);
