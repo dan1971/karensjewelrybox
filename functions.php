@@ -65,11 +65,12 @@
                 <!-- <span class="cart-badge" aria-hidden="true">♦</span> -->
             </a>
             </div>
-            <!-- Cart panel -->
-<div class="cart-backdrop" id="cartPanelBackdrop" aria-hidden="true"></div>
-<div class="cart-panel" id="slideCartPanel" aria-hidden="true">
-    <button class="cart-panel-close" id="closeCartPanel" aria-label="Close cart panel">×</button>
-    <div class="cart-panel-body">
+<!-- Cart panel -->
+<div class="cart-panel-wrapper">
+    <div class="cart-backdrop" id="cartPanelBackdrop" aria-hidden="true"></div>
+    <div class="cart-panel" id="slideCartPanel" aria-hidden="true">
+        <button class="cart-panel-close" id="closeCartPanel" aria-label="Close cart panel">×</button>
+        <div class="cart-panel-body">
         <!-- Cart Info Widget -->
         <div class="cart-status">
             Cart Items: <span id="cart-count">0</span> | Total: $<span id="cart-total">0.00</span>
