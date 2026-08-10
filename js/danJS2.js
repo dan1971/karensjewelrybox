@@ -21,7 +21,7 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
 
                 try {
                     // Send request to PHP backend
-                    const response = await fetch('cart_handler.php', {
+                    const response = await fetch('../cart_handler.php', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
