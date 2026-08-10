@@ -31,48 +31,31 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
                             quantity: parseInt(quantity)
                         })
                     }).then(async response => {
-    // 1. Get the raw text first instead of parsing blindly
     const text = await response.text();
-    
-    // 2. Check if the text actually contains data
-      let data = {};
+    let data = {};
     try {
         data = text ? JSON.parse(text) : {};
     } catch(e) {
-        // Server returned raw HTML/PHP crash logs instead of JSON
-        throw new Error(`Server Error (Non-JSON): ${text || response.statusText}`);
+        throw new Error(`Server Error (Non-JSON): ${text}`);
     }
 
     if (!response.ok) {
-        throw new Error(data.message || `HTTP Error ${response.status}: ${text}`);
+        throw new Error(data.message || `HTTP Error ${response.status}`);
     }
-    return data;
+    return data; // This passes the clean object to the next .then() block
 })
 .then(data => {
+    // 1. Log the successful object
     console.log("Success:", data);
+
+    // 2. UPDATE YOUR USER INTERFACE HERE
+    // DO NOT call data.json() here. 'data' is already an object!
+    document.getElementById('cart-count-badge').innerText = data.cart_count;
+    document.getElementById('cart-total-display').innerText = '$' + data.cart_total.toFixed(2);
 })
 .catch(error => {
-    console.error("Fetch Error caught:", error.message);
+    console.error("Fetch Error:", error.message);
 });
-
-                    const rawInput = await response.json();
-                    const cleanJSON = rawInput.substring(rawInput.indexOf('"') + 1, rawInput.lastIndexOf('"'));
-
-                        // 2. Parse the clean JSON
-                    const data = JSON.parse(cleanJSON);
-                    console.log("data ", data);
-                    if (data.success) {
-                        // Dynamically update UI with data returned from server
-                        document.getElementById('cart-badge').add('active');
-                        alert('Item added successfully!');
-                    } else {
-                        alert('Error: ' + data.message);
-                    }
-
-                } catch (error) {
-                    console.error('Fetch Error:', error);
-                    alert('Could not update cart.');
-                }
             });
         });
 
