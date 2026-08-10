@@ -18,7 +18,25 @@
 </head>
 
 <body>
-                    
+          <!-- Toggle Trigger Button -->
+<button class="menu-toggle" aria-label="Toggle Menu">
+  ☰
+</button>
+
+<!-- Slide-in Sidebar Menu Container -->
+<nav class="side-menu">
+  <button class="menu-close" aria-label="Close Menu">✕</button>
+  <ul class="menu-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Dimmed background overlay when menu is open -->
+<div class="menu-overlay"></div>
+          
     <header class="site-header">
         <div class="header-logo-div">
             <div class="logo-sup">
