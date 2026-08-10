@@ -35,14 +35,25 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
     const text = await response.text();
     
     // 2. Check if the text actually contains data
-    const data = text ? JSON.parse(text) : {};
-    
-    if (!response.ok) {
-      throw new Error(data.message || `HTTP error! Status: ${response.status}`);
+      let data = {};
+    try {
+        data = text ? JSON.parse(text) : {};
+    } catch(e) {
+        // Server returned raw HTML/PHP crash logs instead of JSON
+        throw new Error(`Server Error (Non-JSON): ${text || response.statusText}`);
     }
-    
+
+    if (!response.ok) {
+        throw new Error(data.message || `HTTP Error ${response.status}: ${text}`);
+    }
     return data;
-  }).then(data => console.log(data)).catch(error => console.error('Fetch error:', error));
+})
+.then(data => {
+    console.log("Success:", data);
+})
+.catch(error => {
+    console.error("Fetch Error caught:", error.message);
+});
 
                     const rawInput = await response.json();
                     const cleanJSON = rawInput.substring(rawInput.indexOf('"') + 1, rawInput.lastIndexOf('"'));
