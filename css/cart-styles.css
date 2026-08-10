@@ -13,7 +13,7 @@
   height: 100vh;
   background-color: #111;
   color: #fff;
-  z-index: 1000;
+  z-index: 1002;
   padding: 2rem;
   box-sizing: border-box;
   transition: transform var(--transition-speed) ease-in-out;
