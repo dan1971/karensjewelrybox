@@ -52,38 +52,7 @@
             </div>
 
     </header>
-  <!-- Cart panel -->
-                     
-<nav class="side-menu">
-  <button class="menu-close" aria-label="Close Menu">✕</button>
-  <ul class="menu-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
 
-<!-- Dimmed background overlay when menu is open -->
-<div class="menu-overlay"></div>
-<!-- Cart panel -->
-        <div class="header-logo-div">
-            <div class="logo-sup">
-                <h1>Karen's Jewelry</h1>
-            </div>
-            <div class="logo-sub">
-                <h1>B<sup>ox</sup></h1>
-            </div>
-        </div>
-
-        <nav class="main-nav menu-links" aria-label="Main navigation">
-            <div class="layer" data-text="Shop"><a href="#">Shop</a></div>
-            <div class="layer" data-text="New"><a href="#">New</a></div>
-            <div class="layer" data-text="Gift"><a href="#">Gift</a></div>
-            <div class="layer" data-text="Collections"><a href="/collections.php">Collect</a></div>
-            <div class="layer" data-text="About"><a href="#">About</a></div>
-
-        </nav>
     <?php } ?>
     <?php function footer() { ?>
     <section class="footer-badges" aria-label="Store benefits">
