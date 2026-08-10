@@ -22,9 +22,6 @@
 <!-- Slide-in Sidebar Menu Container -->
 <nav class="side-menu">
   <button class="menu-close" aria-label="Close Menu">✕</button>
-<!-- Cart panel -->
-
-    <div class="cart-backdrop" id="cartPanelBackdrop" aria-hidden="true"></div>
     <div class="cart-panel" id="slideCartPanel" aria-hidden="true">
         <button class="cart-panel-close" id="closeCartPanel" aria-label="Close cart panel">×</button>
         <div class="cart-panel-body">
@@ -46,8 +43,6 @@
             <button class="add-to-cart-btn" data-product-id="102" data-quantity="1">Add to Cart</button>
         </div>
     </div>
-
-<!-- Cart panel -->
 </nav>
 
 <!-- Dimmed background overlay when menu is open -->
