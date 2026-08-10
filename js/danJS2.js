@@ -32,8 +32,11 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
                         })
                     });
 
-                    const data = await response.json();
+                    const rawInput = await response.json();
+                    const cleanJSON = rawInput.substring(rawInput.indexOf('"') + 1, rawInput.lastIndexOf('"'));
 
+                        // 2. Parse the clean JSON
+                    const data = JSON.parse(cleanJSON);
                     if (data.success) {
                         // Dynamically update UI with data returned from server
                         document.getElementById('cart-badge').add('active');
