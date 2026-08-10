@@ -20,7 +20,7 @@ const checkoutButton = document.querySelector('.cart-link');
             const cart = getCart();
             if (!cart.length) {
                 showToast('Your cart is empty.');
-                return;
+         
             }
             console.log("Proceeding to checkout with cart items:", cart);   
            
