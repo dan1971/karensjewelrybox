@@ -13,6 +13,8 @@ function updateHeaderShrink() {
     }
 }
 
+const checkoutButton = document.querySelector('.cart-link');
+
 document.addEventListener('DOMContentLoaded', () => {
   // Select DOM Elements
   const menuToggle = document.querySelector('.menu-toggle');
@@ -39,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
   menuClose.addEventListener('click', closeNav);
   overlay.addEventListener('click', closeNav); // Closes menu if user clicks outside of it
 });
-
 
 
 
