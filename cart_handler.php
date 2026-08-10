@@ -1,7 +1,12 @@
 <?php
-// 1. Start session and set JSON headers immediately at the absolute top
+// TEMPORARY: Remove or comment out these 3 lines once the issue is solved
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 session_start();
 header('Content-Type: application/json');
+// ... rest of your code
 
 try {
     // 2. Get the raw POST data
