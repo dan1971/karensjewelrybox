@@ -10,7 +10,8 @@
   top: 0;
   right: calc(-1 * var(--menu-width)); /* Keeps it fully hidden */
   width: var(--menu-width);
-  height: 100vh;
+  max-height: 100vh; 
+  overflow-y: auto;
   background-color: #111;
   color: #fff;
   z-index: 1002;
