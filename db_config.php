@@ -25,3 +25,4 @@ try {
     header('Content-Type: application/json');
     echo json_encode(['success' => false, 'message' => 'Database connection failed securely.']);
     exit;
+}
