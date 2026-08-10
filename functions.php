@@ -65,7 +65,7 @@
                 <!-- <span class="cart-badge" aria-hidden="true">♦</span> -->
             </a>
             </div>
-<!-- Cart panel -->
+            <!-- Cart panel -->
 <div class="cart-panel-wrapper">
     <div class="cart-backdrop" id="cartPanelBackdrop" aria-hidden="true"></div>
     <div class="cart-panel" id="slideCartPanel" aria-hidden="true">
