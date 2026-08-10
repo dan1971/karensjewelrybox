@@ -42,9 +42,7 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
     }
     
     return data;
-  })
-  .then(data => console.log(data))
-  .catch(error => console.error('Fetch error:', error));;
+  }).then(data => console.log(data)).catch(error => console.error('Fetch error:', error));
 
                     const rawInput = await response.json();
                     const cleanJSON = rawInput.substring(rawInput.indexOf('"') + 1, rawInput.lastIndexOf('"'));
