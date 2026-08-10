@@ -15,18 +15,7 @@ function updateHeaderShrink() {
 
 const checkoutButton = document.querySelector('.cart-link');
         
-        if (checkoutButton) {
-            event.preventDefault();
-            const cart = getCart();
-            if (!cart.length) {
-                showToast('Your cart is empty.');
-         
-            }
-            console.log("Proceeding to checkout with cart items:", cart);   
-           
-            window.location.href = 'cart.php';
-            
-        }
+
 
 document.querySelectorAll('.add-to-cart-btn').forEach(button => {
             button.addEventListener('click', async (e) => {
