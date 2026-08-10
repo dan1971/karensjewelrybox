@@ -37,6 +37,7 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
 
                         // 2. Parse the clean JSON
                     const data = JSON.parse(cleanJSON);
+                    console.log("data ", data);
                     if (data.success) {
                         // Dynamically update UI with data returned from server
                         document.getElementById('cart-badge').add('active');
