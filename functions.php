@@ -19,10 +19,6 @@
 
 <body>
           <!-- Toggle Trigger Button -->
-<button class="menu-toggle" aria-label="Toggle Menu">
-  ☰
-</button>
-
 <!-- Slide-in Sidebar Menu Container -->
 <nav class="side-menu">
   <button class="menu-close" aria-label="Close Menu">✕</button>
@@ -60,7 +56,7 @@
             <a class="cart-link links" href="#" aria-label="View cart"></a>
             <!-- Removed SEARCH menu item -->
             <!-- <a href="#"><span class="icon-account"></span>ACCOUNT</a> -->
-            <a href="cart.php" id="cart-button" class="cart-link" aria-label="View cart">
+            <a href="cart.php" id="cart-button" class="cart-link menu-toggle" aria-label="View cart">
                 <svg id="cart-icon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100">
                     <path class="st1" class="cart-path" fill-rule="evenodd" clip-rule="evenodd"
                         d="M86.6,8v45.4H27.3L15.7,8h70.9M94.6,0H5.4l15.7,61.4h73.5V0h0Z" />
