@@ -1,8 +1,19 @@
 <?php
 // Force clean JSON responses
 header('Content-Type: application/json');
+try {
+    // 1. Get the raw POST data
+    $json = file_get_contents('php://input');
+    $data = json_decode($json, true);
 
-session_start();
+    if (!$data) {
+        throw new Exception('Invalid JSON input');
+    }
+
+    $productId = $data['product_id'] ?? null;
+    $quantity = $data['quantity'] ?? null;
+
+   session_start();
 
 // Require the secure database configuration file
 require_once 'db_config.php';
@@ -65,3 +76,13 @@ echo json_encode([
     'cart_count' => $cart_count,
     'cart_total' => $cart_total
 ]);
+
+    echo json_encode(['status' => 'success', 'message' => 'Added to cart']);
+
+} catch (Exception $e) {
+    // 3. Return a valid JSON error instead of letting the script crash
+    http_response_code(500);
+    echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
+}
+
+
