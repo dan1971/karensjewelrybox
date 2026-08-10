@@ -22,31 +22,18 @@
     <header class="site-header">
         <!-- Cart panel -->
                      
-        <div class="cart-panel-wrapper">
-            <div class="cart-backdrop" id="cartPanelBackdrop" aria-hidden="true"></div>
-            <div class="cart-panel" id="slideCartPanel" aria-hidden="true">
-                <button class="cart-panel-close" id="closeCartPanel" aria-label="Close cart panel">×</button>
-                <div class="cart-panel-body">
-                <!-- Cart Info Widget -->
-                 <div class="cart-status">
-                    Cart Items: <span id="cart-count">0</span> | Total: $<span id="cart-total">0.00</span>
-                </div>
+<nav class="side-menu">
+  <button class="menu-close" aria-label="Close Menu">✕</button>
+  <ul class="menu-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-                <!-- Product Grid Example -->
-                <div class="product-card">
-                <h3>Premium Widget</h3>
-                <p>$19.99</p>
-                <button class="add-to-cart-btn" data-product-id="101" data-quantity="1">Add to Cart</button>
-             </div>
-
-                <div class="product-card">
-             <h3>Super Gadget</h3>
-                <p>$29.99</p>
-                <button class="add-to-cart-btn" data-product-id="102" data-quantity="1">Add to Cart</button>
-                </div>
-            </div>
-            </div>
-        </div>
+<!-- Dimmed background overlay when menu is open -->
+<div class="menu-overlay"></div>
 <!-- Cart panel -->
         <div class="header-logo-div">
             <div class="logo-sup">
@@ -70,7 +57,7 @@
             <a class="cart-link links" href="#" aria-label="View cart"></a>
             <!-- Removed SEARCH menu item -->
             <!-- <a href="#"><span class="icon-account"></span>ACCOUNT</a> -->
-            <a href="cart.php" id="cart-button" class="cart-link" aria-label="View cart">
+            <a href="cart.php" id="cart-button" class="cart-link menu-toggle" aria-label="View cart">
                 <svg id="cart-icon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100">
                     <path class="st1" class="cart-path" fill-rule="evenodd" clip-rule="evenodd"
                         d="M86.6,8v45.4H27.3L15.7,8h70.9M94.6,0H5.4l15.7,61.4h73.5V0h0Z" />

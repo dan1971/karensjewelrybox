@@ -13,49 +13,33 @@ function updateHeaderShrink() {
     }
 }
 
-function setupCartPanel() {
-    const cartPanel = document.getElementById('slideCartPanel');
-    const backdrop = document.getElementById('cartPanelBackdrop');
-    if (!cartPanel) return;
+document.addEventListener('DOMContentLoaded', () => {
+  // Select DOM Elements
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menuClose = document.querySelector('.menu-close');
+  const sideMenu = document.querySelector('.side-menu');
+  const overlay = document.querySelector('.menu-overlay');
 
-    const cartLinks = document.querySelectorAll('.cart-link');
-    const closeButton = document.getElementById('closeCartPanel');
+  // Function to open navigation
+  const openNav = () => {
+    sideMenu.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevents background body scrolling
+  };
 
-    const openPanel = event => {
-        event.preventDefault();
-        cartPanel.classList.add('open');
-        backdrop?.classList.add('visible');
-        cartPanel.setAttribute('aria-hidden', 'false');
-        backdrop?.setAttribute('aria-hidden', 'false');
-    };
+  // Function to close navigation
+  const closeNav = () => {
+    sideMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = ''; // Restores background scrolling
+  };
 
-    const closePanel = () => {
-        cartPanel.classList.remove('open');
-        backdrop?.classList.remove('visible');
-        cartPanel.setAttribute('aria-hidden', 'true');
-        backdrop?.setAttribute('aria-hidden', 'true');
-    };
+  // Attach Event Listeners
+  menuToggle.addEventListener('click', openNav);
+  menuClose.addEventListener('click', closeNav);
+  overlay.addEventListener('click', closeNav); // Closes menu if user clicks outside of it
+});
 
-    cartLinks.forEach(link => {
-        link.addEventListener('click', openPanel);
-    });
-
-    if (closeButton) {
-        closeButton.addEventListener('click', closePanel);
-    }
-
-    if (backdrop) {
-        backdrop.addEventListener('click', closePanel);
-    }
-
-    document.addEventListener('keydown', event => {
-        if (event.key === 'Escape') {
-            closePanel();
-        }
-    });
-}
-
-setupCartPanel();
 
 
 
