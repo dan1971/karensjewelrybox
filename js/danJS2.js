@@ -13,8 +13,50 @@ function updateHeaderShrink() {
     }
 }
 
-const checkoutButton = document.querySelector('.cart-link');
-        
+function setupCartPanel() {
+    const cartPanel = document.getElementById('slideCartPanel');
+    const backdrop = document.getElementById('cartPanelBackdrop');
+    if (!cartPanel) return;
+
+    const cartLinks = document.querySelectorAll('.cart-link');
+    const closeButton = document.getElementById('closeCartPanel');
+
+    const openPanel = event => {
+        event.preventDefault();
+        cartPanel.classList.add('open');
+        backdrop?.classList.add('visible');
+        cartPanel.setAttribute('aria-hidden', 'false');
+        backdrop?.setAttribute('aria-hidden', 'false');
+    };
+
+    const closePanel = () => {
+        cartPanel.classList.remove('open');
+        backdrop?.classList.remove('visible');
+        cartPanel.setAttribute('aria-hidden', 'true');
+        backdrop?.setAttribute('aria-hidden', 'true');
+    };
+
+    cartLinks.forEach(link => {
+        link.addEventListener('click', openPanel);
+    });
+
+    if (closeButton) {
+        closeButton.addEventListener('click', closePanel);
+    }
+
+    if (backdrop) {
+        backdrop.addEventListener('click', closePanel);
+    }
+
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+            closePanel();
+        }
+    });
+}
+
+setupCartPanel();
+
 
 
 document.querySelectorAll('.add-to-cart-btn').forEach(button => {
