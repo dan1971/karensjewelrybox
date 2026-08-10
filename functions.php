@@ -45,7 +45,6 @@
             </div>
             </div>
         </div>
-        
 <!-- Cart panel -->
     <header class="site-header">
         <div class="header-logo-div">
