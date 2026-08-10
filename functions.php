@@ -20,13 +20,29 @@
 <body>
                     
     <header class="site-header">
-      
+        <div class="header-logo-div">
+            <div class="logo-sup">
+                <h1>Karen's Jewelry</h1>
+            </div>
+            <div class="logo-sub">
+                <h1>B<sup>ox</sup></h1>
+            </div>
+        </div>
+
+        <nav class="main-nav menu-links" aria-label="Main navigation">
+            <div class="layer" data-text="Shop"><a href="#">Shop</a></div>
+            <div class="layer" data-text="New"><a href="#">New</a></div>
+            <div class="layer" data-text="Gift"><a href="#">Gift</a></div>
+            <div class="layer" data-text="Collections"><a href="/collections.php">Collect</a></div>
+            <div class="layer" data-text="About"><a href="#">About</a></div>
+
+        </nav>
 
             <div class="cart-icons">
             <a class="cart-link links" href="#" aria-label="View cart"></a>
             <!-- Removed SEARCH menu item -->
             <!-- <a href="#"><span class="icon-account"></span>ACCOUNT</a> -->
-            <a href="cart.php" id="cart-button" class="cart-link menu-toggle" aria-label="View cart">
+            <a href="cart.php" id="cart-button" class="cart-link" aria-label="View cart">
                 <svg id="cart-icon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100">
                     <path class="st1" class="cart-path" fill-rule="evenodd" clip-rule="evenodd"
                         d="M86.6,8v45.4H27.3L15.7,8h70.9M94.6,0H5.4l15.7,61.4h73.5V0h0Z" />
