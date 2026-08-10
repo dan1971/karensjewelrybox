@@ -30,7 +30,21 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
                             product_id: parseInt(productId),
                             quantity: parseInt(quantity)
                         })
-                    });
+                    }).then(async response => {
+    // 1. Get the raw text first instead of parsing blindly
+    const text = await response.text();
+    
+    // 2. Check if the text actually contains data
+    const data = text ? JSON.parse(text) : {};
+    
+    if (!response.ok) {
+      throw new Error(data.message || `HTTP error! Status: ${response.status}`);
+    }
+    
+    return data;
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error('Fetch error:', error));;
 
                     const rawInput = await response.json();
                     const cleanJSON = rawInput.substring(rawInput.indexOf('"') + 1, rawInput.lastIndexOf('"'));
