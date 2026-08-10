@@ -20,7 +20,6 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
                 const quantity = e.target.getAttribute('data-quantity');
 
                 try {
-                    // Send request to PHP backend
                     const response = await fetch('../cart_handler.php', {
                         method: 'POST',
                         headers: {
@@ -30,32 +29,27 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
                             product_id: parseInt(productId),
                             quantity: parseInt(quantity)
                         })
-                    }).then(async response => {
-    const text = await response.text();
-    let data = {};
-    try {
-        data = text ? JSON.parse(text) : {};
-    } catch(e) {
-        throw new Error(`Server Error (Non-JSON): ${text}`);
-    }
+                    });
 
-    if (!response.ok) {
-        throw new Error(data.message || `HTTP Error ${response.status}`);
-    }
-    return data; // This passes the clean object to the next .then() block
-})
-.then(data => {
-    // 1. Log the successful object
-    console.log("Success:", data);
+                    const text = await response.text();
+                    let data = {};
+                    try {
+                        data = text ? JSON.parse(text) : {};
+                    } catch (e) {
+                        throw new Error(`Server Error (Non-JSON): ${text}`);
+                    }
 
-    // 2. UPDATE YOUR USER INTERFACE HERE
-    // DO NOT call data.json() here. 'data' is already an object!
-    document.getElementById('cart-count-badge').innerText = data.cart_count;
-    document.getElementById('cart-total-display').innerText = '$' + data.cart_total.toFixed(2);
-})
-.catch(error => {
-    console.error("Fetch Error:", error.message);
-});
+                    if (!response.ok) {
+                        throw new Error(data.message || `HTTP Error ${response.status}`);
+                    }
+
+                    console.log('Success:', data);
+                    document.getElementById('cart-count-badge').innerText = data.cart_count;
+                    document.getElementById('cart-total-display').innerText = '$' + data.cart_total.toFixed(2);
+
+                } catch (error) {
+                    console.error('Fetch Error:', error.message);
+                }
             });
         });
 
