@@ -44,14 +44,14 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
                     }
 
                     console.log('Success:', data);
-                    const badge = document.getElementById('#cart-badge');
-                     badge.classList.remove('active');
+                    const badge = document.querySelector(".cart-badge");
+                    badge.classList.remove('active');
                     // document.getElementById('cart-count-badge').innerText = data.cart_count;
                     // document.getElementById('cart-total-display').innerText = '$' + data.cart_total.toFixed(2);
 
                 } catch (error) {
-                    const badge = document.getElementById('#cart-badge');
-                     badge.classList.add('active');
+                    const badge = document.querySelector(".cart-badge");
+                    badge.classList.add('active');
                     console.error('Fetch Error:', error.message);
                 }
             });
