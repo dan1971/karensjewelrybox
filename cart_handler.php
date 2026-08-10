@@ -1,7 +1,7 @@
 <?php
 // Force clean JSON responses
 header('Content-Type: application/json');
-var_dump(file_get_contents('php://input')); die();
+
 session_start();
 
 // Require the secure database configuration file
