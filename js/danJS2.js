@@ -37,11 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // Attach Event Listeners
-  menuToggle.addEventListener("click", function(event){
-  event.preventDefault()
-  openNav
-});
-//   menuToggle.addEventListener('click', openNav );
+  menuToggle.addEventListener('click', openNav );
   menuClose.addEventListener('click', closeNav);
   overlay.addEventListener('click', closeNav); // Closes menu if user clicks outside of it
 });
