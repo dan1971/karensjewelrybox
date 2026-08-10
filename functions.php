@@ -22,9 +22,7 @@
 <!-- Slide-in Sidebar Menu Container -->
 <nav class="side-menu">
   <button class="menu-close" aria-label="Close Menu">✕</button>
-    <div class="cart-panel" id="slideCartPanel" aria-hidden="true">
-        <button class="cart-panel-close" id="closeCartPanel" aria-label="Close cart panel">×</button>
-        <div class="cart-panel-body">
+<div class="cart-panel-body">
         <!-- Cart Info Widget -->
         <div class="cart-status">
             Cart Items: <span id="cart-count">0</span> | Total: $<span id="cart-total">0.00</span>
@@ -42,7 +40,6 @@
             <p>$29.99</p>
             <button class="add-to-cart-btn" data-product-id="102" data-quantity="1">Add to Cart</button>
         </div>
-    </div>
 </nav>
 
 <!-- Dimmed background overlay when menu is open -->
