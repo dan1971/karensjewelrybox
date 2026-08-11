@@ -80,6 +80,34 @@
     height:fit-content;
 }
 
+.side-menu .product-image  {
+      height: 450px;
+      width: 100%;
+     background-image: url('images/b-ring002.webp');
+      background-size: cover;
+      background-position-y: 0;
+      background-position-x: center;
+      background-repeat: no-repeat;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter:brightness(1);
+    }
+
+.side-menu .product-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.1) 100%);
+      opacity: 0;
+      transition: var(--transition);
+      backdrop-filter:brightness(1.1);
+    }
+
+.side-menu .product-card:hover .product-image::after {
+      opacity: 1;
+      filter:brightness(1.2);
+    }
+
 /* List Items Styling */
 .menu-links {
   list-style: none;
