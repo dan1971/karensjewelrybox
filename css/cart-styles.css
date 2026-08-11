@@ -66,6 +66,16 @@
   transform: translateX(calc(-1 * var(--menu-width)));
 }
 
+.cart-status, .cart-total, .cart-count{
+    font-size: .09;
+    padding: 0 0 .5;
+}
+
+.cart-panel-body {
+    padding: 80px 24px 24px 24px;
+    flex: 1;
+}
+
 /* List Items Styling */
 .menu-links {
   list-style: none;
@@ -88,7 +98,7 @@
   background: none;
   border: none;
   color: inherit;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
@@ -239,10 +249,7 @@
     background: rgba(0, 0, 0, 0.16);
 }
 
-.cart-panel-body {
-    padding: 80px 24px 24px 24px;
-    flex: 1;
-}
+
 .cart-container {
     max-width: 1200px;
     margin: 0 auto;
