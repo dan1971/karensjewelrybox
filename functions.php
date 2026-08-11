@@ -22,14 +22,14 @@
 <!-- Slide-in Sidebar Menu Container -->
 <nav class="side-menu">
   <button class="menu-close" aria-label="Close Menu">✕</button>
-            <div class="section-heading">
-                <h2>Shopping Cart</h2>
-            </div>
+
 
         <main class="cart-main">
             <div class="cart-container">
                 <div class="cart-content">
-                    <!-- Cart Items Section -->
+            <div class="section-heading">
+                <h2>Shopping Cart</h2>
+            </div>
                     <div class="cart-items">
             
 
