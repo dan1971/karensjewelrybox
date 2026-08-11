@@ -20,7 +20,7 @@
 <body>
           <!-- Toggle Trigger Button -->
 <!-- Slide-in Sidebar Menu Container -->
-<nav class="side-menu glass-card">
+<nav class="side-menu">
   <button class="menu-close" aria-label="Close Menu">✕</button>
 <div class="cart-panel-body">
         <!-- Cart Info Widget -->
