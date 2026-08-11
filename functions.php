@@ -57,24 +57,20 @@
                             <span>Tax</span>
                             <span class="checkOut_tax"></span>
                         </div>
-                        
+
                         <div class="cart-summary-divider"></div>
-                        
                         <div class="cart-summary-line cart-summary-total">
                             <span>Total</span>
                             <span class="checkOut_total" data-total=""></span>
                         </div>
-
                         <button class="checkout-btn">Proceed to Checkout</button>
-                        
                         <a href="index.html" class="continue-shopping-link">← Continue Shopping</a>
-                        
-                        <div class="promo-code">
-                            <input type="text" placeholder="Enter promo code" id="promo-input">
-                            <button class="apply-promo-btn">Apply</button>
-                        </div>
                     </div>
                 </div>
+                    <div class="promo-code">
+                        <input type="text" placeholder="Enter promo code" id="promo-input">
+                        <button class="apply-promo-btn">Apply</button>
+                    </div>         
             </div>
         </main>
 </nav>

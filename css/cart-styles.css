@@ -316,7 +316,10 @@
     gap: 2rem;
     align-items: start;
     }
-.cart-content .promo-code {
+.cart-container .section-heading h2{
+    font-size: .8rem;
+}
+.cart-container .promo-code {
     display: grid;
     grid-template-columns: 1fr;
     gap: 8px;
@@ -324,9 +327,7 @@
     padding-top: 20px;
     border-top: 1px solid #e5e5e5;
     }
-.cart-content .section-heading h2{
-    font-size: .8rem;
-}
+
 }
 
 /* Cart Items */
