@@ -302,20 +302,6 @@
     }
 }
 
- section {
-    container-type: size;
-  }
-
-  @container (max-width: 12rem) {
-    p {
-      font-weight: bold;
-      color: red;
-    }
-    .section-heading h2 {
-        font-size:1.8rem;
-    }
-  }
-
 .cart-main {
     container-type: inline-size;
     padding: 20px;
@@ -330,7 +316,7 @@
     gap: 2rem;
     align-items: start;
     }
-    .promo-code {
+.promo-code {
     display: grid;
     grid-template-columns: 1fr;
     gap: 8px;
@@ -338,6 +324,9 @@
     padding-top: 20px;
     border-top: 1px solid #e5e5e5;
     }
+.section-heading{
+    font-size: .8rem;
+}
 }
 
 /* Cart Items */
