@@ -303,19 +303,19 @@
 }
 
 .cart-main {
-    container-type: inline-size;
+    display:grid;
     padding: 20px;
 }
 
 /* >>>>>>>>>>>>>>>>>>> CURRENT SIDEBAR CART <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
-@container (max-width: var(--menu-width)) {
 .cart-content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
     align-items: start;
     }
+
 .cart-container .section-heading h2{
     font-size: .8rem;
 }
@@ -328,7 +328,7 @@
     border-top: 1px solid #e5e5e5;
     }
 
-}
+
 
 /* Cart Items */
 
