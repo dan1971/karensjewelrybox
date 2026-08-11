@@ -161,10 +161,7 @@
 
 
 /* Shopping Cart Styles */
-.cart-main {
-    min-height: 100vh;
-    padding: 20px 0 20px;
-}
+
 .cart-panel-wrapper {
    
     inset: 0;
@@ -352,12 +349,30 @@
     }
 }
 
+ section {
+    container-type: size;
+  }
+
+  @container (max-width: 12rem) {
+    p {
+      font-weight: bold;
+      color: red;
+    }
+  }
+
+.cart-main {
+    container-type: inline-size;
+    padding: 20px 0 20px;
+}
+
+@container (max-width: var(--menu-width)) {
+
 .cart-content {
     display: grid;
-        max-width: 1112px;
-    grid-template-columns: 1fr 380px;
+    grid-template-columns: 1fr;
     gap: 2rem;
     align-items: start;
+    }
 }
 
 /* Cart Items */
