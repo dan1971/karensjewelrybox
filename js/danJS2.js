@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to open navigation
   const openNav = () => {
     sideMenu.classList.add('active');
+
     // overlay.classList.add('active');
     // document.body.style.overflow = 'hidden'; // Prevents background body scrolling
   };
@@ -36,8 +37,43 @@ document.addEventListener('DOMContentLoaded', () => {
     // document.body.style.overflow = ''; // Restores background scrolling
   };
 
+  // Populate side-menu from session / cart data
+  const populateSideMenu = async () => {
+    const productImage = sideMenu.querySelector('.product_image');
+    const checkoutTotal = sideMenu.querySelector('.checkOut_total');
+
+    try {
+      const response = await fetch('../cart_handler.php', {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Cart fetch failed: ${response.status}`);
+      }
+
+      const data = await response.json();
+      const imageUrl = data.product_image || '';
+      const totalValue = Number(data.cart_total || 0).toFixed(2);
+
+      if (productImage && imageUrl) {
+        productImage.src = imageUrl;
+      }
+      if (checkoutTotal) {
+        checkoutTotal.textContent = `$${totalValue}`;
+      }
+    } catch (error) {
+      console.error('Unable to load cart menu data:', error);
+    }
+  };
+
   // Attach Event Listeners
-  menuToggle.addEventListener('click', openNav );
+  menuToggle.addEventListener('click', async () => {
+    openNav();
+    await populateSideMenu();
+  });
   menuClose.addEventListener('click', closeNav);
 //   overlay.addEventListener('click', closeNav); // Closes menu if user clicks outside of it
 });
@@ -47,7 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
 document.querySelectorAll('.add-to-cart-btn').forEach(button => {
             button.addEventListener('click', async (e) => {
                 const productId = e.target.getAttribute('data-product-id');
-                const quantity = e.target.getAttribute('data-quantity');
+                const product_quantity = e.target.getAttribute('data-quantity');
+                const product_image = e.target.getAttribute('data-image');
 
                 try {
                     const response = await fetch('../cart_handler.php', {
@@ -56,8 +93,9 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
                             'Content-Type': 'application/json'
                         },
                         body: JSON.stringify({
-                            product_id: parseInt(productId),
-                            quantity: parseInt(quantity)
+                            product_id: parseInt(productId, 10),
+                            product_quantity: parseInt(quantity, 10),
+                            product_image: image || null
                         })
                     });
 
@@ -74,14 +112,17 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
                     }
 
                     console.log('Success:', data);
-                    const badge = document.querySelector(".cart-badge");
-                    badge.classList.remove('active');
-                    // document.getElementById('cart-count-badge').innerText = data.cart_count;
-                    // document.getElementById('cart-total-display').innerText = '$' + data.cart_total.toFixed(2);
+                    const badge = document.querySelector('.cart-badge');
+                    if (badge) badge.classList.add('active');
+
+                    const totalElement = document.querySelector('.checkOut_total');
+                    if (totalElement) {
+                        totalElement.textContent = '$' + Number(data.cart_total || 0).toFixed(2);
+                    }
 
                 } catch (error) {
-                    const badge = document.querySelector(".cart-badge");
-                    badge.classList.add('active');
+                    const badge = document.querySelector('.cart-badge');
+                    if (badge) badge.classList.add('active');
                     console.error('Fetch Error:', error.message);
                 }
             });

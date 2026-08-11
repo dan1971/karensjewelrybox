@@ -30,6 +30,27 @@
                 <div class="cart-content">
 
                     <div class="cart-items">
+                    <div class="cart-item" data-item-index="${index}">
+                    <div class="cart-item-image">
+                    <img class="product_image" src="${item.imagePath}" alt="${item.product}" />
+                    </div>
+                    <div class="cart-item-details">
+                        <h1 class="product-title">${item.product}</h1>
+                        <p class="cart-item-description">Handcrafted windchime with glass beads</p>
+                        <p class="cart-item-price" data-item-price-index="${index}">$${item.price}</p>
+                        <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
+                    </div>
+                    <div class="cart-item-quantity">
+                        <label for="quantity${index}">Qty:</label>
+                        <input class="addItemsToOrder" type="number" id="quantity${index}" data-item-quantity-index="${index}" value="${item.quantity}" min="1" max="99">
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div class="cart-item-total" data-item-total-index="${index}">
+                        <p>$${(item.price * item.quantity).toFixed(2)}</p>
+                    </div>
+                </div>
+
                         <!-- Empty Cart Message (hidden when items exist) -->
                         <div class="cart-empty" style="display: none;">
                             <p>Your cart is empty</p>
