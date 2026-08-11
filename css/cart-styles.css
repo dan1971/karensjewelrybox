@@ -502,14 +502,6 @@ font-weight: 500;
     color: #222;
 }
 
-.promo-code {
-    display: flex;
-    gap: 8px;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #e5e5e5;
-}
-
 .promo-code input {
     flex: 1;
     padding: 10px;
