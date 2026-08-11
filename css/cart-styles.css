@@ -130,14 +130,14 @@
   background: none;
   border: none;
   color: inherit;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 
 .menu-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: .7rem;
+  right: .7rem;
 }
 
 /* Background Overlay Tint */
@@ -170,54 +170,7 @@
     z-index: 8990;
 }
 
-.glass-card {
-
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 0 38px 19px rgba(255, 255, 255, 1.9);
-  position: relative;
-  overflow: hidden;
-}
-
-.glass-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.8),
-    transparent
-  );
-}
-
-.glass-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.8),
-    transparent,
-    rgba(255, 255, 255, 0.3)
-  );
-}
-
 .cart-panel {
-
     width: min(420px, 100%);
     max-width: 420px;
     height: 100vh;
@@ -280,7 +233,7 @@
 
 
 .cart-container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -358,20 +311,32 @@
       font-weight: bold;
       color: red;
     }
+    .section-heading h2 {
+        font-size:1.8rem;
+    }
   }
 
 .cart-main {
     container-type: inline-size;
-    padding: 20px 0 20px;
+    padding: 20px;
 }
 
-@container (max-width: var(--menu-width)) {
+/* >>>>>>>>>>>>>>>>>>> CURRENT SIDEBAR CART <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
+@container (max-width: var(--menu-width)) {
 .cart-content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
     align-items: start;
+    }
+    .promo-code {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
     }
 }
 
