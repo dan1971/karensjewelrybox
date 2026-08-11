@@ -76,6 +76,10 @@
     flex: 1;
 }
 
+.side-menu > .product-card {
+    height:fit-content;
+}
+
 /* List Items Styling */
 .menu-links {
   list-style: none;

@@ -336,6 +336,7 @@ font-weight: 300;
       gap: 39px;
       margin: 25px auto 30px;
     }
+    
     .product-card {
       background-color: rgb(0, 0, 0);
       border-radius: var(--border-radius);
