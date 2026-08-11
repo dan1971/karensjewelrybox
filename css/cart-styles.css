@@ -67,8 +67,8 @@
 }
 
 .cart-status, .cart-total, .cart-count{
-    font-size: .09;
-    padding: 0 0 .5;
+    font-size: .09rem;
+    padding: 0 0 .5rem;
 }
 
 .cart-panel-body {
