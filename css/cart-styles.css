@@ -6,18 +6,24 @@
 
 /* Sidebar Styling hidden off-screen to the right */
 .side-menu {
-width: min(420px, 100%);
-max-width: 420px;
   position: fixed;
   top: 0;
   right: calc(-1 * var(--menu-width)); /* Keeps it fully hidden */
   width: var(--menu-width);
   height: 100vh;
   color: #fff;
-  z-index: 1002;
-  padding: 2rem;
-  box-sizing: border-box;
-  transition: transform var(--transition-speed) ease-in-out;
+    background: rgba(255, 255, 255, 0.72);
+    border-left: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow: -18px 0 42px rgba(15, 23, 42, 0.18);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    transition-delay: 0s;
+    z-index: 9000;
+    display: flex;
+    flex-direction: column
 }
 
 /* Active State: Slides into view using GPU-accelerated transform */
