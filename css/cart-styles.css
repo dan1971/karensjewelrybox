@@ -231,12 +231,6 @@
     background: rgba(0, 0, 0, 0.16);
 }
 
-
-.cart-container {
-    max-width: 100%;
-    margin: 0 auto;
-}
-
 .cart-container h1 {
         font-family: 'Montserrat', Verdana, Arial, sans-serif;
     letter-spacing: 1px;
@@ -309,6 +303,10 @@
 
 /* >>>>>>>>>>>>>>>>>>> CURRENT SIDEBAR CART <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
+.cart-container {
+    max-width: 100%;
+}
+
 .cart-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -316,8 +314,18 @@
     align-items: start;
     }
 
+    .cart-items {
+        display: grid;
+        gap: 18px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        transition:all 0.2s ease;
+    }
+
 .cart-container .section-heading h2{
-    font-size: .8rem;
+    font-size: 1.8rem;
+    margin:15px 0 o;
 }
 .cart-container .promo-code {
     display: grid;
@@ -327,8 +335,6 @@
     padding-top: 20px;
     border-top: 1px solid #e5e5e5;
     }
-
-
 
 /* Cart Items */
 
@@ -555,16 +561,6 @@ font-weight: 500;
         font-size: 3.2rem;
         color: var(--muted);
         cursor: pointer;
-    }
-
-    .cart-items {
-        display: grid;
-        gap: 18px;
-        background: #fff;
-        border-radius: 8px;
-        padding: 24px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        transition:all 0.2s ease;
     }
 
     .cart-item {
