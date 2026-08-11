@@ -22,8 +22,6 @@
 <!-- Slide-in Sidebar Menu Container -->
 <nav class="side-menu">
   <button class="menu-close" aria-label="Close Menu">✕</button>
-
-
         <main class="cart-main">
             <div class="cart-container">
                 <div class="section-heading">
