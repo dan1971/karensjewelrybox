@@ -30,12 +30,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     if ($mock_user_id !== null) {
         try {
-            $stmt = $pdo->prepare('SELECT product_id, quantity, product_image FROM user_carts WHERE user_id = ?');
+            $stmt = $pdo->prepare('SELECT productId, productQuantity, productImage FROM user_carts WHERE user_id = ?');
             $stmt->execute([$mock_user_id]);
             foreach ($stmt->fetchAll() as $row) {
-                $cart_items[(int)$row['product_id']] = [
-                    'quantity' => (int)$row['quantity'],
-                    'product_image' => $row['product_image'] ?? null
+                $cart_items[(int)$row['productId']] = [
+                    'quantity' => (int)$row['productQuantity'],
+                    'product_image' => $row['productImage'] ?? null
                 ];
             }
         } catch (\PDOException $e) {
@@ -118,15 +118,15 @@ try {
      */
     if ($mock_user_id !== null) {
         try {
-            $sql = "INSERT INTO user_carts (user_id, product_id, product_image, quantity) 
-                    VALUES (:user_id, :product_id, :quantity) 
+            $sql = "INSERT INTO user_carts (userId, productId, productImage, productQuantity) 
+                    VALUES (:user_id, :product_id, :product_quantity,) 
                     ON DUPLICATE KEY UPDATE quantity = quantity + :quantity_increment";
 
             $stmt = $pdo->prepare($sql);
             $stmt->execute([
                 'user_id'            => $mock_user_id,
                 'product_id'         => $product_id,
-                'quantity'           => $requested_qty,
+                'product_quantity'           => $requested_qty,
                 'quantity_increment' => $requested_qty
             ]);
 
