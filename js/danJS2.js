@@ -61,11 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const cartTotalItems = data.cart_count;
       console.log("cart count ", cartTotalItems);
 
-      if(cartTotalItems<=0){
-        cartIsEmpty.classList.add('visible');
+      if(cartTotalItems==0){
+       
         cartItems.classList.add('hidden');
       } else if (cartTotalItems>0){
-        cartIsEmpty.classList.add('hidden');
+        
         cartItems.classList.add('visible');
       };
        
