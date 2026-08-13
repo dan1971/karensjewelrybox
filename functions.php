@@ -37,19 +37,18 @@
                         <div class="cart-items">
                         <div class="cart-item" data-item-index="${index}">
                         <div class="cart-item-image">
-                        <img class="product_image" src="${item.imagePath}" alt="${item.product}" />
+                            <img class="product_image" src="${item.imagePath}" alt="${item.product}" />
                         </div>
                         <div class="cart-item-details">
-                        <h1 class="product-title"></h1>
-                        <p class="cart-item-description">Handcrafted windchime with glass beads</p>
-                        <p class="cart-item-price" data-item-price-index="${index}"></p>
-                        <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
+                            <h1 class="product-title"></h1>
+                            <p class="cart-item-description">Handcrafted windchime with glass beads</p>
+                            <p class="cart-item-price" data-item-price-index="${index}"></p>
+                            <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
                         </div>
                         <div class="cart-item-quantity">
-                        <label for="quantity${index}">Qty:</label>
-                        <input class="addItemsToOrder" type="number" id="quantity${index}" data-item-quantity-index="${index}" value="${item.quantity}" min="0" max="99">
-                
-                      </div>
+                            <label for="quantity${index}">Qty:</label>
+                            <input class="addItemsToOrder" type="number" id="quantity${index}" data-item-quantity-index="${index}" value="${item.quantity}" min="0" max="99">
+                        </div>
                       <div></div>
                       <div></div>
                       <div class="cart-item-total" data-item-total-index="${index}">
@@ -57,7 +56,7 @@
                       </div>
                       </div>
 
-                    <!-- Cart Summary Section -->
+        <!--<<<<<<<<<<<<  Cart Summary Section >>>>>>>>>>>>>>>>>>>> -->
                     
                         <h2>Order Summary</h2>
                         <div class="cart-summary-line">
@@ -77,8 +76,8 @@
                             <span>Total</span>
                             <span class="checkOut_total" data-total=""></span>
                         </div>
-                        <button class="checkout-btn">Proceed to Checkout</button>
-                        <a href="index.html" class="continue-shopping-link">← Continue Shopping</a>
+                            <button class="checkout-btn">Proceed to Checkout</button>
+                            <a href="index.html" class="continue-shopping-link">← Continue Shopping</a>
                         <div class="promo-code">
                             <input type="text" placeholder="Enter promo code" id="promo-input">
                             <button class="apply-promo-btn">Apply</button>

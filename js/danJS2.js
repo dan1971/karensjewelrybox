@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.menu-toggle');
   const menuClose = document.querySelector('.menu-close');
   const sideMenu = document.querySelector('.side-menu');
-  const overlay = document.querySelector('.menu-overlay');
+//   const overlay = document.querySelector('.menu-overlay');
 
   // Function to open navigation
   const openNav = () => {
@@ -58,11 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = await response.json();
       const imageUrl = data.product_image || '';
       const totalValue = Number(data.cart_total || 0).toFixed(2);
-
-      if(totalValue<=0){
+      const cartTotalItems = data.cart_count;
+      console.log("cart count ", cartTotalItems);
+      
+      if(cartTotalItems<=0){
         cartIsEmpty.classList.add('visible');
         cartItems.classList.add('hidden');
-      } else {
+      } elseif (cartTotalItems>0) {
         cartIsEmpty.classList.add('hidden');
         cartItems.classList.add('visible');
       }
@@ -93,6 +95,7 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
             button.addEventListener('click', async (e) => {
                 const productId = e.target.getAttribute('data-product-id');
                 const product_quantity = e.target.getAttribute('data-quantity');
+                const product_image = e.target.getAttribute('data-image');cart_count
                 const product_image = e.target.getAttribute('data-image');
 
                 try {
@@ -125,6 +128,7 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
                     if (badge) badge.classList.add('active');
 
                     const totalElement = document.querySelector('.checkOut_total');
+
                     if (totalElement) {
                         totalElement.textContent = '$' + Number(data.cart_total || 0).toFixed(2);
                     }
