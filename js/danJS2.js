@@ -95,7 +95,7 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
             button.addEventListener('click', async (e) => {
                 const productId = e.target.getAttribute('data-product-id');
                 const product_quantity = e.target.getAttribute('data-quantity');
-                const product_image = e.target.getAttribute('data-image');cart_count
+                const product_image = e.target.getAttribute('data-image');
                 const product_image = e.target.getAttribute('data-image');
 
                 try {
