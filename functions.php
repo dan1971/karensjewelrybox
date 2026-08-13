@@ -47,7 +47,7 @@
                         </div>
                         <div class="cart-item-quantity">
                             <label for="quantity${index}">Qty:</label>
-                            <input class="addItemsToOrder" type="number" id="quantity${index}" data-item-quantity-index="${index}" value="${item.quantity}" min="0" max="99">
+                            <input class="addItemsToOrder" type="number" id="quantity${index}" data-item-quantity-index="${index}" value=1 min="0" max="99">
                         </div>
                       <div></div>
                       <div></div>
