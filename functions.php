@@ -28,11 +28,8 @@
                     <h2>Shopping Cart</h2>
                 </div>    
                         <div class="cart-content">
-                         <!-- Empty Cart Message (hidden when items exist) -->
-                         <div class="cart-empty">
-                            <p>Your cart is empty</p>
-                         </div>
-                         <a href="index.html" class="continue-shopping-btn">Continue Shopping</a>
+
+                         <a href="collections.html" class="continue-shopping-btn">Continue Shopping</a>
                          <div class="cart-items"></div>
                           <h2>Order Summary</h2>
                           <div class="cart-summary-line">
