@@ -29,7 +29,7 @@
                 </div>    
                 <div class="cart-content">
                     <!-- Empty Cart Message (hidden when items exist) -->
-                        <div class="cart-empty hidden">
+                        <div class="cart-empty">
                             <p>Your cart is empty</p>
                             <a href="index.html" class="continue-shopping-btn">Continue Shopping</a>
                         </div>

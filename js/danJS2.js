@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const productImage = sideMenu.querySelector('.product_image');
     const checkoutTotal = sideMenu.querySelector('.checkOut_total');
     const cartIsEmpty = sideMenu.querySelector('.cart-empty');
-    const cartItems = sideMenu.querySelector('.cart-items')
+    const cartItems = sideMenu.querySelector('.cart-items');
     try {
       const response = await fetch('../cart_handler.php', {
         method: 'GET',
@@ -64,9 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if(cartTotalItems==0){
        
         cartItems.classList.add('hidden');
+
       } else if (cartTotalItems>0){
         
         cartItems.classList.add('visible');
+
       };
        
       if (productImage && imageUrl) {
