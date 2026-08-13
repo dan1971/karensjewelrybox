@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const checkoutTotal = sideMenu.querySelector('.cart-item-total');
       const cartItems = sideMenu.querySelector('.cart-items');
 
-console.log("Log #1- productImage, productTitle, productDesc, productPrice, productQty, checkoutTotal= ", " " ,checkoutTotal.textContent, " " , cartIsEmpty.textContent, " " , cartItems.textContent);
+// console.log("Log #1- productImage, productTitle, productDesc, productPrice, productQty, checkoutTotal= ", " " ,checkoutTotal.textContent, " " , cartIsEmpty.textContent, " " , cartItems.textContent);
 
   // <<<< CALL CART HANDLER- GET CART ITEMS SCRIPT >>>>>>>>>>>>>>>>
     try {
@@ -89,7 +89,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
           const prod = products[id] || products[String(id)];
           const qty = Number(itemsMap[id]) || 0;
           const name = prod?.name || 'Item';
-          
+
           const price = Number(prod?.price || 0).toFixed(2);
           const img = prod?.image || imageUrl || 'images/b-ring002.webp';
           const lineTotal = (Number(price) * qty).toFixed(2);
