@@ -402,10 +402,7 @@ font-weight: 500;
 /* Empty Cart */
 .cart-empty {
     text-align: center;
-    padding: 60px 20px;
-}
-
-.cart-empty p {
+    background-color: #fff;
     font-size: 1.3rem;
     color: var(--dark);
     margin-bottom: 24px;
