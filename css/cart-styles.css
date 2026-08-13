@@ -10,7 +10,7 @@
   top: 0;
   right: calc(-1 * var(--menu-width)); /* Keeps it fully hidden */
   width: var(--menu-width);
-  height: 100vh;
+  height: fit-content;
   color: #fff;
  background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(5px);
