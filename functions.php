@@ -31,8 +31,8 @@
                     <!-- Empty Cart Message (hidden when items exist) -->
                         <div class="cart-empty">
                             <p>Your cart is empty</p>
-                            <a href="index.html" class="continue-shopping-btn">Continue Shopping</a>
                         </div>
+                        <a href="index.html" class="continue-shopping-btn">Continue Shopping</a>
     <!-- <<<<<<<<<<<<<<<<<<<<<<    CARt ITEMS start   >>>>>>>>>>>>>>>>>>>>>>>> -->
                         <div class="cart-items">
                         <div class="cart-item" data-item-index="${index}">
