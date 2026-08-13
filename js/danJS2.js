@@ -98,7 +98,6 @@ console.log("Log #6- cartItems div IS truthy- prod, qty, name, price, img, lineT
 
 // <<<<<<<<<<<<<<<  CART POPULATE PANEL  >>>>>>>>>>>>>>>>>>>>>
             `<div class="cart-item" data-item-id="${id}">
-
               <div class="cart-item-image">
               <img src="${img}" alt="${name}">
               </div>
@@ -184,6 +183,7 @@ console.log("Log #6- cartItems div IS truthy- prod, qty, name, price, img, lineT
 // <<<<<<< ADD-TO-CART- CAPTURE PRODUCT INFO >>>>>>>>>>>>
   document.querySelectorAll('.add-to-cart-btn').forEach(button => {
     button.addEventListener('click', async (e) => {
+      console.log("LOG #10.1- ADD TO CART CLICK");
     const productId = e.target.getAttribute('data-product-id');
     const product_quantity = e.target.getAttribute('data-quantity');
     const product_image = e.target.getAttribute('data-image');
@@ -192,7 +192,7 @@ console.log("Log #6- cartItems div IS truthy- prod, qty, name, price, img, lineT
                 quantity: parseInt(product_quantity, 10),
                 image: product_image || null,
                 });
-console.log('LOG #10- ADD TO CART CLICK capture product info- info body:', body);
+console.log("LOG #10.2- ADD TO CART CLICK capture product info- info body:", body);
 
 // <<<<<<<  ADD-TO-CART- SEND PRODUCT INFO TO CART HANDLER  >>>>>>
     try { const response = await fetch('../cart_handler.php', {

@@ -48,7 +48,7 @@
                                 <div class="cart-tooltip">Add to cart</div>
                             </div>
                         </div>
-                    <div class="add-to-cart-rectangle add-to-cart-btn" data-image="images/chime-001.webp" data-product-id="101" data-quantity="1">Add to cart</div>
+                    <div class="add-to-cart-rectangle add-to-cart-btn" data-image="images/chime-001.webp" data-product-id=101; data-quantity=1>Add to cart</div>
                     </div>
 
 
