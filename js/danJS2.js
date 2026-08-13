@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const populateSideMenu = async () => {
     const productImage = sideMenu.querySelector('.product_image');
     const checkoutTotal = sideMenu.querySelector('.checkOut_total');
-
+    const cartIsEmpty = sideMenu.querySelector('.cart-empty');
+    const cartItems = sideMenu.querySelector('.cart-items')
     try {
       const response = await fetch('../cart_handler.php', {
         method: 'GET',
@@ -58,6 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const imageUrl = data.product_image || '';
       const totalValue = Number(data.cart_total || 0).toFixed(2);
 
+      if(totalValue<=0){
+        cartIsEmpty.classList.add('visible');
+        cartItems.classList.add('hidden');
+      } else {
+        cartIsEmpty.classList.add('hidden');
+        cartItems.classList.add('visible');
+      }
+       
       if (productImage && imageUrl) {
         productImage.src = imageUrl;
       }

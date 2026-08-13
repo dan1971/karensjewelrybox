@@ -4,6 +4,14 @@
   --transition-speed: 0.3s;
 }
 
+.hidden {
+    display:none;
+}
+
+.visible {
+    display:block;
+}
+
 /* Sidebar Styling hidden off-screen to the right */
 .side-menu {
   position: fixed;
