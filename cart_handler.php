@@ -14,24 +14,24 @@ error_reporting(E_ALL);
 header('Content-Type: application/json');
 session_start();
 require_once 'db_config.php';
+require_once 'tools\seed_products.php';
 
 /*
  * Use a real `products` table for product metadata (id, name, price, image).
  * The application expects a `products` table with at least: `id`, `name`, `price`, `image`.
  */
 
-// DELETE endpoint to remove an item from the cart (full removal)
+// >>>>>>>>>>>>> DELETE FUNCTIONALITY <<<<<<<<<<<<<<
+
 if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
     $input = json_decode(file_get_contents('php://input'), true) ?: [];
     $product_id = isset($input['product_id']) ? (int)$input['product_id'] : null;
     $user_id = isset($_SESSION['user_id']) ? (int)$_SESSION['user_id'] : null;
-
     if (!$product_id) {
         http_response_code(400);
         echo json_encode(['status' => 'error', 'message' => 'Missing product_id for DELETE']);
         exit;
     }
-
     if ($user_id !== null) {
         try {
             $del = $pdo->prepare('DELETE FROM user_carts WHERE user_id = ? AND product_id = ?');
@@ -45,7 +45,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
         if (isset($_SESSION['cart'][$product_id])) unset($_SESSION['cart'][$product_id]);
         if (isset($_SESSION['cart_meta'][$product_id])) unset($_SESSION['cart_meta'][$product_id]);
     }
-
     // Return updated summary (reuse same logic as GET)
     $user = isset($_SESSION['user_id']) ? (int)$_SESSION['user_id'] : null;
     $cart_items = [];
@@ -64,7 +63,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
     } else {
         $cart_items = isset($_SESSION['cart']) && is_array($_SESSION['cart']) ? $_SESSION['cart'] : [];
     }
-
     $cart_count = 0;
     $cart_total = 0.00;
     $product_image = null;
@@ -81,7 +79,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
             echo json_encode(['status' => 'error', 'message' => 'Unable to lookup products after remove.']);
             exit;
         }
-
         foreach ($cart_items as $id => $qty) {
             $qty = (int)$qty;
             $cart_count += $qty;
@@ -94,11 +91,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
             }
         }
     }
-
     echo json_encode(['status'=>'success','message'=>'Removed','cart_count'=>$cart_count,'cart_total'=>round($cart_total,2),'product_image'=>$product_image,'cart_items'=>$cart_items,'products'=>$products]);
     exit;
 }
+// >>>>>>>>>>>>> END DELETE FUNCTIONALITY <<<<<<<<<<<<<<
 
+
+// >>>>>>> GET CART FROM db / FROM SESSION <<<<<<<<
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $user_id = isset($_SESSION['user_id']) ? (int)$_SESSION['user_id'] : null;
     $cart_items = [];

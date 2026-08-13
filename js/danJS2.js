@@ -180,10 +180,11 @@ console.log("Log #6- cartItems div IS truthy- prod, qty, name, price, img, lineT
   menuClose.addEventListener('click', closeCartPanel);
 });
 
-// <<<<<<< ADD-TO-CART- CAPTURE PRODUCT INFO >>>>>>>>>>>>
+// <<<<<<<   CLICK ADD-TO-CART- SEND PRODUCT INFO >>>>>>>>>>>>
   document.querySelectorAll('.add-to-cart-btn').forEach(button => {
     button.addEventListener('click', async (e) => {
-      console.log("LOG #10.1- ADD TO CART CLICK");
+console.log("LOG #10.1- ADD TO CART CLICK");
+
     const productId = e.target.getAttribute('data-product-id');
     const product_quantity = e.target.getAttribute('data-quantity');
     const product_image = e.target.getAttribute('data-image');
