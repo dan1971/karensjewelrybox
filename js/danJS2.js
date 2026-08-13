@@ -43,10 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const productPrice = sideMenu.querySelector('.cart-item-price');
       const productQty = sideMenu.querySelector('.addItemsToOrder');
       const checkoutTotal = sideMenu.querySelector('.cart-item-total');
-      
       const cartItems = sideMenu.querySelector('.cart-items');
 
-console.log("Log #1- productImage, productTitle, productDesc, productPrice, productQty, checkoutTotal= ", productImage.querySelector('img'), " " ,checkoutTotal.textContent, " " , cartIsEmpty.textContent, " " , cartItems.textContent);
+console.log("Log #1- productImage, productTitle, productDesc, productPrice, productQty, checkoutTotal= ", " " ,checkoutTotal.textContent, " " , cartIsEmpty.textContent, " " , cartItems.textContent);
+
   // <<<< CALL CART HANDLER- GET CART ITEMS SCRIPT >>>>>>>>>>>>>>>>
     try {
         const response = await fetch('../cart_handler.php', {
@@ -65,12 +65,13 @@ console.log("Log #2- CART HANDLER GET script FAILURE RESPONSE= ", response.statu
       const imageUrl = data.product_image || '';
       const totalValue = Number(data.cart_total || 0).toFixed(2);
       const cartTotalItems = data.cart_count || 0;
+
 console.log("Log #3- CART HANDLER.php GET SUCCESS RESPONSE data, imageUrl, totalValue, cartTotalItems= ", data, " ", imageUrl, " ", totalValue, " ", cartTotalItems);
 
    // <<<<<<<<<<<<<<<  CART STATE EMPTY OR LIST >>>>>>>>>>>>>
       const products = data.products || {};
       const itemsMap = data.cart_items || {};
-console.log("Log #4- products, itemsMap= ", products, " ", itemsMap);
+console.log("Log #4- products= ", products, " itemsMap= ", itemsMap);
 
    // <<<<<<<<<<<<<<<  CART STATE EMPTY >>>>>>>>>>>>>
       if (!cartItems){
@@ -88,6 +89,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
           const prod = products[id] || products[String(id)];
           const qty = Number(itemsMap[id]) || 0;
           const name = prod?.name || 'Item';
+          
           const price = Number(prod?.price || 0).toFixed(2);
           const img = prod?.image || imageUrl || 'images/b-ring002.webp';
           const lineTotal = (Number(price) * qty).toFixed(2);
@@ -96,13 +98,22 @@ console.log("Log #6- cartItems div IS truthy- prod, qty, name, price, img, lineT
 
 // <<<<<<<<<<<<<<<  CART POPULATE PANEL  >>>>>>>>>>>>>>>>>>>>>
             `<div class="cart-item" data-item-id="${id}">
+
               <div class="cart-item-image">
-              <img src="${img}" alt="${name}"></div>
+              <img src="${img}" alt="${name}">
+              </div>
               <div class="cart-item-details">
-                <h3 class="product-title">${name}</h3>
-                <div class="cart-item-qty">Qty: ${qty}</div>
+                <h1 class="product-title">${name}</h1>
+                <p class="cart-item-description">
+                ${name}</p>
+                <div class="cart-item-quantity">
+                  <label for="quantity${index}">Qty:</label>
+                  <input class="addItemsToOrder" type="number" id="quantity${index}" data-item-quantity-index="${index}" value=${qty} min="0" max="99">
+                </div>       
                 <div class="cart-item-price">$${price}</div>
               </div>
+              <div></div>
+              <div></div>
               <div class="cart-item-total">$${lineTotal}</div>
               <div>
                 <button class="cart-item-remove" data-product-id="${id}" aria-label="Remove">Remove</button>

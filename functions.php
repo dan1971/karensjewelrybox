@@ -27,63 +27,39 @@
                 <div class="section-heading">
                     <h2>Shopping Cart</h2>
                 </div>    
-                <div class="cart-content">
-                    <!-- Empty Cart Message (hidden when items exist) -->
-                        <div class="cart-empty">
+                        <div class="cart-content">
+                         <!-- Empty Cart Message (hidden when items exist) -->
+                         <div class="cart-empty">
                             <p>Your cart is empty</p>
-                        </div>
-                        <a href="index.html" class="continue-shopping-btn">Continue Shopping</a>
-    <!-- <<<<<<<<<<<<<<<<<<<<<<    CARt ITEMS start   >>>>>>>>>>>>>>>>>>>>>>>> -->
-                        <div class="cart-items">
-                        <div class="cart-item" data-item-index="">
-                        <div class="cart-item-image">
-                            <img class="product_image" src="${item.imagePath}" alt="${item.product}" />
-                        </div>
-                        <div class="cart-item-details">
-                            <h1 class="product-title"></h1>
-                            <p class="cart-item-description">Handcrafted windchime with glass beads</p>
-                            <p class="cart-item-price" data-item-price-index="${index}"></p>
-                            <button class="cart-item-remove" type="button" data-item-index="${index}">Remove</button>
-                        </div>
-                        <div class="cart-item-quantity">
-                            <label for="quantity${index}">Qty:</label>
-                            <input class="addItemsToOrder" type="number" id="quantity${index}" data-item-quantity-index="${index}" value= 1 min="0" max="99">
-                        </div>
-                      <div></div>
-                      <div></div>
-                      <div class="cart-item-total" data-item-total-index="${index}">
-                        <p></p>
-                      </div>
-                      </div>
-
-        <!--<<<<<<<<<<<<  Cart Summary Section >>>>>>>>>>>>>>>>>>>> -->
-                    
-                        <h2>Order Summary</h2>
-                        <div class="cart-summary-line">
+                         </div>
+                         <a href="index.html" class="continue-shopping-btn">Continue Shopping</a>
+                         <div class="cart-items"></div>
+                          <h2>Order Summary</h2>
+                          <div class="cart-summary-line">
                             <span>Subtotal</span>
                             <span class="checkOut_subtotal"></span>
-                        </div>
-                        <div class="cart-summary-line">
+                          </div>
+                          <div class="cart-summary-line">
                             <span>Shipping</span>
                             <span class="checkOut_shipping"></span>
-                        </div>
-                        <div class="cart-summary-line">
+                          </div>
+                         <div class="cart-summary-line">
                             <span>Tax</span>
                             <span class="checkOut_tax"></span>
-                        </div>
-                        <div class="cart-summary-divider"></div>
-                        <div class="cart-summary-line cart-summary-total">
+                          </div>
+                          <div class="cart-summary-divider"></div>
+                          <div class="cart-summary-line cart-summary-total">
                             <span>Total</span>
-                            <span class="checkOut_total" data-total=""></span>
-                        </div>
+                             <span class="checkOut_total" data-total=""></span>
+                          </div>
                             <button class="checkout-btn">Proceed to Checkout</button>
                             <a href="index.html" class="continue-shopping-link">← Continue Shopping</a>
-                        <div class="promo-code">
+                          <div class="promo-code">
                             <input type="text" placeholder="Enter promo code" id="promo-input">
                             <button class="apply-promo-btn">Apply</button>
-                        </div> 
-                    </div>
-    <!-- <<<<<<<<<<<<<<<<<<<<<<    CARt ITEMS END    >>>>>>>>>>>>>>>>>>>>>>>> -->
+                          </div> 
+                        </div>
+<!-- <<<<<<<<<<<<<<<<<<<<<<    CARt ITEMS END    >>>>>>>>>>>>>>>>>>>>>>>> -->
                 </div>
             </div>
         </main>
