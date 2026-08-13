@@ -60,14 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const totalValue = Number(data.cart_total || 0).toFixed(2);
       const cartTotalItems = data.cart_count;
       console.log("cart count ", cartTotalItems);
-      
+
       if(cartTotalItems<=0){
         cartIsEmpty.classList.add('visible');
         cartItems.classList.add('hidden');
-      } elseif (cartTotalItems>0) {
+      } else if (cartTotalItems>0){
         cartIsEmpty.classList.add('hidden');
         cartItems.classList.add('visible');
-      }
+      };
        
       if (productImage && imageUrl) {
         productImage.src = imageUrl;
