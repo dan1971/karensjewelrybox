@@ -96,7 +96,7 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
                 const productId = e.target.getAttribute('data-product-id');
                 const product_quantity = e.target.getAttribute('data-quantity');
                 const product_image = e.target.getAttribute('data-image');
-                const product_image = e.target.getAttribute('data-image');
+
 
                 try {
                     const response = await fetch('../cart_handler.php', {
@@ -107,7 +107,8 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
                         body: JSON.stringify({
                             product_id: parseInt(productId, 10),
                             product_quantity: parseInt(quantity, 10),
-                            product_image: image || null
+                            product_image: image || null,
+                          
                         })
                     });
 

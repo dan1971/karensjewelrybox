@@ -28,6 +28,7 @@
                         <div class="product-info">
                             <div class="product-category">Wind Chimes</div>
                             <div class="product-name">Golden Windstone</div>
+                            <div class="product-description" data-descrition="product-description"></div>
                             <div class="rating">
                                 <div class="stars">
                                     <div class="star">★</div>
