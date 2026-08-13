@@ -564,7 +564,7 @@ font-weight: 500;
 
     .cart-item {
         display: grid;
-        grid-template-columns: 1fr 1fr auto;
+        grid-template-columns: 1fr;
         gap: 14px;
         padding-bottom: 16px;
         font-family:sans-serif;
