@@ -140,6 +140,46 @@
   right: .7rem;
 }
 
+/* Utility hidden class for JS toggles */
+.hidden { display: none !important; }
+.visible { display: block !important; }
+
+/* Cart item styles inside side-menu */
+.side-menu .cart-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.side-menu .cart-item-image img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.side-menu .cart-item-details { flex: 1; }
+.side-menu .cart-item-remove {
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 6px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #333;
+}
+.side-menu .cart-item-remove:hover { background: rgba(0,0,0,0.03); }
+
+/* Removal animation: fade and slide up */
+.remove-anim {
+    animation: fadeSlide 320ms cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+@keyframes fadeSlide {
+    0% { opacity: 1; transform: translateY(0); height: auto; margin: 8px 0; }
+    60% { opacity: 0.6; transform: translateY(-6px); }
+    100% { opacity: 0; transform: translateY(-14px); height: 0; margin: 0; padding: 0; }
+}
+
 /* Background Overlay Tint */
 .menu-overlay {
   position: fixed;

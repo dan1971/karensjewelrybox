@@ -16,27 +16,100 @@ session_start();
 require_once 'db_config.php';
 
 /*
- * Product metadata fallback for guest carts and total calculation.
- * In production, this should be replaced with a real products table lookup.
+ * Use a real `products` table for product metadata (id, name, price, image).
+ * The application expects a `products` table with at least: `id`, `name`, `price`, `image`.
  */
-$mock_products_db = [
-    101 => ['name' => 'Golden Windstone', 'price' => 129.00, 'image' => 'images/chime-001.webp'],
-    102 => ['name' => 'Golden SkyStone',  'price' => 159.00, 'image' => 'images/chime-002.webp']
-];
+
+// DELETE endpoint to remove an item from the cart (full removal)
+if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+    $input = json_decode(file_get_contents('php://input'), true) ?: [];
+    $product_id = isset($input['product_id']) ? (int)$input['product_id'] : null;
+    $user_id = isset($_SESSION['user_id']) ? (int)$_SESSION['user_id'] : null;
+
+    if (!$product_id) {
+        http_response_code(400);
+        echo json_encode(['status' => 'error', 'message' => 'Missing product_id for DELETE']);
+        exit;
+    }
+
+    if ($user_id !== null) {
+        try {
+            $del = $pdo->prepare('DELETE FROM user_carts WHERE user_id = ? AND product_id = ?');
+            $del->execute([$user_id, $product_id]);
+        } catch (\PDOException $e) {
+            http_response_code(500);
+            echo json_encode(['status' => 'error', 'message' => 'Unable to remove item from database.']);
+            exit;
+        }
+    } else {
+        if (isset($_SESSION['cart'][$product_id])) unset($_SESSION['cart'][$product_id]);
+        if (isset($_SESSION['cart_meta'][$product_id])) unset($_SESSION['cart_meta'][$product_id]);
+    }
+
+    // Return updated summary (reuse same logic as GET)
+    $user = isset($_SESSION['user_id']) ? (int)$_SESSION['user_id'] : null;
+    $cart_items = [];
+    if ($user !== null) {
+        try {
+            $stmt = $pdo->prepare('SELECT product_id, quantity FROM user_carts WHERE user_id = ?');
+            $stmt->execute([$user]);
+            foreach ($stmt->fetchAll() as $row) {
+                $cart_items[(int)$row['product_id']] = (int)$row['quantity'];
+            }
+        } catch (\PDOException $e) {
+            http_response_code(500);
+            echo json_encode(['status' => 'error', 'message' => 'Unable to fetch cart data after remove.']);
+            exit;
+        }
+    } else {
+        $cart_items = isset($_SESSION['cart']) && is_array($_SESSION['cart']) ? $_SESSION['cart'] : [];
+    }
+
+    $cart_count = 0;
+    $cart_total = 0.00;
+    $product_image = null;
+    $products = [];
+    if (!empty($cart_items)) {
+        $ids = array_keys($cart_items);
+        $placeholders = implode(',', array_fill(0, count($ids), '?'));
+        try {
+            $stmt = $pdo->prepare("SELECT id, name, price, image FROM products WHERE id IN ($placeholders)");
+            $stmt->execute($ids);
+            foreach ($stmt->fetchAll() as $p) $products[(int)$p['id']] = $p;
+        } catch (\PDOException $e) {
+            http_response_code(500);
+            echo json_encode(['status' => 'error', 'message' => 'Unable to lookup products after remove.']);
+            exit;
+        }
+
+        foreach ($cart_items as $id => $qty) {
+            $qty = (int)$qty;
+            $cart_count += $qty;
+            if (isset($products[$id])) {
+                $cart_total += (float)$products[$id]['price'] * $qty;
+                if ($product_image === null && !empty($products[$id]['image'])) $product_image = $products[$id]['image'];
+            } elseif (isset($_SESSION['cart_meta'][$id]['price'])) {
+                $cart_total += (float)$_SESSION['cart_meta'][$id]['price'] * $qty;
+                if ($product_image === null && isset($_SESSION['cart_meta'][$id]['image'])) $product_image = $_SESSION['cart_meta'][$id]['image'];
+            }
+        }
+    }
+
+    echo json_encode(['status'=>'success','message'=>'Removed','cart_count'=>$cart_count,'cart_total'=>round($cart_total,2),'product_image'=>$product_image,'cart_items'=>$cart_items,'products'=>$products]);
+    exit;
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    $mock_user_id = isset($_SESSION['user_id']) ? (int)$_SESSION['user_id'] : null;
+    $user_id = isset($_SESSION['user_id']) ? (int)$_SESSION['user_id'] : null;
     $cart_items = [];
 
-    if ($mock_user_id !== null) {
+    // Load cart items from DB for logged users or from session for guests
+    if ($user_id !== null) {
         try {
-            $stmt = $pdo->prepare('SELECT productId, productQuantity, productImage FROM user_carts WHERE user_id = ?');
-            $stmt->execute([$mock_user_id]);
+            $stmt = $pdo->prepare('SELECT product_id, quantity FROM user_carts WHERE user_id = ?');
+            $stmt->execute([$user_id]);
             foreach ($stmt->fetchAll() as $row) {
-                $cart_items[(int)$row['productId']] = [
-                    'quantity' => (int)$row['productQuantity'],
-                    'product_image' => $row['productImage'] ?? null
-                ];
+                $cart_items[(int)$row['product_id']] = (int)$row['quantity'];
             }
         } catch (\PDOException $e) {
             http_response_code(500);
@@ -47,44 +120,58 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $cart_items = isset($_SESSION['cart']) && is_array($_SESSION['cart']) ? $_SESSION['cart'] : [];
     }
 
+    // If there are no items, return empty summary
     $cart_count = 0;
     $cart_total = 0.00;
     $product_image = null;
 
-    foreach ($cart_items as $id => $item) {
-        $quantity = is_array($item) ? ($item['quantity'] ?? 0) : (int)$item;
-        $cart_count += $quantity;
-        $price = null;
+    if (!empty($cart_items)) {
+        $productIds = array_keys($cart_items);
+        $placeholders = implode(',', array_fill(0, count($productIds), '?'));
 
-        if (isset($item['product_image']) && $product_image === null) {
-            $product_image = $item['product_image'];
+        try {
+            $stmt = $pdo->prepare("SELECT id, name, price, image FROM products WHERE id IN ($placeholders)");
+            $stmt->execute($productIds);
+            $products = [];
+            foreach ($stmt->fetchAll() as $p) {
+                $products[(int)$p['id']] = $p;
+            }
+        } catch (\PDOException $e) {
+            http_response_code(500);
+            echo json_encode(['status' => 'error', 'message' => 'Unable to lookup product metadata.']);
+            exit;
         }
 
-        if (isset($mock_products_db[$id]['price'])) {
-            $price = $mock_products_db[$id]['price'];
-        } elseif (isset($_SESSION['cart_meta'][$id]['price'])) {
-            $price = (float)$_SESSION['cart_meta'][$id]['price'];
-        }
+        foreach ($cart_items as $id => $qty) {
+            $qty = (int)$qty;
+            $cart_count += $qty;
 
-        if ($price !== null) {
-            $cart_total += $price * $quantity;
-        }
-
-        if ($product_image === null) {
-            if (isset($_SESSION['cart_meta'][$id]['image'])) {
-                $product_image = $_SESSION['cart_meta'][$id]['image'];
-            } elseif (isset($mock_products_db[$id]['image'])) {
-                $product_image = $mock_products_db[$id]['image'];
+            if (isset($products[$id])) {
+                $price = (float)$products[$id]['price'];
+                $cart_total += $price * $qty;
+                if ($product_image === null && !empty($products[$id]['image'])) {
+                    $product_image = $products[$id]['image'];
+                }
+            } else {
+                // Fallback to session metadata if available
+                if (isset($_SESSION['cart_meta'][$id]['price'])) {
+                    $cart_total += (float)$_SESSION['cart_meta'][$id]['price'] * $qty;
+                }
+                if ($product_image === null && isset($_SESSION['cart_meta'][$id]['image'])) {
+                    $product_image = $_SESSION['cart_meta'][$id]['image'];
+                }
             }
         }
     }
 
+    $products = isset($products) ? $products : [];
     echo json_encode([
         'status' => 'success',
         'cart_count' => $cart_count,
         'cart_total' => round($cart_total, 2),
         'product_image' => $product_image,
-        'cart_items' => $cart_items
+        'cart_items' => $cart_items,
+        'products' => $products
     ]);
     exit;
 }
@@ -110,23 +197,109 @@ try {
     $requested_qty = (int)$data['quantity'];
     $image = isset($data['image']) ? trim($data['image']) : null;
     $price = isset($data['price']) ? (float)$data['price'] : null;
-    $mock_user_id = isset($_SESSION['user_id']) ? (int)$_SESSION['user_id'] : null;
+    $user_id = isset($_SESSION['user_id']) ? (int)$_SESSION['user_id'] : null;
+
+    // Handle remove action: POST with { action: 'remove', product_id }
+    if (isset($data['action']) && $data['action'] === 'remove') {
+        if ($user_id !== null) {
+            try {
+                $del = $pdo->prepare('DELETE FROM user_carts WHERE user_id = ? AND product_id = ?');
+                $del->execute([$user_id, $product_id]);
+            } catch (\PDOException $e) {
+                http_response_code(500);
+                echo json_encode(['status' => 'error', 'message' => 'Unable to remove item from database.']);
+                exit;
+            }
+        } else {
+            if (isset($_SESSION['cart'][$product_id])) {
+                unset($_SESSION['cart'][$product_id]);
+            }
+            if (isset($_SESSION['cart_meta'][$product_id])) {
+                unset($_SESSION['cart_meta'][$product_id]);
+            }
+        }
+
+        // Rebuild summary and return (reuse GET logic)
+        $cart_items = [];
+        if ($user_id !== null) {
+            try {
+                $stmt = $pdo->prepare('SELECT product_id, quantity FROM user_carts WHERE user_id = ?');
+                $stmt->execute([$user_id]);
+                foreach ($stmt->fetchAll() as $row) {
+                    $cart_items[(int)$row['product_id']] = (int)$row['quantity'];
+                }
+            } catch (\PDOException $e) {
+                http_response_code(500);
+                echo json_encode(['status' => 'error', 'message' => 'Unable to fetch cart data for summary.']);
+                exit;
+            }
+        } else {
+            $cart_items = isset($_SESSION['cart']) && is_array($_SESSION['cart']) ? $_SESSION['cart'] : [];
+        }
+
+        $cart_count = 0;
+        $cart_total = 0.00;
+        $product_image = null;
+        if (!empty($cart_items)) {
+            $ids = array_keys($cart_items);
+            $placeholders = implode(',', array_fill(0, count($ids), '?'));
+            try {
+                $stmt = $pdo->prepare("SELECT id, name, price, image FROM products WHERE id IN ($placeholders)");
+                $stmt->execute($ids);
+                $products = [];
+                foreach ($stmt->fetchAll() as $p) {
+                    $products[(int)$p['id']] = $p;
+                }
+            } catch (\PDOException $e) {
+                http_response_code(500);
+                echo json_encode(['status' => 'error', 'message' => 'Unable to lookup products for summary.']);
+                exit;
+            }
+
+            foreach ($cart_items as $id => $qty) {
+                $qty = (int)$qty;
+                $cart_count += $qty;
+                if (isset($products[$id])) {
+                    $cart_total += (float)$products[$id]['price'] * $qty;
+                    if ($product_image === null && !empty($products[$id]['image'])) {
+                        $product_image = $products[$id]['image'];
+                    }
+                } elseif (isset($_SESSION['cart_meta'][$id]['price'])) {
+                    $cart_total += (float)$_SESSION['cart_meta'][$id]['price'] * $qty;
+                    if ($product_image === null && isset($_SESSION['cart_meta'][$id]['image'])) {
+                        $product_image = $_SESSION['cart_meta'][$id]['image'];
+                    }
+                }
+            }
+        }
+
+        echo json_encode([
+            'status' => 'success',
+            'message' => 'Removed from cart',
+            'cart_count' => $cart_count,
+            'cart_total' => round($cart_total, 2),
+            'product_image' => $product_image,
+            'cart_items' => $cart_items,
+            'products' => isset($products) ? $products : []
+        ]);
+        exit;
+    }
 
     /*
      * Persist cart changes.
      * If the user is logged in, use database storage. Otherwise use the session cart.
      */
-    if ($mock_user_id !== null) {
+    if ($user_id !== null) {
         try {
-            $sql = "INSERT INTO user_carts (userId, productId, productImage, productQuantity) 
-                    VALUES (:user_id, :product_id, :product_quantity,) 
+            $sql = "INSERT INTO user_carts (user_id, product_id, quantity) 
+                    VALUES (:user_id, :product_id, :quantity) 
                     ON DUPLICATE KEY UPDATE quantity = quantity + :quantity_increment";
 
             $stmt = $pdo->prepare($sql);
             $stmt->execute([
-                'user_id'            => $mock_user_id,
-                'product_id'         => $product_id,
-                'product_quantity'           => $requested_qty,
+                'user_id' => $user_id,
+                'product_id' => $product_id,
+                'quantity' => $requested_qty,
                 'quantity_increment' => $requested_qty
             ]);
 
@@ -174,18 +347,50 @@ try {
         $_SESSION['cart'] = [];
     }
 
-    foreach ($_SESSION['cart'] as $id => $qty) {
-        $price = null;
+    // Rebuild summary from authoritative source (DB for logged users, session for guests)
+    $cart_items = [];
+    if ($user_id !== null) {
+        try {
+            $stmt = $pdo->prepare('SELECT product_id, quantity FROM user_carts WHERE user_id = ?');
+            $stmt->execute([$user_id]);
+            foreach ($stmt->fetchAll() as $row) {
+                $cart_items[(int)$row['product_id']] = (int)$row['quantity'];
+            }
+        } catch (\PDOException $e) {
+            http_response_code(500);
+            echo json_encode(['status' => 'error', 'message' => 'Unable to fetch cart data for summary.']);
+            exit;
+        }
+    } else {
+        $cart_items = isset($_SESSION['cart']) && is_array($_SESSION['cart']) ? $_SESSION['cart'] : [];
+    }
 
-        if (isset($mock_products_db[$id]['price'])) {
-            $price = $mock_products_db[$id]['price'];
-        } elseif (isset($_SESSION['cart_meta'][$id]['price'])) {
-            $price = (float)$_SESSION['cart_meta'][$id]['price'];
+    $cart_count = 0;
+    $cart_total = 0.00;
+    if (!empty($cart_items)) {
+        $ids = array_keys($cart_items);
+        $placeholders = implode(',', array_fill(0, count($ids), '?'));
+        try {
+            $stmt = $pdo->prepare("SELECT id, price FROM products WHERE id IN ($placeholders)");
+            $stmt->execute($ids);
+            $products = [];
+            foreach ($stmt->fetchAll() as $p) {
+                $products[(int)$p['id']] = $p;
+            }
+        } catch (\PDOException $e) {
+            http_response_code(500);
+            echo json_encode(['status' => 'error', 'message' => 'Unable to lookup products for summary.']);
+            exit;
         }
 
-        if ($price !== null) {
+        foreach ($cart_items as $id => $qty) {
+            $qty = (int)$qty;
             $cart_count += $qty;
-            $cart_total += $price * $qty;
+            if (isset($products[$id])) {
+                $cart_total += (float)$products[$id]['price'] * $qty;
+            } elseif (isset($_SESSION['cart_meta'][$id]['price'])) {
+                $cart_total += (float)$_SESSION['cart_meta'][$id]['price'] * $qty;
+            }
         }
     }
 

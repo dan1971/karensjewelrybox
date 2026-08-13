@@ -58,19 +58,79 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = await response.json();
       const imageUrl = data.product_image || '';
       const totalValue = Number(data.cart_total || 0).toFixed(2);
-      const cartTotalItems = data.cart_count;
-      console.log("cart count ", cartTotalItems);
+      const cartTotalItems = data.cart_count || 0;
 
-      if(cartTotalItems==0){
-       
-        cartItems.classList.add('hidden');
+      // Render empty state or item list
+      const products = data.products || {};
+      const itemsMap = data.cart_items || {};
 
-      } else if (cartTotalItems>0){
-        
-        cartItems.classList.add('visible');
+      if (!cartItems) return;
 
-      };
-       
+      if (cartTotalItems === 0) {
+        cartItems.innerHTML = `
+          <div class="cart-empty">
+            <p>Your cart is empty</p>
+            <a href="index.php" class="continue-shopping-btn">Continue Shopping</a>
+          </div>
+        `;
+      } else {
+        cartItems.innerHTML = Object.keys(itemsMap).map(id => {
+          const prod = products[id] || products[String(id)];
+          const qty = Number(itemsMap[id]) || 0;
+          const name = prod?.name || 'Item';
+          const price = Number(prod?.price || 0).toFixed(2);
+          const img = prod?.image || imageUrl || 'images/b-ring002.webp';
+          const lineTotal = (Number(price) * qty).toFixed(2);
+
+          return `
+            <div class="cart-item" data-item-id="${id}">
+              <div class="cart-item-image"><img src="${img}" alt="${name}"></div>
+              <div class="cart-item-details">
+                <h3 class="product-title">${name}</h3>
+                <div class="cart-item-qty">Qty: ${qty}</div>
+                <div class="cart-item-price">$${price}</div>
+              </div>
+              <div class="cart-item-total">$${lineTotal}</div>
+              <div>
+                <button class="cart-item-remove" data-product-id="${id}" aria-label="Remove">Remove</button>
+              </div>
+            </div>
+          `;
+        }).join('');
+        // Wire remove buttons
+        cartItems.querySelectorAll('.cart-item-remove').forEach(btn => {
+          btn.addEventListener('click', async (e) => {
+            const pid = btn.dataset.productId;
+            const itemEl = btn.closest('.cart-item');
+            try {
+              const resp = await fetch('../cart_handler.php', {
+                method: 'DELETE',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ product_id: parseInt(pid, 10) })
+              });
+              const json = await resp.json();
+              if (!json || json.status !== 'success') throw new Error(json?.message || 'Delete failed');
+
+              // Animate then refresh
+              if (itemEl) {
+                itemEl.classList.add('remove-anim');
+                itemEl.addEventListener('animationend', async () => {
+                  await populateSideMenu();
+                }, { once: true });
+              } else {
+                await populateSideMenu();
+              }
+
+              const badge = document.querySelector('.cart-badge');
+              if (badge && json.cart_count > 0) badge.classList.add('active');
+              if (badge && json.cart_count == 0) badge.classList.remove('active');
+            } catch (err) {
+              console.error('Remove failed', err);
+            }
+          });
+        });
+      }
+
       if (productImage && imageUrl) {
         productImage.src = imageUrl;
       }
