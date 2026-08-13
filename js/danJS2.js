@@ -99,21 +99,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 const product_quantity = e.target.getAttribute('data-quantity');
                 const product_image = e.target.getAttribute('data-image');
 
-
+                const body= JSON.stringify({
+                            product_id: parseInt(productId, 10),
+                            quantity: parseInt(product_quantity, 10),
+                            image: product_image || null,
+                        });
                 try {
                     const response = await fetch('../cart_handler.php', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            product_id: parseInt(productId, 10),
-                            product_quantity: parseInt(quantity, 10),
-                            product_image: image || null,
-                          
-                        })
-                    });
-
+                        }, body });
+            
                     const text = await response.text();
                     let data = {};
                     try {
