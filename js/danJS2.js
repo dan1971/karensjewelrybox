@@ -107,8 +107,8 @@ console.log("Log #6- cartItems div IS truthy- prod, qty, name, price, img, lineT
                 <p class="cart-item-description">
                 ${name}</p>
                 <div class="cart-item-quantity">
-                  <label for="quantity${index}">Qty:</label>
-                  <input class="addItemsToOrder" type="number" id="quantity${index}" data-item-quantity-index="${index}" value=${qty} min="0" max="99">
+                  <label for="quantity${id}">Qty:</label>
+                  <input class="addItemsToOrder" type="number" id="quantity${id}" data-item-quantity-index="${id}" value=${qty} min="0" max="99">
                 </div>       
                 <div class="cart-item-price">$${price}</div>
               </div>
