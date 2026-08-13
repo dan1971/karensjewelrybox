@@ -20,7 +20,7 @@ $options = [
 try {
     // Create the global PDO instance
     $pdo = new PDO($dsn, $user, $pass, $options);
-} catch (\PDOException $e) {
+} catch (PDOException $e) {
     // Suppress system paths and throw a clean, generic error to the frontend
     // header('Content-Type: application/json');
     echo json_encode(['success' => false, 'message' => 'Database connection failed securely.']);
