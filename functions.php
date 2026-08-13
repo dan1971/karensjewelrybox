@@ -55,7 +55,6 @@
                         <p></p>
                     </div>
                     </div>
-                    </div>
 
                         <!-- Cart Summary Section -->
                         <div class="cart-summary">
@@ -84,11 +83,14 @@
                         <button class="checkout-btn">Proceed to Checkout</button>
                         <a href="index.html" class="continue-shopping-link">← Continue Shopping</a>
                     </div>
-                </div>
-                    <div class="promo-code">
+                        <div class="promo-code">
                         <input type="text" placeholder="Enter promo code" id="promo-input">
                         <button class="apply-promo-btn">Apply</button>
-                    </div>         
+                    </div> 
+                    </div>
+                </div>
+
+        
             </div>
         </main>
 </nav>
