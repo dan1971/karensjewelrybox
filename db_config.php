@@ -2,7 +2,7 @@
 <?php
 // Secure Database Connection Configuration
 $host    = 'localhost';
-$db      = 'sazxjwte_cart_storage.user_carts';
+$db      = 'sazxjwte_user_carts';
 $user    = 'sazxjwte_sugar';
 $pass    = 'P^OVFTyQ@1IKVAhe';
 $charset = 'utf8mb4';
