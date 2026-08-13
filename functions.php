@@ -35,7 +35,7 @@
                         <a href="index.html" class="continue-shopping-btn">Continue Shopping</a>
     <!-- <<<<<<<<<<<<<<<<<<<<<<    CARt ITEMS start   >>>>>>>>>>>>>>>>>>>>>>>> -->
                         <div class="cart-items">
-                        <div class="cart-item" data-item-index="${index}">
+                        <div class="cart-item" data-item-index="">
                         <div class="cart-item-image">
                             <img class="product_image" src="${item.imagePath}" alt="${item.product}" />
                         </div>

@@ -36,12 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // <<<<<<<<<< POPULATE CART PANEL- menuToggle CALLS THIS FUNCTION  >>>>>>>>>>>>>>>
     const populateSideMenu = async () => {
-      const productImage = sideMenu.querySelector('.product_image');
-      const checkoutTotal = sideMenu.querySelector('.checkOut_total');
       const cartIsEmpty = sideMenu.querySelector('.cart-empty');
+      const productImage = sideMenu.querySelector('.cart-item-image');
+      const productTitle = sideMenu.querySelector('.product-title');
+      const productDesc = sideMenu.querySelector('.cart-item-description');
+      const productPrice = sideMenu.querySelector('.cart-item-price');
+      const productQty = sideMenu.querySelector('.addItemsToOrder');
+      const checkoutTotal = sideMenu.querySelector('.cart-item-total');
+      
       const cartItems = sideMenu.querySelector('.cart-items');
 
-console.log("Log #1- productImage, checkoutTotal, cartIsEmpty, cartItems= ", productImage.textContent, " " ,checkoutTotal.textContent, " " , cartIsEmpty.textContent, " " , cartItems.textContent);
+console.log("Log #1- productImage, productTitle, productDesc, productPrice, productQty, checkoutTotal= ", productImage.querySelector('img'), " " ,checkoutTotal.textContent, " " , cartIsEmpty.textContent, " " , cartItems.textContent);
   // <<<< CALL CART HANDLER- GET CART ITEMS SCRIPT >>>>>>>>>>>>>>>>
     try {
         const response = await fetch('../cart_handler.php', {
@@ -142,7 +147,10 @@ console.log("Log #6- cartItems div IS truthy- prod, qty, name, price, img, lineT
       }
 
       if (productImage && imageUrl) {
-        productImage.src = imageUrl;
+        const imgElement = productImage.querySelector('img');
+        if (imgElement) {
+          imgElement.src = imageUrl;
+        }
       }
       if (checkoutTotal) {
         checkoutTotal.textContent = `$${totalValue}`;
