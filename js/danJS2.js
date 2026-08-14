@@ -166,7 +166,7 @@ console.log("Log #6- cartItems div IS truthy- prod, qty, name, price, img, lineT
         checkoutTotal.textContent = `$${totalValue}`;
       }
     } catch (error) {
-      console.error('LOG #9- Unable to load cart menu data:', error);
+      console.error(error);
     }
   };
 

@@ -13,8 +13,7 @@ error_reporting(E_ALL);
  */
 header('Content-Type: application/json');
 session_start();
-require_once 'db_config.php';
-require_once 'tools\seed_products.php';
+
 
 /*
  * Use a real `products` table for product metadata (id, name, price, image).
