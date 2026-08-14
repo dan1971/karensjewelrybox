@@ -14,6 +14,9 @@ error_reporting(E_ALL);
 header('Content-Type: application/json');
 session_start();
 
+// Temporary test user for development/testing
+$_SESSION['user_id'] = 21;
+
 require_once 'db_config.php';
 
 /*
