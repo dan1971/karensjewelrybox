@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
     }
     if ($user_id !== null) {
         try {
-            $del = $pdo->prepare('DELETE FROM user_carts WHERE user_id = ? AND product_id = ?');
+            $del = $pdo->prepare('DELETE FROM user_carts WHERE userId = ? AND product_id = ?');
             $del->execute([$user_id, $product_id]);
         } catch (\PDOException $e) {
             http_response_code(500);
@@ -53,10 +53,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
     $cart_items = [];
     if ($user !== null) {
         try {
-            $stmt = $pdo->prepare('SELECT product_id, quantity FROM user_carts WHERE user_id = ?');
+            $stmt = $pdo->prepare('SELECT productId, productQuantity FROM user_carts WHERE user_id = ?');
             $stmt->execute([$user]);
             foreach ($stmt->fetchAll() as $row) {
-                $cart_items[(int)$row['product_id']] = (int)$row['quantity'];
+                $cart_items[(int)$row['productId']] = (int)$row['productQuantity'];
             }
         } catch (\PDOException $e) {
             http_response_code(500);
@@ -108,10 +108,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     // Load cart items from DB for logged users or from session for guests
     if ($user_id !== null) {
         try {
-            $stmt = $pdo->prepare('SELECT product_id, quantity FROM user_carts WHERE user_id = ?');
+            $stmt = $pdo->prepare('SELECT productId, productQuantity FROM user_carts WHERE userId = ?');
             $stmt->execute([$user_id]);
             foreach ($stmt->fetchAll() as $row) {
-                $cart_items[(int)$row['product_id']] = (int)$row['quantity'];
+                $cart_items[(int)$row['productId']] = (int)$row['quantity'];
             }
         } catch (\PDOException $e) {
             http_response_code(500);
