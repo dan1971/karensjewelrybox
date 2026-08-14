@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
             $del->execute([$user_id, $product_id]);
         } catch (\PDOException $e) {
             http_response_code(500);
-            echo json_encode(['status' => 'error', 'message' => 'Unable to remove item from database.']);
+            echo json_encode(['status' => 'error', 'message' => 'Unable to remove item from database.', 'details' => $e->getMessage(), 'details' => $e->getMessage()]);
             exit;
         }
     } else {
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
             }
         } catch (\PDOException $e) {
             http_response_code(500);
-            echo json_encode(['status' => 'error', 'message' => 'Unable to fetch cart data after remove.']);
+            echo json_encode(['status' => 'error', 'message' => 'Unable to fetch cart data after remove.', 'details' => $e->getMessage()]);
             exit;
         }
     } else {
@@ -115,7 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             }
         } catch (\PDOException $e) {
             http_response_code(500);
-            echo json_encode(['status' => 'error', 'message' => 'Unable to fetch cart data from database.']);
+            echo json_encode(['status' => 'error', 'message' => 'Unable to fetch cart data from database.', 'details' => $e->getMessage()]);
             exit;
         }
     } else {
@@ -140,7 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             }
         } catch (\PDOException $e) {
             http_response_code(500);
-            echo json_encode(['status' => 'error', 'message' => 'Unable to lookup product metadata.']);
+            echo json_encode(['status' => 'error', 'message' => 'Unable to lookup product metadata.', 'details' => $e->getMessage()]);
             exit;
         }
 
@@ -232,7 +232,7 @@ try {
                 }
             } catch (\PDOException $e) {
                 http_response_code(500);
-                echo json_encode(['status' => 'error', 'message' => 'Unable to fetch cart data for summary.']);
+                echo json_encode(['status' => 'error', 'message' => 'Unable to fetch cart data for summary.', 'details' => $e->getMessage()]);
                 exit;
             }
         } else {
@@ -307,7 +307,7 @@ try {
 
         } catch (\PDOException $e) {
             http_response_code(500);
-            echo json_encode(['status' => 'error', 'message' => 'Database storage error occurred.']);
+            echo json_encode(['status' => 'error', 'message' => 'Database storage error occurred.', 'details' => $e->getMessage()]);
             exit;
         }
     } else {
@@ -360,7 +360,7 @@ try {
             }
         } catch (\PDOException $e) {
             http_response_code(500);
-            echo json_encode(['status' => 'error', 'message' => 'Unable to fetch cart data for summary.']);
+            echo json_encode(['status' => 'error', 'message' => 'Unable to fetch cart data for summary.', 'details' => $e->getMessage()]);
             exit;
         }
     } else {
@@ -382,7 +382,7 @@ try {
             }
         } catch (\PDOException $e) {
             http_response_code(500);
-            echo json_encode(['status' => 'error', 'message' => 'Unable to lookup products for summary.']);
+            echo json_encode(['status' => 'error', 'message' => 'Unable to lookup products for summary.', 'details' => $e->getMessage()]);
             exit;
         }
 
