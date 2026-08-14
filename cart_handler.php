@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
         $ids = array_keys($cart_items);
         $placeholders = implode(',', array_fill(0, count($ids), '?'));
         try {
-            $stmt = $pdo->prepare("SELECT InquiryID, name, price, image FROM products_chimes WHERE id IN ($placeholders)");
+            $stmt = $pdo->prepare("SELECT InquiryID, name, price, image FROM products_chimes WHERE InquiryID IN ($placeholders)");
             $stmt->execute($ids);
             foreach ($stmt->fetchAll() as $p) $products[(int)$p['id']] = $p;
         } catch (\PDOException $e) {
@@ -132,11 +132,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $placeholders = implode(',', array_fill(0, count($productIds), '?'));
 
         try {
-            $stmt = $pdo->prepare("SELECT InquiryID, name, price, image FROM products_chimes WHERE id IN ($placeholders)");
+            $stmt = $pdo->prepare("SELECT InquiryID, name, price, image FROM products_chimes WHERE InquiryID IN ($placeholders)");
             $stmt->execute($productIds);
             $products = [];
             foreach ($stmt->fetchAll() as $p) {
-                $products[(int)$p['id']] = $p;
+                $products[(int)$p['InquiryID']] = $p;
             }
         } catch (\PDOException $e) {
             http_response_code(500);
@@ -246,11 +246,11 @@ try {
             $ids = array_keys($cart_items);
             $placeholders = implode(',', array_fill(0, count($ids), '?'));
             try {
-                $stmt = $pdo->prepare("SELECT InquiryID, name, price, image FROM products_chimes WHERE id IN ($placeholders)");
+                $stmt = $pdo->prepare("SELECT InquiryID, name, price, image FROM products_chimes WHERE InquiryID IN ($placeholders)");
                 $stmt->execute($ids);
                 $products = [];
                 foreach ($stmt->fetchAll() as $p) {
-                    $products[(int)$p['id']] = $p;
+                    $products[(int)$p['InquiryID']] = $p;
                 }
             } catch (\PDOException $e) {
                 http_response_code(500);
@@ -374,11 +374,11 @@ try {
         $ids = array_keys($cart_items);
         $placeholders = implode(',', array_fill(0, count($ids), '?'));
         try {
-            $stmt = $pdo->prepare("SELECT InquiryID, price FROM products_chimes WHERE id IN ($placeholders)");
+            $stmt = $pdo->prepare("SELECT InquiryID, price FROM products_chimes WHERE InquiryID IN ($placeholders)");
             $stmt->execute($ids);
             $products = [];
             foreach ($stmt->fetchAll() as $p) {
-                $products[(int)$p['id']] = $p;
+                $products[(int)$p['InquiryID']] = $p;
             }
         } catch (\PDOException $e) {
             http_response_code(500);
