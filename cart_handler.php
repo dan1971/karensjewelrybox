@@ -14,6 +14,7 @@ error_reporting(E_ALL);
 header('Content-Type: application/json');
 session_start();
 
+require_once 'db_config.php';
 
 /*
  * Use a real `products` table for product metadata (id, name, price, image).
@@ -366,6 +367,7 @@ try {
     $cart_count = 0;
     $cart_total = 0.00;
     if (!empty($cart_items)) {
+        global $pdo;
         $ids = array_keys($cart_items);
         $placeholders = implode(',', array_fill(0, count($ids), '?'));
         try {
