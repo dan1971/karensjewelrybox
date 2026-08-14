@@ -37,11 +37,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
     }
     if ($user_id !== null) {
         try {
-            $del = $pdo->prepare('DELETE FROM user_carts WHERE userId = ? AND product_id = ?');
+            $del = $pdo->prepare('DELETE FROM user_carts WHERE userId = ? AND productId = ?');
             $del->execute([$user_id, $product_id]);
         } catch (\PDOException $e) {
             http_response_code(500);
-            echo json_encode(['status' => 'error', 'message' => 'Unable to remove item from database.', 'details' => $e->getMessage(), 'details' => $e->getMessage()]);
+            echo json_encode(['status' => 'error', 'message' => 'Unable to remove item from database.', 'details' => $e->getMessage()]);
             exit;
         }
     } else {
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
     $cart_items = [];
     if ($user !== null) {
         try {
-            $stmt = $pdo->prepare('SELECT productId, productQuantity FROM user_carts WHERE user_id = ?');
+            $stmt = $pdo->prepare('SELECT productId, productQuantity FROM user_carts WHERE userId = ?');
             $stmt->execute([$user]);
             foreach ($stmt->fetchAll() as $row) {
                 $cart_items[(int)$row['productId']] = (int)$row['productQuantity'];
@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $stmt = $pdo->prepare('SELECT productId, productQuantity FROM user_carts WHERE userId = ?');
             $stmt->execute([$user_id]);
             foreach ($stmt->fetchAll() as $row) {
-                $cart_items[(int)$row['productId']] = (int)$row['quantity'];
+                $cart_items[(int)$row['productId']] = (int)$row['productQuantity'];
             }
         } catch (\PDOException $e) {
             http_response_code(500);
@@ -205,11 +205,11 @@ try {
     if (isset($data['action']) && $data['action'] === 'remove') {
         if ($user_id !== null) {
             try {
-                $del = $pdo->prepare('DELETE FROM user_carts WHERE user_id = ? AND product_id = ?');
+                $del = $pdo->prepare('DELETE FROM user_carts WHERE userId = ? AND productId = ?');
                 $del->execute([$user_id, $product_id]);
             } catch (\PDOException $e) {
                 http_response_code(500);
-                echo json_encode(['status' => 'error', 'message' => 'Unable to remove item from database.']);
+                echo json_encode(['status' => 'error', 'message' => 'Unable to remove item from database.', 'details' => $e->getMessage()]);
                 exit;
             }
         } else {
@@ -225,10 +225,10 @@ try {
         $cart_items = [];
         if ($user_id !== null) {
             try {
-                $stmt = $pdo->prepare('SELECT product_id, quantity FROM user_carts WHERE user_id = ?');
+                $stmt = $pdo->prepare('SELECT productId, productQuantity FROM user_carts WHERE userId = ?');
                 $stmt->execute([$user_id]);
                 foreach ($stmt->fetchAll() as $row) {
-                    $cart_items[(int)$row['product_id']] = (int)$row['quantity'];
+                    $cart_items[(int)$row['productId']] = (int)$row['productQuantity'];
                 }
             } catch (\PDOException $e) {
                 http_response_code(500);
@@ -293,9 +293,9 @@ try {
      */
     if ($user_id !== null) {
         try {
-            $sql = "INSERT INTO user_carts (user_id, product_id, quantity) 
+            $sql = "INSERT INTO user_carts (userId, productId, productQuantity) 
                     VALUES (:user_id, :product_id, :quantity) 
-                    ON DUPLICATE KEY UPDATE quantity = quantity + :quantity_increment";
+                    ON DUPLICATE KEY UPDATE productQuantity = productQuantity + :quantity_increment";
 
             $stmt = $pdo->prepare($sql);
             $stmt->execute([
@@ -353,10 +353,10 @@ try {
     $cart_items = [];
     if ($user_id !== null) {
         try {
-            $stmt = $pdo->prepare('SELECT product_id, quantity FROM user_carts WHERE user_id = ?');
+            $stmt = $pdo->prepare('SELECT productId, productQuantity FROM user_carts WHERE userId = ?');
             $stmt->execute([$user_id]);
             foreach ($stmt->fetchAll() as $row) {
-                $cart_items[(int)$row['product_id']] = (int)$row['quantity'];
+                $cart_items[(int)$row['productId']] = (int)$row['productQuantity'];
             }
         } catch (\PDOException $e) {
             http_response_code(500);
