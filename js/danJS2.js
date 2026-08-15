@@ -125,8 +125,8 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
           `;
           
  console.log("Count= ",  cartList );
+ cartItems.innerHTML=cartList;
         }).join('');
-cartItems.innerHTML=cartList;
 // <<<<<<<<<<<<<<<  CART REMOVE ITEM FROM CART  >>>>>>>>>>>>>>>>>>>>>
         cartItems.querySelectorAll('.cart-item-remove').forEach(btn => {
           btn.addEventListener('click', async (e) => {
