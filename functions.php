@@ -28,9 +28,9 @@
                     <h2>Shopping Cart</h2>
                 </div>    
                         <div class="cart-content">
-
+                        <div class="cart-items"></div>
                          <a href="collections.html" class="continue-shopping-btn">Continue Shopping</a>
-                         <div class="cart-items"></div>
+                         
                           <h2>Order Summary</h2>
                           <div class="cart-summary-line">
                             <span>Subtotal</span>

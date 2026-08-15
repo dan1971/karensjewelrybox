@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const productPrice = sideMenu.querySelector('.cart-item-price');
       const productQty = sideMenu.querySelector('.addItemsToOrder');
       const checkoutTotal = sideMenu.querySelector('.cart-item-total');
-      const cartContent = sideMenu.querySelector('.cart-content');
+      const cartItems = sideMenu.querySelector('.cart-items');
 
 // console.log("Log #1- productImage, productTitle, productDesc, productPrice, productQty, checkoutTotal= ", " " ,checkoutTotal.textContent, " " , cartIsEmpty.textContent, " " , cartItems.textContent);
 
@@ -126,7 +126,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
           
 //  console.log("Count= ",  cartList );
 //  cartItems.innerHTML=cartList;
- cartContent.insertAdjacentHTML('afterbegin',  cartList);
+ cartItems.insertAdjacentHTML('afterbegin',  cartList);
         }).join('');
 // <<<<<<<<<<<<<<<  CART REMOVE ITEM FROM CART  >>>>>>>>>>>>>>>>>>>>>
         cartItems.querySelectorAll('.cart-item-remove').forEach(btn => {
