@@ -103,7 +103,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 
   let cartList=`<div class="cart-item" data-item-id="${prod}">
               <div class="cart-item-image">
-              <img src="${img}" alt="${name}">
+              <img src="${img}" alt="${name}" width="63" height="63">
               </div>
               <div class="cart-item-details">
                 <h1 class="product-title">${name}</h1>
