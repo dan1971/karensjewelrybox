@@ -123,8 +123,8 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
               </div>
             </div>
           `;
-          
- console.log("cartlist= ",  cartList );
+          cartItems.appendChild(cartList);
+ console.log("Count= ",  cartList );
         }).join('');
 
 // <<<<<<<<<<<<<<<  CART REMOVE ITEM FROM CART  >>>>>>>>>>>>>>>>>>>>>
