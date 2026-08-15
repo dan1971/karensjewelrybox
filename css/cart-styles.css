@@ -404,25 +404,25 @@
 }
 
 .cart-item-quantity {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
+    width: fit-content;
+    display: grid;
+    gap: 8px;
+    align-items: center;
+    grid-template-columns: 1fr auto;
 }
 
 .cart-item-quantity label {
-    font-size: 0.85rem;
+font-size: 0.85rem;
 color: var(--ink); 
 font-weight: 500;
-    margin: 0 auto;
 }
 
 .cart-item-quantity input {
-    width: 70px;
-    padding: 8px;
+    width: 50px;
+    padding: 2px 0 2px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
-    text-align: center;
 }
 
 .cart-item-total {
