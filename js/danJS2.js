@@ -100,9 +100,8 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 // console.log("Log #6- cartItems div IS truthy- prod, qty, name, price, img, lineTotal= ", prod, " ", qty, " ", name, " ", price, " ", img, " ", lineTotal );
 
 // <<<<<<<<<<<<<<<  CART POPULATE PANEL  >>>>>>>>>>>>>>>>>>>>>
-const cartList= document.createElement('div').classList.add('cart-item');
-  cartList.innerHTML=
-            `<div class="cart-item" data-item-id="${prod}">
+
+  document.querySelector('.cartItems').innerHTML= `<div class="cart-item" data-item-id="${prod}">
               <div class="cart-item-image">
               <img src="${img}" alt="${name}">
               </div>
@@ -125,9 +124,7 @@ const cartList= document.createElement('div').classList.add('cart-item');
             </div>
           `;
           
- console.log("Count= ",  cartList );
         }).join('');
-cartItems.appendChild(cartList);
 // <<<<<<<<<<<<<<<  CART REMOVE ITEM FROM CART  >>>>>>>>>>>>>>>>>>>>>
         cartItems.querySelectorAll('.cart-item-remove').forEach(btn => {
           btn.addEventListener('click', async (e) => {
