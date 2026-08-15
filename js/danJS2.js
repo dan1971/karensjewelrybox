@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const productQty = sideMenu.querySelector('.addItemsToOrder');
       const checkoutTotal = sideMenu.querySelector('.cart-item-total');
       const cartItems = sideMenu.querySelector('.cart-items');
-      let makeCartChildren;
+      let makeCartChildren="";
   /* your logic */ 
       
 
