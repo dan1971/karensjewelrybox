@@ -19,7 +19,7 @@ function updateHeaderShrink() {
 }
 
  // <<<<<<<  DOM ON-LOAD CART PANEL VARIALBLE SETUP  >>>>>>
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   const menuToggle = document.querySelector('.menu-toggle');
   const menuClose = document.querySelector('.menu-close');
   const sideMenu = document.querySelector('.side-menu');
