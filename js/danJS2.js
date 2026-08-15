@@ -121,7 +121,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
             </div>
           `;
           
-        cartItems.appendChild(makeCartChildren);
+
         }).join('');
 
 // <<<<<<<<<<<<<<<  CART REMOVE ITEM FROM CART  >>>>>>>>>>>>>>>>>>>>>
