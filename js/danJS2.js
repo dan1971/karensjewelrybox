@@ -86,7 +86,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 
  // <<<<<<<<<<<<<<<  CART HAS ITEMS IN IT >>>>>>>>>>>>>
       } else {
-        const makeCartChildren = Object.keys(itemsMap).map(id => {
+        Object.keys(itemsMap).map(id => {
           const prod = products[id] || products[String(id)];
           const qty = Number(itemsMap[id]) || 0;
           const name = prod?.name || 'Item';
