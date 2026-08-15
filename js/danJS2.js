@@ -87,7 +87,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
  // <<<<<<<<<<<<<<<  CART HAS ITEMS IN IT >>>>>>>>>>>>>
       } else {
         let count=0;
-        const cartList= document.createElement('div').classList.add('cart-item');
+        
         Object.keys(itemsMap).map(id => {
           const prod = products[id] || products[String(id)];
           const qty = Number(itemsMap[id]) || 0;
@@ -101,7 +101,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 
 // <<<<<<<<<<<<<<<  CART POPULATE PANEL  >>>>>>>>>>>>>>>>>>>>>
 
-  document.querySelector('.cartItems').innerHTML= `<div class="cart-item" data-item-id="${prod}">
+  let cartList=`<div class="cart-item" data-item-id="${prod}">
               <div class="cart-item-image">
               <img src="${img}" alt="${name}">
               </div>
@@ -124,7 +124,9 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
             </div>
           `;
           
+ console.log("Count= ",  cartList );
         }).join('');
+cartItems.innerHTML=cartList;
 // <<<<<<<<<<<<<<<  CART REMOVE ITEM FROM CART  >>>>>>>>>>>>>>>>>>>>>
         cartItems.querySelectorAll('.cart-item-remove').forEach(btn => {
           btn.addEventListener('click', async (e) => {
