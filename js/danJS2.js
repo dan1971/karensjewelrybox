@@ -1,6 +1,7 @@
 
 
 
+
  // <<<<<<<<<<<<<  HEADER SCROLL SHRINK >>>>>>>>>>>>>
 function setupHeaderScroll() {
     updateHeaderShrink();
@@ -45,8 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const checkoutTotal = sideMenu.querySelector('.cart-item-total');
       const cartItems = sideMenu.querySelector('.cart-items');
 
-};
-
 // console.log("Log #1- productImage, productTitle, productDesc, productPrice, productQty, checkoutTotal= ", " " ,checkoutTotal.textContent, " " , cartIsEmpty.textContent, " " , cartItems.textContent);
 
   // <<<< CALL CART HANDLER- GET CART ITEMS SCRIPT >>>>>>>>>>>>>>>>
@@ -87,7 +86,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 
  // <<<<<<<<<<<<<<<  CART HAS ITEMS IN IT >>>>>>>>>>>>>
       } else {
-       Object.keys(itemsMap).map(id => {
+        const makeCartChildren = Object.keys(itemsMap).map(id => {
           const prod = products[id] || products[String(id)];
           const qty = Number(itemsMap[id]) || 0;
           const name = prod?.name || 'Item';
@@ -121,7 +120,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
               </div>
             </div>
           `;
-
+          
         cartItems.appendChild(makeCartChildren);
         }).join('');
 
