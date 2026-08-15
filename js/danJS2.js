@@ -44,6 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const productQty = sideMenu.querySelector('.addItemsToOrder');
       const checkoutTotal = sideMenu.querySelector('.cart-item-total');
       const cartItems = sideMenu.querySelector('.cart-items');
+      const makeCartChildren;
+
+};
 
 // console.log("Log #1- productImage, productTitle, productDesc, productPrice, productQty, checkoutTotal= ", " " ,checkoutTotal.textContent, " " , cartIsEmpty.textContent, " " , cartItems.textContent);
 
@@ -119,7 +122,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
               </div>
             </div>
           `;
-          
+
         cartItems.appendChild(makeCartChildren);
         }).join('');
 
