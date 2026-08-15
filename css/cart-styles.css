@@ -409,6 +409,7 @@
     gap: 8px;
     align-items: center;
     grid-template-columns: 1fr auto;
+    margin:9px 0;
 }
 
 .cart-item-quantity label {
