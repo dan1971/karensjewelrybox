@@ -19,7 +19,7 @@ function updateHeaderShrink() {
 }
 
  // <<<<<<<  DOM ON-LOAD CART PANEL VARIALBLE SETUP  >>>>>>
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.menu-toggle');
   const menuClose = document.querySelector('.menu-close');
   const sideMenu = document.querySelector('.side-menu');
@@ -87,7 +87,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 
  // <<<<<<<<<<<<<<<  CART HAS ITEMS IN IT >>>>>>>>>>>>>
       } else {
-       cartItems.innerHTML=Object.keys(itemsMap).map(id => {
+       Object.keys(itemsMap).map(id => {
           const prod = products[id] || products[String(id)];
           const qty = Number(itemsMap[id]) || 0;
           const name = prod?.name || 'Item';
@@ -121,6 +121,8 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
               </div>
             </div>
           `;
+
+        cartItems.appendChild(makeCartChildren);
         }).join('');
 
 // <<<<<<<<<<<<<<<  CART REMOVE ITEM FROM CART  >>>>>>>>>>>>>>>>>>>>>
@@ -170,7 +172,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
     } catch (error) {
       console.error(error);
     }
-  });
+  };
 
 // <<<<<<<<<<<<<<  OPEN CART PANEL  >>>>>>>>>>>>>>>>>>>
   menuToggle.addEventListener('click', async () => {
@@ -180,6 +182,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 
 // <<<<<<<<<<<<<<  CLOSE CART PANEL  >>>>>>>>>>>>>>>>>>>
   menuClose.addEventListener('click', closeCartPanel);
+});
 
 // <<<<<<<   CLICK ADD-TO-CART- SEND PRODUCT INFO >>>>>>>>>>>>
   document.querySelectorAll('.add-to-cart-btn').forEach(button => {
