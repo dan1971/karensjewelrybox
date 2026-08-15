@@ -87,9 +87,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 
  // <<<<<<<<<<<<<<<  CART HAS ITEMS IN IT >>>>>>>>>>>>>
       } else {
-        const newCartChild=document.createElement('div');
-        newCartChild.classList.add('cart-item');
-        newCartChild.innerHTML=Object.keys(itemsMap).map(id => {
+       cartItems.innerHTML=Object.keys(itemsMap).map(id => {
           const prod = products[id] || products[String(id)];
           const qty = Number(itemsMap[id]) || 0;
           const name = prod?.name || 'Item';
@@ -123,8 +121,6 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
               </div>
             </div>
           `;
-cartItems.appendchild(newCartChild);
-       
         }).join('');
 
 // <<<<<<<<<<<<<<<  CART REMOVE ITEM FROM CART  >>>>>>>>>>>>>>>>>>>>>
