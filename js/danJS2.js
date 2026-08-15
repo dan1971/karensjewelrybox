@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const checkoutTotal = sideMenu.querySelector('.cart-item-total');
       const cartItems = sideMenu.querySelector('.cart-items');
       const makeCartChildren;
+  /* your logic */ 
+      
 
 };
 
@@ -88,7 +90,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 
  // <<<<<<<<<<<<<<<  CART HAS ITEMS IN IT >>>>>>>>>>>>>
       } else {
-        const makeCartChildren = Object.keys(itemsMap).map(id => {
+       makeCartChildren=Object.keys(itemsMap).map(id => {
           const prod = products[id] || products[String(id)];
           const qty = Number(itemsMap[id]) || 0;
           const name = prod?.name || 'Item';
@@ -125,6 +127,8 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 
         cartItems.appendChild(makeCartChildren);
         }).join('');
+          
+        
 
 // <<<<<<<<<<<<<<<  CART REMOVE ITEM FROM CART  >>>>>>>>>>>>>>>>>>>>>
         cartItems.querySelectorAll('.cart-item-remove').forEach(btn => {
