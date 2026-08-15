@@ -170,7 +170,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
     } catch (error) {
       console.error(error);
     }
-  };
+  });
 
 // <<<<<<<<<<<<<<  OPEN CART PANEL  >>>>>>>>>>>>>>>>>>>
   menuToggle.addEventListener('click', async () => {
@@ -180,7 +180,6 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 
 // <<<<<<<<<<<<<<  CLOSE CART PANEL  >>>>>>>>>>>>>>>>>>>
   menuClose.addEventListener('click', closeCartPanel);
-});
 
 // <<<<<<<   CLICK ADD-TO-CART- SEND PRODUCT INFO >>>>>>>>>>>>
   document.querySelectorAll('.add-to-cart-btn').forEach(button => {
