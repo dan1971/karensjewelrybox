@@ -123,10 +123,10 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
               </div>
             </div>
           `;
-          cartItems.appendChild(cartList);
+          
  console.log("Count= ",  cartList );
         }).join('');
-
+cartItems.appendChild(cartList);
 // <<<<<<<<<<<<<<<  CART REMOVE ITEM FROM CART  >>>>>>>>>>>>>>>>>>>>>
         cartItems.querySelectorAll('.cart-item-remove').forEach(btn => {
           btn.addEventListener('click', async (e) => {
