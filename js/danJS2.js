@@ -123,7 +123,7 @@ cartList.innerHTML(
               </div>
             </div>
           `);
-          
+          cartItems.appendChild(cartList);
 
         }).join('');
 
