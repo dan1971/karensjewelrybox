@@ -87,7 +87,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
  // <<<<<<<<<<<<<<<  CART HAS ITEMS IN IT >>>>>>>>>>>>>
       } else {
         let count=0;
-        let cartList ="";
+        const cartList= document.createElement('div').classList.add('cart-item');
         Object.keys(itemsMap).map(id => {
           const prod = products[id] || products[String(id)];
           const qty = Number(itemsMap[id]) || 0;
@@ -100,7 +100,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 // console.log("Log #6- cartItems div IS truthy- prod, qty, name, price, img, lineTotal= ", prod, " ", qty, " ", name, " ", price, " ", img, " ", lineTotal );
 
 // <<<<<<<<<<<<<<<  CART POPULATE PANEL  >>>>>>>>>>>>>>>>>>>>>
-  cartList=
+  cartList.innerHTML=
             `<div class="cart-item" data-item-id="${prod}">
               <div class="cart-item-image">
               <img src="${img}" alt="${name}">
