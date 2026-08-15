@@ -96,11 +96,11 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
           const price = Number(prod?.price || 0).toFixed(2);
           const img = prod?.image || imageUrl || 'images/b-ring002.webp';
           const lineTotal = (Number(price) * qty).toFixed(2);
-          console.log("Count= ", count+=1 );
+         
 // console.log("Log #6- cartItems div IS truthy- prod, qty, name, price, img, lineTotal= ", prod, " ", qty, " ", name, " ", price, " ", img, " ", lineTotal );
 
 // <<<<<<<<<<<<<<<  CART POPULATE PANEL  >>>>>>>>>>>>>>>>>>>>>
-  cartList.textContent(
+  cartList=
             `<div class="cart-item" data-item-id="${prod}">
               <div class="cart-item-image">
               <img src="${img}" alt="${name}">
@@ -122,9 +122,9 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
                 <button class="cart-item-remove" data-product-id="${id}" aria-label="Remove">Remove</button>
               </div>
             </div>
-          `);
-          cartItems.appendChild(cartList);
-
+          `;
+          
+ console.log("cartlist= ",  cartList );
         }).join('');
 
 // <<<<<<<<<<<<<<<  CART REMOVE ITEM FROM CART  >>>>>>>>>>>>>>>>>>>>>
