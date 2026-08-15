@@ -44,9 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const productQty = sideMenu.querySelector('.addItemsToOrder');
       const checkoutTotal = sideMenu.querySelector('.cart-item-total');
       const cartItems = sideMenu.querySelector('.cart-items');
-      const makeCartChildren = (item) => { 
-  /* your logic */ 
-        };
 
 };
 
@@ -90,7 +87,9 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 
  // <<<<<<<<<<<<<<<  CART HAS ITEMS IN IT >>>>>>>>>>>>>
       } else {
-       let makeCartChildren = Object.keys(itemsMap).map(id => {
+        const newCartChild=document.createElement('div');
+        newCartChild.classList.add('cart-item');
+        newCartChild.innerHTML=Object.keys(itemsMap).map(id => {
           const prod = products[id] || products[String(id)];
           const qty = Number(itemsMap[id]) || 0;
           const name = prod?.name || 'Item';
@@ -124,8 +123,8 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
               </div>
             </div>
           `;
-
-        cartItems.appendChild(makeCartChildren);
+cartItems.appendchild(newCartChild);
+       
         }).join('');
 
 // <<<<<<<<<<<<<<<  CART REMOVE ITEM FROM CART  >>>>>>>>>>>>>>>>>>>>>
