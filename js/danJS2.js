@@ -85,7 +85,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 
  // <<<<<<<<<<<<<<<  CART HAS ITEMS IN IT >>>>>>>>>>>>>
       } else {
-        cartItems.innerHTML = Object.keys(itemsMap).map(id => {
+        const makeCartChildren = Object.keys(itemsMap).map(id => {
           const prod = products[id] || products[String(id)];
           const qty = Number(itemsMap[id]) || 0;
           const name = prod?.name || 'Item';
@@ -93,11 +93,11 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
           const price = Number(prod?.price || 0).toFixed(2);
           const img = prod?.image || imageUrl || 'images/b-ring002.webp';
           const lineTotal = (Number(price) * qty).toFixed(2);
-console.log("Log #6- cartItems div IS truthy- prod, qty, name, price, img, lineTotal= ", prod, " ", qty, " ", name, " ", price, " ", img, " ", lineTotal );
-
+// console.log("Log #6- cartItems div IS truthy- prod, qty, name, price, img, lineTotal= ", prod, " ", qty, " ", name, " ", price, " ", img, " ", lineTotal );
 
 // <<<<<<<<<<<<<<<  CART POPULATE PANEL  >>>>>>>>>>>>>>>>>>>>>
-            `<div class="cart-item" data-item-id="${id}">
+
+            `<div class="cart-item" data-item-id="${prod}">
               <div class="cart-item-image">
               <img src="${img}" alt="${name}">
               </div>
@@ -119,6 +119,8 @@ console.log("Log #6- cartItems div IS truthy- prod, qty, name, price, img, lineT
               </div>
             </div>
           `;
+          
+        cartItems.appendChild(makeCartChildren);
         }).join('');
 
 // <<<<<<<<<<<<<<<  CART REMOVE ITEM FROM CART  >>>>>>>>>>>>>>>>>>>>>
