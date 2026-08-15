@@ -152,9 +152,10 @@
     padding: 8px 0;
     border-bottom: 1px solid rgba(0,0,0,0.06);
 }
-.side-menu .cart-item-image img {
-    width: 64px;
-    height: 64px;
+.side-menu .cart-item-image {
+    flex-shrink: 0;
+    min-width: 64px;
+    height: auto;
     object-fit: cover;
     border-radius: 6px;
 }
