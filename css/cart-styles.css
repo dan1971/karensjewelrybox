@@ -146,10 +146,10 @@
 
 /* Cart item styles inside side-menu */
 .side-menu .cart-item {
-    display: flex;
+    display: grid;
     align-items: center;
     gap: 12px;
-    padding: 8px 0;
+    padding: 16px;
     border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 .side-menu .cart-item-image {
@@ -275,7 +275,7 @@
 .cart-container h1 {
         font-family: 'Montserrat', Verdana, Arial, sans-serif;
     letter-spacing: 1px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: var(--ink);
     margin-bottom: .12rem;
