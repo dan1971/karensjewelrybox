@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
             $del->execute([$user_id, $product_id]);
         } catch (\PDOException $e) {
             http_response_code(500);
-            echo json_encode(['status' => 'error', 'message' => 'Unable to remove item from database.', 'details' => $e->getMessage()]);
+            echo json_encode(['status' => 'error', 'message' => 'Unable to remove item from database. ',$user_id, ' details' => $e->getMessage()]);
             exit;
         }
     } else {

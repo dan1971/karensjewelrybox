@@ -67,7 +67,7 @@ console.log("Log #2- CART HANDLER GET script FAILURE RESPONSE= ", response.statu
       const totalValue = Number(data.cart_total || 0).toFixed(2);
       const cartTotalItems = data.cart_count || 0;
 
-console.log("Log #3- CART HANDLER.php GET SUCCESS RESPONSE data, imageUrl, totalValue, cartTotalItems= ", data, " ", imageUrl, " ", totalValue, " ", cartTotalItems);
+// console.log("Log #3- CART HANDLER.php GET SUCCESS RESPONSE data, imageUrl, totalValue, cartTotalItems= ", data, " ", imageUrl, " ", totalValue, " ", cartTotalItems);
 
    // <<<<<<<<<<<<<<<  CART STATE EMPTY OR LIST >>>>>>>>>>>>>
       const products = data.products || {};
@@ -124,11 +124,11 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
             </div>
           `;
           
-//  console.log("Count= ",  cartList );
-//  cartItems.innerHTML=cartList;
  cartItems.insertAdjacentHTML('afterbegin',  cartList);
         }).join('');
+
 // <<<<<<<<<<<<<<<  CART REMOVE ITEM FROM CART  >>>>>>>>>>>>>>>>>>>>>
+
         cartItems.querySelectorAll('.cart-item-remove').forEach(btn => {
           btn.addEventListener('click', async (e) => {
             const pid = btn.getAttribute('data-product-id');
@@ -189,6 +189,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 });
 
 // <<<<<<<   CLICK ADD-TO-CART- SEND PRODUCT INFO >>>>>>>>>>>>
+
   document.querySelectorAll('.add-to-cart-btn').forEach(button => {
     button.addEventListener('click', async (e) => {
 console.log("LOG #10.1- ADD TO CART CLICK");
