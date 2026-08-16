@@ -77,7 +77,7 @@ console.log("Log #4- products= ", products, " itemsMap= ", itemsMap);
 
    // <<<<<<<<<<<<<<<  CART STATE EMPTY >>>>>>>>>>>>>
       if (!cartItem){
-        console.log("Log #5- cartItems div not truthy= ", cartItems);
+        console.log("Log #55- cartItems div not truthy= ", cartItems);
         cartItems.innerHTML = `
           <div class="cart-empty">
             <p>Your cart is empty</p>
