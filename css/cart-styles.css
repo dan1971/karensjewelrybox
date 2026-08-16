@@ -172,13 +172,13 @@
 
 /* Removal animation: fade and slide up */
 .remove-anim {
-    animation: fadeSlide 320ms cubic-bezier(.2,.8,.2,1) forwards;
+    animation: fadeSlide 120ms cubic-bezier(.2,.8,.2,1) forwards;
 }
 
 @keyframes fadeSlide {
-    0% { transform: translateY(0); height: auto; margin: 8px 0; }
-    60% { transform: translateY(-6px); }
-    100% { transform: translateY(-14px); height: 0; margin: 0; padding: 0; }
+    0% { opacity: 1; transform: translateY(0); height: auto; margin: 8px 0; }
+    60% { opacity: 0.6; transform: translateY(-6px); }
+    100% { opacity: 0; transform: translateY(-14px); height: 0; margin: 0; padding: 0; }
 }
 
 /* Background Overlay Tint */
@@ -346,9 +346,6 @@
 
 .cart-container {
     max-width: 100%;
-     overflow: hidden;    /* Critical: clips the child element */
-  position: relative;
-
 }
 
 .cart-content {
