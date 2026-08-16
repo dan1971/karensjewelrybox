@@ -131,7 +131,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 // <<<<<<<<<<<<<<<  CART REMOVE ITEM FROM CART  >>>>>>>>>>>>>>>>>>>>>
         cartItems.querySelectorAll('.cart-item-remove').forEach(btn => {
           btn.addEventListener('click', async (e) => {
-            const pid = btn.dataset.productId;
+            const pid = btn.getAttribute('data-id');
             const itemEl = btn.closest('.cart-item');
             try {
               const resp = await fetch('../cart_handler.php', {
