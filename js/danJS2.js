@@ -134,6 +134,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
             const pid = btn.getAttribute('data-product-id');
             console.log("pid=", pid)
             const itemEl = btn.closest('.cart-item');
+            console.log("itemEl= ", itemEl)
             try {
               const resp = await fetch('../cart_handler.php', {
                 method: 'DELETE',
