@@ -346,6 +346,9 @@
 
 .cart-container {
     max-width: 100%;
+     overflow: hidden;    /* Critical: clips the child element */
+  position: relative;
+
 }
 
 .cart-content {
