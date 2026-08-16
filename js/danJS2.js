@@ -142,9 +142,9 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
                 body: JSON.stringify({ product_id: parseInt(pid, 10) })
               });
               const json = await resp.json();
-
+console.log("json= ", json)
               if (!json || json.status !== 'success') throw new Error(json?.message || 'Delete failed');
-            console.log("json= ", json)
+            
 // <<<<<<<<<<<<<<  CART ANIMATE REMOVE ITEM >>>>>>>>>>>>>>>>>>>
               if (itemEl) {
                 itemEl.classList.add('remove-anim');
