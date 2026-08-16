@@ -101,7 +101,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
 
 // <<<<<<<<<<<<<<<  CART POPULATE PANEL  >>>>>>>>>>>>>>>>>>>>>
 
-  let cartList=`<div class="cart-item" data-item-id="${prod}">
+  let cartList=`<div class="cart-item" data-item-id="${id}">
               <div class="cart-item-image">
               <img src="${img}" alt="${name}" width="63" height="63">
               </div>
