@@ -27,10 +27,8 @@
                 <div class="section-heading">
                     <h2>Shopping Cart</h2>
                 </div>    
-                        <div class="cart-content">
-                            <div class="cart-items"></div>
-                            <a href="collections.html" class="continue-shopping-btn">Continue Shopping</a>
-                         
+                    <div class="cart-content">
+                        <div class="cart-items">
                           <h2>Order Summary</h2>
                           <div class="cart-summary-line">
                             <span>Subtotal</span>
@@ -40,10 +38,10 @@
                             <span>Shipping</span>
                             <span class="checkOut_shipping"></span>
                           </div>
-                             <div class="cart-summary-line">
+                          <div class="cart-summary-line">
                             <span>Tax</span>
                             <span class="checkOut_tax"></span>
-                             </div>
+                          </div>
                           <div class="cart-summary-divider"></div>
                           <div class="cart-summary-line cart-summary-total">
                             <span>Total</span>
@@ -52,9 +50,11 @@
                             <button class="checkout-btn">Proceed to Checkout</button>
                             <a href="index.html" class="continue-shopping-link">← Continue Shopping</a>
                           <div class="promo-code">
-                                <input type="text" placeholder="Enter promo code" id="promo-input">
-                                <button class="apply-promo-btn">Apply</button>
-                        </div> 
+                            <input type="text" placeholder="Enter promo code" id="promo-input">
+                            <button class="apply-promo-btn">Apply</button>
+                          </div> 
+                        </div>
+                        
                     </div>
 <!-- <<<<<<<<<<<<<<<<<<<<<<    CARt ITEMS END    >>>>>>>>>>>>>>>>>>>>>>>> -->
                 </div>
