@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const productQty = sideMenu.querySelector('.addItemsToOrder');
       const checkoutTotal = sideMenu.querySelector('.cart-item-total');
       const cartItems = sideMenu.querySelector('.cart-items');
+      const cartItem = sideMenu.querySelector('.cart-item');
 
 // console.log("Log #1- productImage, productTitle, productDesc, productPrice, productQty, checkoutTotal= ", " " ,checkoutTotal.textContent, " " , cartIsEmpty.textContent, " " , cartItems.textContent);
 
@@ -75,7 +76,7 @@ console.log("Log #2- CART HANDLER GET script FAILURE RESPONSE= ", response.statu
 console.log("Log #4- products= ", products, " itemsMap= ", itemsMap);
 
    // <<<<<<<<<<<<<<<  CART STATE EMPTY >>>>>>>>>>>>>
-      if (!cartItems){
+      if (!cartItem){
         cartItems.innerHTML = `
           <div class="cart-empty">
             <p>Your cart is empty</p>
