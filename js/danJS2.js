@@ -80,7 +80,6 @@ console.log("Log #4- products= ", products, " itemsMap= ", itemsMap);
         cartItems.innerHTML = `
           <div class="cart-empty">
             <p>Your cart is empty</p>
-            <a href="index.php" class="continue-shopping-btn">Continue Shopping</a>
           </div>`;
 console.log("Log #5- cartItems div not truthy= ", cartItems);
         return;
