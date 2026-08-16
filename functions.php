@@ -28,8 +28,9 @@
                     <h2>Shopping Cart</h2>
                 </div>    
                     <div class="cart-content">
-                        <div class="cart-items">
-                          <h2>Order Summary</h2>
+                        <div class="cart-items"></div>
+                        
+                        <h2>Order Summary</h2>
                           <div class="cart-summary-line">
                             <span>Subtotal</span>
                             <span class="checkOut_subtotal"></span>
@@ -53,8 +54,7 @@
                             <input type="text" placeholder="Enter promo code" id="promo-input">
                             <button class="apply-promo-btn">Apply</button>
                           </div> 
-                        </div>
-                        
+
                     </div>
 <!-- <<<<<<<<<<<<<<<<<<<<<<    CARt ITEMS END    >>>>>>>>>>>>>>>>>>>>>>>> -->
                 </div>
