@@ -134,7 +134,7 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
             const pid = btn.getAttribute('data-product-id');
             console.log("pid=", pid)
             const itemEl = btn.closest('.cart-item');
-            console.log("itemEl= ", itemEl)
+           
             try {
               const resp = await fetch('../cart_handler.php', {
                 method: 'DELETE',
@@ -142,8 +142,9 @@ console.log("Log #5- cartItems div not truthy= ", cartItems);
                 body: JSON.stringify({ product_id: parseInt(pid, 10) })
               });
               const json = await resp.json();
-              if (!json || json.status !== 'success') throw new Error(json?.message || 'Delete failed');
 
+              if (!json || json.status !== 'success') throw new Error(json?.message || 'Delete failed');
+            console.log("json= ", json)
 // <<<<<<<<<<<<<<  CART ANIMATE REMOVE ITEM >>>>>>>>>>>>>>>>>>>
               if (itemEl) {
                 itemEl.classList.add('remove-anim');
