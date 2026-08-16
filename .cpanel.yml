@@ -2,6 +2,8 @@
 ---
 deployment:
   tasks: 
+      - export DEPLOYPATH=/home2/sazxjwte/public_html/website_14f8c164
+    - /bin/rsync -avz --exclude '.git*' --exclude '.cpanel.yml' ./ $DEPLOYPATH
     - /bin/cp -R images $DEPLOYPATH
     - /bin/cp -R css $DEPLOYPATH
     - /bin/cp -R js $DEPLOYPATH
@@ -12,5 +14,3 @@ deployment:
     - /bin/cp  cart_handler.php $DEPLOYPATH
     - /bin/cp  checkout_processor.php $DEPLOYPATH
     - /bin/cp  deploy.php $DEPLOYPATH
-    - export DEPLOYPATH=/home2/sazxjwte/public_html/website_14f8c164
-    - /bin/rsync -avz --exclude '.git*' --exclude '.cpanel.yml' ./ $DEPLOYPATH
