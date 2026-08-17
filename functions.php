@@ -25,7 +25,7 @@
         <main class="cart-main">
             <div class="cart-container">
                 <div class="section-heading">
-                    <h2>Shopping Cart</h2>
+                    <h2>Shopping Kart</h2>
                 </div>    
                     <div class="cart-content">
                         <div class="cart-items"></div>
