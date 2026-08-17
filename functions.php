@@ -77,7 +77,7 @@
 
         <nav class="main-nav menu-links" aria-label="Main navigation">
             <div class="layer" data-text="Shop"><a href="#">Boo</a></div>
-            <div class="layer" data-text="New"><a href="#">New</a></div>
+            <div class="layer" data-text="New"><a href="#">Baa</a></div>
             <div class="layer" data-text="Gift"><a href="#">Gift</a></div>
             <div class="layer" data-text="Collections"><a href="/collections.php">Collect</a></div>
             <div class="layer" data-text="About"><a href="#">About</a></div>
