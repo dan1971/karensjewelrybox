@@ -3,7 +3,7 @@
     <main>
         <section class="hero">
             <div class="hero-copy">
-                <h1>Handmade with Hands</h1>
+                <h1>Handmade with Haands</h1>
                 <p>Artisanal jewelry crafted with care, inspired by nature, and made to be uniquely yours.</p>
                 <div class="hero-actions">
                     <div class="layered">
