@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"php-built-in-server.phpExecutable": "C:\\php-8.4.4"
+	}
+}
